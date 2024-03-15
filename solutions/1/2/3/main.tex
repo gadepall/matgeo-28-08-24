@@ -1,0 +1,56 @@
+\solution 
+From 
+	\eqref{eq:median-be}
+	and
+	\eqref{eq:median-cf},
+the equations of $BE$ 
+and 
+$CF$
+are, respectively,
+\begin{align}
+\myvec{3 & 1} \vec{x} &= \myvec{-6}
+\label{eq:1.2.3,8}
+\\
+\myvec{ 5&-1} \vec{x} &= \myvec{-10}
+\label{eq:1.2.3,9}
+\end{align}
+From \eqref{eq:1.2.3,8} and \eqref{eq:1.2.3,9} the augmented matrix is
+\begin{align}
+    \label{eq:matrowoperations}
+    \myvec{
+    3 & 1 & -6
+    \\
+    5 & -1 & -10
+    }
+     \xleftrightarrow[]{R_1 \leftarrow R_1+R_2}
+    \myvec{
+    8 & 0 & -16
+    \\
+    5 & -1 & -10 
+    }
+    \\
+     \xleftrightarrow[]{R_1\leftarrow R_1/8}
+    \myvec{
+    1 & 0 & -2
+    \\
+    5 & -1 & -10 
+    }
+     \xleftrightarrow[]{R_2\leftarrow R_2-5R_1}
+    \myvec{
+    1 & 0 & -2
+    \\
+    0 & -1 & 0
+    }
+    \\
+     \xleftrightarrow[]{R_2\leftarrow -R_2}
+    \myvec{
+    1 & 0 & -2
+    \\
+    0 & 1 & 0
+    }
+\end{align} 
+using Gauss elimination.  Therefore, 
+\begin{align}
+\vec{G} = \myvec{-2 \\ 0}
+	\label{eq:median-g}
+\end{align}

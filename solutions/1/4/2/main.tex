@@ -1,0 +1,13 @@
+\solution \\
+The intersection of 
+			\eqref{eq:tri-perp-bisect-ca}
+			and
+			\eqref{eq:tri-perp-bisect-ab},
+			can be obtained as
+\begin{align}
+\myvec{5&-7&-25\\1&1&-4} \xleftrightarrow[]{R_2 \leftarrow 5R_2 - R_1} \myvec{5&-7&-25\\0&12&5}\\
+ \xleftrightarrow[]{R_1\leftarrow \frac{12}{7}R_1 + R_2} \myvec{\frac{60}{7}&0& \frac{-265}{7}\\0&12&5}
+ \xleftrightarrow[R_1\leftarrow \frac{7}{60}R_1]{R_2 \leftarrow \frac{1}{12}R_2} \myvec{1&0& \frac{-53}{12}\\0&1&\frac{5}{12}}\\
+\implies \vec{O}=\myvec{\frac{-53}{12}\\\frac{5}{12}}
+			\label{eq:tri-perp-bisect-O}
+\end{align}

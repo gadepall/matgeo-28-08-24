@@ -1,0 +1,48 @@
+\solution
+From 
+		\eqref{eq:geo-dir-vec-ab},
+		\eqref{eq:geo-dir-vec-bc},
+		\eqref{eq:geo-dir-vec-ca},
+	\eqref{eq:median-d},
+	\eqref{eq:median-e}
+	and
+	\eqref{eq:median-f},
+\begin{align}
+\vec{\frac{\vec{B}+\vec{C}}{2}} &= \frac{1}{2}\myvec{-{7} \\ 1},\,
+\vec{B}-\vec{C} = \myvec{-1 \\ 11} 
+\\
+\vec{\frac{\vec{A}+\vec{B}}{2}}&=\frac{1}{2}\myvec{-{3} \\{5}},\,
+\vec{A}-\vec{B}=\myvec{5\\ -7} \\
+\vec{\frac{\vec{C}+\vec{A}}{2}} &= \myvec{-1\\-3},\,
+\vec{C}-\vec{A} = \myvec{-4\\-4} \\
+\end{align}
+yielding
+\begin{alignat}{2}
+  \brak{\vec{B}-\vec{C}}^{\top}\brak{\frac{\vec{B}+\vec{C}}{2}}
+	&=\myvec{-1&11}\myvec{-\frac{7}{2} \\ \frac{1}{2}}
+	&&=9
+  \\
+\brak{\vec{A}-\vec{B}}^{\top}\brak{\frac{\vec{A}+\vec{B}}{2}}
+	&=\myvec{5&-7}\myvec{-\frac{3}{2} \\\frac{5}{2}}
+	&&=-25
+  \\
+\brak{\vec{C}-\vec{A}}^{\top}\brak{\frac{\vec{C}+\vec{A}}{2}}
+	&=\myvec{-4&-4}\myvec{-1\\-3}
+	&&=16
+\end{alignat}
+Thus, the perpendicular bisectors are obtained from 
+			\eqref{eq:tri-perp-bisect}
+			as
+		\begin{alignat}{2}
+			\label{eq:tri-perp-bisect-bc}
+			BC&: \quad \myvec{-1&11}\vec{x}&&=9
+\\
+			\label{eq:tri-perp-bisect-ca}
+			CA&: \quad \myvec{5&-7}\vec{x}&&=-25
+\\
+			\label{eq:tri-perp-bisect-ab}
+			AB&: \quad \myvec{1&1}\vec{x}&&=-4
+		\end{alignat}
+
+
+

@@ -1,0 +1,64 @@
+\begin{enumerate}
+	\item
+From
+		\eqref{eq:geo-dir-vec-bc}, 
+the direction vector of side $\vec{BC}$ is
+\begin{align}
+\vec{m}
+	&=\myvec{1\\-11}
+	\\
+\implies \vec{n} &= \myvec{0 & 1\\
+  -1 & 0}\myvec{1\\-11}
+ = \myvec{-11\\-1}
+		\label{eq:geo-norm-vec-bc}
+\end{align}
+from 
+			\eqref{eq:geo-norm-vec}.
+Hence, from 
+			\eqref{eq:geo-normal},
+the normal equation of side $BC$ is 
+\begin{align}
+	\vec{n}^{\top}\brak{	\vec{x}-\vec{B}} &= 0
+			\\
+\implies    \myvec{-11 & -1}\vec{x}&=\myvec{-11 & -1}\myvec{-4\\6}\\
+    \implies
+BC: \quad    \myvec{11 & 1}\vec{x}&=-38
+\end{align}
+\item Similarly, for $AB$,
+from 
+		\eqref{eq:geo-dir-vec-ab}, 
+\begin{align}
+	\vec{m} &= \myvec{-5\\7}
+	\\
+\implies        \vec{n} 
+                &= \myvec{0&1\\-1&0}\myvec{-5\\7}
+                = \myvec{7\\5}
+		\label{eq:geo-norm-vec-ab}
+\end{align}
+and 
+\begin{align}
+	\vec{n}^{\top}\brak{	\vec{x}-\vec{A}} &= 0
+	\\
+	\implies
+                AB: \quad  \vec{n}^{\top}\vec{x} &= \myvec{7&5}\myvec{1\\-1}\\    
+       \implies\myvec{7&5}\vec{x} &= 2
+\end{align}
+\item For 
+$CA$, 
+from 
+		\eqref{eq:geo-dir-vec-ca}, 
+\begin{align}
+\vec{m} &= \myvec{1 \\ 1}
+\\
+		\label{eq:geo-norm-vec-ca}
+\implies \vec{n} 
+&= \myvec{0&1 \\ -1&0}\myvec{1 \\ 1}
+= \myvec{1 \\ -1}\\
+\\
+\implies	\vec{n}^{\top}\brak{	\vec{x}-\vec{C}} &= 0
+\\
+\implies \myvec{1&-1}{\vec{x}} &= \myvec{1&-1}\myvec{-3 \\ -5} 
+= 2 
+\end{align}
+\end{enumerate}
+

@@ -1,0 +1,103 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{gvv-book}
+\usepackage{gvv}
+%\usepackage{styles/front}
+%\usepackage{Wiley-AuthoringTemplate}
+%\usepackage[sectionbib,authoryear]{natbib}% for name-date citation comment the below line
+%\usepackage[sectionbib,numbers]{natbib}% for numbered citation comment the above line
+
+%%********************************************************************%%
+%%       How many levels of section head would you like numbered?     %%
+%% 0= no section numbers, 1= section, 2= section, 3= subsection %%
+\setcounter{secnumdepth}{3}
+%%********************************************************************%%
+%%**********************************************************************%%
+%%     How many levels of section head would you like to appear in the  %%
+%%				Table of Contents?			%%
+%% 0= chapter, 1= section, 2= section, 3= subsection titles.	%%
+\setcounter{tocdepth}{2}
+%%**********************************************************************%%
+
+%\includeonly{ch01}
+\makeindex
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\onecolumn
+
+
+\title{
+	\begin{flushleft}
+	GEOMETRY \\ Through Algebra 
+	\\
+\rule{0.4\columnwidth}{0.4pt}
+\end{flushleft}
+}
+\author{
+\vspace{7cm}
+	\begin{flushleft}
+\includegraphics[width=0.2\columnwidth]{figs/logo.jpg}
+\\
+	\huge G. V. V. Sharma
+	\end{flushleft}
+%\IEEEpubid{\makebox[\columnwidth]{978-1-7281-5966-1/20/\$31.00 ©2020 IEEE \hfill} \hspace{\columnsep}\makebox[\columnwidth]{ }}
+}
+\maketitle
+
+\newpage
+
+\iffalse
+\begin{abstract}
+This paper presents a comprehensive guide to solving geometry problems using algebraic techniques.
+\end{abstract}
+\begin{IEEEkeywords}
+Geometry, Algebra, Trigonometry, Coordinate Geometry, Eigenvalues, Eigenvectors, Matrices
+\end{IEEEkeywords}
+\fi
+
+\tableofcontents
+
+\newpage
+\twocolumn
+
+\iffalse
+\section{Introduction}
+This paper shows how to solve problems in geometry using trigonometry and coordinate geometry. 
+
+\fi
+%\section{Triangle}
+\section{Vectors}
+Consider a triangle with vertices
+		\begin{align}
+			\label{eq:tri-pts}
+			\vec{A} = \myvec{1 \\ -1},\,
+			\vec{B} = \myvec{-4 \\ 6},\,
+			\vec{C} = \myvec{-3 \\ -5}
+		\end{align}
+\input{chapters/triangle/vector}
+\subsection{Median}
+\input{chapters/triangle/median}
+\subsection{Altitude}
+\input{chapters/triangle/altitude}
+\subsection{Perpendicular Bisector}
+\input{chapters/triangle/perp-bisect}
+\subsection{Angle Bisector}
+\input{chapters/triangle/angle-bisect}
+\subsection{Eigenvalues and Eigenvectors}
+\input{chapters/triangle/eigen}
+\section{Matrices}
+\input{chapters/triangle/matrix}
+
+%\section{Quadrilateral}
+%\input{./chapters/exercises/quad_geo_exer}
+
+%\appendices
+
+
+
+\iffalse
+\latexprintindex
+\fi
+
+\end{document}
+

@@ -1,0 +1,24 @@
+\solution
+Let 
+\begin{align}
+\vec{x} &= \vec{B} + k{\vec{m}}\label{eq:8}
+\end{align}
+Substituting \eqref{eq:8} in \eqref{eq:incircle}
+\begin{align}
+  \norm{ \vec{B} + k{\vec{m}}- \vec{I} }^2 &= r^2 \\
+\implies   \brak{\vec{B} + k{\vec{m}}- \vec{I}}^{\top} \brak{\vec{B} + k{\vec{m}}- \vec{I}} &= r^2 
+\\
+	\text{or, }
+	k^2\norm{\vec{m}}^2 +2k{\vec{m}^{\top}}\brak{{\vec{B}-\vec{I}}}+\norm{\vec{B}-\vec{I}}^2 &= 0
+	\label{eq:incircle-disc}
+\end{align}
+It can be easily verified that 
+\begin{align}
+\cbrak{2\vec{m}^{\top}\brak{\vec{B}-\vec{I}}}^2
+= 
+	\norm{\vec{m}}^2\norm{\vec{B}-\vec{I}}^2
+\end{align}
+which implies that the discriminant of 
+	\eqref{eq:incircle-disc}
+	is 0.  Thus, BC intersects the circle at only one point.
+

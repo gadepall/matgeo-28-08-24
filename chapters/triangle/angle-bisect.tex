@@ -1,0 +1,73 @@
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+	\item Let $\vec{D}_3, \vec{E}_3, \vec{F}_3$, be points on $AB, BC$ and $CA$ respectively such that
+		\begin{align}
+			BD_3 = BF_3=m, CD_3 = CE_3=n, AE_3 = AF_3=p.
+		\end{align}
+	Obtain $m,n,p$ in terms of $a,b,c$ obtained in  
+		\probref{prob:side-length}.
+ \\
+ 		\input{solutions/1/5/11/main.tex}
+	\item Using section formula, find 
+		\begin{align}
+			\vec{D}_3 = \frac{m\vec{C}+n\vec{B}}{m+n},\,
+			\vec{E}_3 = \frac{n\vec{A}+p\vec{C}}{n+p},\,
+			\vec{F}_3 = \frac{p\vec{B}+m\vec{A}}{p+m}
+		\end{align}
+	\item Find the circumcentre and circumradius of $\triangle D_3E_3F_3$.  These are the {\em incentre} and {\em inradius} of $\triangle ABC$.
+	\item Draw the circumcircle of $\triangle D_3E_3F_3$.  This is known as the {\em incircle} of $\triangle ABC$.
+		\\
+ 		\input{solutions/1/5/4/main.tex}
+	\item Using 
+    \eqref{eq:angle2d}
+verify that 
+		\begin{align}
+			\angle BAI = \angle CAI.
+		\end{align}
+		$AI$ is the bisector of $\angle A$.  
+	\item Verify that $BI, CI$ are also the angle bisectors of $\triangle ABC$.
+
+		\iffalse
+
+\item Suppose the equations  given by 
+		\begin{align}
+			\label{eq:tri-sides}
+			\vec{n}_i^{\top}\vec{x}=c_i \quad i = 1, 2, 3 
+		\end{align}
+		The equations of the respective angle bisectors are then given by 
+		\begin{align}
+			\frac{\vec{n}_i^{\top}\vec{x}-c_i}{\norm{\vec{n}_i}}
+		=
+	\pm	\frac{\vec{n}_j^{\top}\vec{x}-c_j}{\norm{\vec{n}_j}}
+\quad i \ne j
+		\end{align}
+		Substitute numerical values and find the equations of the angle bisectors of $A, B$ and $C$.
+	\\
+		%\input{solutions/1/5/1/Assignment_1.tex}
+  \input{solutions/1/5/1(1)/main.tex}
+	\item Find the intersection $\vec{I}$ of the angle bisectors of $B$ and $C$.
+	\item Find the distance from $\vec{I}$ to $BC$.  
+  \\
+		\input{solutions/1/5/4/main.tex} 
+	\item Repeat the above exercise for the sides $AB$ and $AC$.
+	This distance is known as the {\em inradius} $r$.
+	\item Draw a circle with center $\vec{I}$ and radius $r$.  $\vec{I}$ is known as the {\em incentre}.
+	\item The equation of the {\em incircle} is given by 
+		\begin{align}
+			\label{eq:incircle}
+			\norm{\vec{x}-\vec{I}}^2 = r^2
+		\end{align}
+		Using the parameteric equation of $BC$, verify that $BC$ intersects the incircle at exactly one point. $BC$ is defined to be a {\em tangent} to the incircle.
+		\\
+		\input{solutions/1/5/7/main.tex}
+	\item Find the {\em point of contact} $\vec{D}_3$ where $BC$ touches the incircle.
+		\\
+		\input{solutions/1/5/8/main.tex}
+
+  \item Find the other points of contact $\vec{E}_3$ and $\vec{F}_3$.
+  \\
+		\input{solutions/1/5/9/main.tex}
+		\fi
+\end{enumerate}
