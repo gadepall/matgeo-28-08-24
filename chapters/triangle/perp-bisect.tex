@@ -1,6 +1,4 @@
-%\renewcommand{\theequation}{\theenumi}
-%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
 
 \item The equation of the perpendicular bisector of $BC$ is
@@ -36,8 +34,16 @@ $\vec{O}$ is known as the circumcentre.\\
 		\begin{align}
 			\vec{P} = \myvec{\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta}
 		\end{align}
-		Find $\theta$ if 
+			where
+\begin{align}
+	\theta = \angle BOC
+\end{align}
+Verify that 
 		\begin{align}
-			\vec{C}-\vec{O}=\vec{P}\brak{\vec{A}-\vec{O}}
+			\vec{B}-\vec{O}=\vec{P}\brak{\vec{C}-\vec{O}}
 		\end{align}
+All codes for this section are available at
+\begin{lstlisting}
+	codes/triangle/perp-bisect.py
+\end{lstlisting}
 \end{enumerate}

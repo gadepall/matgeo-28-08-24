@@ -1,6 +1,7 @@
 #Code by GVV Sharma
 #September 7, 2023
 #Revised October 1, 2023
+#Revised March 16, 2024
 #released under GNU GPL
 #Drawing a triangle given 3 vertices
 #Some calculations 
@@ -65,6 +66,11 @@ c2 = n2.T@B
 n3 = norm_vec(C,A)
 c3 = n3.T@C
 #print(n1,c1,n2,c2,n3,c3)
+
+#Area
+arvec = np.cross(m1[:,0],m3[:,0])
+area = 1/2*LA.norm(arvec)
+print(area)
 
 #Angles
 angA = np.degrees(np.arccos((-m1.T@m3)/(c*b)))

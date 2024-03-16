@@ -67,6 +67,7 @@ def icircle(A,B,C):
   return I,r
 
 
+
 #Incircle points of contact
 '''
 def icontact(A,B,C):

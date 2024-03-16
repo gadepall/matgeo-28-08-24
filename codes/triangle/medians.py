@@ -6,7 +6,7 @@
 
 
 import sys                                          #for path to external scripts
-sys.path.insert(0, '/home/gadepall/github/geometry/codes/CoordGeo')        #path to my scripts
+sys.path.insert(0, '/sdcard/github/matgeo/codes/CoordGeo')        #path to my scripts
 import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
@@ -50,8 +50,8 @@ G = line_intersect(n2,B,n3,C)
 #print(G, (A+B+C)/3)
 
 #Collinearity check
-mat=np.block([1,1,1],[A,G,D]).T
-print(LA.rank(mat))
+mat=np.block([[1,1,1],[A,G,D]]).T
+print(LA.matrix_rank(mat))
 
 #Generating all lines
 x_AD = line_gen(A,D)
@@ -87,7 +87,7 @@ plt.axis('equal')
 
 #if using termux
 plt.savefig('figs/triangle/median.pdf')
-#subprocess.run(shlex.split("termux-open ./figs/tri_sss.pdf"))
+subprocess.run(shlex.split("termux-open figs/triangle/median.pdf"))
 #else
-plt.show()
+#plt.show()
 

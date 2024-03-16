@@ -6,7 +6,7 @@
 
 
 import sys                                          #for path to external scripts
-sys.path.insert(0, '/home/gadepall/github/geometry/codes/CoordGeo')        #path to my scripts
+sys.path.insert(0, '/sdcard/github/matgeo/codes/CoordGeo')        #path to my scripts
 import numpy as np
 import mpmath as mp
 import numpy.linalg as LA
@@ -42,8 +42,15 @@ m2 = dir_vec(A,C)
 m3 = dir_vec(B,C)
 v1 = dir_vec(O,B)
 v2 = dir_vec(O,C)
+angBAC = ang_vec(m1,m2)
+angBOC= 2*mp.pi-ang_vec(v1,v2)
 
-print(ang_vec(m1,m2),2*mp.pi-ang_vec(v1,v2))
+print(angBAC,angBOC)
+
+#Rotation matrix
+theta =-angBOC
+P = rotmat(theta)
+print(v1,P@v2)
 
 #OD perpendicular to BC
 m3 = dir_vec(B,C)
@@ -87,6 +94,6 @@ plt.axis('equal')
 
 #if using termux
 plt.savefig('figs/triangle/perp-bisect.pdf')
-#subprocess.run(shlex.split("termux-open ./figs/tri_sss.pdf"))
+subprocess.run(shlex.split("termux-open figs/triangle/perp-bisect.pdf"))
 #else
-plt.show()
+#plt.show()

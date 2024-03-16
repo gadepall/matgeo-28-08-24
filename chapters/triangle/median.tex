@@ -1,6 +1,4 @@
-%\renewcommand{\theequation}{\theenumi}
-%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
 \item If $\vec{D}$ divides $BC$ in the ratio $k : 1$,
 		\begin{align}
@@ -38,5 +36,10 @@
 		\end{align}
 		The quadrilateral $AFDE$ is defined to be a parallelogram.\\
   		\input{solutions/1/2/7/main.tex}
+All codes for this section are available in 
+\begin{lstlisting}
+	codes/triangle/medians.py
+	codes/triangle/pgm.py
+\end{lstlisting}
   
 \end{enumerate}

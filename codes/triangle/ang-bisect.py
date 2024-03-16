@@ -6,7 +6,7 @@
 
 
 import sys                                          #for path to external scripts
-sys.path.insert(0, '/sdcard/github/geometry/codes/CoordGeo')        #path to my scripts
+sys.path.insert(0, '/sdcard/github/matgeo/codes/CoordGeo')        #path to my scripts
 import numpy as np
 import scipy.linalg as SA
 import mpmath as mp
@@ -101,6 +101,6 @@ plt.axis('equal')
 
 #if using termux
 plt.savefig('figs/triangle/ang-bisect.pdf')
-#subprocess.run(shlex.split("termux-open ./figs/tri_sss.pdf"))
+subprocess.run(shlex.split("termux-open figs/triangle/ang-bisect.pdf"))
 #else
-plt.show()
+#plt.show()
