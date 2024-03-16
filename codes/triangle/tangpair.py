@@ -7,7 +7,7 @@
 #Drawing a pair of tangents to a conic
 
 import sys                                          #for path to external scripts
-sys.path.insert(0, '/home/gadepall/github/geometry/codes/CoordGeo')        #path to my scripts
+sys.path.insert(0, '/sdcard/github/matgeo/codes/CoordGeo')        #path to my scripts
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy import linalg as LA

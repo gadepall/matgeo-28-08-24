@@ -1,5 +1,4 @@
-%\renewcommand{\theequation}{\theenumi}
-%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\numberwithin{equation}{subsection}
 The equation of the incircle is given by 
 		\begin{align}
 			 \label{eq:conic_quad_form}
@@ -8,15 +7,15 @@ The equation of the incircle is given by
 		\end{align}
 		where 
 		\begin{align}
+			 \label{eq:conic_quad_form-params}
 			\vec{V}=\vec{I}, \vec{u}=-\vec{O}, f = \norm{\vec{O}}-r^2,
 		\end{align}
 		$\vec{O}$ being the incentre and $r$ the inradius.  Here $\vec{I}$ is the identity matrix.
-%		\subsection{Vectors}
-%\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
-\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
 \item Compute 
 \begin{align}
+	\label{eq:incircle-disc-Sigma}
 \vec{\Sigma} = 
 \brak{\vec{V}\vec{h}+\vec{u}}
 	  \brak{\vec{V}\vec{h}+\vec{u}}^{\top}
@@ -81,4 +80,9 @@ to the circle in \eqref{eq:conic_quad_form}
 	for $\vec{m}$ in 
 	  \eqref{eq:h-tangents-cond-mPlam}.
   Compute the points of contact. You should get the same points that you obtained in the previous section. 
+
+All codes for this section are available at
+\begin{lstlisting}
+	codes/triangle/tangpair.py
+\end{lstlisting}
 \end{enumerate}

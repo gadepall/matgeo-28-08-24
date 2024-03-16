@@ -1,0 +1,74 @@
+The equation of the {\em incircle} is given by 
+		\begin{align}
+			\label{eq:incircle}
+			\norm{\vec{x}-\vec{O}}^2 = r^2
+		\end{align}
+		which can be expressed as 
+			 \eqref{eq:conic_quad_form}
+			 using 
+			 \eqref{eq:conic_quad_form-params}.
+	In \figref{fig:incircle}, 
+Let 
+  \eqref{eq:line_dir_pt-lam}
+  be the equation of $AB$.  Then, the intersection of 
+  \eqref{eq:line_dir_pt-lam}
+  and 
+			 \eqref{eq:conic_quad_form}
+			 can be expressed as 
+\begin{align}
+\brak{\vec{h} + \mu{\vec{m}}}^{\top}
+\vec{V}
+\brak{\vec{h} + \mu{\vec{m}}}
+			+2\vec{u}^{\top}\brak{\vec{h} + \mu{\vec{m}}}+f &= 0
+			\\
+\implies \mu^2\vec{m}^{\top} \vec{V}\vec{m} + 2\mu \vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}+g\brak{\vec{h}} &= 0 
+	\label{eq:incircle-quad}
+\end{align}
+For 	\eqref{eq:incircle-quad} to have exactly one root, the discriminant
+\begin{align}
+ \cbrak{\vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}}^2 -g\brak{\vec{h}}\vec{m}^{\top} \vec{V}\vec{m}  &= 0 
+	\label{eq:incircle-disc}
+\end{align}
+and 
+  \eqref{eq:line_dir_pt-lam-mu}
+  is obtained.
+	\eqref{eq:incircle-disc}
+	can be expressed as
+\begin{align}
+\vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}\vec{m}-g\brak{\vec{h}}\vec{m}^{\top} \vec{V}\vec{m}  &= 0 
+\\
+\implies \vec{m}^{\top}\vec{\Sigma}\vec{m} &= 0
+	\label{eq:incircle-disc-Sigma-new}
+\end{align}
+for $\vec{\Sigma}$ defined in 
+	\eqref{eq:incircle-disc-Sigma-new}.
+      Substituting \eqref{eq:conic_parmas_eig_def}
+	in \eqref{eq:incircle-disc-Sigma-new},
+\begin{align}
+\vec{m}^{\top}\vec{P}\vec{D}\vec{P}^{\top}\vec{m} &= 0
+\\
+\implies 
+\vec{v}^{\top}\vec{D}\vec{v} &= 0
+	\label{eq:incircle-disc-v}
+\end{align}
+where 
+\begin{align}
+	\label{eq:incircle-disc-v-lam-P}
+\vec{v} = \vec{P}^{\top}\vec{m}
+\end{align}
+	\eqref{eq:incircle-disc-v}
+	can be expressed as 
+\begin{align}
+\lambda_1 v_1^2
+-\lambda_2 v_2^2 &= 0
+\\
+\implies \vec{v} = \myvec{\sqrt{\abs{\lambda_2}} \\[2mm]  \pm \sqrt{\abs{\lambda_1}}}
+	\label{eq:incircle-disc-v-lam}
+\end{align}
+after some algebra.
+From 
+	\eqref{eq:incircle-disc-v-lam}
+	and
+	\eqref{eq:incircle-disc-v-lam-P}
+	we obtain 
+	  \eqref{eq:h-tangents-cond-mPlam}.

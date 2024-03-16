@@ -10,4 +10,5 @@
 \contentsline {subsection}{\numberline {2.2}Median}{10}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Altitude}{10}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Perpendicular Bisector}{10}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Angle Bisector}{10}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Angle Bisector}{11}{subsection.2.5}%
+\contentsline {section}{Appendix\nobreakspace A: Tangents to a Circle}{11}{section*.2}%

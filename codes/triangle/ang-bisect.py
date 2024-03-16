@@ -58,11 +58,9 @@ v1 = dir_vec(O,A)
 v2 = dir_vec(O,B)
 v3 = dir_vec(O,C)
 
-'''
 print(ang_vec(m1,-v1), ang_vec(m3,v1))
 print(ang_vec(m2,-v2), ang_vec(m1,v2))
 print(ang_vec(m3,-v3), ang_vec(m2,v3))
-'''
 
 #Plotting the incircle
 plt.plot(x_circ[0,:],x_circ[1,:],label='$circumcircle$')
