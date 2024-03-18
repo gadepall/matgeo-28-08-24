@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.12.8)  16 MAR 2024 13:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.12.8)  18 MAR 2024 08:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1466,7 +1466,7 @@ Package hyperref Info: Link coloring OFF on input line 24.
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-<figs/logo.jpg, id=63, 642.4pt x 642.4pt>
+<figs/logo.jpg, id=67, 642.4pt x 642.4pt>
 File: figs/logo.jpg Graphic file (type jpg)
 <use figs/logo.jpg>
 Package pdftex.def Info: figs/logo.jpg  used on input line 53.
@@ -1540,7 +1540,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--2
  []
 
 ) (./solutions/1/1/3/main.tex
-<figs/triangle/vector.pdf, id=98, 462.52798pt x 346.89601pt>
+<figs/triangle/vector.pdf, id=103, 462.52798pt x 346.89601pt>
 File: figs/triangle/vector.pdf Graphic file (type pdf)
 <use figs/triangle/vector.pdf>
 Package pdftex.def Info: figs/triangle/vector.pdf  used on input line 57.
@@ -1552,39 +1552,39 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.52 		\end{align}
+l.53 		\end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.52 		\end{align}
+l.53 		\end{align}
                    <./figs/triangle/vector.pdf>] (./solutions/1/1/5/assign1.tex
 ) (./solutions/1/1/6/main.tex) (./solutions/1/1/7/main.tex
-Underfull \hbox (badness 10000) in paragraph at lines 80--2
+Underfull \hbox (badness 10000) in paragraph at lines 81--2
 
  []
 
 )) (./chapters/triangle/median.tex (./solutions/1/2/1/main.tex [4])
 (./solutions/1/2/2/main.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--3
+Underfull \hbox (badness 10000) in paragraph at lines 11--3
 
  []
 
 ) (./solutions/1/2/3/main.tex) (./solutions/1/2/4_1/main.tex)
 (./solutions/1/2/5/main.tex [5]
-<figs/triangle/median.pdf, id=311, 462.52798pt x 346.89601pt>
+<figs/triangle/median.pdf, id=317, 462.52798pt x 346.89601pt>
 File: figs/triangle/median.pdf Graphic file (type pdf)
 <use figs/triangle/median.pdf>
 Package pdftex.def Info: figs/triangle/median.pdf  used on input line 51.
 (pdftex.def)             Requested size: 252.0pt x 189.00429pt.
 ) (./solutions/1/2/6/main.tex)
 (./solutions/1/2/7/main.tex
-Underfull \hbox (badness 10000) in paragraph at lines 36--2
+Underfull \hbox (badness 10000) in paragraph at lines 37--2
 
  []
 
-<figs/triangle/pgm.pdf, id=313, 462.52798pt x 346.89601pt>
+<figs/triangle/pgm.pdf, id=319, 462.52798pt x 346.89601pt>
 File: figs/triangle/pgm.pdf Graphic file (type pdf)
 <use figs/triangle/pgm.pdf>
 Package pdftex.def Info: figs/triangle/pgm.pdf  used on input line 14.
@@ -1613,7 +1613,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--10
 
  []
 
-<figs/triangle/altitude.pdf, id=406, 462.52798pt x 346.89601pt>
+<figs/triangle/altitude.pdf, id=412, 462.52798pt x 346.89601pt>
 File: figs/triangle/altitude.pdf Graphic file (type pdf)
 <use figs/triangle/altitude.pdf>
 Package pdftex.def Info: figs/triangle/altitude.pdf  used on input line 37.
@@ -1627,7 +1627,7 @@ s been already used, duplicate ignored
 l.13 \end{align}
                  <./figs/triangle/altitude.pdf>]) (./solutions/1/4/3/main.tex)
 (./solutions/1/4/5/assignment2.tex
-<figs/triangle/perp-bisect.pdf, id=493, 462.52798pt x 346.89601pt>
+<figs/triangle/perp-bisect.pdf, id=499, 462.52798pt x 346.89601pt>
 File: figs/triangle/perp-bisect.pdf Graphic file (type pdf)
 <use figs/triangle/perp-bisect.pdf>
 Package pdftex.def Info: figs/triangle/perp-bisect.pdf  used on input line 6.
@@ -1645,7 +1645,7 @@ Overfull \hbox (1.55086pt too wide) detected at line 21
  []
 
 ) (./solutions/1/5/4/main.tex
-<figs/triangle/ang-bisect.pdf, id=577, 462.52798pt x 346.89601pt>
+<figs/triangle/ang-bisect.pdf, id=583, 462.52798pt x 346.89601pt>
 File: figs/triangle/ang-bisect.pdf Graphic file (type pdf)
 <use figs/triangle/ang-bisect.pdf>
 Package pdftex.def Info: figs/triangle/ang-bisect.pdf  used on input line 6.
@@ -1663,17 +1663,38 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.62.1
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.144 		\end{align}
-                   ]) (./chapters/triangle/tangent.tex) [11
+                   ]) (./chapters/triangle/line.tex
+(./figs/triangle/tri_med_isect.tex)
+Overfull \hbox (10.0921pt too wide) detected at line 98
+[]
+ []
 
-] (./main.aux)
+(./figs/coord/tri_med_meet.tex) [11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.159   \end{align}
+                   ]
+Overfull \hbox (31.10306pt too wide) detected at line 171
+[]
+ []
+
+) (./chapters/triangle/tangent.tex) [12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.101 \end{document}
+                    ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 95856C17DDE2540CF92464732B0B0956;1730.
+(rerunfilecheck)             Checksum: BE1C3EA53CD57971E4FDF4291CA12D07;1930.
  ) 
 Here is how much of TeX's memory you used:
- 33956 strings out of 476091
- 655393 string characters out of 5794081
+ 34202 strings out of 476091
+ 660021 string characters out of 5794081
  1916330 words of memory out of 5000000
- 53108 multiletter control sequences out of 15000+600000
+ 53290 multiletter control sequences out of 15000+600000
  599068 words of font info for 215 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  116i,21n,110p,1185b,1243s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1685,13 +1706,13 @@ fonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on main.pdf (11 pages, 217197 bytes).
+fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (12 pages, 230962 bytes).
 PDF statistics:
- 856 PDF objects out of 1000 (max. 8388607)
- 675 compressed objects within 7 object streams
- 337 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 954 PDF objects out of 1000 (max. 8388607)
+ 769 compressed objects within 8 object streams
+ 391 named destinations out of 1000 (max. 500000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
