@@ -1,153 +1,52 @@
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
-%
-\iffalse
+\documentclass[journal]{IEEEtran}
 \usepackage{gvv-book}
-\fi
 \usepackage{gvv}
 
+\makeindex
+
 \begin{document}
-%
-
-
 \bibliographystyle{IEEEtran}
-%\bibliographystyle{ieeetr}
+\onecolumn
 
-
-\vspace{3cm}
 
 \title{
-%	\logo{
-Algebraic Approach to School Geometry
-%	}
+	\begin{flushleft}
+	MATRICES \\ In Geometry
+	\\
+\rule{0.4\columnwidth}{0.4pt}
+\end{flushleft}
 }
-\author{ G V V Sharma$^{*}$% <-this % stops a space
-	\thanks{*The author is with the Department
-		of Electrical Engineering, Indian Institute of Technology, Hyderabad
-		502285 India e-mail:  gadepall@iith.ac.in. All content in this manual is released under GNU GPL.  Free and open source.}
-	
-}	
-%\title{
-%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
-%}
-
-
-% paper title
-% can use linebreaks \\ within to get better formatting as desired
-%\title{Matrix Analysis through Octave}
-%
-%
-% author names and IEEE memberships
-% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-% a structure at a ~ so this keeps an author's name from being broken across
-% two lines.
-% use \thanks{} to gain access to the first footnote area
-% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-% was not built to handle multiple paragraphs
-%
-
-%\author{<-this % stops a space
-%\thanks{}}
-%}
-% note the % following the last \IEEEmembership and also \thanks - 
-% these prevent an unwanted space from occurring between the last author name
-% and the end of the author line. i.e., if you had this:
-% 
-% \author{....lastname \thanks{...} \thanks{...} }
-%                     ^------------^------------^----Do not want these spaces!
-%
-% a space would be appended to the last name and could cause every name on that
-% line to be shifted left slightly. This is one of those "LaTeX things". For
-% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
-% "AB" then you have to do: "\textbf{A}\textbf{B}"
-% \thanks is no different in this regard, so shield the last } of each \thanks
-% that ends a line with a % and do not let a space in before the next \thanks.
-% Spaces after \IEEEmembership other than the last one are OK (and needed) as
-% you are supposed to have spaces between the names. For what it is worth,
-% this is a minor point as most people would not even notice if the said evil
-% space somehow managed to creep in.
-
-
-
-% The paper headers
-%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
-%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
-% The only time the second header will appear is for the odd numbered pages
-% after the title page when using the twoside option.
-% 
-% *** Note that you probably will NOT want to include the author's ***
-% *** name in the headers of peer review papers.                   ***
-% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
-% you desire.
-
-
-
-
-% If you want to put a publisher's ID mark on the page you can do it like
-% this:
-%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
-% Remember, if you use this you must call \IEEEpubidadjcol in the second
-% column for its text to clear the IEEEpubid mark.
-
-
-
-% make the title area
+\author{
+\vspace{7cm}
+	\begin{flushleft}
+\includegraphics[width=0.2\columnwidth]{figs/logo.jpg}
+\\
+		{	\huge G. V. V. Sharma}
+		\\
+\vspace{1cm}
+https://creativecommons.org/licenses/by-sa/3.0/
+\\
+and
+\\
+https://www.gnu.org/licenses/fdl-1.3.en.html
+	\end{flushleft}
+%\IEEEpubid{\makebox[\columnwidth]{978-1-7281-5966-1/20/\$31.00 ©2020 IEEE \hfill} \hspace{\columnsep}\makebox[\columnwidth]{ }}
+}
 \maketitle
 
 \newpage
 
+
 \tableofcontents
 
-\bigskip
+\newpage
+\twocolumn
+
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
 
-%\begin{abstract}
-%%\boldmath
-%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
-%
-%\end{abstract}
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the journal you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals frown on math
-% in the abstract anyway.
-
-% Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%Cooperative diversity, decode and forward, piecewise linear
-%\end{IEEEkeywords}
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-%\IEEEpeerreviewmaketitle
-
-\begin{abstract}
-This book introduces high school geometry through a combination of trigonometry and algebra.  The content and exercises are based on  NCERT textbooks from Class 6-12.  A simple introduction to Python and \LaTeX figures is provided in the process.
-\end{abstract}
-
-Download all python codes from 
-%
-\begin{lstlisting}
-svn co https://github.com/gadepall/school/trunk/ncert/geometry/codes
-\end{lstlisting}
-%
-and latex-tikz codes from 
-%
-\begin{lstlisting}
-svn co https://github.com/gadepall/school/trunk/ncert/geometry/figs
-\end{lstlisting}
-%
 
 \section{Vectors}
 %\numberwithin{equation}{section}
@@ -160,37 +59,34 @@ Consider a triangle with vertices
 		\end{align}
 \subsection{Sides}
 \input{chapters/triangle/vector}
+\newpage
 \subsection{Median}
 \input{chapters/triangle/median}
+\newpage
 \subsection{Altitude}
 \input{chapters/triangle/altitude}
+\newpage
 \subsection{Perpendicular Bisector}
 \input{chapters/triangle/perp-bisect}
+\newpage
 \subsection{Angle Bisector}
 \input{chapters/triangle/angle-bisect}
+\newpage
 \subsection{Eigenvalues and Eigenvectors}
 \input{chapters/triangle/eigen}
+\newpage
 \section{Matrices}
 \input{chapters/triangle/matrix}
-
-
+\newpage
+%
 \appendices
 \section{Points on a Line}
 \input{chapters/triangle/line}
+\newpage
 \section{Tangents to a Circle}
 \numberwithin{equation}{section}
 \input{chapters/triangle/tangent}
 
-
-\iffalse
-\section{Baudhayana Theorem}
-\subsection{The Right Angled Triangle}
-\input{./chapters/baudh/tri_geo_rt}
-\subsection{Sum of Angles}
-\input{./chapters/baudh/tri_geo_sum_angle}
-\subsection{Proof of Baudhayana Theorem}
-\input{./chapters/baudh/tri_geo_baudh}
-\fi
 
 
 \end{document}

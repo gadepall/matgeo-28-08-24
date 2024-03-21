@@ -1,36 +1,62 @@
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+\usepackage{siunitx}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{iithtlc}
+\usepackage{mathrsfs}
 \usepackage{txfonts}
-\usepackage{listings}
+\usepackage{stfloats}
+\usepackage{steinmetz}
+%\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
 \usepackage{enumitem}
 \usepackage{mathtools}
-\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
 \usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
-\usepackage{ulem}
-\usepackage{alltt}
-\usepackage[anticlockwise,figuresright]{rotating}
-\usepackage{pstricks}
-\usepackage{wrapfig}
-\usepackage{pstcol,pst-grad}
-\usepackage{bm}
-\usepackage{tabularx}
-\usepackage{ifthen}
-\usepackage{float}
-\usepackage{boites}
-\usepackage{boites_exemples}
-%\usepackage{latexsym}
-%\usepackage[fleqn]{mathtools}
-\usepackage{mathrsfs,makeidx,listings,verbatim,moreverb}
-\usepackage{breakurl}
-\usepackage{steinmetz}
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usetikzlibrary{fadings}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+%\usepackage{enumerate}
 
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
+%\usepackage{wasysym}
+
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -38,7 +64,9 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-
+%\newcounter{MYtempeqncnt}
+%\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
@@ -46,3 +74,4 @@
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
