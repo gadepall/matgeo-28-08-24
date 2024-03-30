@@ -12,4 +12,4 @@
 \contentsline {subsection}{\numberline {2.4}Perpendicular Bisector}{12}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Angle Bisector}{12}{subsection.2.5}%
 \contentsline {section}{Appendix\nobreakspace A: Points on a Line}{12}{section*.8}%
-\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{14}{section*.11}%
+\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{13}{section*.9}%
