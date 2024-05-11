@@ -1,0 +1,555 @@
+\section{$2\times 1$ vectors}
+
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+	\item Mathematically, 
+the projection of $\vec{A}$ on $\vec{B}$ is defined as
+		\begin{align}
+	\vec{C} = k \vec{B},\, \text{such that}
+	\brak{\vec{A}-\vec{C}}^{\top}\vec{C} = 0
+\end{align}
+yielding
+\begin{align}
+	\brak{\vec{A}-k\vec{B}}^{\top}\vec{B} = 0
+	\\
+	\text{or, } k = 
+	\frac{\vec{A}^{\top}\vec{B}}{\norm{\vec{B}}^2}
+	\implies 
+	\vec{C} = 
+	\frac{\vec{A}^{\top}\vec{B}}{\norm{\vec{B}}^2}
+ \vec{B}
+	\label{eq:12/10/3/4/proj}
+\end{align}
+\item If $\vec{A}, \vec{B}$ are unit vectors, 
+\begin{multline}
+	\brak{\vec{A}-\vec{B}}^{\top} 
+	\brak{\vec{A}+\vec{B}} 
+	\\
+\norm{\vec{A}}^2 - \norm{\vec{B}}^2
+	= 0
+	\label{eq:12/10/3/11/unit}
+\end{multline}
+  \item If $ABCD$ be a parallelogram,
+	  \label{prop:two-pgm}
+  \begin{align}
+	  \label{eq:two-pgm}
+ \vec{B}-\vec{A} = \vec{C} -\vec{D}
+  \end{align}
+  \item 
+If $PQRS$ is formed by joining the mid points of $ABCD$, 
+\begin{align}
+  \vec{P} = \frac{1}{2}\brak{\vec{A}+\vec{B}} 
+  ,\,
+ \vec{Q} = \frac{1}{2}\brak{\vec{B}+\vec{C}} 
+ \\
+ \vec{R} = \frac{1}{2}\brak{\vec{C}+\vec{D}}   
+  ,\,
+ \vec{S} = \frac{1}{2}\brak{\vec{D}+\vec{A}}  
+ \\
+	\implies 
+ \vec{P}-\vec{Q} = \vec{S} -\vec{R}.
+  \label{eq:10/7/4/8det2f}
+\end{align}
+Hence, $PQRS$ is a parallelogram
+	  from \eqref{eq:two-pgm}.
+  \item If 
+\begin{align}
+	\vec{A}^{\top}\vec{A} =\vec{I},
+\label{eq:12/10/3/5/inner}
+\end{align}
+		then $	\vec{A}$ is an {\em orthogonal} matrix.
+\end{enumerate}
+\iffalse
+%\begin{enumerate}
+%\numberwithin{equation}{enumi}
+
+\item Let 
+\begin{align}
+  \vec{A} &= \myvec{a_1\\a_2 \\ a_3} \equiv a_1\overrightarrow{i}+a_2\overrightarrow{j}+a_3\overrightarrow{j}, 
+  \\
+  \vec{B} &= \myvec{b_1\\b_2 \\ b_3}, 
+\end{align}
+and 
+\begin{align}
+  \vec{A}_{ij} &= \myvec{a_i\\a_j}, 
+  \\
+  \vec{B}_{ij} &= \myvec{b_i\\b_j}. 
+\end{align}
+
+\item The {\em cross product} or {\em vector product} of $\vec{A}, \vec{B}$ is defined as
+\begin{align}
+  \label{eq:cross3d}
+	\vec{A} \times \vec{B} = \myvec{ \mydet{\vec{A}_{23} & \vec{B}_{23}} \\[10pt] \mydet{\vec{A}_{31} & \vec{B}_{31}} \\[10pt] \mydet{\vec{A}_{12}  & \vec{B}_{12}}}
+\end{align}
+\item Verify that
+\begin{align}
+  \vec{A} \times \vec{B} = -  \vec{B} \times \vec{A} 
+\end{align}
+\item The area of a triangle is given by 
+\begin{align}
+	\frac{1}{2} \norm{  \vec{A} \times \vec{B}}
+\end{align}
+\item (Cauchy-Schwarz Inequality)
+    \begin{align}
+        \label{eq:dot-mag-ineq}
+	    \abs{\vec{a}^\top\vec{b}} &\le \norm{\vec{a}}\norm{\vec{b}}
+    \end{align}
+    \solution
+	\begin{align}
+        \norm{\vec{a}-\frac{\vec{a}^\top\vec{b}}{\norm{\vec{b}}^2}\vec{b}}^2 &\ge 0 \\
+        \implies \norm{\vec{a}}^2 - 2\frac{\brak{\vec{a}^\top\vec{b}}^2}{\norm{\vec{b}}^2} + \frac{\brak{\vec{a}^\top\vec{b}}^2}{\norm{\vec{b}}^2} &\ge 0 \\
+        \implies \norm{\vec{a}}^2 - \frac{\brak{\vec{a}^\top\vec{b}}^2}{\norm{\vec{b}}^2} &\ge 0 \\
+        \implies \norm{\vec{a}}^2\norm{\vec{b}}^2 &\ge \brak{\vec{a}^\top\vec{b}}^2 \\
+    \end{align}
+    yielding
+        \eqref{eq:dot-mag-ineq}.
+\item (Triangle Inequality)
+    \begin{align}
+\norm{\vec{a}+\vec{b}} &\le \norm{\vec{a}}+\norm{\vec{b}}
+        \label{eq:triangle-ineq}
+    \end{align}
+    \solution
+    Using \eqref{eq:dot-mag-ineq},
+    \begin{align}
+        \vec{a}^\top\vec{b} &\le \norm{\vec{a}}\norm{\vec{b}} \\
+\implies        \norm{\vec{a}}^2 + 2\vec{a}^\top\vec{b} + \norm{\vec{b}}^2 &\le \norm{\vec{a}}^2 + 2\norm{\vec{a}}\norm{\vec{b}} + \norm{\vec{b}}^2 \\
+\implies               \norm{\vec{a}+\vec{b}}^2 &\le \brak{\norm{\vec{a}}+\norm{\vec{b}}}^2 
+    \end{align}
+    yielding
+        \eqref{eq:triangle-ineq}.
+\end{enumerate}
+
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\begin{enumerate}[1.]
+%\begin{enumerate}
+%\numberwithin{equation}{enumi}
+\item Let 
+\begin{align}
+  \vec{A} \equiv \overrightarrow{A} &= \myvec{a_1\\a_2} 
+  \\
+  &\equiv a_1\overrightarrow{i}+a_2\overrightarrow{j}, 
+  \\
+  \vec{B} &= \myvec{b_1\\b_2}, 
+\end{align}
+be $2 \times 1$ vectors.
+Then, the determinant of the $2 \times 2$ matrix 
+\begin{align}  
+  \vec{M} = \myvec{\vec{A} & \vec{B}}
+\end{align}
+is defined as
+\begin{align}
+  \label{eq:det2d}
+  \mydet{\vec{M}} &= \mydet{\vec{A} & \vec{B}} 
+  \\
+  &= \mydet{a_1 & b_1\\a_2 & b_2} = a_1b_2 - a_2 b_1
+\end{align}
+%
+\item The value of the cross product of two vectors is given by  
+  \eqref{eq:det2d}.
+\item The area of the triangle with vertices $\vec{A}, \vec{B}, \vec{C}$ is given by 
+	\label{prop:area2d}
+\begin{align}
+  \label{eq:area2d}
+	\frac{1}{2}\norm{\brak{\vec{A}-\vec{B}} \times \brak{\vec{A}-\vec{C}}}
+ = 
+ \frac{1}{2}\norm{\vec{A} \times \vec{B}+\vec{B} \times \vec{C}+\vec{C} \times \vec{A}}
+  \end{align}
+  \item If 
+  \label{prop:area2d-norm}
+\begin{align}
+  \label{eq:area2d-norm}
+	\norm{\vec{A}\times\vec{B}}  &= \norm{\vec{C}\times \vec{D}}, \quad \text{then}
+	\\
+	\vec{A}\times\vec{B}  &= \pm\brak{\vec{C}\times \vec{D}}
+  \end{align}
+  where the sign depends on the orientation of the vectors.
+  \item The median divides the triangle into two triangles of equal area.
+	  \label{prop:two-median-area}
+  \item  The transpose of $\vec{A}$ is defined as
+\begin{align}
+  \label{eq:transpose2d}
+  \vec{A}^{\top}  = \myvec{a_1 & a_2}
+\end{align}
+%
+\item The {\em inner product} or {\em dot product} is defined as
+  \label{prop:dot2d}
+\begin{align}
+  \label{eq:dot2d}
+  \vec{A}^{\top} \vec{B} &\equiv \vec{A} \cdot \vec{B} 
+  \\
+  &= \myvec{a_1 & a_2} \myvec{b_1 \\ b_2}= a_1b_1+a_2b_2 
+\end{align}
+%
+\item {\em norm} of $\vec{A}$ is defined as
+\begin{align}
+  \label{eq:norm2d}
+  \norm{A} &\equiv \mydet{\overrightarrow{A}}
+  \\
+  &= \sqrt{\vec{A}^{\top} \vec{A}}= \sqrt{a_1^2+a_2^2}
+\end{align}
+Thus, 
+\begin{align}
+  \label{eq:norm2d_const}
+  \norm{\lambda \vec{A}} &\equiv \mydet{\lambda\overrightarrow{A}}
+  \\
+  &= \abs{\lambda} \norm{\vec{A}}
+\end{align}
+\item The distance betwen the points $\vec{A}$ and $\vec{B}$ is given by 
+\begin{align}
+  \label{eq:norm2d_dist}
+\norm{\vec{A}-\vec{B}} 
+\end{align}
+\item Let $\vec{x}$ be equidistant from the points $\vec{A}$ and $\vec{B}$.  Then 
+  \begin{align}
+	  \brak{\vec{A}-\vec{B}}^{\top}{\vec{x}} 
+	  =  \frac{\norm{\vec{A}}^2 - \norm{\vec{B}}^2}{2}
+  \label{eq:norm2d_equidist}
+  \end{align}
+  \solution 
+\begin{align}
+	\norm{\vec{x}-\vec{A}} &=
+\norm{\vec{A}-\vec{B}} 
+\\
+	\implies \norm{\vec{x}-\vec{A}}^2 &=
+\norm{\vec{x}-\vec{B}}^2 
+\end{align}
+which can be expressed as 
+\begin{multline}
+%  \label{eq:norm2d_dist}
+	\brak{\vec{x}-\vec{A}}^{\top} \brak{\vec{x}-\vec{A}}=
+	\brak{\vec{x}-\vec{B}}^{\top} 
+\brak{\vec{x}-\vec{B}}
+\\
+	\implies	\norm{\vec{x}}^2-2{\vec{x}}^{\top}\vec{A} + \norm{\vec{A}}^2
+	\\= \norm{\vec{x}}^2-2{\vec{x}}^{\top}\vec{B} + \norm{\vec{B}}^2
+\end{multline}
+which can be simplified to obtain
+  \eqref{eq:norm2d_equidist}.
+\item If $\vec{x}$ lies on the  $x$-axis and is  equidistant from the points $\vec{A}$ and $\vec{B}$, 
+  \begin{align}
+	  \vec{x} &=
+	   x\vec{e}_1
+  \end{align}
+  where 
+  \begin{align}
+	  x &=\frac{\norm{\vec{A}}^2 -\norm{\vec{B}}^2 }{2\brak{\vec{A}-\vec{B}}^{\top }\vec{e}_1
+}
+	  \label{eq:cbse_10_x}
+  \end{align}
+  \solution 
+  From \eqref{eq:norm2d_equidist}.
+  \begin{align}
+	   x\brak{\vec{A}-\vec{B}}^{\top }\vec{e}_1
+		  &=
+	  \frac{\norm{\vec{A}}^2 -\norm{\vec{B}}^2 }{2}
+   \end{align}
+	  yielding \eqref{eq:cbse_10_x}.
+  \item The angle between two vectors is given by 
+    \label{prop:angle2d}
+  \begin{align}
+%    \label{eq:angle2d}
+    \theta = \cos^{-1}\frac{\vec{A}^{\top} \vec{B}}{\norm{A}\norm{B}}
+  \end{align}
+  \item If two vectors are orthogonal (perpendicular), 
+  \begin{align}
+    \label{eq:angle2d_orth}
+\vec{A}^{\top} \vec{B} = 0
+  \end{align}
+  \item For an isoceles triangle $ABC$ ith $AB = AC$, the median $AD \perp BC$.
+    \label{prop:two-isosc}
+%  \begin{align}
+%    \label{eq:two-isosc}
+%\vec{A}^{\top} \vec{B} = 0
+%  \end{align}
+
+  \item The {\em direction vector} of the line joining two points $\vec{A},\vec{B}$ is given by 
+  \begin{align}
+    \label{eq:dir_vec}
+    \vec{m} = \vec{A}-\vec{B}
+  \end{align}
+  \item The points $\vec{A}\vec{A}\vec{A}$
+\item The unit vector in the direction of $\vec{m}$ is defined as
+\begin{align}
+    \frac{\vec{m}}{\norm{\vec{m}}}
+\end{align}
+\item If the direction vector of a line is expressed as 
+		\label{prop:two-dir-vec}
+	\begin{align}
+		\label{eq:two-dir-vec}
+    \vec{m} = \myvec{1\\m},
+\end{align}
+ the $m$ is defined to be the {\em} slope of the line. 
+  \item $AB \parallel CD$ if 
+	  \label{prop:two-par-dir-vec}
+  \begin{align}
+	  \vec{A}- \vec{B}= k\brak{\vec{C}- \vec{D}}
+	  \label{eq:two-par-dir-vec}
+  \end{align}
+  \item The {\em normal vector} to $\vec{m}$ is defined by 
+  \begin{align}
+    \label{eq:normal_vec}
+    \vec{m}^{\top}  \vec{n} = 0
+  \end{align}
+  \item  If
+	  \label{prop:two-orth-para}
+\begin{align}
+	\vec{m}^{\top}  \vec{n}_1 &= 0
+	\\
+	\vec{m}^{\top}  \vec{n}_2 &= 0,
+	\\
+	\vec{n}_1 &\parallel \vec{n}_2
+	  \label{eq:two-orth-para}
+\end{align}
+  \item The point $\vec{P}$ that divides the line segment $AB$ in the ratio $k:1$  is given by 
+
+  \begin{align}
+	  \vec{P}&= \frac{k\vec{B}+ \vec{A}}{k+1}
+%	  \label{eq:section_formula}
+  \end{align}
+\item  The standard basis vectors are defined as 
+	\label{def:matrix-two}
+
+  \begin{align}
+  \vec{e}_1&= \myvec{1\\0}, 
+  \\
+  \vec{e}_2&= \myvec{0\\1}.
+  \end{align}
+  \item Diagonals of a parallelogram bisect each other.
+	  \label{prop:two-pgm-diag-bisect}
+\item The area of the parallelogram with vertices $\vec{A}, \vec{B}, \vec{C}$ and $\vec{D}$ is given by 
+  \label{prop:pgm2d}
+\begin{align}
+  \label{eq:pgm2d}
+	\norm{\brak{\vec{A}-\vec{B}} \times \brak{\vec{A}-\vec{D}}}
+ = 
+ \norm{\vec{A} \times \vec{B}+\vec{B} \times \vec{C}+\vec{C} \times \vec{A}}
+  \end{align}
+  \item Points $\vec{A},\vec{B}$ and $\vec{C}$ form a triangle  if 
+	  \label{prop:two-tri-indep}
+  \begin{align}
+	  p\brak{\vec{A}- \vec{B}} +q\brak{\vec{A} -\vec{C}} &= 0
+	  \\
+	  \label{eq:two-tri-indep}
+	  \text{or, }\brak{p+q}\vec{A}- p\vec{B} -q\vec{C} &= 0
+	  \\
+	  \implies p=0, q=0
+  \end{align}
+  are linearly independent.
+  \item In $\triangle ABC$, if $\vec{D}, \vec{E}$ divide the lines $AB, AC$ in the ratio $k:1$ respectively,  then $DE \parallel BC$.
+	  \label{prop:two-tri-bpt}
+	  \begin{proof}
+		  From 
+	  \eqref{eq:section_formula}, 
+  \begin{align}
+	  \vec{D}&= \frac{k\vec{B}+ \vec{A}}{k+1}
+	  \\
+	  \vec{E}&= \frac{k\vec{C}+ \vec{A}}{k+1}
+	  \\
+	  \implies 
+	  \vec{D}-	  \vec{E}&= \frac{k}{k+1}\brak{\vec{B}- \vec{C}}
+  \end{align}
+  Thus, from 
+		  Appendix \ref{prop:two-dir-vec}, $DE \parallel BC$.
+
+	  \end{proof}
+
+  \item In $\triangle ABC$, if $DE \parallel BC$, $\vec{D}$ and $\vec{E}$ divide the lines $AB, AC$ in the same ratio.  
+	  \label{prop:two-tri-bpt-conv}
+	  \begin{proof}
+If $DE \parallel BC$,
+		  from 
+ \eqref{eq:two-par-dir-vec}
+  \begin{align}
+	  \label{prop:two-tri-bpt-conv-1}
+	  \brak{\vec{B}- \vec{C}} = k\brak{\vec{D}-	  \vec{E}}
+  \end{align}
+Using   
+	  \eqref{eq:section_formula}, 
+let 
+  \begin{align}
+	  \vec{D}&= \frac{k_1\vec{B}+ \vec{A}}{k_1+1}
+	  \\
+	  \vec{E}&= \frac{k_2\vec{C}+ \vec{A}}{k_2+1}
+  \end{align}
+	  Subtituting the above in 
+	  \eqref{prop:two-tri-bpt-conv-1}, after some algebra, we obtain 
+	
+  \begin{align}
+\brak{p+q}\vec{A}- p\vec{B} -q\vec{C} &= 0
+  \end{align}
+  where
+  \begin{align}
+	  p = \frac{1}{k} -  \frac{k_1}{k_1+1},
+	  q = \frac{1}{k} -  \frac{k_1}{k_1+1}
+  \end{align}
+  %
+From 	  
+	  \eqref{eq:two-tri-indep},
+  \begin{align}
+	p = q = 0
+	  \\
+	  \implies k_1 = k_2  = \frac{1}{k-1}
+  \end{align}
+
+	  \end{proof}
+\end{enumerate}
+\section{Eigenvalues and Eigenvectors}
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\begin{enumerate}
+%\numberwithin{equation}{enumi}
+\item The eigenvalue $\lambda$ and the eigenvector $\vec{x}$  for a matrix $\vec{A}$ are defined as, 
+\begin{align}
+  \vec{A} \vec{x} = \lambda \vec{x}
+\end{align}
+\item The eigenvalues are calculated by solving the
+equation
+\begin{align}
+  \label{eq:chareq}
+f\brak{\lambda} = \mydet{\lambda \vec{I}- \vec{A} } =0
+\end{align}
+The above equation is known as the characteristic equation.
+\item According to the Cayley-Hamilton theorem,
+\begin{align}
+	\label{eq:cayley}
+  f(\lambda) = 0 \implies f\brak{\vec{A}} = 0
+\end{align}
+\item The trace of a square  matrix is defined to be the sum of the diagonal elements.
+\begin{align}
+	\label{eq:trace}
+	\text{tr}\brak{\vec{A}}=\sum_{i=1}^{N}a_{ii}.
+\end{align}
+	where $a_{ii}$ is the $i$th diagonal element of the matrix $\vec{A}$. 	
+\item The trace of a matrix is equal to the sum of the eigenvalues
+\begin{align}
+	\label{eq:trace_eig}
+	\text{tr}\brak{\vec{A}}=\sum_{i=1}^{N}\lambda_i
+\end{align}
+
+
+\end{enumerate}
+\section{Determinants}
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\begin{enumerate}
+%\numberwithin{equation}{enumi}
+
+\item Let 
+\begin{align}
+	\vec{A} = \myvec{a_1 & b_1 & c_1  \\ a_2 & b_2 & c_2  \\ a_3 & b_3 & c_3}.
+\end{align}
+be a $3 \times 3$ matrix. 
+Then, 
+\begin{multline}
+	\mydet{\vec{A}} = a_1 \myvec{ b_2 & c_2 \\  b_3 & c_3} - a_2\myvec{ b_1 & c_1 \\  b_3 & c_3 }  \\ + a_3\myvec{a_1 & b_1 \\ a_2 & b_2 }.
+\end{multline}
+\item Let $\lambda_1,\lambda_2, \dots, \lambda_n$ be the eigenvalues of a matrix $\vec{A}$.  Then,   the product of the eigenvalues is equal to the determinant of $\vec{A}$.
+\begin{align}
+	\mydet{\vec{A}} = \prod_{i=1}^{n}\lambda_i
+\end{align}
+%
+\item 
+\begin{align}
+	\mydet{\vec{A}\vec{B}} = \mydet{\vec{A}}\mydet{\vec{B}}
+\end{align}
+\item If $\vec{A}$ be an $n \times n$ matrix, 
+\begin{align}
+	\label{eq:det_kord}
+	\mydet{k\vec{A}} = k^n\mydet{\vec{A}}
+\end{align}
+
+\end{enumerate}
+\section{Rank of a Matrix}
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\begin{enumerate}
+%\numberwithin{equation}{enumi}
+\item The rank of a matrix is defined as the number of linearly independent rows.  This is also known as the row rank.
+\item Row rank = Column rank.
+\item The rank of a matrix is obtained as the number of nonzero rows obtained after row reduction.
+\item An $n \times n$ matrix is invertible if and only if its rank is $n$.
+
+\item Points $\vec{A}, \vec{B}, \vec{C}$ are on a line if 
+\begin{align}
+%  \label{eq:line_rank}
+  \text{rank}\myvec{\vec{A} \\ \vec{B} \\ \vec{C} }  = 1
+\end{align}
+\item Points $\vec{A}, \vec{B}, \vec{C}, \vec{D}$ form a paralelogram if 
+\begin{align}
+%  \label{eq:parallelgm_rank}
+  \text{rank}\myvec{\vec{A} \\ \vec{B} \\ \vec{C} \\ \vec{D}  }  = 1, 
+  \text{rank}\myvec{\vec{A} \\ \vec{B} \\ \vec{C} }  = 2
+\end{align}
+\end{enumerate}
+\section{Inverse of a Matrix}
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\begin{enumerate}
+%\numberwithin{equation}{enumi}
+\item For a $2 \times 2$ matrix 
+\begin{align}
+	\vec{A} = \myvec{a_1 & b_1  \\ a_2 & b_2 },
+\end{align}
+the inverse is given by 
+\begin{align}
+	\vec{A}^{-1} = \frac{1}{\mydet{\vec{A}}}\myvec{b_2 & -b_1  \\ -a_2 & a_1 },
+\end{align}
+\item For higher order matrices, the inverse should be calculated using row operations.
+\end{enumerate}
+\section{Orthogonality}
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\begin{enumerate}
+%\numberwithin{equation}{enumi}
+\item The rotation matrix is defined as 
+\begin{align}
+	\vec{R}_{\theta} = \myvec{\cos \theta & -\sin \theta  \\ \sin \theta  & \cos \theta  }, \quad \theta \in \sbrak{0, 2\pi}
+\end{align}
+\item The rotation matrix is {\em orthogonal}
+\begin{align}
+	\vec{R}_{\theta}^{\top}\vec{R}_{\theta} = \vec{R}_{\theta}\vec{R}_{\theta}^{\top} = \vec{I}
+\end{align}
+\item If the angle of rotation is $\frac{\pi}{2}$,
+	\label{prop:mat/rot/pi/2}
+\begin{align}
+	\vec{m}^{\top}\vec{n} = 0 \implies \vec{n} = \vec{R}_{\frac{\pi}{2}}\vec{m}
+\end{align}
+\item 
+\begin{align}
+	\label{eq:mat-nh}
+	\vec{n}^{\top}\vec{h} = 1 \implies \vec{n} = \frac{\vec{e}_1}{\vec{e}_1^{\top}\vec{h}}+\mu\vec{R}_{\frac{\pi}{2}}\vec{h}, \quad \mu \in \mathbb{R}.
+\end{align}
+
+
+\item
+	The {\em affine} transformation is given by 
+    \begin{align}
+	    \vec{x} &= \vec{P}\vec{y}+\vec{c} \quad \text{(Affine Transformation)}
+\label{eq:conic_affine}
+    \end{align}
+	where $\vec{P}$ is invertible.
+
+\item
+	The eigenvalue decomposition of a symmetric matrix $\vec{V}$ is given by 
+	%\cite{banchoff}
+    \begin{align}
+%      \label{eq:conic_parmas_eig_def}
+      \vec{P}^{\top}\vec{V}\vec{P} &= \vec{D}. \quad \text{(Eigenvalue Decomposition)}
+      \\
+      \vec{D} &= \myvec{\lambda_1 & 0\\ 0 & \lambda_2}, 
+      \\
+      \vec{P} &= \myvec{\vec{p}_1 & \vec{p}_2}, \quad \vec{P}^{\top}=\vec{P}^{-1},
+%      \label{eq:eigevecP}
+    \end{align}
+
+
+\end{enumerate}
+\fi

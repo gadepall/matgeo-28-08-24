@@ -11,5 +11,14 @@
 \contentsline {subsection}{\numberline {2.3}Altitude}{12}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Perpendicular Bisector}{12}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Angle Bisector}{12}{subsection.2.5}%
-\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{12}{section*.8}%
-\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{13}{section*.9}%
+\contentsline {section}{\numberline {3}Length}{12}{section.3}%
+\contentsline {section}{\numberline {4}Direction}{12}{section.4}%
+\contentsline {section}{\numberline {5}Scalar Product}{14}{section.5}%
+\contentsline {section}{\numberline {6}Orthogonality}{16}{section.6}%
+\contentsline {section}{\numberline {7}Miscellaneous}{20}{section.7}%
+\contentsline {section}{\numberline {8}Linear Forms}{20}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Equation of a Line}{20}{subsection.8.1}%
+\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{21}{section*.19}%
+\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{22}{section*.20}%
+\contentsline {section}{Appendix\nobreakspace C: Matrices}{22}{section*.21}%
+\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{22}{section*.22}%

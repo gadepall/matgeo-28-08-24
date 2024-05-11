@@ -51,6 +51,15 @@ columns=fullflexible
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvecf}[2][0pt]{%
+    \ensuremath{%
+        \begin{pmatrix}%
+            \renewcommand{\arraystretch}{1.5}% Adjust default row spacing
+            \def\myvec@rowspacing{#1}% Set row spacing
+            #2%
+        \end{pmatrix}%
+    }%
+}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 	\newcommand{\augvec}[3]{\ensuremath{\begin{amatrix}{#1|#2}#3\end{amatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
