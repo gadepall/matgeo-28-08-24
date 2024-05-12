@@ -15,10 +15,12 @@
 \contentsline {section}{\numberline {4}Direction}{12}{section.4}%
 \contentsline {section}{\numberline {5}Scalar Product}{14}{section.5}%
 \contentsline {section}{\numberline {6}Orthogonality}{16}{section.6}%
-\contentsline {section}{\numberline {7}Miscellaneous}{20}{section.7}%
-\contentsline {section}{\numberline {8}Linear Forms}{20}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Equation of a Line}{20}{subsection.8.1}%
-\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{21}{section*.19}%
-\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{22}{section*.20}%
-\contentsline {section}{Appendix\nobreakspace C: Matrices}{22}{section*.21}%
-\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{22}{section*.22}%
+\contentsline {section}{\numberline {7}Vector Product}{21}{section.7}%
+\contentsline {section}{\numberline {8}Exercises}{24}{section.8}%
+\contentsline {section}{\numberline {9}Miscellaneous}{24}{section.9}%
+\contentsline {section}{\numberline {10}Linear Forms}{24}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Equation of a Line}{24}{subsection.10.1}%
+\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{25}{section*.26}%
+\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{25}{section*.27}%
+\contentsline {section}{Appendix\nobreakspace C: Matrices}{25}{section*.28}%
+\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{25}{section*.29}%
