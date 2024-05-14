@@ -7,21 +7,22 @@
 \contentsline {subsection}{\numberline {1.6}Eigenvalues and Eigenvectors}{11}{subsection.1.6}%
 \contentsline {subsection}{\numberline {1.7}Addition and Subtraction}{11}{subsection.1.7}%
 \contentsline {subsection}{\numberline {1.8}Section Formula}{12}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Length}{16}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}Direction}{17}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Scalar Product}{19}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Orthogonality}{23}{subsection.1.12}%
-\contentsline {subsection}{\numberline {1.13}Vector Product}{27}{subsection.1.13}%
-\contentsline {subsection}{\numberline {1.14}Miscellaneous}{31}{subsection.1.14}%
+\contentsline {subsection}{\numberline {1.9}Rank}{16}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Length}{16}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Direction}{17}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Scalar Product}{19}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Orthogonality}{23}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.14}Vector Product}{28}{subsection.1.14}%
+\contentsline {subsection}{\numberline {1.15}Miscellaneous}{32}{subsection.1.15}%
 \contentsline {section}{\numberline {2}Matrices}{33}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Vectors}{33}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Median}{33}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Altitude}{33}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Perpendicular Bisector}{33}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Angle Bisector}{33}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.3}Altitude}{34}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Perpendicular Bisector}{34}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Angle Bisector}{34}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Linear Forms}{34}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Equation of a Line}{34}{subsection.3.1}%
 \contentsline {section}{Appendix\nobreakspace A: Points on a Line}{35}{section*.48}%
-\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{35}{section*.49}%
-\contentsline {section}{Appendix\nobreakspace C: Matrices}{35}{section*.50}%
-\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{35}{section*.51}%
+\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{36}{section*.49}%
+\contentsline {section}{Appendix\nobreakspace C: Matrices}{36}{section*.50}%
+\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{36}{section*.51}%
