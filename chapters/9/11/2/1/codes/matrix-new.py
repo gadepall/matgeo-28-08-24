@@ -26,12 +26,23 @@ def norm_vec(A,B):
 theta =75* np.pi/180
 a=7
 k=13
-c= 0.5*(k**2-a**2)/(k-a*np.cos(theta))
+e2=np.array(([0,1]))
 C=np.array(([7,0]))
 B=np.array(([0,0]))
+ormat =np.array(([1,1],[1,-1]))
+Dmat=np.array(([k,a**2/k]))
+O =np.array(([1,1],[k,-k+2*a*np.cos(theta)]))
+D=np.array(([k,a**2]))
+P=np.linalg.solve(O,D)
+c=P[1]
 A=np.array(([c*np.cos(theta),c*np.sin(theta)]))
 print(A)
+l=(np.linalg.norm(B-A))
+m=(np.linalg.norm(A-C))                   
+print(round(l+m))
+print(c, cval)
 ##Generating all lines
+'''
 x_BC = line_gen(B,C)
 x_AB = line_gen(A,B)
 x_CA = line_gen(C,A)
@@ -63,3 +74,4 @@ plt.axis('equal')
 #subprocess.run(shlex.split("termux-open  /sdcard/FWC/matrices/matrix.pdf"))
 #else
 plt.show()
+'''
