@@ -1,6 +1,7 @@
 #Code by GVV Sharma
 #December 7, 2019
 #Revised July 15, 2020
+#Revised May 15, 2024
 #released under GNU GPL
 #Functions related to triangle
 
@@ -17,13 +18,31 @@ def tri_sides(A,B,C):
     c = LA.norm(A-B)
     return c,a,b
 
-#Triangle vertices
+#Triangle Construction 
+#a,b,c
 def tri_vert(a,b,c):
   p = (a**2 + c**2-b**2 )/(2*a)
   q = np.sqrt(c**2-p**2)
   A = np.array([p,q]) 
   B = np.array([0,0]) 
   C = np.array([a,0]) 
+  return  A,B,C
+
+#a,b+c,angB given
+def tri_const(a,K,angB):
+  c= 0.5*(K**2-a**2)/(K-a*np.cos(angB))
+  C=np.array(([a,0])).reshape(-1,1)
+  B=np.array(([0,0])).reshape(-1,1)
+  A=np.array(([c*np.cos(angB),c*np.sin(angB)])).reshape(-1,1)
+  return  A,B,C
+
+#a+b+c,angB,angC given
+def tri_const_sum(K,angB,angC):
+  x=LA.solve(np.array(([1,1,1],[-1,np.cos(angC),np.cos(angB)],[0,np.sin(angC),-np.sin(angB)])),K*np.array(([1,0,0])).reshape(-1,1))
+  print(x)
+  C=np.array(([x[0][0],0])).reshape(-1,1)
+  B=np.array(([0,0])).reshape(-1,1)
+  A=np.array(([x[2][0]*np.cos(angB),x[2][0]*np.sin(angB)])).reshape(-1,1)
   return  A,B,C
 
 #Triangle  mid points
