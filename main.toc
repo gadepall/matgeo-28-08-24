@@ -15,14 +15,16 @@
 \contentsline {subsection}{\numberline {1.14}Vector Product}{28}{subsection.1.14}%
 \contentsline {subsection}{\numberline {1.15}Miscellaneous}{32}{subsection.1.15}%
 \contentsline {subsection}{\numberline {1.16}Triangle}{33}{subsection.1.16}%
-\contentsline {section}{\numberline {2}Matrices}{35}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Vectors}{35}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Median}{35}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Altitude}{36}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Perpendicular Bisector}{36}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Angle Bisector}{36}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Linear Forms}{36}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Equation of a Line}{36}{subsection.3.1}%
+\contentsline {section}{\numberline {2} Quadrilateral}{35}{section.2}%
+\contentsline {section}{\numberline {3}Exercises}{35}{section.3}%
+\contentsline {section}{\numberline {4}Matrices}{35}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Vectors}{35}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Median}{35}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Altitude}{36}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Perpendicular Bisector}{36}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Angle Bisector}{36}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Linear Forms}{36}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Equation of a Line}{36}{subsection.5.1}%
 \contentsline {section}{Appendix\nobreakspace A: Points on a Line}{37}{section*.53}%
 \contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{38}{section*.54}%
 \contentsline {section}{Appendix\nobreakspace C: Matrices}{38}{section*.55}%
