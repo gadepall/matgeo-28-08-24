@@ -9,27 +9,27 @@
 \contentsline {subsection}{\numberline {1.8}Section Formula}{12}{subsection.1.8}%
 \contentsline {subsection}{\numberline {1.9}Rank}{16}{subsection.1.9}%
 \contentsline {subsection}{\numberline {1.10}Length}{16}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Direction}{17}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Scalar Product}{19}{subsection.1.12}%
-\contentsline {subsection}{\numberline {1.13}Orthogonality}{23}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.11}Direction}{18}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Scalar Product}{20}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Orthogonality}{24}{subsection.1.13}%
 \contentsline {subsection}{\numberline {1.14}Vector Product}{28}{subsection.1.14}%
 \contentsline {subsection}{\numberline {1.15}Miscellaneous}{32}{subsection.1.15}%
-\contentsline {subsection}{\numberline {1.16}Triangle}{33}{subsection.1.16}%
-\contentsline {section}{\numberline {2} Quadrilateral}{35}{section.2}%
+\contentsline {subsection}{\numberline {1.16}Triangle}{34}{subsection.1.16}%
+\contentsline {section}{\numberline {2} Quadrilateral}{36}{section.2}%
 \contentsline {section}{\numberline {3}Matrices}{36}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Vectors}{36}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Median}{36}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Altitude}{36}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Perpendicular Bisector}{36}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Angle Bisector}{36}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.3}Altitude}{37}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Perpendicular Bisector}{37}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Angle Bisector}{37}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Linear Forms}{37}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Equation of a Line}{37}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Perpendicular}{40}{section.5}%
-\contentsline {section}{\numberline {6}Plane}{40}{section.6}%
-\contentsline {section}{\numberline {7}Miscellaneous }{41}{section.7}%
-\contentsline {section}{\numberline {8}Exemplar}{41}{section.8}%
-\contentsline {section}{\numberline {9}Singular Value Decomposition}{42}{section.9}%
-\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{42}{section*.60}%
-\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{42}{section*.61}%
-\contentsline {section}{Appendix\nobreakspace C: Matrices}{42}{section*.62}%
-\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{42}{section*.63}%
+\contentsline {section}{\numberline {5}Perpendicular}{43}{section.5}%
+\contentsline {section}{\numberline {6}Plane}{44}{section.6}%
+\contentsline {section}{\numberline {7}Miscellaneous }{44}{section.7}%
+\contentsline {section}{\numberline {8}Exemplar}{45}{section.8}%
+\contentsline {section}{\numberline {9}Singular Value Decomposition}{45}{section.9}%
+\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{45}{section*.69}%
+\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{46}{section*.70}%
+\contentsline {section}{Appendix\nobreakspace C: Matrices}{46}{section*.71}%
+\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{46}{section*.72}%
