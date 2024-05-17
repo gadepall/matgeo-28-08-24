@@ -24,12 +24,12 @@
 \contentsline {subsection}{\numberline {3.5}Angle Bisector}{37}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Linear Forms}{37}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Equation of a Line}{37}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Perpendicular}{43}{section.5}%
+\contentsline {section}{\numberline {5}Perpendicular}{44}{section.5}%
 \contentsline {section}{\numberline {6}Plane}{44}{section.6}%
-\contentsline {section}{\numberline {7}Miscellaneous }{44}{section.7}%
+\contentsline {section}{\numberline {7}Miscellaneous }{45}{section.7}%
 \contentsline {section}{\numberline {8}Exemplar}{45}{section.8}%
-\contentsline {section}{\numberline {9}Singular Value Decomposition}{45}{section.9}%
-\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{45}{section*.69}%
-\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{46}{section*.70}%
-\contentsline {section}{Appendix\nobreakspace C: Matrices}{46}{section*.71}%
-\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{46}{section*.72}%
+\contentsline {section}{\numberline {9}Singular Value Decomposition}{46}{section.9}%
+\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{46}{section*.71}%
+\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{46}{section*.72}%
+\contentsline {section}{Appendix\nobreakspace C: Matrices}{46}{section*.73}%
+\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{46}{section*.74}%
