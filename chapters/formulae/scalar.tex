@@ -1,0 +1,58 @@
+\begin{enumerate}[label=\thesubsubsection.\arabic*.,ref=\thesubsubsection.\theenumi]
+	\item Mathematically, 
+the projection of $\vec{A}$ on $\vec{B}$ is defined as
+		\begin{align}
+	\vec{C} = k \vec{B},\, \text{such that}
+	\brak{\vec{A}-\vec{C}}^{\top}\vec{C} = 0
+\end{align}
+yielding
+\begin{align}
+	\brak{\vec{A}-k\vec{B}}^{\top}\vec{B} = 0
+	\\
+	\text{or, } k = 
+	\frac{\vec{A}^{\top}\vec{B}}{\norm{\vec{B}}^2}
+	\implies 
+	\vec{C} = 
+	\frac{\vec{A}^{\top}\vec{B}}{\norm{\vec{B}}^2}
+ \vec{B}
+	\label{eq:12/10/3/4/proj}
+\end{align}
+\item If $\vec{A}, \vec{B}$ are unit vectors, 
+\begin{multline}
+	\brak{\vec{A}-\vec{B}}^{\top} 
+	\brak{\vec{A}+\vec{B}} 
+	\\
+\norm{\vec{A}}^2 - \norm{\vec{B}}^2
+	= 0
+	\label{eq:12/10/3/11/unit}
+\end{multline}
+  \item If $ABCD$ be a parallelogram,
+	  \label{prop:two-pgm}
+  \begin{align}
+	  \label{eq:two-pgm}
+ \vec{B}-\vec{A} = \vec{C} -\vec{D}
+  \end{align}
+  \item 
+If $PQRS$ is formed by joining the mid points of $ABCD$, 
+\begin{align}
+  \vec{P} = \frac{1}{2}\brak{\vec{A}+\vec{B}} 
+  ,\,
+ \vec{Q} = \frac{1}{2}\brak{\vec{B}+\vec{C}} 
+ \\
+ \vec{R} = \frac{1}{2}\brak{\vec{C}+\vec{D}}   
+  ,\,
+ \vec{S} = \frac{1}{2}\brak{\vec{D}+\vec{A}}  
+ \\
+	\implies 
+ \vec{P}-\vec{Q} = \vec{S} -\vec{R}.
+  \label{eq:10/7/4/8det2f}
+\end{align}
+Hence, $PQRS$ is a parallelogram
+	  from \eqref{eq:two-pgm}.
+  \item If 
+\begin{align}
+	\vec{A}^{\top}\vec{A} =\vec{I},
+\label{eq:12/10/3/5/inner}
+\end{align}
+		then $	\vec{A}$ is an {\em orthogonal} matrix.
+\end{enumerate}

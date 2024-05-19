@@ -1,0 +1,52 @@
+\begin{enumerate}[label=\thesubsubsection.\arabic*.,ref=\thesubsubsection.\theenumi]
+\item Let 
+\begin{align}
+  \vec{A} &= \myvec{a_1\\a_2 \\ a_3} \equiv a_1\overrightarrow{i}+a_2\overrightarrow{j}+a_3\overrightarrow{j}, 
+  \\
+  \vec{B} &= \myvec{b_1\\b_2 \\ b_3}, 
+\end{align}
+and 
+\begin{align}
+  \label{eq:cross3d-submat}
+\begin{split}
+  \vec{A}_{ij} &= \myvec{a_i\\a_j}, 
+  \\
+  \vec{B}_{ij} &= \myvec{b_i\\b_j}. 
+\end{split}
+\end{align}
+
+\item The {\em cross product} or {\em vector product} of $\vec{A}, \vec{B}$ is defined as
+\begin{align}
+  \label{eq:cross3d}
+	\vec{A} \times \vec{B} 
+	 = \myvec{ \mydet{\vec{A}_{23} & \vec{B}_{23}} \\[1ex] \mydet{\vec{A}_{31} & \vec{B}_{31}} \\[1ex] \mydet{\vec{A}_{12}  & \vec{B}_{12}}}
+\end{align}
+\item Verify that
+\begin{align}
+  \label{eq:cross3d-commute}
+  \vec{A} \times \vec{B} = -  \vec{B} \times \vec{A} 
+  \\
+  \label{eq:cross3d-same}
+  \vec{A} \times \vec{A} = \vec{0}
+\end{align}
+\item If 
+		\label{prop:lin-dep-cross}
+\begin{align}
+  \vec{A} \times \vec{B} = \vec{0},
+\end{align}
+  $\vec{A}$ and $ \vec{B} $ are linearly independent.
+  \item 
+\begin{align}
+	\label{eq:cross-sin}
+	\norm{ \vec{A} \times \vec{B} }
+	=
+	\norm{\vec{A}} \times 	\norm{\vec{B}} \sin \theta
+\end{align}
+where $\theta$ is the angle between the vectors.
+\item 
+\begin{align}
+	ar\brak{ABCD} = 
+         \frac{1}{2}\brak{\brak{\vec{C}-\vec{A}}\times\brak{\vec{D}-\vec{B}}} \\
+        \label{eq:11/10/1/1area-diag} 
+\end{align}
+\end{enumerate}

@@ -1,0 +1,44 @@
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\item Construct a $\triangle ABC$ given $a, \angle B$ and $K = b+c$.
+		\label{prob:9/11/2/1}
+	\\
+	\solution 
+	Using the cosine formula in  $\triangle ABC$,
+\begin{align}
+	{b}^2&= {a}^2 + {c}^2 - 2ac\cos{B}
+\\
+\implies	(K-c)^2 &= {a}^2 + c^2- 2  a  c\cos{B}
+\\
+\implies
+	c &=
+	\frac{K^2-a^2}{2\brak{K- a  \cos{B}}}
+		\label{eq:9/11/2/1}
+\end{align}
+The coordinates of $\triangle ABC$ can then be expressed as
+\begin{align}
+		\label{eq:9/11/2/1-final}
+	\vec{A}=c\myvec{\cos B \\ \sin B},
+	\vec{B} = \vec{0},
+	\vec{C} =\myvec{a \\ 0}.
+\end{align}
+\item Construct a $\triangle ABC$ given $\angle B, \angle C$ and $K = a+b+c$.
+	\\
+	\solution
+	\begin{align}
+a+b+c &= K \\
+b\cos C + c \cos B -a &=0 \\
+b\sin C - c \sin B &=0
+\end{align}
+resulting in the matrix equation
+\begin{align}
+		\label{eq:9/11/2/4}
+	\myvec{1 & 1 & 1 \\ -1 & \cos C & \cos B  \\ 0 &\sin C & -\sin B } \myvec{a \\ b \\ c} = K \myvec{1 \\ 0 \\ 0}
+\end{align}
+which can be solved to obtain all the sides.  $\triangle ABC$ can then be plotted using
+\begin{align}
+\vec{A} = \myvec{a \\ b},\,
+\vec{B} = \vec{0},\, 
+\vec{C} = \myvec{a \\ 0}
+		\label{eq:9/11/2/4-final}
+\end{align}
+\end{enumerate}

@@ -1,0 +1,74 @@
+\begin{enumerate}[label=\thesubsubsection.\arabic*.,ref=\thesubsubsection.\theenumi]
+\item Let the perpendicular distance from the origin to a line be $p$ and the angle made by the perpendicular with the positive $x$-axis be $\theta$.
+	Then 
+\begin{align}
+	p\myvec{\cos \theta \\ \sin \theta}
+\end{align}
+is a point on the line as well as the normal vector.
+Hence, the equation of the line is 
+\begin{align}
+	p\myvec{\cos \theta & \sin \theta}
+	\cbrak{\vec{x}-p\myvec{\cos \theta \\ \sin \theta}} &= 0
+	\\
+	\implies 
+	\myvec{\cos \theta & \sin \theta}
+	\vec{x} &= p
+\label{eq:chapters/11/10/2/8-final}
+\end{align}
+\item Let $\vec{Q}$ be the foot of the perpendicular from $\vec{P}$
+	to the line
+\begin{align}
+			\label{eq:geo-norm-app}
+    \vec{n}^{\top}  \vec{x} = c
+\end{align}
+From
+			\eqref{eq:geo-param}
+\begin{align}
+			\label{eq:geo-param-app}
+	\vec{Q} = \vec{P} + k\vec{n}
+	\\
+	\implies PQ = \norm{\vec{Q} - \vec{P}}=\abs{k} \norm{\vec{n}}
+			\label{eq:geo-param-app-PQ}
+\end{align}
+is the distance from $\vec{Q}$
+to the line in 
+			\eqref{eq:geo-norm-app}.
+			From \eqref{eq:geo-param-app},
+\begin{align}
+	\vec{n}^{\top}  \vec{Q} = \vec{n}^{\top}  \vec{P} + k\norm{\vec{n}}^2
+	\\
+	\implies \abs{k} = 
+	\frac{\abs{\vec{n}^{\top}\brak{\vec{Q} - \vec{P}}}}{\norm{\vec{n}}^2}
+			\label{eq:geo-param-app-k}
+			\\
+	\implies PQ =\abs{k}  
+		\norm{\vec{n}}	=
+	\frac{\abs{\vec{n}^{\top}\vec{P} - c}}{\norm{\vec{n}}}
+			\label{eq:PQ-final}
+\end{align}
+upon substituting from 
+			\eqref{eq:geo-param-app-PQ}.
+\item The foot of the perpendicular is given by
+\begin{align}
+	\label{eq:11/10/3/4/foot_of_perpendicular}
+	\myvec{\vec{m} & \vec{n}}^\top\vec{Q} &= 
+	   \myvec{
+              \vec{m}^\top\vec{P}\\
+	      c
+	      }
+\end{align}
+\item The distance between the parallel lines 
+\begin{align}
+	\label{eq:parallel_lines}
+	\begin{split}
+		\vec{n}^{\top}\vec{x} &= c_1
+		\\
+		\vec{n}^{\top}\vec{x} &= c_2
+	\end{split}
+\end{align}
+is given by 
+\begin{align}
+	\label{eq:dist_lines_2d}
+	d = \frac{\abs{   c_1-c_2 }}{\norm{\vec{n}}}	
+\end{align}
+\end{enumerate}

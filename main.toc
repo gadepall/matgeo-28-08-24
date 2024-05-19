@@ -1,35 +1,36 @@
-\contentsline {section}{\numberline {1}Vectors}{3}{section.1}%
+\contentsline {section}{\numberline {1}Triangle}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Sides}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Median}{5}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Altitude}{7}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Perpendicular Bisector}{8}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Angle Bisector}{10}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Eigenvalues and Eigenvectors}{11}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Addition and Subtraction}{11}{subsection.1.7}%
-\contentsline {subsection}{\numberline {1.8}Section Formula}{12}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Rank}{16}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}Length}{16}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Direction}{18}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Scalar Product}{20}{subsection.1.12}%
-\contentsline {subsection}{\numberline {1.13}Orthogonality}{24}{subsection.1.13}%
-\contentsline {subsection}{\numberline {1.14}Vector Product}{28}{subsection.1.14}%
-\contentsline {subsection}{\numberline {1.15}Miscellaneous}{32}{subsection.1.15}%
-\contentsline {subsection}{\numberline {1.16}Triangle}{34}{subsection.1.16}%
-\contentsline {section}{\numberline {2} Quadrilateral}{36}{section.2}%
-\contentsline {section}{\numberline {3}Matrices}{36}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Vectors}{36}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Median}{36}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Altitude}{37}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Perpendicular Bisector}{37}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Angle Bisector}{37}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Linear Forms}{37}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Equation of a Line}{37}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Perpendicular}{44}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Plane}{47}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Miscellaneous }{48}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Exemplar}{48}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Singular Value Decomposition}{49}{subsection.4.6}%
-\contentsline {section}{Appendix\nobreakspace A: Points on a Line}{49}{section*.81}%
-\contentsline {section}{Appendix\nobreakspace B: Tangents to a Circle}{49}{section*.82}%
-\contentsline {section}{Appendix\nobreakspace C: Matrices}{49}{section*.83}%
-\contentsline {section}{Appendix\nobreakspace D: $2\times 1$ vectors}{49}{section*.84}%
+\contentsline {subsection}{\numberline {1.2}Formulae}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Median}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Altitude}{7}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Perpendicular Bisector}{8}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Angle Bisector}{9}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Eigenvalues and Eigenvectors}{10}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Formulae}{10}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Matrices}{11}{subsection.1.9}%
+\contentsline {section}{\numberline {2}Vectors}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Addition and Subtraction}{12}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Section Formula}{12}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Rank}{16}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Length}{17}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Direction}{17}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Scalar Product}{19}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Formulae}{23}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Orthogonality}{23}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Vector Product}{28}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Formulae}{32}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}Miscellaneous}{32}{subsection.2.11}%
+\contentsline {section}{\numberline {3}Constructions}{34}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Triangle}{34}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Quadrilateral}{35}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Formulae}{35}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Linear Forms}{36}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Equation of a Line}{36}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Perpendicular}{42}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Formulae}{45}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Plane}{46}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Formulae}{47}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Miscellaneous }{47}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Exemplar}{47}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Singular Value Decomposition}{47}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Formulae}{47}{subsection.4.9}%
