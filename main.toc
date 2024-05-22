@@ -30,6 +30,7 @@
 \contentsline {subsection}{\numberline {4.3}Formulae}{46}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Plane}{46}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Miscellaneous }{48}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Exemplar}{51}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Singular Value Decomposition}{51}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Formulae}{51}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.6}Formulae}{51}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Exemplar}{51}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Singular Value Decomposition}{51}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Formulae}{51}{subsection.4.9}%
