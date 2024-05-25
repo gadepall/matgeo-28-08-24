@@ -27,11 +27,11 @@
 \contentsline {section}{\numberline {4}Linear Forms}{36}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Equation }{36}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Parallel}{40}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Perpendicular}{41}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Formulae}{47}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Angle}{47}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Intersection}{48}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Miscellaneous }{50}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.3}Perpendicular}{42}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Formulae}{48}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Angle}{49}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Intersection}{49}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Miscellaneous }{52}{subsection.4.7}%
 \contentsline {subsection}{\numberline {4.8}Formulae}{54}{subsection.4.8}%
 \contentsline {subsection}{\numberline {4.9}Exemplar}{54}{subsection.4.9}%
 \contentsline {subsection}{\numberline {4.10}Singular Value Decomposition}{54}{subsection.4.10}%
