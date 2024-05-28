@@ -33,6 +33,5 @@
 \contentsline {subsection}{\numberline {4.6}Intersection}{49}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Miscellaneous }{52}{subsection.4.7}%
 \contentsline {subsection}{\numberline {4.8}Formulae}{53}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Exemplar}{54}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}Singular Value Decomposition}{54}{subsection.4.10}%
-\contentsline {subsection}{\numberline {4.11}Formulae}{54}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.9}Singular Value Decomposition}{53}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Formulae}{54}{subsection.4.10}%
