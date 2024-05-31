@@ -8,7 +8,7 @@
 L_2: \quad        
 	\vec{x} &= \vec{B}  + \kappa_2\vec{m_2} 
 \end{split}
-	    \label{eq:chapters/12/11/2/16/svd/L1L2}
+	    \label{eq:chapters/12/11/2/16/lsq/L1L2}
 \end{align}
 will intersect if 
 \begin{align}
@@ -16,11 +16,17 @@ will intersect if
 = \vec{B}  + \kappa_2\vec{m_2} 
 \\
 \implies 
-	 \vec{B}-\vec{A}=
  \myvec{\vec{m_1} & \vec{m_2}}\myvec{\kappa_1\\-\kappa_2}
+	 =\vec{B}-\vec{A}
  \\
-	\implies \rank\cbrak{\vec{M} = 
-	\myvec{\vec{m_1} & \vec{m_2}}} = 2
+	\implies \rank\myvec{\vec{M}  
+	& \vec{B}-\vec{A}} = 2 
+	    \label{eq:chapters/12/11/2/16/lsq/rank}
+\end{align}
+where
+\begin{align}
+	\vec{M} = 
+	\myvec{\vec{m_1} & \vec{m_2}} 
 \end{align}
 \item If $L_1, L_2$, do not intersect, let 
 \begin{align}
@@ -29,17 +35,17 @@ will intersect if
 	\\
 	\vec{x}_2 &= \vec{B}  + \kappa_2\vec{m_2} 
 \end{split}
-	    \label{eq:chapters/12/11/2/16/svd/x1x2}
+	    \label{eq:chapters/12/11/2/16/lsq/x1x2}
 \end{align}
 be points on 
 $L_1, L_2$ respectively, that are closest to each other.
 Then, 
-	    from \eqref{eq:chapters/12/11/2/16/svd/x1x2}
+	    from \eqref{eq:chapters/12/11/2/16/lsq/x1x2}
 \begin{align}
 \vec{x_1} - \vec{x_2} =
 	 \vec{A}-\vec{B}+
  \myvec{\vec{m_1} & \vec{m_2}}\myvec{\kappa_1\\-\kappa_2}
-	\label{eq:chapters/12/11/2/16/svd/x-diff}
+	\label{eq:chapters/12/11/2/16/lsq/x-diff}
 \end{align}
 Also, 
     \begin{align}
@@ -56,14 +62,14 @@ Also,
 	    \implies \vec{M}^\top
 	    \brak{\vec{A}-\vec{B}}+
  \vec{M}^\top\vec{M}\myvec{\kappa_1\\-\kappa_2} = \vec{0}
-	    \label{eq:chapters/12/11/2/16/svd/m-orth}
+	    \label{eq:chapters/12/11/2/16/lsq/m-orth}
     \end{align}
 	    from 
-	\eqref{eq:chapters/12/11/2/16/svd/x-diff},
+	\eqref{eq:chapters/12/11/2/16/lsq/x-diff},
 	yielding
     \begin{align}
 	    \vec{M}^\top\vec{M}\myvec{\kappa_1\\-\kappa_2} = \vec{M}^\top\brak{\vec{B}-\vec{A}}
-        \label{eq:chapters/12/11/2/16/svd/vec-eqn}
+        \label{eq:chapters/12/11/2/16/lsq/vec-eqn}
     \end{align}
     This is known as the {\em least squares solution}.
 \end{enumerate}
