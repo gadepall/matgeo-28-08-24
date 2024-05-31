@@ -33,5 +33,8 @@
 \contentsline {subsection}{\numberline {4.6}Intersection}{49}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Miscellaneous }{52}{subsection.4.7}%
 \contentsline {subsection}{\numberline {4.8}Formulae}{53}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Singular Value Decomposition}{53}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}Formulae}{54}{subsection.4.10}%
+\contentsline {section}{\numberline {5}Skew Lines}{54}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Least Squares}{54}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Formulae}{55}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Singular Value Decomposition}{55}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Formulae}{55}{subsection.5.4}%

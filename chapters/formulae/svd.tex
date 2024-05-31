@@ -1,0 +1,24 @@
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+	\item    We use singular value decomposition here. Let
+    \begin{align}
+        \vec{M} = \vec{U\Sigma V}^\top
+        \label{eq:chapters/12/11/2/16/svd/M-svd}
+    \end{align}
+    where $\vec{U}, \vec{V}$ are orthogonal and $\vec{\Sigma}$ is diagonal with
+    nonnegative diagonal entries. Substituting in \eqref{eq:chapters/12/11/2/16/svd/vec-eqn},
+    \begin{align}
+        \vec{V\Sigma U}^\top\vec{U\Sigma V}^\top\vec{\kappa} = \vec{V\Sigma U}^\top\vec{x} \\
+        \implies \vec{V\Sigma}^2\vec{V}^\top\vec{\kappa} = \vec{V\Sigma U}^\top\vec{x} \\
+        \implies \vec{\kappa} = \brak{\vec{V\Sigma}^2\vec{V}^\top}^{-1}\vec{V\Sigma U}^\top\vec{x} \\
+        \implies \vec{\kappa} = \vec{V\Sigma}^{-2}\vec{V}^\top\vec{V\Sigma U}^\top\vec{x} \\
+        \implies \vec{\kappa} = \vec{V\Sigma}^{-1}\vec{U}^\top\vec{x} \label{eq:chapters/12/11/2/16/svd/kappa-sol}
+    \end{align}
+    where $\vec{\Sigma}^{-1}$ is obtained by inverting the nonzero elements of
+    $\vec{\Sigma}$. Thus, the shortest distance is given by using \eqref{eq:chapters/12/11/2/16/svd/M-svd}
+    and \eqref{eq:chapters/12/11/2/16/svd/kappa-sol} in \eqref{eq:chapters/12/11/2/16/svd/f-def}, and is given by
+    \begin{align}
+        d = \norm{\brak{\vec{U}\brak{\vec{\Sigma\Sigma}^{-1}}\vec{U}^\top-\vec{I}}\vec{x}}
+        \label{eq:chapters/12/11/2/16/svd/min-sol}
+    \end{align}
+\end{enumerate}
