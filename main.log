@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  31 MAY 2024 21:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  1 JUN 2024 08:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3137,19 +3137,80 @@ File: chapters/12/11/2/15/figs/Figure_1.png Graphic file (type png)
 Package pdftex.def Info: chapters/12/11/2/15/figs/Figure_1.png  used on input l
 ine 44.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-)) (./chapters/formulae/lsq.tex [54 <./chapters/12/11/2/15/figs/Figure_1.png>])
- (./chapters/formulae/svd.tex
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `eq:chapters/12/11/2/16/svd/vec-eqn' on page 55 undefi
+
+(./chapters/12/11/2/16/lsq/lsq.tex
+<chapters/12/11/2/16/lsq/figs/skew.png, id=3678, 462.528pt x 346.896pt>
+File: chapters/12/11/2/16/lsq/figs/skew.png Graphic file (type png)
+<use chapters/12/11/2/16/lsq/figs/skew.png>
+Package pdftex.def Info: chapters/12/11/2/16/lsq/figs/skew.png  used on input l
+ine 32.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+) [54 <./chapters/12/11/2/15/figs/Figure_1.png>]) (./chapters/formulae/lsq.tex)
+ (./chapters/svd/svd.tex
+(./chapters/12/11/2/16/svd/main.tex
+Underfull \hbox (badness 2150) in paragraph at lines 26--29
+\OT1/txr/m/n/10 For $\OML/txmi/m/it/10 ^^U[]$\OT1/txr/m/n/10 , the aug-mented m
+a-trix formed from the
+ []
+
+[55 <./chapters/12/11/2/16/lsq/figs/skew.png>]
+Underfull \hbox (badness 2150) in paragraph at lines 39--42
+\OT1/txr/m/n/10 For $\OML/txmi/m/it/10 ^^U[]$\OT1/txr/m/n/10 , the aug-mented m
+a-trix formed from the
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 51--54
+\OT1/txr/m/n/10 For $\OML/txmi/m/it/10 ^^U[]$\OT1/txr/m/n/10 , the aug-mented m
+a-trix formed from the
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 81--84
+\OT1/txr/m/n/10 For $\OML/txmi/m/it/10 ^^U[]$\OT1/txr/m/n/10 , the aug-mented m
+a-trix formed from the
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 90--93
+\OT1/txr/m/n/10 For $\OML/txmi/m/it/10 ^^U[]$\OT1/txr/m/n/10 , the aug-mented m
+a-trix formed from the
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+
+LaTeX Warning: Reference `eq:chapters/12/11/2/16/svd/lambda-sol' on page 57 und
+efined on input line 113.
+
+<chapters/12/11/2/16/svd/figs/skew_svd.png, id=3780, 462.528pt x 346.896pt>
+File: chapters/12/11/2/16/svd/figs/skew_svd.png Graphic file (type png)
+<use chapters/12/11/2/16/svd/figs/skew_svd.png>
+Package pdftex.def Info: chapters/12/11/2/16/svd/figs/skew_svd.png  used on inp
+ut line 125.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+)
+Underfull \vbox (badness 1975) has occurred while \output is active []
+
+)
+(./chapters/formulae/svd.tex
+
+LaTeX Warning: Reference `eq:chapters/12/11/2/16/svd/vec-eqn' on page 57 undefi
 ned on input line 9.
 
 
-LaTeX Warning: Reference `eq:chapters/12/11/2/16/svd/f-def' on page 55 undefine
+LaTeX Warning: Reference `eq:chapters/12/11/2/16/svd/f-def' on page 57 undefine
 d on input line 19.
 
-) [55
-
-] (./main.aux)
+) [57 <./chapters/12/11/2/16/svd/figs/skew_svd.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -3162,10 +3223,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 80DD7D500887780CAB3490A6ABD7E49E;4531.
  ) 
 Here is how much of TeX's memory you used:
- 56600 strings out of 474104
- 1355946 string characters out of 5729886
- 1994493 words of memory out of 5000000
- 75744 multiletter control sequences out of 15000+600000
+ 56700 strings out of 474104
+ 1358287 string characters out of 5729886
+ 1996493 words of memory out of 5000000
+ 75776 multiletter control sequences out of 15000+600000
  632333 words of font info for 183 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,21n,109p,1194b,1663s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3186,10 +3247,10 @@ ype1/public/txfonts/txsya.pfb></data/data/com.termux/files/usr/share/texlive/20
 /com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on main.pdf (55 pages, 1831465 bytes).
+Output written on main.pdf (57 pages, 3127647 bytes).
 PDF statistics:
- 4175 PDF objects out of 4296 (max. 8388607)
- 3118 compressed objects within 32 object streams
- 1845 named destinations out of 2073 (max. 500000)
- 834 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4265 PDF objects out of 4296 (max. 8388607)
+ 3201 compressed objects within 33 object streams
+ 1905 named destinations out of 2073 (max. 500000)
+ 844 words of extra memory for PDF output out of 10000 (max. 10000000)
 
