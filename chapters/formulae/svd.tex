@@ -1,24 +1,65 @@
-%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
 \begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
-	\item    We use singular value decomposition here. Let
+	\item Perform the eigendecompositions 
     \begin{align}
-        \vec{M} = \vec{U\Sigma V}^\top
+	    \vec{MM}^\top &= \vec{U}\vec{D}_1\vec{U}^\top \label{eq:chapters/12/11/2/16/svd/decomp-1} \\
+	    \vec{M}^\top\vec{M} &= \vec{V}\vec{D}_2\vec{V}^\top \label{eq:chapters/12/11/2/16/svd/decomp-2}
+    \end{align}
+	\item    The following expression is known as {\em singular value decomposition}
+    \begin{align}
+        \vec{M} = 
+	\vec{U}\vec{\Sigma}\vec{V}^\top
         \label{eq:chapters/12/11/2/16/svd/M-svd}
     \end{align}
-    where $\vec{U}, \vec{V}$ are orthogonal and $\vec{\Sigma}$ is diagonal with
-    nonnegative diagonal entries. Substituting in \eqref{eq:chapters/12/11/2/16/svd/vec-eqn},
-    \begin{align}
-        \vec{V\Sigma U}^\top\vec{U\Sigma V}^\top\vec{\kappa} = \vec{V\Sigma U}^\top\vec{x} \\
-        \implies \vec{V\Sigma}^2\vec{V}^\top\vec{\kappa} = \vec{V\Sigma U}^\top\vec{x} \\
-        \implies \vec{\kappa} = \brak{\vec{V\Sigma}^2\vec{V}^\top}^{-1}\vec{V\Sigma U}^\top\vec{x} \\
-        \implies \vec{\kappa} = \vec{V\Sigma}^{-2}\vec{V}^\top\vec{V\Sigma U}^\top\vec{x} \\
-        \implies \vec{\kappa} = \vec{V\Sigma}^{-1}\vec{U}^\top\vec{x} \label{eq:chapters/12/11/2/16/svd/kappa-sol}
-    \end{align}
+    where $\vec{\Sigma}$ is diagonal with
+    entries obtained as in 
+        \eqref{eq:chapters/12/11/2/16/svd/svd-params}.
+ Substituting in 
+        \eqref{eq:chapters/12/11/2/16/lsq/vec-eqn},
+	\begin{align}
+\vec{V}\vec{\Sigma}\vec{U}^\top\vec{U}\vec{\Sigma}\vec{V}^\top\bm{\kappa} &= \vec{V}\vec{\Sigma}\vec{U}^\top\brak{\vec{B}-\vec{A}} \\
+\implies \vec{V}\vec{\Sigma}^2\vec{V}^\top\bm{\kappa} &= \vec{V}\vec{\Sigma}\vec{U}^\top\brak{\vec{B}-\vec{A}} \\
+\implies \bm{\kappa} &= \brak{\vec{V}\vec{\Sigma}^2\vec{V}^\top}^{-1}\vec{V}\vec{\Sigma}\vec{U}^\top\brak{\vec{B}-\vec{A}} \\
+\implies \bm{\kappa} &= \vec{V}\vec{\Sigma}^{-2}\vec{V}^\top\vec{V}\vec{\Sigma}\vec{U}^\top\brak{\vec{B}-\vec{A}} \\
+\implies \bm{\kappa} &= \vec{V}\vec{\Sigma}^{-1}\vec{U}^\top\brak{\vec{B}-\vec{A}}
+\label{eq:chapters/12/11/2/16/svd/kappa-sol}
+\end{align}
     where $\vec{\Sigma}^{-1}$ is obtained by inverting the nonzero elements of
-    $\vec{\Sigma}$. Thus, the shortest distance is given by using \eqref{eq:chapters/12/11/2/16/svd/M-svd}
-    and \eqref{eq:chapters/12/11/2/16/svd/kappa-sol} in \eqref{eq:chapters/12/11/2/16/svd/f-def}, and is given by
+    $\vec{\Sigma}$. 
+		\item 
+	    From \eqref{eq:chapters/12/11/2/16/lsq/x1x2}, 
+\begin{align}
+	\vec{x}_1-\vec{x}_2 &= 
+	\vec{A}+ \kappa_1\vec{m_1}
+	 -\vec{B}  - \kappa_2\vec{m_2} 
+	 \\
+	 &=
+	\vec{A} 
+	 -\vec{B}  + \vec{M} 
+	\bm{\kappa}
+\end{align}
+which, upon substitution from 
+        \eqref{eq:chapters/12/11/2/16/svd/M-svd}
+	yields
+\begin{align}
+	\vec{x}_1-\vec{x}_2 &= 
+	\vec{A} 
+	 -\vec{B}  + 
+\vec{U}\vec{\Sigma}\vec{V}^\top
+\vec{V}\vec{\Sigma}^{-1}\vec{U}^\top\brak{\vec{B}-\vec{A}}
+\\
+	&=
+	\brak{	\vec{A} 
+	 -\vec{B}}  \brak{\vec{I}- 
+\vec{U}\vec{\Sigma}
+	\vec{\Sigma}^{-1}\vec{U}^\top}
+\end{align}
+			Thus, 
     \begin{align}
-        d = \norm{\brak{\vec{U}\brak{\vec{\Sigma\Sigma}^{-1}}\vec{U}^\top-\vec{I}}\vec{x}}
+	    \norm{\vec{x}_1-\vec{x}_2} = 
+	\norm{\brak{	\vec{A} 
+	 -\vec{B}}  \brak{\vec{I}- 
+\vec{U}\vec{\Sigma}
+	    \vec{\Sigma}^{-1}\vec{U}^\top}}
         \label{eq:chapters/12/11/2/16/svd/min-sol}
     \end{align}
 \end{enumerate}
