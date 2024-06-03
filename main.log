@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  2 JUN 2024 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  3 JUN 2024 09:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1604,11 +1604,7 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 7
 (/data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/tex/latex/txfont
 s/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-) (./main.aux
-
-LaTeX Warning: Label `chapters/11/11/1/5' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 7.
@@ -3305,10 +3301,56 @@ File: chapters/11/11/1/4/figs/circ.png Graphic file (type png)
 Package pdftex.def Info: chapters/11/11/1/4/figs/circ.png  used on input line 2
 1.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-)) (./chapters/formulae/circle.tex
+) (./chapters/11/11/1/6/circle.tex
+<chapters/11/11/1/6/figs/fig.pdf, id=4080, 462.52798pt x 346.89601pt>
+File: chapters/11/11/1/6/figs/fig.pdf Graphic file (type pdf)
+<use chapters/11/11/1/6/figs/fig.pdf>
+Package pdftex.def Info: chapters/11/11/1/6/figs/fig.pdf  used on input line 13
+.
+(pdftex.def)             Requested size: 252.0pt x 189.00429pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./chapters/11/11/1/7/circle.tex
+<chapters/11/11/1/7/figs/circle.png, id=4082, 462.528pt x 346.896pt>
+File: chapters/11/11/1/7/figs/circle.png Graphic file (type png)
+<use chapters/11/11/1/7/figs/circle.png>
+Package pdftex.def Info: chapters/11/11/1/7/figs/circle.png  used on input line
+ 16.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+) (./chapters/11/11/1/8/circle.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62 <./chapters/11/11/1/4/figs/circ.png>]
+<chapters/11/11/1/8/figs/11.1.8.png, id=4084, 462.528pt x 346.896pt>
+File: chapters/11/11/1/8/figs/11.1.8.png Graphic file (type png)
+<use chapters/11/11/1/8/figs/11.1.8.png>
+Package pdftex.def Info: chapters/11/11/1/8/figs/11.1.8.png  used on input line
+ 13.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./chapters/11/11/1/9/circle.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62 <./chapters/11/11/1/4/figs/circ.png> <./chapters/11/11/1/6/figs/fig.pdf> <
+./chapters/11/11/1/7/figs/circle.png>]
+<chapters/11/11/1/9/figs/fig.png, id=4147, 462.528pt x 346.896pt>
+File: chapters/11/11/1/9/figs/fig.png Graphic file (type png)
+<use chapters/11/11/1/9/figs/fig.png>
+Package pdftex.def Info: chapters/11/11/1/9/figs/fig.png  used on input line 18
+.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+)) (./chapters/formulae/circle.tex
+Underfull \vbox (badness 1292) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63 <./chapters/11/11/1/8/figs/11.1.8.png> <./chapters/11/11/1/9/figs/fig.png>
+]
 Overfull \hbox (52.54604pt too wide) detected at line 153
 []
  []
@@ -3318,23 +3360,20 @@ Overfull \hbox (30.47725pt too wide) detected at line 202
 []
  []
 
-) (./chapters/circles/examples/misc.tex) [63] (./main.aux)
+) (./chapters/circles/examples/misc.tex (./chapters/11/11/1/5/circle.tex))
+[64] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: CA0BD9FE7A9F7315BC8A7DD489B1476B;4924.
  ) 
 Here is how much of TeX's memory you used:
- 57083 strings out of 474104
- 1368103 string characters out of 5729886
+ 57162 strings out of 474104
+ 1370577 string characters out of 5729886
  1998493 words of memory out of 5000000
- 75970 multiletter control sequences out of 15000+600000
+ 76018 multiletter control sequences out of 15000+600000
  632333 words of font info for 183 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,22n,109p,1194b,1663s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3355,10 +3394,10 @@ ype1/public/txfonts/txsya.pfb></data/data/com.termux/files/usr/share/texlive/20
 /com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on main.pdf (63 pages, 3421870 bytes).
+Output written on main.pdf (64 pages, 3494796 bytes).
 PDF statistics:
- 4627 PDF objects out of 5155 (max. 8388607)
- 3478 compressed objects within 35 object streams
- 2047 named destinations out of 2073 (max. 500000)
- 926 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4695 PDF objects out of 5155 (max. 8388607)
+ 3513 compressed objects within 36 object streams
+ 2063 named destinations out of 2073 (max. 500000)
+ 946 words of extra memory for PDF output out of 10000 (max. 10000000)
 
