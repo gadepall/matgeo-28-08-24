@@ -1,0 +1,52 @@
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+	\item 
+The affine transformation is given by 
+\begin{align}
+	\label{eq:conic_affine}
+	\vec{x} = \vec{P}^{\top}\vec{y}+\vec{c}
+\end{align}
+where 
+\begin{align}
+\vec{P} =
+\myvec{
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta 
+}
+\end{align}
+is the rotation matrix and $\vec{c}$ is the translation vector.
+\item Given vertices $\vec{A}, \vec{C}$ of a square, the other two vertices are given by
+\begin{align}
+\begin{split}
+	\vec{B} = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{P}^{\top}\vec{e}_1+\vec{A}
+	\\
+	\vec{D} = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{P}^{\top}\vec{e}_2+\vec{A}
+\end{split}
+	\label{eq:affine-square-bd}
+\end{align}
+%-c}}{\norm{\vec{n}}}\vec{n}
+	\\
+		\solution Shifting $\vec{A}$ to the origin and rotating the square clockwise by an angle $\phi$ made by $CA$ with the $x$-axis,
+	from \eqref{eq:conic_affine},
+\begin{align}
+\vec{A} = \vec{P}\vec{0}+\vec{c}
+\\
+\implies 
+\vec{c} = \vec{A}
+\\
+	\theta =  \phi -\frac{\pi}{4} 
+\end{align}
+and we obtain a square with the other vertices as
+\begin{align}
+\begin{split}
+	\vec{B}_1 = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{e}_1
+	\\
+	\vec{D}_1 = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{e}_2
+\end{split}
+	\label{eq:affine-bd}
+\end{align}
+	From \eqref{eq:conic_affine}
+	and 
+	\eqref{eq:affine-bd},
+	we obtain \eqref{eq:affine-square-bd}.
+\end{enumerate}

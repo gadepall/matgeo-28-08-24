@@ -20,19 +20,20 @@
 \contentsline {subsection}{\numberline {2.9}Vector Product}{28}{subsection.2.9}%
 \contentsline {subsection}{\numberline {2.10}Formulae}{32}{subsection.2.10}%
 \contentsline {subsection}{\numberline {2.11}Miscellaneous}{32}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}Formulae}{33}{subsection.2.12}%
 \contentsline {section}{\numberline {3}Constructions}{34}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Triangle}{34}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Quadrilateral}{36}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Formulae}{36}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Linear Forms}{36}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Equation }{36}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Parallel}{40}{subsection.4.2}%
+\contentsline {section}{\numberline {4}Linear Forms}{37}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Equation }{37}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Parallel}{41}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Perpendicular}{42}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Formulae}{48}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Angle}{48}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Intersection}{49}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.4}Formulae}{49}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Angle}{49}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Intersection}{50}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Miscellaneous }{52}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Formulae}{53}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.8}Formulae}{54}{subsection.4.8}%
 \contentsline {section}{\numberline {5}Skew Lines}{54}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Least Squares}{54}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Formulae}{56}{subsection.5.2}%
@@ -40,5 +41,11 @@
 \contentsline {subsection}{\numberline {5.4}Formulae}{58}{subsection.5.4}%
 \contentsline {section}{\numberline {6}Circle}{59}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Equation}{59}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Formulae}{63}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Formulae}{64}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Miscellaneous}{64}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Conics}{64}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Equation}{64}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Formulae}{65}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Chords and Tangents}{68}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Formulae}{68}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Miscellaneous}{68}{subsection.7.5}%
