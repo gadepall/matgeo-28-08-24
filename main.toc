@@ -45,7 +45,8 @@
 \contentsline {subsection}{\numberline {6.3}Miscellaneous}{64}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Conics}{64}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Equation}{64}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Formulae}{65}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Chords and Tangents}{68}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Formulae}{68}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Miscellaneous}{68}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.2}Formulae}{66}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Chords and Tangents}{67}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Formulae}{67}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Miscellaneous}{67}{subsection.7.5}%
+\contentsline {section}{Appendix\nobreakspace A: Conic Section}{71}{section*.119}%
