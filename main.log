@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  5 JUN 2024 15:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  5 JUN 2024 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3360,31 +3360,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--53
 
  []
 
-[64]
+
 Underfull \hbox (badness 10000) in paragraph at lines 53--58
 
  []
 
-
-Overfull \hbox (115.77402pt too wide) in paragraph at lines 81--85
-[]$[]\OT1/txr/m/n/10 (0\OML/txmi/m/it/10 ; \OT1/txr/m/n/10 0)\OML/txmi/m/it/10 
-; [][]$\OT1/txr/m/n/10 . 
- []
-
-
-Overfull \hbox (56.63075pt too wide) in paragraph at lines 85--89
-[]$[]$ 
- []
-
-[65]) (./chapters/formulae/conics/equation.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [66])
+[64] [65]) (./chapters/formulae/conics/equation.tex [66])
 (./chapters/conics/examples/misc.tex (./chapters/11/11/5/2/conic.tex
-<chapters/11/11/5/2/figs/fig.pdf, id=4429, 462.52798pt x 346.89601pt>
+<chapters/11/11/5/2/figs/fig.pdf, id=4426, 462.52798pt x 346.89601pt>
 File: chapters/11/11/5/2/figs/fig.pdf Graphic file (type pdf)
 <use chapters/11/11/5/2/figs/fig.pdf>
 Package pdftex.def Info: chapters/11/11/5/2/figs/fig.pdf  used on input line 30
@@ -3399,7 +3382,6 @@ Package pdftex.def Info: chapters/11/11/5/2/figs/fig.pdf  used on input line 30
 \gnumericColB=\skip86
 \gnumericColC=\skip87
 )
-[67 <./chapters/11/11/5/2/figs/fig.pdf>]
 Overfull \hbox (7.62277pt too wide) detected at line 185
  []$[]   [][] \OT1/txr/bx/n/10 V [] \OT1/txr/m/n/10 + 2\OT1/txr/bx/n/10 u[] [] 
 \OT1/txr/m/n/10 + \OML/txmi/m/it/10 f \OT1/txr/m/n/10 = 0$ 
@@ -3414,13 +3396,16 @@ txr/m/n/10 + \OML/txmi/m/it/10 ^^U[]^^U[]\OT1/txr/bx/n/10 e[]Ve[] \OT1/txr/m/n/
 10 + 2\OML/txmi/m/it/10 ^^U[]\OT1/txr/bx/n/10 u[]e[]$ 
  []
 
-<chapters/11/11/5/3/figs/parabola.png, id=4493, 462.528pt x 346.896pt>
+<chapters/11/11/5/3/figs/parabola.png, id=4429, 462.528pt x 346.896pt>
 File: chapters/11/11/5/3/figs/parabola.png Graphic file (type png)
 <use chapters/11/11/5/3/figs/parabola.png>
 Package pdftex.def Info: chapters/11/11/5/3/figs/parabola.png  used on input li
 ne 202.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-) (./chapters/11/11/5/6/parab.tex
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67 <./chapters/11/11/5/2/figs/fig.pdf>] (./chapters/11/11/5/6/parab.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3428,48 +3413,38 @@ Underfull \hbox (badness 1533) in paragraph at lines 153--156
 \OT1/txr/m/n/10 Adding [] to 12 times [], and us-ing
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [68 <./chapters/11/11/5/3/figs/parabola.png>]
-<chapters/11/11/5/6/figs/fig1.pdf, id=4536, 462.52798pt x 346.89601pt>
+<chapters/11/11/5/6/figs/fig1.pdf, id=4501, 462.52798pt x 346.89601pt>
 File: chapters/11/11/5/6/figs/fig1.pdf Graphic file (type pdf)
 <use chapters/11/11/5/6/figs/fig1.pdf>
 Package pdftex.def Info: chapters/11/11/5/6/figs/fig1.pdf  used on input line 1
 75.
 (pdftex.def)             Requested size: 252.0pt x 189.00429pt.
 ) (./chapters/11/11/5/8/parab.tex
-<chapters/11/11/5/8/figs/co.pdf, id=4537, 462.52798pt x 346.89601pt>
+<chapters/11/11/5/8/figs/co.pdf, id=4502, 462.52798pt x 346.89601pt>
 File: chapters/11/11/5/8/figs/co.pdf Graphic file (type pdf)
 <use chapters/11/11/5/8/figs/co.pdf>
 Package pdftex.def Info: chapters/11/11/5/8/figs/co.pdf  used on input line 30.
 
 (pdftex.def)             Requested size: 252.0pt x 189.00429pt.
-)
-(./chapters/11/11/5/4/conic.tex
-<chapters/11/11/5/4/figs/ellipse.png, id=4538, 560.0925pt x 426.59375pt>
+) (./chapters/11/11/5/4/conic.tex
+<chapters/11/11/5/4/figs/ellipse.png, id=4503, 560.0925pt x 426.59375pt>
 File: chapters/11/11/5/4/figs/ellipse.png Graphic file (type png)
 <use chapters/11/11/5/4/figs/ellipse.png>
 Package pdftex.def Info: chapters/11/11/5/4/figs/ellipse.png  used on input lin
 e 54.
 (pdftex.def)             Requested size: 252.0pt x 191.93936pt.
-) (./chapters/11/11/5/5/ellipse.tex
-Underfull \vbox (badness 5147) has occurred while \output is active []
-
-
+)
+(./chapters/11/11/5/5/ellipse.tex [68 <./chapters/11/11/5/3/figs/parabola.png> 
+<./chapters/11/11/5/6/figs/fig1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69 <./chapters/11/11/5/6/figs/fig1.pdf> <./chapters/11/11/5/8/figs/co.pdf
 
-pdfTeX warning: pdflatex (file ./chapters/11/11/5/8/figs/co.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./chapters/11/11/5/4/figs/ellipse.png>]
 (./chapters/11/11/5/5/tables/table_1.tex)
 Overfull \hbox (24.7437pt too wide) in paragraph at lines 7--246
  [] 
  []
 
-<chapters/11/11/5/5/figs/Figure_1.png, id=4612, 462.528pt x 346.896pt>
+<chapters/11/11/5/5/figs/Figure_1.png, id=4554, 462.528pt x 346.896pt>
 File: chapters/11/11/5/5/figs/Figure_1.png Graphic file (type png)
 <use chapters/11/11/5/5/figs/Figure_1.png>
 Package pdftex.def Info: chapters/11/11/5/5/figs/Figure_1.png  used on input li
@@ -3479,13 +3454,11 @@ ne 254.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./chapters/11/11/5/7/ellipse.tex
-Underfull \vbox (badness 6316) has occurred while \output is active []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [70 <./chapters/11/11/5/5/figs/Figure_1.png>]
-<chapters/11/11/5/7/figs/problem7.pdf, id=4669, 462.52798pt x 346.89601pt>
+ [69 <./chapters/11/11/5/8/figs/co.pdf> <./chapters/11/11/5/4/figs/ellipse.png>
+]
+<chapters/11/11/5/7/figs/problem7.pdf, id=4630, 462.52798pt x 346.89601pt>
 File: chapters/11/11/5/7/figs/problem7.pdf Graphic file (type pdf)
 <use chapters/11/11/5/7/figs/problem7.pdf>
 Package pdftex.def Info: chapters/11/11/5/7/figs/problem7.pdf  used on input li
@@ -3495,17 +3468,14 @@ ne 127.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./chapters/formulae/conics/app.tex
-Underfull \vbox (badness 1308) has occurred while \output is active []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71 <./chapters/11/11/5/7/figs/problem7.pdf>]
+ [70 <./chapters/11/11/5/5/figs/Figure_1.png>]) (./chapters/formulae/conics/app
+.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-(./tables/det.tex
+ [71 <./chapters/11/11/5/7/figs/problem7.pdf>] (./tables/det.tex
 \gnumericColD=\skip88
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -3522,8 +3492,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1A6B2539BFBE523B8FE0A8C77E21B69C;5854.
  ) 
 Here is how much of TeX's memory you used:
- 57749 strings out of 474104
- 1382130 string characters out of 5729886
+ 57739 strings out of 474104
+ 1382041 string characters out of 5729886
  2001493 words of memory out of 5000000
  76217 multiletter control sequences out of 15000+600000
  632333 words of font info for 183 fonts, out of 8000000 for 9000
@@ -3547,10 +3517,10 @@ data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></data/data/com.termux/files/usr/share/texlive/2024/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (73 pages, 3637711 bytes).
+Output written on main.pdf (73 pages, 3634928 bytes).
 PDF statistics:
- 5413 PDF objects out of 6186 (max. 8388607)
- 4105 compressed objects within 42 object streams
- 2403 named destinations out of 2487 (max. 500000)
+ 5400 PDF objects out of 6186 (max. 8388607)
+ 4094 compressed objects within 41 object streams
+ 2393 named destinations out of 2487 (max. 500000)
  1045 words of extra memory for PDF output out of 10000 (max. 10000000)
 
