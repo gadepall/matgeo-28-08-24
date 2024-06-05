@@ -49,4 +49,4 @@
 \contentsline {subsection}{\numberline {7.3}Chords and Tangents}{67}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Formulae}{67}{subsection.7.4}%
 \contentsline {subsection}{\numberline {7.5}Miscellaneous}{67}{subsection.7.5}%
-\contentsline {section}{Appendix\nobreakspace A: Conic Section}{71}{section*.119}%
+\contentsline {section}{Appendix\nobreakspace A: Conic Section}{67}{section*.110}%
