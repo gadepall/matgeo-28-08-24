@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  5 JUN 2024 19:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  6 JUN 2024 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3353,15 +3353,15 @@ Package pdftex.def Info: chapters/11/11/1/9/figs/fig.png  used on input line 18
 (./chapters/formulae/circle/equation.tex) (./chapters/circles/examples/misc.tex
 (./chapters/11/11/1/5/circle.tex)) (./chapters/conics/examples/equation.tex
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 13.
+LaTeX Warning: Command \textendash invalid in math mode on input line 9.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--47
+(./chapters/conics/tables/std.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--52
+Underfull \hbox (badness 10000) in paragraph at lines 43--48
 
  []
 
@@ -3370,9 +3370,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66])
 (./chapters/conics/examples/misc.tex) (./chapters/formulae/conics/app.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [67]
+[67]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3385,25 +3383,59 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \gnumericColC=\skip87
 \gnumericColD=\skip88
 )
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68])
-[69
+ [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] (./main.aux)
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 563.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 563.
+
+
+Overfull \hbox (2.59383pt too wide) detected at line 581
+[]
+ []
+
+[69]
+Overfull \hbox (81.9915pt too wide) detected at line 776
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (53.27435pt too wide) detected at line 828
+[]
+ []
+
+
+Overfull \hbox (27.04552pt too wide) detected at line 838
+[]
+ []
+
+) [70] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2084E81D3B0C92C810519E3D93D7C6DF;5854.
+(rerunfilecheck)             Checksum: B76C32EAAF4ACD86E096FB9FF80B5F92;5854.
  ) 
 Here is how much of TeX's memory you used:
- 57505 strings out of 474104
- 1375888 string characters out of 5729886
+ 57634 strings out of 474104
+ 1377831 string characters out of 5729886
  2001493 words of memory out of 5000000
- 76116 multiletter control sequences out of 15000+600000
- 632333 words of font info for 183 fonts, out of 8000000 for 9000
+ 76181 multiletter control sequences out of 15000+600000
+ 652015 words of font info for 234 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,27n,109p,1194b,1663s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/pu
@@ -3418,15 +3450,16 @@ r/share/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txex.pfb></data/data
 /com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/public/txfonts/
 txsy.pfb></data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/t
 ype1/public/txfonts/txsya.pfb></data/data/com.termux/files/usr/share/texlive/20
-24/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></data/data/com.termux/files
-/usr/share/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></data/data
-/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8
-a.pfb></data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type
-1/urw/times/utmri8a.pfb>
-Output written on main.pdf (69 pages, 3527557 bytes).
+24/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></data/data/com.termux/files
+/usr/share/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></data/
+data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></data/data/com.termux/files/usr/share/texlive/2024/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (70 pages, 3541538 bytes).
 PDF statistics:
- 5091 PDF objects out of 5155 (max. 8388607)
- 3900 compressed objects within 39 object streams
- 2290 named destinations out of 2487 (max. 500000)
+ 5193 PDF objects out of 6186 (max. 8388607)
+ 3998 compressed objects within 40 object streams
+ 2338 named destinations out of 2487 (max. 500000)
  1010 words of extra memory for PDF output out of 10000 (max. 10000000)
 
