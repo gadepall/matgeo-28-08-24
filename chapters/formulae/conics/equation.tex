@@ -49,19 +49,20 @@ where
 				\begin{align}
 					\label{eq:dx-ell-hyp}
 					\vec{e}_1^{\top}\vec{y} &=  
-					%\pm\sqrt{\abs{\frac{f_0\lambda_2}{\lambda_1\brak{\lambda_2-\lambda_1}}}} & e \ne 1
-					\pm \frac{1}{e}\sqrt{\frac{\abs{f_0}}{\lambda_2\brak{1-e^2}}} & e \ne 1
+					\pm\sqrt{\abs{\frac{f_0\lambda_2}{\lambda_1\brak{\lambda_2-\lambda_1}}}} & e \ne 1
+				%	\pm \frac{1}{e}\sqrt{\frac{\abs{f_0}}{\lambda_2\brak{1-e^2}}} & e \ne 1
 					\\
 					\vec{e}_1^{\top}\vec{y} &= \frac{\eta}{2\lambda_2} & e = 1
 					\label{eq:dx-parab}
 				\end{align}
-    \item The foci of the standard ellipse and hyperbola are given by 
+    \item The foci of the standard conic are given by 
 				\begin{align}
 					\label{eq:F-ell-hyp-parab}
 					\vec{F} 
 =
 					\begin{cases}
-						\pm e\sqrt{\frac{\abs{f_0}}{\lambda_2\brak{1-e^2}}}\vec{e}_1 & e \ne 1
+						\pm \sqrt{\abs{f_0\brak{\frac{1}{\lambda_2}-\frac{1}{\lambda_1}}}}\vec{e}_1 & e \ne 1
+						%\pm e\sqrt{\frac{\abs{f_0}}{\lambda_2\brak{1-e^2}}}\vec{e}_1 & e \ne 1
 						\\
 						 -\frac{\eta}{4\lambda_2}\vec{e}_1 & e = 1
 					\end{cases}
@@ -149,8 +150,10 @@ and \eqref{eq:conic_quad_form_e}
 in \eqref{eq:conic_quad_form_F},
 				\begin{align}
 					\vec{F} &= \pm \frac{\brak{\frac{1}{e\sqrt{1-e^2}}}\brak{e^2}\sqrt{\frac{\lambda_2}{f_0}}\vec{e}_1}{\frac{\lambda_2}{f_0}}
-					%\pm\sqrt{\abs{\frac{f_0}{\brak{1 - \frac{\lambda_1}{\lambda_2}}\frac{\lambda_1}{\lambda_2}}}}
-					%\brak{1 - \frac{\lambda_1}{\lambda_2}}\frac{\sqrt{\lambda_2}}{\lambda_2}\vec{e}_1
+					\\
+					&=
+					\pm\sqrt{\abs{\frac{f_0}{\brak{1 - \frac{\lambda_1}{\lambda_2}}\frac{\lambda_1}{\lambda_2}}}}
+					\brak{1 - \frac{\lambda_1}{\lambda_2}}\frac{\sqrt{\lambda_2}}{\lambda_2}\vec{e}_1
  			\end{align}
 			yielding
 					\eqref{eq:F-ell-hyp-parab}
