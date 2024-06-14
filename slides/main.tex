@@ -1,0 +1,1176 @@
+\documentclass{beamer}
+\mode<presentation>
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{advdate}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+%\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usetheme{Boadilla}
+\usecolortheme{lily}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{navigation symbols}{}
+
+\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
+\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\vec{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \vec{Solution: }}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+\let\vec\mathbf
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+%\numberwithin{equation}{section}
+
+\title{Fractal in Action}
+\author{G. V. V. Sharma \\ Dept. of Electrical Engg.,\\IIT Hyderabad.}
+
+\date{\today} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section*{Outline}
+\begin{frame}
+\tableofcontents
+\end{frame}
+\section{Class 10}
+\begin{frame}
+\frametitle{Question}
+The centre of a circle is at (2,0). If one end of a diameter is at (6,0), then the other end is at :
+\begin{enumerate}
+\item $\brak{0,0}$
+\item $\brak{4,0}$
+\item $\brak{-2,0}$
+\item $\brak{-6,0}$
+\end{enumerate}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+Let
+\begin{align}
+	\vec{O} =
+    \myvec{
+2 \\
+0 
+},\
+\vec{A} =
+    \myvec{
+6 \\
+0 
+}
+\end{align}
+Then,
+\begin{align}
+\vec{O} &= \frac{\brak{\vec{A} + \vec{B}}}{2}\\
+\implies \vec{B} &= 2\vec{O} - \vec{A}\\
+    &=  2\myvec{
+2 \\
+0 
+} -  \myvec{
+6 \\
+0 
+}
+=\myvec{
+   -2\\
+   0
+}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Question }
+\begin{enumerate}
+\item [2)]
+$AD$ is a median of $\Delta ABC$ with vertices $A\brak{5,-6}, B\brak{6,4}$ and $C\brak{0,0}$. Length $AD$ is equal to:
+\begin{enumerate}
+\item  $\sqrt{68}$
+\item  $2\sqrt{15}$
+\item  $\sqrt{101}$
+\item  $10$
+\end{enumerate}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solution}
+The midpoint of $\vec{BC}$ is 
+\begin{align}
+    \vec{D} &= \frac{\vec{B} + \vec{C}}{2}\\
+    &=\frac{1}{2}\myvec{
+        6\\
+        4
+    }
+    +
+   \frac{1}{2} \myvec{
+        0\\
+        0
+    } = \myvec{
+        3\\
+        2
+    },
+\end{align}
+Since
+\begin{align}
+\vec{A}-\vec{D} &= \myvec{
+        5\\
+        -6
+    }-\myvec{
+        3\\
+        2
+    }=
+    \myvec{
+        2\\
+        -8
+    }
+\\    \implies \lvert\lvert \vec{A}-\vec{D} \rvert\rvert &\triangleq \sqrt{\brak{\vec{A}-\vec{D}}^\top\brak{\vec{A}-\vec{D}}} \label{9}\\
+    &= \sqrt{\myvec{
+        2 & -8 
+    }
+    \myvec{
+        2\\
+        -8
+    }}
+    = \sqrt{2^2+8^2} =\sqrt{68} 
+\end{align}
+\end{frame}
+
+\begin{frame}
+\frametitle{Question }
+If the distance between the points $\brak{3,-5}$ and $\brak{x,-5}$ is $15$ units, then the values of $x$ are
+\begin{enumerate}
+\item  $12,-18$
+\item  $-12,18$
+\item  $18,5$
+\item  $-9,-12$
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solution}
+\begin{align}
+	\vec{A} &=
+    \myvec{
+3 \\
+-5 
+},\
+\vec{B} =
+    \myvec{
+x \\
+-5 
+}\\
+\implies \vec{A}-\vec{B} &= \myvec{
+        3-x\\
+        -5 -\brak{-5}
+    } = \myvec{
+        3-x\\
+        0
+    }
+    \\
+\implies      \lvert\lvert \vec{A}-\vec{B} \rvert\rvert 
+&= \sqrt{\myvec{
+        3-x & 0
+    }
+\myvec{
+        3-x\\
+        0
+    }}
+     = \sqrt{\brak{3-x}^2}\\
+\implies  15 &= \pm\brak{3-x}\\
+ \implies  x &= -12,18
+\end{align}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Question }
+Solve the following system of linear equations algebraically:\\
+$2x+5y=-4$;$4x-3y$=$5$
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution}
+The above system of equations can be written as:
+\begin{align}
+    \myvec{
+        2 & 5\\ 
+        4 & -3
+    }
+    \myvec{
+        x\\
+        y
+    } &= \myvec{
+        -4\\
+        5
+    } \label{8}
+    \end{align}
+    Writing the augmented matrix for using Gauss elimination
+    \begin{align}
+        &\begin{amatrix}{2}
+   2 & 5 & -4 \\  4 & -3 & 5
+ \end{amatrix} \xleftarrow{R_2 \to R_2-2R_1}
+  \myvec{
+   2 & 5 & -4 \\  0 & -13 & 13
+ } 
+ \\
+&\myvec{
+   2 & 5 & -4 \\  0 & -13 & 13
+ } \xleftarrow{R_1 \to \frac{13}{5}R_1+R_2}
+ \myvec{
+   \frac{26}{5} & 0 & \frac{13}{5} \\  0 & -13 & 13
+ }  \label{14}
+ \\
+    & \implies \myvec{
+        x\\
+        y
+    } =
+    \myvec{
+        \frac{1}{2}\\
+        -1
+    }
+    \end{align}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Question }
+\begin{enumerate}
+    \item[5)]
+The sum of the digits of a $2$-digit number is 14. The number obtained by interchanging     its digits exceeds the given number by 18. Find the number.
+\end{enumerate}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+Let the digits of the number be $x_1$(tens) and $x_2$(units).Given
+\begin{align}
+    x_1+x_2 &= 14 \label{1}\\
+    10x_2+x_1 &= 18 + 10x_1+x_2\\
+    \implies x_1-x_2 &= -2\label{2}
+\end{align}
+Solving the equations $\eqref{1}$,$\eqref{2}$ in their matrix forms
+\begin{align}
+    \myvec{
+        1 & 1\\
+        -1 & 1
+    }
+    \myvec{
+        x_1\\
+        x_2
+    } &= \myvec{
+        14\\
+        -2
+    }   \\
+    \end{align}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+For the matrix
+    \begin{align}
+	    \vec{A}&=\frac{1}{\sqrt{2}}\myvec{
+        1 & 1\\
+        -1 & 1
+    }\\
+	    \vec{A}^\top \vec{A}&= \vec{I}    
+    \end{align}
+$\vec{A}$ is an orthogonal matrix.
+    \begin{align}
+            \myvec{
+        1 & 1\\
+        -1 & 1
+    }
+    \myvec{
+        1 & 1\\
+        -1 & 1
+    }
+    \myvec{
+        x_1\\
+        x_2
+    } &= 
+    \myvec{
+        1 & 1\\
+        -1 & 1
+    }
+    \myvec{
+        14\\
+        -2
+    } \\
+\implies    2\vec{I}\vec{x} &= \myvec{
+        12\\
+        16
+    }\\
+    \implies \vec{x} &= \myvec{
+        6\\
+        8
+    }
+\end{align}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Question }
+Find the ratio in which the point $C\brak{\frac{8}{5},y}$ divides the line segment joining the points $A\brak{1,2}$ and $B\brak{2,3}$. Also, find the value of $y$. 
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+    For collinearity,
+    \begin{align}
+          \text{rank}\myvec{
+        1 & 1 & 1\\
+        A & B & C
+    } =2 \label{10}\\
+    \myvec{
+        1 & 1 & 1\\
+        1 & 2 & 8/5\\
+        2 & 3 & y
+    } \xleftrightarrow{}
+    \myvec{
+        1 & 1 & 1\\
+        0 & \brak{2-1} & \brak{\frac{8}{5}-1}\\
+        0 & \brak{3-2} & \brak{y-3}
+    }\xleftrightarrow{}
+    \myvec{
+        1 & 1 & 1\\
+        0 & 1 & \frac{3}{5}\\
+        0 & 1 & y-3
+    }
+    \\
+    \xleftrightarrow{R_3\rightarrow R_3-R_2}
+    \myvec{
+        1 & 1 & 1\\
+        0 & 1 & \frac{3}{5}\\
+        0 & 0 & y-\frac{18}{5}
+    }
+    \implies y = \frac{18}{5}
+\end{align}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Question }
+$ABCD$ is a rectangle formed by the points $A\brak{-1,-1}$,$B\brak{-1,6}$,$C\brak{3,6}$ and $D\brak{3,-1}$. $P$,$Q$,$R$ and $S$ are mid-points of sides $AB$,$BC$,$CD$ and $DA$ respectively. Show that the diagonal of the quadrilateral $PQRS$ bisect each other. 
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+\begin{align}
+    \vec{P}&=\frac{\vec{A}+\vec{B}}{2},\
+        \vec{Q}=\frac{\vec{B}+\vec{C}}{2}\\
+    \vec{R}&=\frac{\vec{C}+\vec{D}}{2},\
+    \vec{S}=\frac{\vec{D}+\vec{A}}{2}
+    \end{align}
+Let $\vec{O}_1$ and $\vec{O}_2$ be the midpoints of $PR$ and $QS$ respectively
+\begin{align}
+    \vec{O}_1 = \frac{\vec{P}+\vec{R}}{2}=\frac{\vec{A}+\vec{B}+\vec{C}+\vec{D}}{4}\\
+      \vec{O}_2 = \frac{\vec{Q}+\vec{S}}{2}=\frac{\vec{A}+\vec{B}+\vec{C}+\vec{D}}{4}
+\end{align}
+Since the midpoints of the diagonals coincide, the diagonals bisect each other. 
+\end{frame}
+%
+\begin{frame}{Topics covered so far}
+    \begin{enumerate}
+        \item {Vectors}
+        \item {Section Formula}
+        \item {Norm}
+        \item {Gauss Elimination}
+        \item {Orthogonal matrix}
+        \item {Rank}
+    \end{enumerate}
+\end{frame}
+%
+\section{Class 12}
+%
+\begin{frame}
+\frametitle{Question }
+If $\overrightarrow{a} = 2\hat{i} - \hat{j} + \hat{k}$ and  $\overrightarrow{b} = \hat{i} + \hat{j} - \hat{k}$, then $\overrightarrow{a}$ and $\overrightarrow{b}$ are:
+    \begin{enumerate}
+\item  Collinear vectors which are not parallel
+\item  Parallel vectors
+\item  Perpendicular vectors
+\item  Unit vectors
+\end{enumerate}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+Let
+\begin{align}
+    \vec{a} &= \myvec{
+        2\\
+        -1\\
+        1
+    } , 
+    \vec{b}=\myvec{
+        1\\
+        1\\
+        -1
+    }
+    \end{align}
+    Applying concept of rank from $\eqref{10}$
+    \begin{align}
+                  \text{rank}\myvec{
+        1 & 1 & -1\\
+        2 & -1 & 1
+    } &=2 \neq 1 ,
+    \text{Not parallel}
+    \end{align}
+    Applying condition for perpendicularity:
+    \begin{align}
+            \vec{a}^{\top}\vec{b} = \myvec{
+        2 &-1 &1
+    }\myvec{
+        1\\
+        1\\
+        -1
+    } &= 0
+    \implies \vec{a} \perp \vec{b}
+\end{align}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Question }
+\begin{enumerate}
+    \item [2)]
+If $\alpha$,$\beta$ and $\gamma$ are the angles which a line makes with positive directions of $x$,$y$ and $z$ axes respectively, then which of the following are {not} true?
+    \begin{enumerate}
+\item  $\cos^2{\alpha} + \cos^2{\beta} + \cos^2{\gamma} = 1$
+\item  $\sin^2{\alpha} + \sin^2{\beta} + \sin^2{\gamma} = 2$
+\item  $\cos{2\alpha} + \cos{2\beta} + \cos{2\gamma} =-1$
+\item  $\cos{\alpha} + \cos{\beta} + \cos{\gamma} = 1$
+\end{enumerate}
+\end{enumerate}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+Let $\vec{m}$ represent the unit direction vector of the line.  Then,
+\begin{align}
+    \vec{m} = \myvec{
+        \cos{\alpha} \\
+        \cos{\beta}\\
+        \cos{\gamma}
+    }
+\end{align}
+with 
+\begin{align}
+	\norm{\vec{m}} =  1
+\end{align}
+From $\eqref{8}$
+\begin{align}
+    2x + 5y = -4
+    \end{align}
+    can be expressed as
+\begin{align}
+    \vec{n}^{\top}\vec{x} &= c
+\end{align}
+where
+\begin{align}
+	\vec{n} = \myvec{2\\5},\ c = -4
+\end{align}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+This is defined to be the normal equation of a line, where $\vec{n}$ represents the normal vector.
+Also, 
+\begin{align}
+    2x + 5y &= -4\\
+    \implies 2x &= -4 -5y
+    \\
+    \implies
+    \myvec{
+        x\\
+        y
+    } &= \myvec{
+        -2\\
+        0
+    } + y\myvec{
+        -\frac{5}{2}\\
+        1
+    }\\
+    \vec{x} &= \myvec{
+        -2\\
+        0
+    } -\frac{5y}{2}\myvec{
+        1\\
+        -\frac{2}{5}
+    }\\
+    &= \vec{A} + k\vec{m} \label{11}
+\end{align}
+The general equation written above is of the parametric form.
+\end{frame}
+%
+\begin{frame}
+\frametitle{Question }
+$\overrightarrow{a}$,$\overrightarrow{b}$ and $\overrightarrow{c}$ are three mutually perpendicular unit vectors. If $\theta$ is the angle between $\overrightarrow{a}$ and $\brak{\overrightarrow{2a}+\overrightarrow{3b}+\overrightarrow{6c}}$, find the value of $\cos{\theta}$. 
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+Given:
+\begin{align}
+    \vec{a}^{\top}\vec{b} &=  \vec{b}^{\top}\vec{c} =  \vec{c}^{\top}\vec{a} = 0\\
+    \lvert \lvert \vec{a} \rvert \rvert 
+&= \lvert \lvert \vec{b} \rvert \rvert = \lvert \lvert \vec{c} \rvert \rvert = 1\\
+\cos{\theta} &= \frac{\vec{a}^{\top}\brak{2\vec{a}+3\vec{b}+6\vec{c}}}{\lvert \lvert \vec{a} \rvert \rvert \lvert \lvert 2\vec{a} + 3\vec{b} + 6\vec{c} \rvert \rvert}
+\end{align}
+Now,
+\begin{align}
+    \vec{a}^{\top}\brak{2\vec{a}+3\vec{b}+6\vec{c}} &= 2\vec{a}^{\top}\vec{a} + 3\vec{a}^{\top}\vec{b} + 6\vec{a}^{\top}\vec{c} = 2 + 0 + 0 = 2\\
+    \lvert \lvert \vec{a} \rvert \rvert \lvert \lvert 2\vec{a} + 3\vec{b} + 6\vec{c} \rvert \rvert &= \lvert \lvert 2\vec{a} + 3\vec{b} + 6\vec{c} \rvert \rvert
+    \end{align}
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+From $\eqref{9}$ norm definition:
+    \begin{align}
+        \brak{\lvert \lvert 2\vec{a} + 3\vec{b} + 6\vec{c} \rvert \rvert}^2 &= \lvert \lvert 4\vec{a}^2 \rvert \rvert + \lvert \lvert 9\vec{b}^2 \rvert \rvert + \lvert \lvert 36\vec{c}^2  \rvert \rvert = 49\\
+    \implies \lvert \lvert 2\vec{a} + 3\vec{b} + 6\vec{c} \rvert \rvert &= +7\\
+    \implies \cos{\theta} &= \frac{2}{7}
+\end{align}
+    
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Question }
+Find the position vector of point $\vec{C}$ which divides the line segment joining points $\vec{A}$ and $\vec{B}$ having position vectors $\hat{i} + 2\hat{j} - \hat{k}$ and $-\hat{i} + \hat{j} + \hat{k}$ respectively in the ratio $4:1$ externally. Further, find $\lvert \overrightarrow{AB}\rvert : \lvert \overrightarrow{BC} \rvert$. 
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+We know that
+\begin{align}
+\vec{C} = \frac{4\vec{B}-\vec{A}}{4-1}
+\end{align}
+Simplify the above for $\vec{C}$. 
+    
+\end{frame}
+%
+\begin{frame}
+\frametitle{Question }
+\begin{enumerate}
+    \item [5)]
+Find the equation of the line passing through the point of intersection of the lines $\frac{x}{1} = \frac{y-1}{2} = \frac{z-2}{3}$ and $\frac{x-1}{0} = \frac{y}{-3} = \frac{z-7}{2}$ and perpendicular to these given lines. 
+\end{enumerate}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+Let the given lines be denoted by $\vec{x}_1$ and $\vec{x}_2$ respectively. From $\eqref{11}$:
+\begin{align}
+    \vec{x}_1 &= \myvec{
+        0\\
+        1\\
+        2
+    } + k_1\myvec{
+        1\\
+        2\\
+        3
+    } = \vec{A} + k_1\vec{m}_1 \label{12} \\
+    \vec{x}_2 &= \myvec{
+        1\\
+        0\\
+        7
+    } + k_2\myvec{
+        0\\
+        -3\\
+        2
+    } = \vec{B} + k_2\vec{m}_2 \label{13}
+\end{align}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+The two equations required to solve for the direction of line are 
+\begin{align}
+\vec{m}^\top\vec{m}_1 &= 0\\
+\vec{m}^\top\vec{m}_2 &= 0\\
+	\implies \myvec{\vec{m}_1 &\vec{m}_2}^{\top}\vec{m} &= 0
+\end{align}
+\begin{align}
+    \myvec{
+        1 & 2 & 3\\
+        0 & -3 & 2   \\
+    }\vec{m} &\xleftarrow{R_1 \to 2R_2 + 3R_1} \myvec{
+        3 & 0 & 13\\
+        0 & -3 & 2   \\
+    }\vec{m} = 0\\
+  &\implies  \myvec{
+        3 & 0 & 13\\
+        0 & -3 & 2   \\
+    }\myvec{
+        m_x\\
+        m_y\\
+        m_z
+    } = 0\\
+    &\implies \vec{m} = \myvec{
+        \frac{-13}{3}\\
+        \frac{2}{3}\\
+        1
+    }
+\end{align}
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+Let the unknown line in its parametric form be denoted as follows from $\eqref{11}$.
+\begin{align}
+    \vec{x}_3 = \vec{C} + k_3\vec{m}
+\end{align}
+For finding the point of intersection of the lines($\vec{C}$), equating $\eqref{12}$ and $\eqref{13}$
+\begin{align}
+    \vec{A} + k_1\vec{m}_1 = \vec{B} + k_2\vec{m}_2\\
+    \myvec{
+        \vec{m}_1 & \vec{m}_2
+    }\myvec{
+        k_1 \\
+        -k_2
+    } = \vec{B}-\vec{A}
+\end{align}
+From the above $k_1$ and $k_2$ can be found by gauss elimination given in $\eqref{14}$ and thus $\vec{C}$.
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Question }
+Two vertices of the parallelogram $\vec{ABCD}$ are given as $\vec{A}\brak{-1,2,1}$ and $\vec{B}\brak{1,-2,5}$. If the equation if the line passing through $\vec{C}$ and $\vec{D}$ is $\frac{x-4}{1} = \frac{y+7}{-2} = \frac{z-8}{2}$, then find the distance between the sides $\vec{AB}$ and $\vec{CD}$. Hence, find the area of parallelogram $\vec{ABCD}$
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+Let  the two parallel lines be
+\begin{align}
+    \vec{x} & = \vec{A} + k_1\vec{m}  \\
+    \vec{x} &=  \vec{B} + k_2\vec{m} 
+\end{align}
+If $\vec{P}$ be a point on the second line, 
+\begin{align}
+    \vec{P} &=  \vec{B} + k_2\vec{m} 
+    \\
+	\brak{\vec{A}-\vec{P}}^{\top}\vec{m} &= 0
+\end{align}
+From the above, 
+\begin{align}
+	\brak{\vec{A}-\vec{B}}^{\top}\vec{m} -k_2\norm{\vec{m}}^2&= 0
+	\\
+	\implies k_2 = \frac{
+		\brak{\vec{A}-\vec{B}}^{\top}\vec{m}}{ \norm{\vec{m}}^2}
+\end{align}
+    
+\end{frame}
+
+
+
+
+
+
+
+
+    \section{CLASS 10}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Question }
+\begin{enumerate}
+    \item [8)]
+The sum of first and eight terms of an A.P is $32$ and their product is $60$. Find the first term and common difference of the A.P. Hence, also find the sum of its first $20$ terms. 
+\end{enumerate}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+Let the first and eighth terms be $x\brak{0}$ and $x\brak{7}$ respectively,given:
+\begin{align}
+x\brak{0}+x\brak{7} &= 32\\
+x\brak{0} &= 32 - x\brak{7}\label{3} \\
+x\brak{0}x\brak{7} &= 60 \label{4}
+\end{align}
+From $\eqref{3}$ and $\eqref{4}$
+\begin{align}
+    x\brak{7}\brak{32-x\brak{7}} &= 60
+\end{align}
+The roots are $\brak{30,2}$, therefore ,if $x\brak{7}=30$ then $x\brak{0}=2$ and if $x\brak{7}=2$ then $x_0=30$\\
+Now
+\begin{align}
+    x\brak{n} &= \brak{x\brak{0} + nd}u\brak{n}\label{5}
+    \end{align}
+    Where $d$ is the common difference of the A.P and $u(n)$ is the unit step function.\\($u\brak{n}=0 \forall n<0$,$u\brak{n}=1 \forall n\geq0$)
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+\begin{align}
+        \implies     x\brak{7} &= \brak{x\brak{0} + 7d}\\
+    \implies 7d &= \pm 28 \implies d = \pm 4
+\end{align}
+Therefore the A.P is $2,6,10...$ or $30,26,22...$.\\
+Considering the former for calculations and taking Z-Transform of $\eqref{5}$ for sum.\\
+Since
+\begin{align}
+X(z) &= \sum_{n=-\infty}^{\infty} x(n)z^{-n} \label{6}
+\end{align}
+Let $y\brak{n}$ denote the sum, let:
+\begin{align}
+    y\brak{n} &= x\brak{n} * h\brak{n}\\
+    &= \sum_{k=-\infty}^{\infty} x(k)h(n-k)
+\end{align}    
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+Replace $h\brak{n}$ with $u\brak{n}$.
+\begin{align}
+    y\brak{n} &= \sum_{k=0}^{n} x(k)u_{\brak{n-k}}\\
+    &=x(0)u\brak{n} + x(1)u\brak{n-1} + ..... x(n)u_{\brak{0}}
+\end{align}
+    This denotes the sum of terms $x(0),x(1)....x(n)$ i.e. first $n+1$ terms. From \eqref{6}\\
+\begin{align}
+    u\brak{n} &\xrightarrow{\mathcal{Z}} \frac{1}{\brak{1-z^{-1}}} \label{7}\\
+nu\brak{n} &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{\brak{1-z^{-1}}^{2}}\\
+  \implies  X(z)&= \frac{2}{\brak{1-z^{-1}}} + \frac{4z^{-1}}{\brak{1-z^{-1}}^{2}} \label{eq:ee25-4}
+,\quad \abs {z}>\abs{1} 
+\end{align}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+Now as convolution in the time domain corresponds to multiplication in the frequency domain and \eqref{eq:ee25-4} and \eqref{7}.
+\begin{align}
+    Y\brak{z} &= X\brak{z} * H\brak{z}\\
+ &= \brak{\frac{2}{\brak{1-z^{-1}}} +
+\frac{4z^{-1}}{\brak{1-z^{-1}}^{2}}}\brak{\frac{1}{\brak{1-z^{-1}}}}
+,\quad \abs {z}>\abs{1}     
+\end{align}
+Using normal inversion for inverse Z-transform:
+\begin{align}
+ Y(z) &= \frac{2}{\brak{1-z^{-1}}^2} +
+\frac{4z^{-1}}{\brak{1-z^{-1}}^{3}}
+,\quad \abs {z}>\abs{1}\\
+   &= \frac{8z^{-1}}{1-z^{-1}} + \frac{10z^{-2}}{\brak{1-z^{-1}}^2} + \frac{4z^{-3}}{\brak{1-z^{-1}}^{3}} + 2\label{final}
+\end{align}
+    
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+For proceeding forwards here are some important generalizations.\\
+Shifting property
+\begin{align}
+x(n-k) \leftrightarrow z^{-k} X(z) \label{shift}
+\end{align}
+Differentiation property
+\begin{align}
+nx(n) \leftrightarrow -zX^{\prime}(z) \label{diff}
+\end{align}
+From \eqref{7} and \eqref{shift}
+\begin{align}
+u\brak{n-1} &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{1-z^{-1}} \label{21}
+\end{align}
+From $\eqref{7}$ and $\eqref{diff}$
+\begin{align}
+nu\brak{n} &\xrightarrow{\mathcal{Z}} -z\frac{d}{dz}\brak{\frac{1}{1-z^{-1}}}\\
+nu\brak{n}    &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{\brak{1-z^{-1}}^{2}}
+\end{align}
+    
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+From $\eqref{shift}$
+\begin{align}
+(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} z^{-1}\frac{z^{-1}}{\brak{1-z^{-1}}^{2}}\\
+(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} \frac{z^{-2}}{\brak{1-z^{-1}}^{2}} \label{22}
+\end{align}
+Now, using $\eqref{diff}$ and writing the corresponding L.H.S
+\begin{align}   
+(n)(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} \frac{2z^{-2}}{\brak{1-z^{-1}}^3} 
+\end{align}
+Using $\eqref{shift}$
+\begin{align}
+    \frac{(n-1)(n-2)u\brak{n-2}}{2}    &\xrightarrow{\mathcal{Z}} \frac{z^{-3}}{\brak{1-z^{-1}}^3} \label{23} 
+\end{align}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+The inverse-Z of a constant will be $\delta(n)$, so it is ruled out.
+Plugging these values in $\eqref{final}$ we get
+\begin{align}
+   y(n) = 8u\brak{n-1} + 10(n-1)u\brak{n-1} &+ 4\frac{(n-1)(n-2)u\brak{n-2}}{2} \notag \\
+   &+ 2\delta(n)
+\end{align}
+Putting $n=19$
+\begin{align}
+      y(19) &= 2(19+1)^2 = 800
+\end{align}
+    
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+Using contour integration for inverse Z-transform
+\begin{align}
+    y(19)&=\frac{1}{2\pi j}\oint_{C}Y(z) \;z^{18} \;dz\\  
+ &=\frac{1}{2\pi j}\oint_{C}\brak{2z^{20}\brak{z-1}^{-2}+
+       4z^{20}\brak{z-1}^{-3}} \;dz\\
+       R&=\frac{1}{\brak {m-1}!}\lim\limits_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\brak {{(z-a)}^{m}f\brak z}\label{eq:6}  
+\end{align}
+For $R_1$ , $m=2$ , where $m$ corresponds to number of repeated poles .
+\begin{align}
+    R_1 &=\frac{1}{\brak {1}!}\lim\limits_{z\to 1}\frac{d}{dz}\brak {{(z-1)}^{2}2z^{20}\brak{z-1}^{-2}}   \\
+    &=2\lim\limits_{z\to 1}\frac{d}{dz}(z^{20})   \\
+    &= 40
+    \end{align}
+    
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+\begin{align}
+    R_2 &=\frac{1}{\brak {2}!}\lim\limits_{z\to 1}\frac{d^{2}}{dz^{2}}\brak {{(z-1)}^{3}4z^{20}\brak{z-1}^{-3}}   \\
+    &=\brak2\lim\limits_{z\to 1}\frac{d^2}{dz^2}(z^{20})   \\
+    &= 760\\
+    R_1 + R_2 &= 800\\
+    \implies  y{(19)} &= 800
+\end{align}
+Similarly, the sum for the A.P. $30,26,22...$ can be found by the same procedure.
+    
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Question }
+\begin{enumerate}
+    \item [9)]
+In an A.P. of $40$ terms, the sum of first $9$ terms is $153$ and the sum of last $6$ terms is $687$. Determine the first term and the common difference of the A.P. Also find the sum of all the terms of the A.P. 
+\end{enumerate}
+\end{frame}
+Given:
+\begin{align}
+y(8) &= 153 \label{17}\\
+y(39)-y(34) &= 687 \label{18}
+\end{align}
+Now, let the first term be $x(0)$ and common difference be $d$. From $\eqref{6}$ and $\eqref{5}$
+\begin{align}
+    X(z) &= \frac{x(0)}{1-z^{-1}} + \frac{dz^{-1}}{\brak{1-z^{-1}}^2} ,\quad \abs {z}>\abs{1} 
+\end{align}
+For finding the sum (Assuming $h(n)=u\brak{n}$)
+\begin{align}
+    y\brak{n} &= x\brak{n} * h\brak{n}\\
+Y\brak{z} &= X\brak{z} * H\brak{z}\\
+&= \brak{\frac{x(0)}{\brak{1-z^{-1}}} +
+\frac{dz^{-1}}{\brak{1-z^{-1}}^{2}}}\brak{\frac{1}{\brak{1-z^{-1}}}}
+,\quad \abs {z}>\abs{1}     
+\end{align}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+\begin{align}
+ Y\brak{z}   = \frac{\brak{2x(0)+d}z^{-1}}{1-z^{-1}} + \frac{\brak{x(0)+2d}z^{-2}}{\brak{1-z^{-1}}^2} + \frac{dz^{-3}}{\brak{1-z^{-1}}^{3}} + x(0)
+\end{align}
+Using normal inversion for inverse Z-transform:\\
+Using the results $\eqref{21}$,$\eqref{22}$ and $\eqref{23}$
+\begin{align}
+   y(n) = (2x_0+d)u\brak{n-1} &+ (n-1)u\brak{n-1}(x_0+2d) + \notag\\
+    &\frac{d(n-1)(n-2)u\brak{n-2}}{2} + x(0)\delta(n)
+\end{align}
+Now use $\eqref{17}$ and $\eqref{18}$ to solve for $x(0)$ and $d$ and put in $\eqref{19}$ for the sum of $40$ terms.
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+Using contour integration for inverse Z-transform
+\begin{align}
+    y(n)&=\frac{1}{2\pi j}\oint_{C}Y(z) \;z^{n-1} \;dz\\  
+ &=\frac{1}{2\pi j}\oint_{C}\brak{x(0)z^{n+1}\brak{z-1}^{-2}+
+       dz^{20}\brak{z-1}^{-3}} \;dz\\
+       R&=\frac{1}{\brak {m-1}!}\lim\limits_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\brak {{(z-a)}^{m}f\brak z}
+\end{align}
+For $R_1$ , $m=2$ , where $m$ corresponds to number of repeated poles .
+\begin{align}
+    R_1 &=\frac{1}{\brak {1}!}\lim\limits_{z\to 1}\frac{d}{dz}\brak {{(z-1)}^{2}x(0)z^{n+1}\brak{z-1}^{-2}}   \\
+    &=x(0)\lim\limits_{z\to 1}\frac{d}{dz}(z^{n+1})   \\
+    &= \brak{n+1}x(0)
+    \end{align}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Solution}
+   For $R_2$ , $m=3$ 
+    \begin{align}
+    R_2 &=\frac{1}{\brak {2}!}\lim\limits_{z\to 1}\frac{d^{2}}{dz^{2}}\brak {{(z-1)}^{3}dz^{n+1}\brak{z-1}^{-3}}   \\
+        &=\brak{\frac{d}{2}}\lim\limits_{z\to 1}\frac{d^2}{dz^2}(z^{n+1})   \\
+    &= \brak{\frac{d}{2}}\brak{n}\brak{n+1}\\
+   y(n)= R_1 + R_2 &= \brak{\frac{n+1}{2}}\brak{2x(0) + nd} \label{19}
+\end{align}
+Now use $\eqref{17}$ and $\eqref{18}$ to solve for $x(0)$ and $d$ and put in $\eqref{19}$ for the sum of $40$ terms.
+\end{frame} 
+
+\begin{frame}
+\frametitle{Solution}
+\begin{itemize}
+
+\item Hardware products to be available at low cost.
+\item Related skill sets to be provided to the public through simple projects. 
+\end{itemize}
+\end{frame}
+\section{Market}
+\begin{frame}
+\frametitle{Market}
+\begin{itemize}
+
+\item Students 
+\item Working professionals
+\item Industry and academia
+\end{itemize}
+\end{frame}
+\section{Product}
+\begin{frame}
+\frametitle{Product}
+    \begin{figure}[t]
+        \centering
+        \includegraphics[width=0.3\columnwidth]{figs/kit}
+        \caption{Decimal Game}
+\label{fig3:subfig1}        
+    \end{figure}%
+\end{frame}
+\section{Financials}
+\begin{frame}
+\frametitle{Financials}
+\begin{itemize}
+\item Investment - negligible
+\item Expected profit - $> 50 \%$
+\end{itemize}
+
+\end{frame}
+\section{Team}
+\begin{frame}
+\frametitle{Team}
+\begin{itemize}
+\item G V V   Sharma
+\item Faculty in the EE Dept at IITH
+\item 22 years exp. 
+\item Currently running the FWC certificiate program at IITH.
+\item Leading the SatCom 6G team at IITH.  
+\end{itemize}
+%\item I want to take the technologies developed at IITH to the masses.
+\end{frame}
+%\begin{frame}
+%\frametitle{Introduction}
+%\framesubtitle{Literature}
+%%\begin{figure}[t!]
+%%    \centering
+%%    \begin{subfigure}[t]{0.4\columnwidth}
+%%        \centering
+%%        \includegraphics[width=\columnwidth]{point_source}
+%%        \caption{Single point source}
+%%\label{fig3:subfig1}        
+%%    \end{subfigure}%
+%%    ~ 
+%%    \begin{subfigure}[t]{0.4\columnwidth}
+%%        \centering
+%%        \includegraphics[width=\columnwidth]{pointNoPowerDist_new}
+%%        \caption{SNR profile}
+%%\label{fig3:subfig2}
+%%    \end{subfigure}
+%%  %  \caption{Average SNR for a BPP. $N=16$}
+%%    \label{fig3}
+%%  \end{figure}
+%
+%\end{frame}
+%  
+%
+%
+%%
+
+\end{document}
