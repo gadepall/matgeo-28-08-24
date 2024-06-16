@@ -111,7 +111,13 @@ Let
 0 
 }
 \end{align}
-Then,
+If $\vec{O}$
+divides $AB$ in the ratio $k:1$,
+\begin{align}
+	\label{eq:section}
+\vec{O} = \frac{\brak{\vec{A} +k \vec{B}}}{1+k}
+\end{align}
+In this case,  $\because k = 1$,
 \begin{align}
 \vec{O} &= \frac{\brak{\vec{A} + \vec{B}}}{2}\\
 \implies \vec{B} &= 2\vec{O} - \vec{A}\\
@@ -130,15 +136,38 @@ Then,
 \end{frame}
 \begin{frame}
 \frametitle{Question }
-\begin{enumerate}
-\item [2)]
+$ABCD$ is a rectangle formed by the points $A\brak{-1,-1}$,$B\brak{-1,6}$,$C\brak{3,6}$ and $D\brak{3,-1}$. $P$,$Q$,$R$ and $S$ are mid-points of sides $AB$,$BC$,$CD$ and $DA$ respectively. Show that the diagonals of the quadrilateral $PQRS$ bisect each other. 
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+	From \eqref{eq:section},
+\begin{align}
+    \vec{P}&=\frac{\vec{A}+\vec{B}}{2},\
+        \vec{Q}=\frac{\vec{B}+\vec{C}}{2}\\
+    \vec{R}&=\frac{\vec{C}+\vec{D}}{2},\
+    \vec{S}=\frac{\vec{D}+\vec{A}}{2}
+    \end{align}
+Let $\vec{O}_1$ and $\vec{O}_2$ be the midpoints of $PR$ and $QS$ respectively
+\begin{align}
+    \vec{O}_1 = \frac{\vec{P}+\vec{R}}{2}=\frac{\vec{A}+\vec{B}+\vec{C}+\vec{D}}{4}\\
+      \vec{O}_2 = \frac{\vec{Q}+\vec{S}}{2}=\frac{\vec{A}+\vec{B}+\vec{C}+\vec{D}}{4}
+\end{align}
+Since 
+\begin{align}
+    \vec{O}_1     = \vec{O}_2,
+\end{align}
+ the diagonals bisect each other. 
+\end{frame}
+%
+\begin{frame}
+\frametitle{Question }
 $AD$ is a median of $\Delta ABC$ with vertices $A\brak{5,-6}, B\brak{6,4}$ and $C\brak{0,0}$. Length $AD$ is equal to:
 \begin{enumerate}
 \item  $\sqrt{68}$
 \item  $2\sqrt{15}$
 \item  $\sqrt{101}$
 \item  $10$
-\end{enumerate}
 \end{enumerate}
 \end{frame}
 \begin{frame}
@@ -231,13 +260,53 @@ x \\
 %
 \begin{frame}
 \frametitle{Question }
-Solve the following system of linear equations algebraically:\\
-$2x+5y=-4$;$4x-3y$=$5$
+Solve the following system of linear equations algebraically
+\begin{align}
+\label{eq:8}
+\begin{split}
+	2x+5y&=-4
+\\
+	4x-3y&=5
+\end{split}
+\end{align}
 \end{frame}
 
 \begin{frame}
 \frametitle{Solution}
-The above system of equations can be written as:
+$\eqref{eq:8}$
+    can be expressed as
+\begin{align}
+\label{eq:9}
+\begin{split}
+    \vec{n}_1^{\top}\vec{x} &= c_1
+    \\
+    \vec{n}_2^{\top}\vec{x} &= c_2
+\end{split}
+\end{align}
+where
+\begin{align}
+	\vec{n}_1 = \myvec{4\\-3},\ c_1 = 5
+	\\
+	\vec{n}_2 = \myvec{2\\5},\ c_2 = -4
+\end{align}
+\eqref{eq:9} gives the normal forms of the equations given in 
+\eqref{eq:8}  where 
+\begin{align}
+\vec{n}_1, \vec{n}_2 
+\end{align}
+are defined to be the normal vectors of the respective lines.
+\end{frame}
+\begin{frame}
+\frametitle{Solution}
+\eqref{eq:9}
+can be expressed as
+\begin{align}
+%\label{eq:9}
+\begin{split}
+	\myvec{\vec{n}_1 & \vec{n}_2}^{\top}\vec{x} &= \myvec{ c_1 \\ c_2}
+\end{split}
+\end{align}
+yielding the matrix equation
 \begin{align}
     \myvec{
         2 & 5\\ 
@@ -249,7 +318,7 @@ The above system of equations can be written as:
     } &= \myvec{
         -4\\
         5
-    } \label{8}
+    } 
     \end{align}
     Writing the augmented matrix for using Gauss elimination
     \begin{align}
@@ -277,25 +346,55 @@ The above system of equations can be written as:
     }
     \end{align}
 \end{frame}
-
-
-
-
-
-
+%
 \begin{frame}
 \frametitle{Question }
-\begin{enumerate}
-    \item[5)]
-The sum of the digits of a $2$-digit number is 14. The number obtained by interchanging     its digits exceeds the given number by 18. Find the number.
-\end{enumerate}
+Find the ratio in which the point $C\brak{\frac{8}{5},y}$ divides the line segment joining the points $A\brak{1,2}$ and $B\brak{2,3}$. Also, find the value of $y$. 
 \end{frame}
-
-
-
-
-
-
+%
+\begin{frame}
+\frametitle{Solution}
+    For collinearity,
+    \begin{align}
+          \text{rank}\myvec{
+        1 & 1 & 1\\
+	    \vec{A} & \vec{B} & \vec{C}
+    } =2 \label{eq:10}
+\end{align}
+	Performing row reduction,
+\begin{align}
+    \myvec{
+        1 & 1 & 1\\
+        1 & 2 & 8/5\\
+        2 & 3 & y
+    } \xleftrightarrow{}
+    \myvec{
+        1 & 1 & 1\\
+        0 & \brak{2-1} & \brak{\frac{8}{5}-1}\\
+        0 & \brak{3-2} & \brak{y-3}
+    }\xleftrightarrow{}
+    \myvec{
+        1 & 1 & 1\\
+        0 & 1 & \frac{3}{5}\\
+        0 & 1 & y-3
+    }
+    \\
+    \xleftrightarrow{R_3\rightarrow R_3-R_2}
+    \myvec{
+        1 & 1 & 1\\
+        0 & 1 & \frac{3}{5}\\
+        0 & 0 & y-\frac{18}{5}
+    }
+    \implies y = \frac{18}{5}
+\end{align}
+in order to get a 0 row.
+\end{frame}
+%
+\begin{frame}
+\frametitle{Question }
+The sum of the digits of a $2$-digit number is 14. The number obtained by interchanging     its digits exceeds the given number by 18. Find the number.
+\end{frame}
+%
 \begin{frame}
 \frametitle{Solution}
 Let the digits of the number be $x_1$(tens) and $x_2$(units).Given
@@ -304,7 +403,8 @@ Let the digits of the number be $x_1$(tens) and $x_2$(units).Given
     10x_2+x_1 &= 18 + 10x_1+x_2\\
     \implies x_1-x_2 &= -2\label{2}
 \end{align}
-Solving the equations $\eqref{1}$,$\eqref{2}$ in their matrix forms
+The above equations can be expressed in matrix form
+as
 \begin{align}
     \myvec{
         1 & 1\\
@@ -319,23 +419,18 @@ Solving the equations $\eqref{1}$,$\eqref{2}$ in their matrix forms
     }   \\
     \end{align}
 \end{frame}
-
-
-
-
-
-
+%
 \begin{frame}
 \frametitle{Solution}
-For the matrix
+If
     \begin{align}
 	    \vec{A}&=\frac{1}{\sqrt{2}}\myvec{
         1 & 1\\
         -1 & 1
-    }\\
+    },\\
 	    \vec{A}^\top \vec{A}&= \vec{I}    
     \end{align}
-$\vec{A}$ is an orthogonal matrix.
+$\vec{A}$ is then defined to be an orthogonal matrix.
     \begin{align}
             \myvec{
         1 & 1\\
@@ -368,65 +463,6 @@ $\vec{A}$ is an orthogonal matrix.
 \end{align}
 \end{frame}
 %
-\begin{frame}
-\frametitle{Question }
-Find the ratio in which the point $C\brak{\frac{8}{5},y}$ divides the line segment joining the points $A\brak{1,2}$ and $B\brak{2,3}$. Also, find the value of $y$. 
-\end{frame}
-%
-\begin{frame}
-\frametitle{Solution}
-    For collinearity,
-    \begin{align}
-          \text{rank}\myvec{
-        1 & 1 & 1\\
-        A & B & C
-    } =2 \label{10}\\
-    \myvec{
-        1 & 1 & 1\\
-        1 & 2 & 8/5\\
-        2 & 3 & y
-    } \xleftrightarrow{}
-    \myvec{
-        1 & 1 & 1\\
-        0 & \brak{2-1} & \brak{\frac{8}{5}-1}\\
-        0 & \brak{3-2} & \brak{y-3}
-    }\xleftrightarrow{}
-    \myvec{
-        1 & 1 & 1\\
-        0 & 1 & \frac{3}{5}\\
-        0 & 1 & y-3
-    }
-    \\
-    \xleftrightarrow{R_3\rightarrow R_3-R_2}
-    \myvec{
-        1 & 1 & 1\\
-        0 & 1 & \frac{3}{5}\\
-        0 & 0 & y-\frac{18}{5}
-    }
-    \implies y = \frac{18}{5}
-\end{align}
-\end{frame}
-%
-\begin{frame}
-\frametitle{Question }
-$ABCD$ is a rectangle formed by the points $A\brak{-1,-1}$,$B\brak{-1,6}$,$C\brak{3,6}$ and $D\brak{3,-1}$. $P$,$Q$,$R$ and $S$ are mid-points of sides $AB$,$BC$,$CD$ and $DA$ respectively. Show that the diagonal of the quadrilateral $PQRS$ bisect each other. 
-\end{frame}
-%
-\begin{frame}
-\frametitle{Solution}
-\begin{align}
-    \vec{P}&=\frac{\vec{A}+\vec{B}}{2},\
-        \vec{Q}=\frac{\vec{B}+\vec{C}}{2}\\
-    \vec{R}&=\frac{\vec{C}+\vec{D}}{2},\
-    \vec{S}=\frac{\vec{D}+\vec{A}}{2}
-    \end{align}
-Let $\vec{O}_1$ and $\vec{O}_2$ be the midpoints of $PR$ and $QS$ respectively
-\begin{align}
-    \vec{O}_1 = \frac{\vec{P}+\vec{R}}{2}=\frac{\vec{A}+\vec{B}+\vec{C}+\vec{D}}{4}\\
-      \vec{O}_2 = \frac{\vec{Q}+\vec{S}}{2}=\frac{\vec{A}+\vec{B}+\vec{C}+\vec{D}}{4}
-\end{align}
-Since the midpoints of the diagonals coincide, the diagonals bisect each other. 
-\end{frame}
 %
 \begin{frame}{Topics covered so far}
     \begin{enumerate}
@@ -434,8 +470,8 @@ Since the midpoints of the diagonals coincide, the diagonals bisect each other.
         \item {Section Formula}
         \item {Norm}
         \item {Gauss Elimination}
-        \item {Orthogonal matrix}
         \item {Rank}
+        \item {Orthogonal matrix}
     \end{enumerate}
 \end{frame}
 %
@@ -467,7 +503,7 @@ Let
         -1
     }
     \end{align}
-    Applying concept of rank from $\eqref{10}$
+    Applying concept of rank from $\eqref{eq:10}$
     \begin{align}
                   \text{rank}\myvec{
         1 & 1 & -1\\
@@ -490,15 +526,12 @@ Let
 %
 \begin{frame}
 \frametitle{Question }
-\begin{enumerate}
-    \item [2)]
 If $\alpha$,$\beta$ and $\gamma$ are the angles which a line makes with positive directions of $x$,$y$ and $z$ axes respectively, then which of the following are {not} true?
     \begin{enumerate}
 \item  $\cos^2{\alpha} + \cos^2{\beta} + \cos^2{\gamma} = 1$
 \item  $\sin^2{\alpha} + \sin^2{\beta} + \sin^2{\gamma} = 2$
 \item  $\cos{2\alpha} + \cos{2\beta} + \cos{2\gamma} =-1$
 \item  $\cos{\alpha} + \cos{\beta} + \cos{\gamma} = 1$
-\end{enumerate}
 \end{enumerate}
 \end{frame}
 %
@@ -516,23 +549,10 @@ with
 \begin{align}
 	\norm{\vec{m}} =  1
 \end{align}
-From $\eqref{8}$
-\begin{align}
-    2x + 5y = -4
-    \end{align}
-    can be expressed as
-\begin{align}
-    \vec{n}^{\top}\vec{x} &= c
-\end{align}
-where
-\begin{align}
-	\vec{n} = \myvec{2\\5},\ c = -4
-\end{align}
 \end{frame}
 %
 \begin{frame}
-\frametitle{Solution}
-This is defined to be the normal equation of a line, where $\vec{n}$ represents the normal vector.
+\frametitle{Parametric Form}
 Also, 
 \begin{align}
     2x + 5y &= -4\\
@@ -558,7 +578,7 @@ Also,
     }\\
     &= \vec{A} + k\vec{m} \label{11}
 \end{align}
-The general equation written above is of the parametric form.
+$\vec{m}$ is defined to be the direction vector of the line.
 \end{frame}
 %
 \begin{frame}
@@ -665,51 +685,44 @@ Let the given lines be denoted by $\vec{x}_1$ and $\vec{x}_2$ respectively. From
 
 \begin{frame}
 \frametitle{Solution}
-The two equations required to solve for the direction of line are 
-\begin{align}
-\vec{m}^\top\vec{m}_1 &= 0\\
-\vec{m}^\top\vec{m}_2 &= 0\\
-	\implies \myvec{\vec{m}_1 &\vec{m}_2}^{\top}\vec{m} &= 0
-\end{align}
-\begin{align}
-    \myvec{
-        1 & 2 & 3\\
-        0 & -3 & 2   \\
-    }\vec{m} &\xleftarrow{R_1 \to 2R_2 + 3R_1} \myvec{
-        3 & 0 & 13\\
-        0 & -3 & 2   \\
-    }\vec{m} = 0\\
-  &\implies  \myvec{
-        3 & 0 & 13\\
-        0 & -3 & 2   \\
-    }\myvec{
-        m_x\\
-        m_y\\
-        m_z
-    } = 0\\
-    &\implies \vec{m} = \myvec{
-        \frac{-13}{3}\\
-        \frac{2}{3}\\
-        1
-    }
-\end{align}
-\end{frame}
-
-
-
-
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
 Let the unknown line in its parametric form be denoted as follows from $\eqref{11}$.
 \begin{align}
     \vec{x}_3 = \vec{C} + k_3\vec{m}
 \end{align}
-For finding the point of intersection of the lines($\vec{C}$), equating $\eqref{12}$ and $\eqref{13}$
+The two equations required to solve for the direction of line are 
+\begin{align}
+\vec{m}^\top\vec{m}_1 = 0\\
+\vec{m}^\top\vec{m}_2 = 0\\
+	\implies \myvec{\vec{m}_1 &\vec{m}_2}^{\top}\vec{m} = 0
+\end{align}
+yielding
+\begin{align}
+    \myvec{
+        1 & 2 & 3\\
+        0 & -3 & 2   
+    } \xleftarrow{R_1 \to 2R_2 + 3R_1} \myvec{
+        3 & 0 & 13\\
+        0 & -3 & 2   \\
+    } = 0\\
+  \implies  \myvec{
+        3 & 0 & 13\\
+        0 & -3 & 2   \\
+    }\myvec{
+        m_1\\
+        m_2\\
+        m_3
+    } = 0
+    \implies \vec{m} = \myvec{
+	    -\frac{13}{3}\\[1ex]
+        \frac{2}{3}\\[1ex]
+        1
+    }
+\end{align}
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+Equating $\eqref{12}$ and $\eqref{13}$,
 \begin{align}
     \vec{A} + k_1\vec{m}_1 = \vec{B} + k_2\vec{m}_2\\
     \myvec{
@@ -719,7 +732,7 @@ For finding the point of intersection of the lines($\vec{C}$), equating $\eqref{
         -k_2
     } = \vec{B}-\vec{A}
 \end{align}
-From the above $k_1$ and $k_2$ can be found by gauss elimination given in $\eqref{14}$ and thus $\vec{C}$.
+From the above, $k_1$ and $k_2$ can be found by gauss elimination given in $\eqref{14}$ and thus $\vec{C}$.
 
 \end{frame}
 
@@ -733,7 +746,7 @@ From the above $k_1$ and $k_2$ can be found by gauss elimination given in $\eqre
 
 \begin{frame}
 \frametitle{Question }
-Two vertices of the parallelogram $\vec{ABCD}$ are given as $\vec{A}\brak{-1,2,1}$ and $\vec{B}\brak{1,-2,5}$. If the equation if the line passing through $\vec{C}$ and $\vec{D}$ is $\frac{x-4}{1} = \frac{y+7}{-2} = \frac{z-8}{2}$, then find the distance between the sides $\vec{AB}$ and $\vec{CD}$. Hence, find the area of parallelogram $\vec{ABCD}$
+Two vertices of the parallelogram $\vec{ABCD}$ are given as $\vec{A}\brak{-1,2,1}$ and $\vec{B}\brak{1,-2,5}$. If the equation if the line passing through $\vec{C}$ and $\vec{D}$ is $\frac{x-4}{1} = \frac{y+7}{-2} = \frac{z-8}{2}$, then find the distance between the sides ${AB}$ and ${CD}$. Hence, find the area of parallelogram ${ABCD}$.
 \end{frame}
 %
 \begin{frame}
@@ -741,20 +754,20 @@ Two vertices of the parallelogram $\vec{ABCD}$ are given as $\vec{A}\brak{-1,2,1
 Let  the two parallel lines be
 \begin{align}
     \vec{x} & = \vec{A} + k_1\vec{m}  \\
-    \vec{x} &=  \vec{B} + k_2\vec{m} 
+    \vec{x} &=  \vec{C} + k_2\vec{m} 
 \end{align}
 If $\vec{P}$ be a point on the second line, 
 \begin{align}
-    \vec{P} &=  \vec{B} + k_2\vec{m} 
+    \vec{P} =  \vec{C} + k_2\vec{m} 
     \\
-	\brak{\vec{A}-\vec{P}}^{\top}\vec{m} &= 0
+	\brak{\vec{A}-\vec{P}}^{\top}\vec{m} = 0
 \end{align}
 From the above, 
 \begin{align}
-	\brak{\vec{A}-\vec{B}}^{\top}\vec{m} -k_2\norm{\vec{m}}^2&= 0
+	\brak{\vec{A}-\vec{C}}^{\top}\vec{m} -k_2\norm{\vec{m}}^2&= 0
 	\\
 	\implies k_2 = \frac{
-		\brak{\vec{A}-\vec{B}}^{\top}\vec{m}}{ \norm{\vec{m}}^2}
+		\brak{\vec{A}-\vec{C}}^{\top}\vec{m}}{ \norm{\vec{m}}^2}
 \end{align}
     
 \end{frame}

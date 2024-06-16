@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  15 JUN 2024 00:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  16 JUN 2024 19:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1277,27 +1277,17 @@ thkerncmss.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 130.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 136.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 130.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 136.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 130.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 136.
 
  [4
 
-]
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 143.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 143.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 143.
-
- [5
+] [5
 
 ] [6
 
@@ -1384,9 +1374,11 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
 
 ] [46
 
-] [47] [48
+] [47
 
-] [49
+] [48] [49
+
+] [50
 
 ]
 \tf@nav=\write6
@@ -1407,13 +1399,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9A4A87F6CB425DE1842FDE3AE6C88FB6;336.
  ) 
 Here is how much of TeX's memory you used:
- 26585 strings out of 474104
- 515473 string characters out of 5729886
- 1944493 words of memory out of 5000000
- 48303 multiletter control sequences out of 15000+600000
- 570377 words of font info for 80 fonts, out of 8000000 for 9000
+ 26537 strings out of 474104
+ 514159 string characters out of 5729886
+ 1947493 words of memory out of 5000000
+ 48253 multiletter control sequences out of 15000+600000
+ 565701 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,19n,131p,398b,695s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,21n,131p,398b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmex10.pfb></data/data/com.termux/files/usr/share/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></data/data/com.termux/fi
@@ -1429,10 +1421,10 @@ les/usr/share/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb></data/data/com.termux/files/usr/share/texlive/2024/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (49 pages, 169402 bytes).
+Output written on main.pdf (50 pages, 171681 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 128 named destinations out of 1000 (max. 500000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 365 compressed objects within 4 object streams
+ 132 named destinations out of 1000 (max. 500000)
  87 words of extra memory for PDF output out of 10000 (max. 10000000)
 
