@@ -39,6 +39,7 @@
 \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
 \providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
 \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\providecommand{\rank}{\text{rank}}
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
@@ -645,13 +646,43 @@ We know that
 Simplify the above for $\vec{C}$. 
     
 \end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Question }
+Two vertices of the parallelogram $\vec{ABCD}$ are given as $\vec{A}\brak{-1,2,1}$ and $\vec{B}\brak{1,-2,5}$. If the equation if the line passing through $\vec{C}$ and $\vec{D}$ is $\frac{x-4}{1} = \frac{y+7}{-2} = \frac{z-8}{2}$, then find the distance between the sides ${AB}$ and ${CD}$. Hence, find the area of parallelogram ${ABCD}$.
+\end{frame}
+%
+\begin{frame}
+\frametitle{Solution}
+Let  the two parallel lines be
+\begin{align}
+    \vec{x} & = \vec{A} + k_1\vec{m}  \\
+    \vec{x} &=  \vec{C} + k_2\vec{m} 
+\end{align}
+If $\vec{P}$ be a point on the second line, 
+\begin{align}
+    \vec{P} =  \vec{C} + k_2\vec{m} 
+    \\
+	\brak{\vec{A}-\vec{P}}^{\top}\vec{m} = 0
+\end{align}
+From the above, 
+\begin{align}
+	\brak{\vec{A}-\vec{C}}^{\top}\vec{m} -k_2\norm{\vec{m}}^2&= 0
+	\\
+	\implies k_2 = \frac{
+		\brak{\vec{A}-\vec{C}}^{\top}\vec{m}}{ \norm{\vec{m}}^2}
+\end{align}
+    
+\end{frame}
 %
 \begin{frame}
 \frametitle{Question }
-\begin{enumerate}
-    \item [5)]
 Find the equation of the line passing through the point of intersection of the lines $\frac{x}{1} = \frac{y-1}{2} = \frac{z-2}{3}$ and $\frac{x-1}{0} = \frac{y}{-3} = \frac{z-7}{2}$ and perpendicular to these given lines. 
-\end{enumerate}
 \end{frame}
 %
 \begin{frame}
@@ -731,6 +762,7 @@ Equating $\eqref{12}$ and $\eqref{13}$,
         k_1 \\
         -k_2
     } = \vec{B}-\vec{A}
+	\label{eq:non-skew}
 \end{align}
 From the above, $k_1$ and $k_2$ can be found by gauss elimination given in $\eqref{14}$ and thus $\vec{C}$.
 
@@ -739,39 +771,110 @@ From the above, $k_1$ and $k_2$ can be found by gauss elimination given in $\eqr
 
 
 
-
-
-
-
-
+\section{NCERT}
 \begin{frame}
-\frametitle{Question }
-Two vertices of the parallelogram $\vec{ABCD}$ are given as $\vec{A}\brak{-1,2,1}$ and $\vec{B}\brak{1,-2,5}$. If the equation if the line passing through $\vec{C}$ and $\vec{D}$ is $\frac{x-4}{1} = \frac{y+7}{-2} = \frac{z-8}{2}$, then find the distance between the sides ${AB}$ and ${CD}$. Hence, find the area of parallelogram ${ABCD}$.
+\frametitle{Question}
+Find the shortest distance between the lines whose vector equations are
+    \begin{align}
+\begin{split}
+	\vec{x} &= \myvec{1\\2\\3} + \kappa_1\myvec{1\\-3\\2}
+	\\
+	\vec{x} &= \myvec{4\\5\\6} + \kappa_2\myvec{2\\3\\1}
+\end{split}
+        \label{eq:chapters/12/11/2/16/L2/svd}
+    \end{align}
+%    \solution
+%		\input{chapters/12/11/2/16/lsq/lsq.tex}
 \end{frame}
-%
 \begin{frame}
 \frametitle{Solution}
-Let  the two parallel lines be
+	From \eqref{eq:non-skew}
+the lines
+%\begin{align}
+%\begin{split}
+%	L_1: \quad   \vec{x} &=\vec{A}+ \kappa_1\vec{m_1}
+%	\\
+%L_2: \quad        
+%	\vec{x} &= \vec{B}  + \kappa_2\vec{m_2} 
+%\end{split}
+%	    \label{eq:chapters/12/11/2/16/lsq/L1L2}
+%\end{align}
+will intersect if 
 \begin{align}
-    \vec{x} & = \vec{A} + k_1\vec{m}  \\
-    \vec{x} &=  \vec{C} + k_2\vec{m} 
+%\vec{A}+ \kappa_1\vec{m_1}
+%= \vec{B}  + \kappa_2\vec{m_2} 
+%\\
+%\implies 
+% \myvec{\vec{m_1} & \vec{m_2}}\myvec{\kappa_1\\-\kappa_2}
+%	 =\vec{B}-\vec{A}
+% \\
+%	\implies 
+	\rank\myvec{\vec{M}  &
+	 \vec{B}-\vec{A}} = 2 
+	    \label{eq:chapters/12/11/2/16/lsq/rank}
 \end{align}
-If $\vec{P}$ be a point on the second line, 
+where
 \begin{align}
-    \vec{P} =  \vec{C} + k_2\vec{m} 
-    \\
-	\brak{\vec{A}-\vec{P}}^{\top}\vec{m} = 0
+	\vec{M} = 
+	\myvec{\vec{m_1} & \vec{m_2}} 
 \end{align}
-From the above, 
-\begin{align}
-	\brak{\vec{A}-\vec{C}}^{\top}\vec{m} -k_2\norm{\vec{m}}^2&= 0
-	\\
-	\implies k_2 = \frac{
-		\brak{\vec{A}-\vec{C}}^{\top}\vec{m}}{ \norm{\vec{m}}^2}
-\end{align}
-    
 \end{frame}
-
+\begin{frame}
+\frametitle{Solution}
+If $L_1, L_2$, do not intersect, let 
+\begin{align}
+\begin{split}
+	\vec{x}_1 &=\vec{A}+ \kappa_1\vec{m_1}
+	\\
+	\vec{x}_2 &= \vec{B}  + \kappa_2\vec{m_2} 
+\end{split}
+	    \label{eq:chapters/12/11/2/16/lsq/x1x2}
+\end{align}
+be points on 
+$L_1, L_2$ respectively, that are closest to each other.
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=0.5\columnwidth]{../chapters/12/11/2/16/lsq/figs/skew.png}
+        \caption{}
+    \end{figure}
+%	    \label{eq:chapters/12/11/2/16/lsq/L1L2}
+\end{frame}
+\begin{frame}
+\frametitle{Solution}
+Then, 
+	    from \eqref{eq:chapters/12/11/2/16/lsq/x1x2}
+\begin{align}
+\vec{x_1} - \vec{x_2} =
+	 \vec{A}-\vec{B}+
+ \myvec{\vec{m_1} & \vec{m_2}}\myvec{\kappa_1\\-\kappa_2}
+	\label{eq:chapters/12/11/2/16/lsq/x-diff}
+\end{align}
+Also, 
+    \begin{align}
+	    \brak{\vec{x}_1 -\vec{x}_2}^\top\vec{m}_1
+	    =
+	    \brak{\vec{x}_1 -\vec{x}_2}^\top\vec{m}_2
+	    =0
+	    \\
+	    \implies 
+	    \brak{\vec{x}_1 -\vec{x}_2}^\top\myvec{\vec{m_1} & \vec{m_2}} = \vec{0}
+	    \\
+	    \text{or, }	    \vec{M}^\top\brak{\vec{x}_1 -\vec{x}_2} = \vec{0}
+	    \\
+	    \implies \vec{M}^\top
+	    \brak{\vec{A}-\vec{B}}+
+ \vec{M}^\top\vec{M}\myvec{\kappa_1\\-\kappa_2} = \vec{0}
+	    \label{eq:chapters/12/11/2/16/lsq/m-orth}
+    \end{align}
+	    from 
+	\eqref{eq:chapters/12/11/2/16/lsq/x-diff},
+	yielding
+    \begin{align}
+	    \vec{M}^\top\vec{M}\myvec{\kappa_1\\-\kappa_2} = \vec{M}^\top\brak{\vec{B}-\vec{A}}
+        \label{eq:chapters/12/11/2/16/lsq/vec-eqn}
+    \end{align}
+    This is known as the {\em least squares solution}.
+\end{frame}
 
 
 
