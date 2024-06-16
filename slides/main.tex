@@ -2,6 +2,7 @@
 \mode<presentation>
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{bm}
 %\usepackage{advdate}
 \usepackage{adjustbox}
 \usepackage{subcaption}
@@ -577,7 +578,8 @@ Also,
         1\\
         -\frac{2}{5}
     }\\
-    &= \vec{A} + k\vec{m} \label{11}
+    &= \vec{A} + k\vec{m} 
+  \label{eq:line_dir_pt-lam}
 \end{align}
 $\vec{m}$ is defined to be the direction vector of the line.
 \end{frame}
@@ -687,7 +689,7 @@ Find the equation of the line passing through the point of intersection of the l
 %
 \begin{frame}
 \frametitle{Solution}
-Let the given lines be denoted by $\vec{x}_1$ and $\vec{x}_2$ respectively. From $\eqref{11}$:
+Let the given lines be denoted by $\vec{x}_1$ and $\vec{x}_2$ respectively. From $\eqref{eq:line_dir_pt-lam}$:
 \begin{align}
     \vec{x}_1 &= \myvec{
         0\\
@@ -716,7 +718,7 @@ Let the given lines be denoted by $\vec{x}_1$ and $\vec{x}_2$ respectively. From
 
 \begin{frame}
 \frametitle{Solution}
-Let the unknown line in its parametric form be denoted as follows from $\eqref{11}$.
+Let the unknown line in its parametric form be denoted as follows from $\eqref{eq:line_dir_pt-lam}$.
 \begin{align}
     \vec{x}_3 = \vec{C} + k_3\vec{m}
 \end{align}
@@ -875,342 +877,679 @@ Also,
     \end{align}
     This is known as the {\em least squares solution}.
 \end{frame}
-
-
-
-
-
-
-
-    \section{Class 10}
-
-
-
-
-
-
 \begin{frame}
-\frametitle{Question }
-\begin{enumerate}
-    \item [8)]
-The sum of first and eight terms of an A.P is $32$ and their product is $60$. Find the first term and common difference of the A.P. Hence, also find the sum of its first $20$ terms. 
-\end{enumerate}
+\frametitle{Question}
+Draw a circle of radius 6 cm. From a point 10 cm away from its centre, construct the pair of tangents to the circle and measure their lengths.
 \end{frame}
-
-
-
-
-
 \begin{frame}
 \frametitle{Solution}
-Let the first and eighth terms be $x\brak{0}$ and $x\brak{7}$ respectively,given:
+	The equation of the circle is given by 
+		\begin{align}
+			\label{eq:incircle}
+			\norm{\vec{x}-\vec{O}}^2 = r^2
+		\end{align}
+		which can be expressed as 
 \begin{align}
-x\brak{0}+x\brak{7} &= 32\\
-x\brak{0} &= 32 - x\brak{7}\label{3} \\
-x\brak{0}x\brak{7} &= 60 \label{4}
-\end{align}
-From $\eqref{3}$ and $\eqref{4}$
-\begin{align}
-    x\brak{7}\brak{32-x\brak{7}} &= 60
-\end{align}
-The roots are $\brak{30,2}$, therefore ,if $x\brak{7}=30$ then $x\brak{0}=2$ and if $x\brak{7}=2$ then $x_0=30$\\
-Now
-\begin{align}
-    x\brak{n} &= \brak{x\brak{0} + nd}u\brak{n}\label{5}
+    \label{eq:conic_quad_form}
+	\text{g}\brak{\vec{x}} = \vec{x}^{\top}\vec{V}\vec{x}+2\vec{u}^{\top}\vec{x}+f=0
     \end{align}
-    Where $d$ is the common difference of the A.P and $u(n)$ is the unit step function.\\($u\brak{n}=0 \forall n<0$,$u\brak{n}=1 \forall n\geq0$)
+for
+		\begin{align}
+			 \label{eq:conic_quad_form-params}
+	 \vec{V}=\vec{I},\vec{u}=-\vec{O}, f = \norm{\vec{O}}-r^2,
+		\end{align}
+Let 
+  \eqref{eq:line_dir_pt-lam}
+  be the equation of the tangent from the point $\vec{h}$ .  Then, the intersection of 
+  \eqref{eq:line_dir_pt-lam}
+  and 
+			 \eqref{eq:conic_quad_form}
+			 can be expressed as 
+\begin{align}
+\brak{\vec{h} + \mu{\vec{m}}}^{\top}
+\vec{V}
+\brak{\vec{h} + \mu{\vec{m}}}
+			+2\vec{u}^{\top}\brak{\vec{h} + \mu{\vec{m}}}+f &= 0
+			\\
+\implies \mu^2\vec{m}^{\top} \vec{V}\vec{m} + 2\mu \vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}+g\brak{\vec{h}} &= 0 
+	\label{eq:incircle-quad}
+\end{align}
+For 	\eqref{eq:incircle-quad} to have exactly one root, the discriminant
 \end{frame}
-
-
-
-
-
-
 \begin{frame}
 \frametitle{Solution}
 \begin{align}
-        \implies     x\brak{7} &= \brak{x\brak{0} + 7d}\\
-    \implies 7d &= \pm 28 \implies d = \pm 4
+ \cbrak{\vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}}^2 -g\brak{\vec{h}}\vec{m}^{\top} \vec{V}\vec{m}  &= 0 
+	\label{eq:incircle-disc}
 \end{align}
-Therefore the A.P is $2,6,10...$ or $30,26,22...$.\\
-Considering the former for calculations and taking Z-Transform of $\eqref{5}$ for sum.\\
-Since
+and 
+  \begin{align}
+  \label{eq:line_dir_pt-lam-mu}
+	  \mu = -\frac{\vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}}{\vec{m}^{\top}\vec{V}\vec{m} }
+  \end{align}
+  is obtained.
+	\eqref{eq:incircle-disc}
+	can be expressed as
 \begin{align}
-X(z) &= \sum_{n=-\infty}^{\infty} x(n)z^{-n} \label{6}
+\vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}\vec{m}-g\brak{\vec{h}}\vec{m}^{\top} \vec{V}\vec{m}  &= 0 
+\\
+\implies \vec{m}^{\top}\vec{\Sigma}\vec{m} &= 0
+	\label{eq:incircle-disc-Sigma-new}
 \end{align}
-Let $y\brak{n}$ denote the sum, let:
+where
 \begin{align}
-    y\brak{n} &= x\brak{n} * h\brak{n}\\
-    &= \sum_{k=-\infty}^{\infty} x(k)h(n-k)
-\end{align}    
-\end{frame}
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-Replace $h\brak{n}$ with $u\brak{n}$.
-\begin{align}
-    y\brak{n} &= \sum_{k=0}^{n} x(k)u_{\brak{n-k}}\\
-    &=x(0)u\brak{n} + x(1)u\brak{n-1} + ..... x(n)u_{\brak{0}}
+	\label{eq:incircle-disc-Sigma}
+\vec{\Sigma} = 
+\brak{\vec{V}\vec{h}+\vec{u}}
+	  \brak{\vec{V}\vec{h}+\vec{u}}^{\top}
+   -
+	  {g}\brak{\vec{h}}\vec{V}
 \end{align}
-    This denotes the sum of terms $x(0),x(1)....x(n)$ i.e. first $n+1$ terms. From \eqref{6}\\
-\begin{align}
-    u\brak{n} &\xrightarrow{\mathcal{Z}} \frac{1}{\brak{1-z^{-1}}} \label{7}\\
-nu\brak{n} &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{\brak{1-z^{-1}}^{2}}\\
-  \implies  X(z)&= \frac{2}{\brak{1-z^{-1}}} + \frac{4z^{-1}}{\brak{1-z^{-1}}^{2}} \label{eq:ee25-4}
-,\quad \abs {z}>\abs{1} 
-\end{align}
-\end{frame}
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-Now as convolution in the time domain corresponds to multiplication in the frequency domain and \eqref{eq:ee25-4} and \eqref{7}.
-\begin{align}
-    Y\brak{z} &= X\brak{z} * H\brak{z}\\
- &= \brak{\frac{2}{\brak{1-z^{-1}}} +
-\frac{4z^{-1}}{\brak{1-z^{-1}}^{2}}}\brak{\frac{1}{\brak{1-z^{-1}}}}
-,\quad \abs {z}>\abs{1}     
-\end{align}
-Using normal inversion for inverse Z-transform:
-\begin{align}
- Y(z) &= \frac{2}{\brak{1-z^{-1}}^2} +
-\frac{4z^{-1}}{\brak{1-z^{-1}}^{3}}
-,\quad \abs {z}>\abs{1}\\
-   &= \frac{8z^{-1}}{1-z^{-1}} + \frac{10z^{-2}}{\brak{1-z^{-1}}^2} + \frac{4z^{-3}}{\brak{1-z^{-1}}^{3}} + 2\label{final}
-\end{align}
-    
-\end{frame}
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-For proceeding forwards here are some important generalizations.\\
-Shifting property
-\begin{align}
-x(n-k) \leftrightarrow z^{-k} X(z) \label{shift}
-\end{align}
-Differentiation property
-\begin{align}
-nx(n) \leftrightarrow -zX^{\prime}(z) \label{diff}
-\end{align}
-From \eqref{7} and \eqref{shift}
-\begin{align}
-u\brak{n-1} &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{1-z^{-1}} \label{21}
-\end{align}
-From $\eqref{7}$ and $\eqref{diff}$
-\begin{align}
-nu\brak{n} &\xrightarrow{\mathcal{Z}} -z\frac{d}{dz}\brak{\frac{1}{1-z^{-1}}}\\
-nu\brak{n}    &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{\brak{1-z^{-1}}^{2}}
-\end{align}
-    
-\end{frame}
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-From $\eqref{shift}$
-\begin{align}
-(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} z^{-1}\frac{z^{-1}}{\brak{1-z^{-1}}^{2}}\\
-(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} \frac{z^{-2}}{\brak{1-z^{-1}}^{2}} \label{22}
-\end{align}
-Now, using $\eqref{diff}$ and writing the corresponding L.H.S
-\begin{align}   
-(n)(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} \frac{2z^{-2}}{\brak{1-z^{-1}}^3} 
-\end{align}
-Using $\eqref{shift}$
-\begin{align}
-    \frac{(n-1)(n-2)u\brak{n-2}}{2}    &\xrightarrow{\mathcal{Z}} \frac{z^{-3}}{\brak{1-z^{-1}}^3} \label{23} 
-\end{align}
-\end{frame}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-The inverse-Z of a constant will be $\delta(n)$, so it is ruled out.
-Plugging these values in $\eqref{final}$ we get
-\begin{align}
-   y(n) = 8u\brak{n-1} + 10(n-1)u\brak{n-1} &+ 4\frac{(n-1)(n-2)u\brak{n-2}}{2} \notag \\
-   &+ 2\delta(n)
-\end{align}
-Putting $n=19$
-\begin{align}
-      y(19) &= 2(19+1)^2 = 800
-\end{align}
-    
-\end{frame}
-
-
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-Using contour integration for inverse Z-transform
-\begin{align}
-    y(19)&=\frac{1}{2\pi j}\oint_{C}Y(z) \;z^{18} \;dz\\  
- &=\frac{1}{2\pi j}\oint_{C}\brak{2z^{20}\brak{z-1}^{-2}+
-       4z^{20}\brak{z-1}^{-3}} \;dz\\
-       R&=\frac{1}{\brak {m-1}!}\lim\limits_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\brak {{(z-a)}^{m}f\brak z}\label{eq:6}  
-\end{align}
-For $R_1$ , $m=2$ , where $m$ corresponds to number of repeated poles .
-\begin{align}
-    R_1 &=\frac{1}{\brak {1}!}\lim\limits_{z\to 1}\frac{d}{dz}\brak {{(z-1)}^{2}2z^{20}\brak{z-1}^{-2}}   \\
-    &=2\lim\limits_{z\to 1}\frac{d}{dz}(z^{20})   \\
-    &= 40
-    \end{align}
-    
-\end{frame}
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-\begin{align}
-    R_2 &=\frac{1}{\brak {2}!}\lim\limits_{z\to 1}\frac{d^{2}}{dz^{2}}\brak {{(z-1)}^{3}4z^{20}\brak{z-1}^{-3}}   \\
-    &=\brak2\lim\limits_{z\to 1}\frac{d^2}{dz^2}(z^{20})   \\
-    &= 760\\
-    R_1 + R_2 &= 800\\
-    \implies  y{(19)} &= 800
-\end{align}
-Similarly, the sum for the A.P. $30,26,22...$ can be found by the same procedure.
-    
-\end{frame}
-
-
-
-
-
-
-
-
-
-\begin{frame}
-\frametitle{Question }
-\begin{enumerate}
-    \item [9)]
-In an A.P. of $40$ terms, the sum of first $9$ terms is $153$ and the sum of last $6$ terms is $687$. Determine the first term and the common difference of the A.P. Also find the sum of all the terms of the A.P. 
-\end{enumerate}
-\end{frame}
-Given:
-\begin{align}
-y(8) &= 153 \label{17}\\
-y(39)-y(34) &= 687 \label{18}
-\end{align}
-Now, let the first term be $x(0)$ and common difference be $d$. From $\eqref{6}$ and $\eqref{5}$
-\begin{align}
-    X(z) &= \frac{x(0)}{1-z^{-1}} + \frac{dz^{-1}}{\brak{1-z^{-1}}^2} ,\quad \abs {z}>\abs{1} 
-\end{align}
-For finding the sum (Assuming $h(n)=u\brak{n}$)
-\begin{align}
-    y\brak{n} &= x\brak{n} * h\brak{n}\\
-Y\brak{z} &= X\brak{z} * H\brak{z}\\
-&= \brak{\frac{x(0)}{\brak{1-z^{-1}}} +
-\frac{dz^{-1}}{\brak{1-z^{-1}}^{2}}}\brak{\frac{1}{\brak{1-z^{-1}}}}
-,\quad \abs {z}>\abs{1}     
-\end{align}
-
-
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-\begin{align}
- Y\brak{z}   = \frac{\brak{2x(0)+d}z^{-1}}{1-z^{-1}} + \frac{\brak{x(0)+2d}z^{-2}}{\brak{1-z^{-1}}^2} + \frac{dz^{-3}}{\brak{1-z^{-1}}^{3}} + x(0)
-\end{align}
-Using normal inversion for inverse Z-transform:\\
-Using the results $\eqref{21}$,$\eqref{22}$ and $\eqref{23}$
-\begin{align}
-   y(n) = (2x_0+d)u\brak{n-1} &+ (n-1)u\brak{n-1}(x_0+2d) + \notag\\
-    &\frac{d(n-1)(n-2)u\brak{n-2}}{2} + x(0)\delta(n)
-\end{align}
-Now use $\eqref{17}$ and $\eqref{18}$ to solve for $x(0)$ and $d$ and put in $\eqref{19}$ for the sum of $40$ terms.
-\end{frame}
-
-
-
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-Using contour integration for inverse Z-transform
-\begin{align}
-    y(n)&=\frac{1}{2\pi j}\oint_{C}Y(z) \;z^{n-1} \;dz\\  
- &=\frac{1}{2\pi j}\oint_{C}\brak{x(0)z^{n+1}\brak{z-1}^{-2}+
-       dz^{20}\brak{z-1}^{-3}} \;dz\\
-       R&=\frac{1}{\brak {m-1}!}\lim\limits_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\brak {{(z-a)}^{m}f\brak z}
-\end{align}
-For $R_1$ , $m=2$ , where $m$ corresponds to number of repeated poles .
-\begin{align}
-    R_1 &=\frac{1}{\brak {1}!}\lim\limits_{z\to 1}\frac{d}{dz}\brak {{(z-1)}^{2}x(0)z^{n+1}\brak{z-1}^{-2}}   \\
-    &=x(0)\lim\limits_{z\to 1}\frac{d}{dz}(z^{n+1})   \\
-    &= \brak{n+1}x(0)
-    \end{align}
-\end{frame}
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{frame}
-\frametitle{Solution}
-   For $R_2$ , $m=3$ 
+Using the eigenvalue decomposition
     \begin{align}
-    R_2 &=\frac{1}{\brak {2}!}\lim\limits_{z\to 1}\frac{d^{2}}{dz^{2}}\brak {{(z-1)}^{3}dz^{n+1}\brak{z-1}^{-3}}   \\
-        &=\brak{\frac{d}{2}}\lim\limits_{z\to 1}\frac{d^2}{dz^2}(z^{n+1})   \\
-    &= \brak{\frac{d}{2}}\brak{n}\brak{n+1}\\
-   y(n)= R_1 + R_2 &= \brak{\frac{n+1}{2}}\brak{2x(0) + nd} \label{19}
+      \label{eq:conic_parmas_eig_def}
+      \vec{P}^{\top}\vec{\Sigma}\vec{P} &= \vec{D},
+    \end{align} 
+	in \eqref{eq:incircle-disc-Sigma-new},
+\end{frame}
+\begin{frame}
+\frametitle{Solution}
+\begin{align}
+\vec{m}^{\top}\vec{P}\vec{D}\vec{P}^{\top}\vec{m} &= 0
+\\
+\implies 
+\vec{v}^{\top}\vec{D}\vec{v} &= 0
+	\label{eq:incircle-disc-v}
 \end{align}
-Now use $\eqref{17}$ and $\eqref{18}$ to solve for $x(0)$ and $d$ and put in $\eqref{19}$ for the sum of $40$ terms.
-\end{frame} 
+where 
+\begin{align}
+	\label{eq:incircle-disc-v-lam-P}
+\vec{v} = \vec{P}^{\top}\vec{m}
+\end{align}
+	\eqref{eq:incircle-disc-v}
+	can be expressed as 
+\begin{align}
+\lambda_1 v_1^2
+-\lambda_2 v_2^2 &= 0
+\\
+\implies \vec{v} = \myvec{\sqrt{\abs{\lambda_2}} \\[2mm]  \pm \sqrt{\abs{\lambda_1}}}
+	\label{eq:incircle-disc-v-lam}
+\end{align}
+after some algebra.
+From 
+	\eqref{eq:incircle-disc-v-lam}
+	and
+	\eqref{eq:incircle-disc-v-lam-P}
+	we obtain 
+\begin{align}
+  \vec{m}&= \vec{P}\myvec{\sqrt{\abs{\lambda_2}} \\[2mm]  \pm \sqrt{\abs{\lambda_1}}}
+	  \label{eq:h-tangents-cond-mPlam}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{SVD}
+Perform the eigendecompositions 
+    \begin{align}
+	    \vec{MM}^\top &= \vec{U}\vec{D}_1\vec{U}^\top \label{eq:chapters/12/11/2/16/svd/decomp-1} \\
+	    \vec{M}^\top\vec{M} &= \vec{V}\vec{D}_2\vec{V}^\top \label{eq:chapters/12/11/2/16/svd/decomp-2}
+    \end{align}
+	The following expression is known as {\em singular value decomposition}
+    \begin{align}
+        \vec{M} = 
+	\vec{U}\vec{\Sigma}\vec{V}^\top
+        \label{eq:chapters/12/11/2/16/svd/M-svd}
+    \end{align}
+    where $\vec{\Sigma}$ is diagonal with
+    \begin{align}
+        \vec{\Sigma} \triangleq \myvec{\sqrt{\lambda_1}&0\\0&\sqrt{\lambda_2}\\0&0}
+        \label{eq:chapters/12/11/2/16/svd/svd-params}
+    \end{align}
+ Substituting in 
+        \eqref{eq:chapters/12/11/2/16/lsq/vec-eqn},
+\end{frame}
+\begin{frame}
+\frametitle{SVD}
+	\begin{align}
+\vec{V}\vec{\Sigma}\vec{U}^\top\vec{U}\vec{\Sigma}\vec{V}^\top\bm{\kappa} &= \vec{V}\vec{\Sigma}\vec{U}^\top\brak{\vec{B}-\vec{A}} \\
+\implies \vec{V}\vec{\Sigma}^2\vec{V}^\top\bm{\kappa} &= \vec{V}\vec{\Sigma}\vec{U}^\top\brak{\vec{B}-\vec{A}} \\
+\implies \bm{\kappa} &= \brak{\vec{V}\vec{\Sigma}^2\vec{V}^\top}^{-1}\vec{V}\vec{\Sigma}\vec{U}^\top\brak{\vec{B}-\vec{A}} \\
+\implies \bm{\kappa} &= \vec{V}\vec{\Sigma}^{-2}\vec{V}^\top\vec{V}\vec{\Sigma}\vec{U}^\top\brak{\vec{B}-\vec{A}} \\
+\implies \bm{\kappa} &= \vec{V}\vec{\Sigma}^{-1}\vec{U}^\top\brak{\vec{B}-\vec{A}}
+\label{eq:chapters/12/11/2/16/svd/kappa-sol}
+\end{align}
+    where $\vec{\Sigma}^{-1}$ is obtained by inverting the nonzero elements of
+    $\vec{\Sigma}$. 
+	    From \eqref{eq:chapters/12/11/2/16/lsq/x1x2}, 
+\begin{align}
+	\vec{x}_1-\vec{x}_2 &= 
+	\vec{A}+ \kappa_1\vec{m_1}
+	 -\vec{B}  - \kappa_2\vec{m_2} 
+	 \\
+	 &=
+	\vec{A} 
+	 -\vec{B}  + \vec{M} 
+	\bm{\kappa}
+\end{align}
+which, upon substitution from 
+        \eqref{eq:chapters/12/11/2/16/svd/M-svd}
+	yields
+\begin{align}
+	\vec{x}_1-\vec{x}_2 &= 
+	\vec{A} 
+	 -\vec{B}  + 
+\vec{U}\vec{\Sigma}\vec{V}^\top
+\vec{V}\vec{\Sigma}^{-1}\vec{U}^\top\brak{\vec{B}-\vec{A}}
+\\
+	&=
+	\brak{	\vec{A} 
+	 -\vec{B}}  \brak{\vec{I}- 
+\vec{U}\vec{\Sigma}
+	\vec{\Sigma}^{-1}\vec{U}^\top}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Conic Section}
+  Let $\vec{q}$ be a point such that the ratio of its distance from a fixed point $\vec{F}$ and the distance ($d$) from a fixed line 
+	\begin{align}
+L: \vec{n}^{\top}\vec{x}=c 
+	\end{align}
+		is constant, given by 
+\label{conics/30/def}
+\begin{align}
+\frac{\norm{\vec{q}-\vec{F}}}{d} = e    
+\end{align}
+The locus of $\vec{q}$ is known as a conic section. The line $L$ is known as the directrix and the point $\vec{F}$ is the focus. $e$ is defined to be 
+the eccentricity of the conic.  
+\begin{enumerate}
+\item For $e = 1$, the conic is a parabola
+    \item For $e < 1$, the conic is an ellipse
+    \item For $e > 1$, the conic is a hyperbola
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Conic}
+The equation of  a conic with directrix $\vec{n}^{\top}\vec{x} = c$, eccentricity $e$ and focus $\vec{F}$ is given by 
+\begin{align}
+%    \label{eq:conic_quad_form}
+	\text{g}\brak{\vec{x}} = \vec{x}^{\top}\vec{V}\vec{x}+2\vec{u}^{\top}\vec{x}+f=0
+    \end{align}
+where     
+\begin{align}
+  \label{eq:conic_quad_form_v}
+\vec{V} &=\norm{\vec{n}}^2\vec{I}-e^2\vec{n}\vec{n}^{\top}, 
+\\
+\label{eq:conic_quad_form_u}
+\vec{u} &= ce^2\vec{n}-\norm{\vec{n}}^2\vec{F}, 
+\\
+\label{eq:conic_quad_form_f}
+f &= \norm{\vec{n}}^2\norm{\vec{F}}^2-c^2e^2
+    \end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Conic}
+  Using Definition \ref{conics/30/def},
+for any point $\vec{x}$ on the conic,
+\begin{multline}
+\norm{\vec{x}-\vec{F}}^2=e^2 \frac{\brak{{\vec{n}^{\top}\vec{x} - c}}^2}{\norm{\vec{n}}^2}\label{conics/30/eq:1} \\
+\implies \norm{\vec{n}}^2\brak{\vec{x}-\vec{F}}^{\top}\brak{\vec{x}-\vec{F}}=e^2\brak{\vec{n}^{\top}\vec{x} - c}^2
+\\
+\implies \norm{\vec{n}}^2\brak{\vec{x}^{\top}\vec{x}-2\vec{F}^{\top}\vec{x}+\norm{\vec{F}}^2}
+	\\
+	=e^2\brak{c^2+\brak{\vec{n}^{\top}\vec{x} }^2-2c\vec{n}^{\top}\vec{x}} \\
+=e^2\brak{c^2+\brak{\vec{x}^{\top}\vec{n}\vec{n}^{\top}\vec{x} }-2c\vec{n}^{\top}\vec{x}}
+\end{multline}
+%
+which can be expressed as \eqref{eq:conic_quad_form} after simplification.
+\end{frame}
+\begin{frame}
+\frametitle{Conic}
+  The eccentricity, directrices and foci of \eqref{eq:conic_quad_form} are given by 
+\begin{align}
+  \label{eq:conic_quad_form_e} 
+  e&= \sqrt{1-\frac{\lambda_1}{\lambda_2}}
+\\
+\label{eq:conic_quad_form_nc} 
+	\begin{split}
+  \vec{n}&= \sqrt{\lambda_2}\vec{p}_1,  
+  \\
+	c &= 
+  \begin{cases}
+    \frac{e\vec{u}^{\top}\vec{n} \pm \sqrt{e^2\brak{\vec{u}^{\top}\vec{n}}^2-\lambda_2\brak{e^2-1}\brak{\norm{\vec{u}}^2 - \lambda_2 f}}}{\lambda_2e\brak{e^2-1}} & e \ne 1
+    \\
+    \frac{\norm{\vec{u}}^2 - \lambda_2 f   }{2\vec{u}^{\top}\vec{n}} & e = 1
+  \end{cases}
+	\end{split}
+  \\
+  \label{eq:conic_quad_form_F} 
+  \vec{F}  &= \frac{ce^2\vec{n}-\vec{u}}{\lambda_2}
+\end{align}  
+\end{frame}
+\begin{frame}
+\frametitle{Conic}
+	From \eqref{eq:conic_quad_form_v}, using the fact that $\vec{V}$ is symmetric with $\vec{V} = \vec{V}^{\top}$,
+  \begin{align}
+	  \vec{V}^{\top} \vec{V}&=\brak{\norm{\vec{n}}^2\vec{I}-e^2\vec{n}\vec{n}^{\top}}^{\top}
+	  \brak{\norm{\vec{n}}^2\vec{I}-e^2\vec{n}\vec{n}^{\top}}
+    \\
+	  \implies \vec{V}^{2} &= \norm{\vec{n}}^4\vec{I}+e^4\vec{n}\vec{n}^{\top}\vec{n}\vec{n}^{\top}
+	  -2e^2\norm{\vec{n}}^2\vec{n}\vec{n}^{\top}
+    \\
+	  &= \norm{\vec{n}}^4\vec{I} + e^4\norm{\vec{n}}^2\vec{n}\vec{n}^{\top}
+	%  \\
+	  - 2e^2\norm{\vec{n}}^2\vec{n}\vec{n}^{\top}
+    \\
+	  &= \norm{\vec{n}}^4\vec{I} + e^2\brak{e^2 - 2}\norm{\vec{n}}^2\vec{n}\vec{n}^{\top}
+    \\
+	  &= \norm{\vec{n}}^4\vec{I} + \brak{e^2 - 2}\norm{\vec{n}}^2\brak{\norm{\vec{n}}^2\vec{I}- \vec{V}}
+    \end{align}
+%    
+which can be expressed as
+\begin{align}
+  \vec{V}^{2} + \brak{e^2 - 2}\norm{\vec{n}}^2\vec{V} - \brak{e^2 - 1}\norm{\vec{n}}^4\vec{I}=0
+  \label{eq:conic_quad_form_e_cayley}
+\end{align}
+	Using the Cayley-Hamilton theorem,
+	\eqref{eq:conic_quad_form_e_cayley} results in the characteristic equation, 
+\begin{align}
+  \lambda^{2} - \brak{2-e^2}\norm{\vec{n}}^2\lambda + \brak{1-e^2 }\norm{\vec{n}}^4=0
+\end{align}
+which can be expressed as
+\end{frame}
+\begin{frame}
+\frametitle{Conic}
+\begin{align}
+\brak{\frac{\lambda}{\norm{\vec{n}}^2}}^2 - \brak{2-e^2 }\brak{\frac{\lambda}{\norm{\vec{n}}^2}} 
+	+ \brak{1-e^2 } = 0
+	\\
+	\implies \frac{\lambda}{\norm{\vec{n}}^2} = 1-e^2, 1
+  \\
+	\text{or, }\lambda_2 = \norm{\vec{n}}^2, \lambda_1 = \brak{1-e^2}\lambda_2 
+  \label{eq:conic_quad_form_lam_cayley}
+\end{align}
+From   \eqref{eq:conic_quad_form_lam_cayley}, the eccentricity of \eqref{eq:conic_quad_form} is given by 
+\eqref{eq:conic_quad_form_e}.   
+%
+Multiplying both sides of    \eqref{eq:conic_quad_form_v} by $\vec{n}$,
+\begin{align}
+\vec{V} \vec{n}&=\norm{\vec{n}}^2\vec{n}-e^2\vec{n}\vec{n}^{\top}\vec{n} 
+\\
+&=\norm{\vec{n}}^2\brak{1-e^2}\vec{n} 
+ \\
+  &=\lambda_1 \vec{n} 
+	\\
+  \label{eq:eigevecn}
+\end{align}  
+from \eqref{eq:conic_quad_form_lam_cayley}.
+Thus,  $\lambda_1$ is the corresponding eigenvalue for $\vec{n}$. 
+\end{frame}
+\begin{frame}
+\frametitle{Conic}
+	From       \eqref{eq:eigevecn}, this implies that 
+\begin{align}  
+	\vec{p}_1 &= \frac{\vec{n}}{\norm{\vec{n}}} 
+	\\
+	\text{or, }
+   \vec{n}&= \norm{\vec{n}}\vec{p}_1  = \sqrt{\lambda_2}\vec{p}_1 
+\end{align}  
+from   \eqref{eq:conic_quad_form_lam_cayley} .
+From \eqref{eq:conic_quad_form_u} and \eqref{eq:conic_quad_form_lam_cayley},
+\begin{align}
+\vec{F}  &= \frac{ce^2\vec{n}-\vec{u}}{\lambda_2}
+ \\
+ \implies \norm{\vec{F}}^2  &= \frac{\brak{ce^2\vec{n}-\vec{u}}^{\top}\brak{ce^2\vec{n}-\vec{u}}}{\lambda_2^2}
+ \\
+ \implies \lambda_2^2\norm{\vec{F}}^2  &= c^2e^4\lambda_2-2ce^2\vec{u}^{\top}\vec{n}+\norm{\vec{u}}^2
+ \label{eq:conic_quad_form_u_temp}
+    \end{align}
+    Also, \eqref{eq:conic_quad_form_f} can be expressed as
+    \begin{align}
+    \lambda_2\norm{\vec{F}}^2 &= f+c^2e^2
+    \label{eq:conic_quad_form_f_temp}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Conic}
+From  \eqref{eq:conic_quad_form_u_temp} and     \eqref{eq:conic_quad_form_f_temp},
+\begin{align}
+c^2e^4\lambda_2-2ce^2\vec{u}^{\top}\vec{n}+\norm{\vec{u}}^2 = \lambda_2\brak{f+c^2e^2}
+\end{align}
+\begin{align}
+\implies \lambda_2e^2\brak{e^2-1}c^2-2ce^2\vec{u}^{\top}\vec{n}
+	+\norm{\vec{u}}^2 - \lambda_2 f = 0
+\end{align}
+yielding
+\eqref{eq:conic_quad_form_nc} 
+%  \eqref{eq:conic_quad_form_F}. 
+\end{frame}
+
+
+
+
+
+
+
+%    \section{Class 10}
+
+
+
+
+
+
+%\begin{frame}
+%\frametitle{Question }
+%\begin{enumerate}
+%    \item [8)]
+%The sum of first and eight terms of an A.P is $32$ and their product is $60$. Find the first term and common difference of the A.P. Hence, also find the sum of its first $20$ terms. 
+%\end{enumerate}
+%\end{frame}
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%Let the first and eighth terms be $x\brak{0}$ and $x\brak{7}$ respectively,given:
+%\begin{align}
+%x\brak{0}+x\brak{7} &= 32\\
+%x\brak{0} &= 32 - x\brak{7}\label{3} \\
+%x\brak{0}x\brak{7} &= 60 \label{4}
+%\end{align}
+%From $\eqref{3}$ and $\eqref{4}$
+%\begin{align}
+%    x\brak{7}\brak{32-x\brak{7}} &= 60
+%\end{align}
+%The roots are $\brak{30,2}$, therefore ,if $x\brak{7}=30$ then $x\brak{0}=2$ and if $x\brak{7}=2$ then $x_0=30$\\
+%Now
+%\begin{align}
+%    x\brak{n} &= \brak{x\brak{0} + nd}u\brak{n}\label{5}
+%    \end{align}
+%    Where $d$ is the common difference of the A.P and $u(n)$ is the unit step function.\\($u\brak{n}=0 \forall n<0$,$u\brak{n}=1 \forall n\geq0$)
+%\end{frame}
+%
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%\begin{align}
+%        \implies     x\brak{7} &= \brak{x\brak{0} + 7d}\\
+%    \implies 7d &= \pm 28 \implies d = \pm 4
+%\end{align}
+%Therefore the A.P is $2,6,10...$ or $30,26,22...$.\\
+%Considering the former for calculations and taking Z-Transform of $\eqref{5}$ for sum.\\
+%Since
+%\begin{align}
+%X(z) &= \sum_{n=-\infty}^{\infty} x(n)z^{-n} \label{6}
+%\end{align}
+%Let $y\brak{n}$ denote the sum, let:
+%\begin{align}
+%    y\brak{n} &= x\brak{n} * h\brak{n}\\
+%    &= \sum_{k=-\infty}^{\infty} x(k)h(n-k)
+%\end{align}    
+%\end{frame}
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%Replace $h\brak{n}$ with $u\brak{n}$.
+%\begin{align}
+%    y\brak{n} &= \sum_{k=0}^{n} x(k)u_{\brak{n-k}}\\
+%    &=x(0)u\brak{n} + x(1)u\brak{n-1} + ..... x(n)u_{\brak{0}}
+%\end{align}
+%    This denotes the sum of terms $x(0),x(1)....x(n)$ i.e. first $n+1$ terms. From \eqref{6}\\
+%\begin{align}
+%    u\brak{n} &\xrightarrow{\mathcal{Z}} \frac{1}{\brak{1-z^{-1}}} \label{7}\\
+%nu\brak{n} &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{\brak{1-z^{-1}}^{2}}\\
+%  \implies  X(z)&= \frac{2}{\brak{1-z^{-1}}} + \frac{4z^{-1}}{\brak{1-z^{-1}}^{2}} \label{eq:ee25-4}
+%,\quad \abs {z}>\abs{1} 
+%\end{align}
+%\end{frame}
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%Now as convolution in the time domain corresponds to multiplication in the frequency domain and \eqref{eq:ee25-4} and \eqref{7}.
+%\begin{align}
+%    Y\brak{z} &= X\brak{z} * H\brak{z}\\
+% &= \brak{\frac{2}{\brak{1-z^{-1}}} +
+%\frac{4z^{-1}}{\brak{1-z^{-1}}^{2}}}\brak{\frac{1}{\brak{1-z^{-1}}}}
+%,\quad \abs {z}>\abs{1}     
+%\end{align}
+%Using normal inversion for inverse Z-transform:
+%\begin{align}
+% Y(z) &= \frac{2}{\brak{1-z^{-1}}^2} +
+%\frac{4z^{-1}}{\brak{1-z^{-1}}^{3}}
+%,\quad \abs {z}>\abs{1}\\
+%   &= \frac{8z^{-1}}{1-z^{-1}} + \frac{10z^{-2}}{\brak{1-z^{-1}}^2} + \frac{4z^{-3}}{\brak{1-z^{-1}}^{3}} + 2\label{final}
+%\end{align}
+%    
+%\end{frame}
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%For proceeding forwards here are some important generalizations.\\
+%Shifting property
+%\begin{align}
+%x(n-k) \leftrightarrow z^{-k} X(z) \label{shift}
+%\end{align}
+%Differentiation property
+%\begin{align}
+%nx(n) \leftrightarrow -zX^{\prime}(z) \label{diff}
+%\end{align}
+%From \eqref{7} and \eqref{shift}
+%\begin{align}
+%u\brak{n-1} &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{1-z^{-1}} \label{21}
+%\end{align}
+%From $\eqref{7}$ and $\eqref{diff}$
+%\begin{align}
+%nu\brak{n} &\xrightarrow{\mathcal{Z}} -z\frac{d}{dz}\brak{\frac{1}{1-z^{-1}}}\\
+%nu\brak{n}    &\xrightarrow{\mathcal{Z}} \frac{z^{-1}}{\brak{1-z^{-1}}^{2}}
+%\end{align}
+%    
+%\end{frame}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%From $\eqref{shift}$
+%\begin{align}
+%(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} z^{-1}\frac{z^{-1}}{\brak{1-z^{-1}}^{2}}\\
+%(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} \frac{z^{-2}}{\brak{1-z^{-1}}^{2}} \label{22}
+%\end{align}
+%Now, using $\eqref{diff}$ and writing the corresponding L.H.S
+%\begin{align}   
+%(n)(n-1)u\brak{n-1}    &\xrightarrow{\mathcal{Z}} \frac{2z^{-2}}{\brak{1-z^{-1}}^3} 
+%\end{align}
+%Using $\eqref{shift}$
+%\begin{align}
+%    \frac{(n-1)(n-2)u\brak{n-2}}{2}    &\xrightarrow{\mathcal{Z}} \frac{z^{-3}}{\brak{1-z^{-1}}^3} \label{23} 
+%\end{align}
+%\end{frame}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%The inverse-Z of a constant will be $\delta(n)$, so it is ruled out.
+%Plugging these values in $\eqref{final}$ we get
+%\begin{align}
+%   y(n) = 8u\brak{n-1} + 10(n-1)u\brak{n-1} &+ 4\frac{(n-1)(n-2)u\brak{n-2}}{2} \notag \\
+%   &+ 2\delta(n)
+%\end{align}
+%Putting $n=19$
+%\begin{align}
+%      y(19) &= 2(19+1)^2 = 800
+%\end{align}
+%    
+%\end{frame}
+%\begin{frame}
+%\frametitle{Solution}
+%Using contour integration for inverse Z-transform
+%\begin{align}
+%    y(19)&=\frac{1}{2\pi j}\oint_{C}Y(z) \;z^{18} \;dz\\  
+% &=\frac{1}{2\pi j}\oint_{C}\brak{2z^{20}\brak{z-1}^{-2}+
+%       4z^{20}\brak{z-1}^{-3}} \;dz\\
+%       R&=\frac{1}{\brak {m-1}!}\lim\limits_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\brak {{(z-a)}^{m}f\brak z}\label{eq:6}  
+%\end{align}
+%For $R_1$ , $m=2$ , where $m$ corresponds to number of repeated poles .
+%\begin{align}
+%    R_1 &=\frac{1}{\brak {1}!}\lim\limits_{z\to 1}\frac{d}{dz}\brak {{(z-1)}^{2}2z^{20}\brak{z-1}^{-2}}   \\
+%    &=2\lim\limits_{z\to 1}\frac{d}{dz}(z^{20})   \\
+%    &= 40
+%    \end{align}
+%    
+%\end{frame}
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%\begin{align}
+%    R_2 &=\frac{1}{\brak {2}!}\lim\limits_{z\to 1}\frac{d^{2}}{dz^{2}}\brak {{(z-1)}^{3}4z^{20}\brak{z-1}^{-3}}   \\
+%    &=\brak2\lim\limits_{z\to 1}\frac{d^2}{dz^2}(z^{20})   \\
+%    &= 760\\
+%    R_1 + R_2 &= 800\\
+%    \implies  y{(19)} &= 800
+%\end{align}
+%Similarly, the sum for the A.P. $30,26,22...$ can be found by the same procedure.
+%    
+%\end{frame}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Question }
+%\begin{enumerate}
+%    \item [9)]
+%In an A.P. of $40$ terms, the sum of first $9$ terms is $153$ and the sum of last $6$ terms is $687$. Determine the first term and the common difference of the A.P. Also find the sum of all the terms of the A.P. 
+%\end{enumerate}
+%\end{frame}
+%Given:
+%\begin{align}
+%y(8) &= 153 \label{17}\\
+%y(39)-y(34) &= 687 \label{18}
+%\end{align}
+%Now, let the first term be $x(0)$ and common difference be $d$. From $\eqref{6}$ and $\eqref{5}$
+%\begin{align}
+%    X(z) &= \frac{x(0)}{1-z^{-1}} + \frac{dz^{-1}}{\brak{1-z^{-1}}^2} ,\quad \abs {z}>\abs{1} 
+%\end{align}
+%For finding the sum (Assuming $h(n)=u\brak{n}$)
+%\begin{align}
+%    y\brak{n} &= x\brak{n} * h\brak{n}\\
+%Y\brak{z} &= X\brak{z} * H\brak{z}\\
+%&= \brak{\frac{x(0)}{\brak{1-z^{-1}}} +
+%\frac{dz^{-1}}{\brak{1-z^{-1}}^{2}}}\brak{\frac{1}{\brak{1-z^{-1}}}}
+%,\quad \abs {z}>\abs{1}     
+%\end{align}
+%
+%
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%\begin{align}
+% Y\brak{z}   = \frac{\brak{2x(0)+d}z^{-1}}{1-z^{-1}} + \frac{\brak{x(0)+2d}z^{-2}}{\brak{1-z^{-1}}^2} + \frac{dz^{-3}}{\brak{1-z^{-1}}^{3}} + x(0)
+%\end{align}
+%Using normal inversion for inverse Z-transform:\\
+%Using the results $\eqref{21}$,$\eqref{22}$ and $\eqref{23}$
+%\begin{align}
+%   y(n) = (2x_0+d)u\brak{n-1} &+ (n-1)u\brak{n-1}(x_0+2d) + \notag\\
+%    &\frac{d(n-1)(n-2)u\brak{n-2}}{2} + x(0)\delta(n)
+%\end{align}
+%Now use $\eqref{17}$ and $\eqref{18}$ to solve for $x(0)$ and $d$ and put in $\eqref{19}$ for the sum of $40$ terms.
+%\end{frame}
+%
+%
+%
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%Using contour integration for inverse Z-transform
+%\begin{align}
+%    y(n)&=\frac{1}{2\pi j}\oint_{C}Y(z) \;z^{n-1} \;dz\\  
+% &=\frac{1}{2\pi j}\oint_{C}\brak{x(0)z^{n+1}\brak{z-1}^{-2}+
+%       dz^{20}\brak{z-1}^{-3}} \;dz\\
+%       R&=\frac{1}{\brak {m-1}!}\lim\limits_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\brak {{(z-a)}^{m}f\brak z}
+%\end{align}
+%For $R_1$ , $m=2$ , where $m$ corresponds to number of repeated poles .
+%\begin{align}
+%    R_1 &=\frac{1}{\brak {1}!}\lim\limits_{z\to 1}\frac{d}{dz}\brak {{(z-1)}^{2}x(0)z^{n+1}\brak{z-1}^{-2}}   \\
+%    &=x(0)\lim\limits_{z\to 1}\frac{d}{dz}(z^{n+1})   \\
+%    &= \brak{n+1}x(0)
+%    \end{align}
+%\end{frame}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%\begin{frame}
+%\frametitle{Solution}
+%   For $R_2$ , $m=3$ 
+%    \begin{align}
+%    R_2 &=\frac{1}{\brak {2}!}\lim\limits_{z\to 1}\frac{d^{2}}{dz^{2}}\brak {{(z-1)}^{3}dz^{n+1}\brak{z-1}^{-3}}   \\
+%        &=\brak{\frac{d}{2}}\lim\limits_{z\to 1}\frac{d^2}{dz^2}(z^{n+1})   \\
+%    &= \brak{\frac{d}{2}}\brak{n}\brak{n+1}\\
+%   y(n)= R_1 + R_2 &= \brak{\frac{n+1}{2}}\brak{2x(0) + nd} \label{19}
+%\end{align}
+%Now use $\eqref{17}$ and $\eqref{18}$ to solve for $x(0)$ and $d$ and put in $\eqref{19}$ for the sum of $40$ terms.
+%\end{frame} 
 
 
 \end{document}
