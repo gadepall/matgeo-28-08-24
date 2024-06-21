@@ -4,9 +4,10 @@
 The affine transformation is given by 
 \begin{align}
 	\label{eq:conic_affine}
-	\vec{x} = \vec{P}^{\top}\vec{y}+\vec{c}
+	\vec{x} = \vec{P}\vec{y}+\vec{c}
 \end{align}
-where 
+where $\vec{c}$ is the translation vector.
+\item The matrix
 \begin{align}
 \vec{P} =
 \myvec{
@@ -14,13 +15,18 @@ where
 \sin\theta & \cos\theta 
 }
 \end{align}
-is the rotation matrix and $\vec{c}$ is the translation vector.
+is defined to be the rotation matrix. 
+\item 
+\begin{align}
+	\vec{P}^{\top} \vec{P} = \vec{I}
+\end{align}
+		$\vec{P}$ is known as as {\em orthogonal} matrix.
 \item Given vertices $\vec{A}, \vec{C}$ of a square, the other two vertices are given by
 \begin{align}
 \begin{split}
-	\vec{B} = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{P}^{\top}\vec{e}_1+\vec{A}
+	\vec{B} = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{P}\vec{e}_1+\vec{A}
 	\\
-	\vec{D} = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{P}^{\top}\vec{e}_2+\vec{A}
+	\vec{D} = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{P}\vec{e}_2+\vec{A}
 \end{split}
 	\label{eq:affine-square-bd}
 \end{align}
