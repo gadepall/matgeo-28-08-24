@@ -47,4 +47,4 @@
 \contentsline {subsection}{\numberline {7.1}Equation}{65}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Formulae}{70}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Miscellaneous}{72}{subsection.7.3}%
-\contentsline {section}{Appendix\nobreakspace A: Conic Section}{72}{section*.128}%
+\contentsline {section}{Appendix\nobreakspace A: Conic Section}{74}{section*.131}%
