@@ -1,0 +1,44 @@
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+		\item
+  The points of intersection of the line 
+\begin{align}
+L: \quad \vec{x} = \vec{h} + \kappa \vec{m} \quad \kappa \in \mathbb{R}
+\label{eq:conic_tangent}
+\end{align}
+with the conic section in \eqref{eq:conic_quad_form} are given by
+\begin{align}
+\vec{x}_i = \vec{h} + \kappa_i \vec{m}
+	\label{eq:chord-pts}
+\end{align}
+%
+where
+\begin{multline}
+\kappa_i = \frac{1}
+{
+\vec{m}^{\top}\vec{V}\vec{m}
+}
+\lbrak{-\vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}}
+\\
+\pm
+{\small
+\rbrak{\sqrt{
+\sbrak{
+\vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}
+}^2
+	-\text{g}
+\brak
+{\vec{h}
+%\vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} +f
+}
+\brak{\vec{m}^{\top}\vec{V}\vec{m}}
+}
+}
+}
+\label{eq:tangent_roots}
+\end{multline}
+See 
+	 \ref{prop:chord}
+	 for proof.
+
+
+\end{enumerate}

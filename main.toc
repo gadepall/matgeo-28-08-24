@@ -1,50 +1,56 @@
-\contentsline {section}{\numberline {1}Triangle}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Sides}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Formulae}{5}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Median}{5}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Altitude}{7}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Perpendicular Bisector}{8}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Angle Bisector}{9}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Eigenvalues and Eigenvectors}{10}{subsection.1.7}%
-\contentsline {subsection}{\numberline {1.8}Formulae}{10}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Matrices}{11}{subsection.1.9}%
-\contentsline {section}{\numberline {2}Vectors}{12}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Addition and Subtraction}{12}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Section Formula}{12}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Rank}{16}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Length}{17}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Direction}{17}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Scalar Product}{19}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Formulae}{23}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Orthogonality}{23}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Vector Product}{28}{subsection.2.9}%
-\contentsline {subsection}{\numberline {2.10}Formulae}{32}{subsection.2.10}%
-\contentsline {subsection}{\numberline {2.11}Miscellaneous}{32}{subsection.2.11}%
-\contentsline {subsection}{\numberline {2.12}Formulae}{33}{subsection.2.12}%
-\contentsline {section}{\numberline {3}Constructions}{34}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Triangle}{34}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Quadrilateral}{36}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Formulae}{36}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Linear Forms}{37}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Equation }{37}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Parallel}{41}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Perpendicular}{42}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Formulae}{49}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Angle}{49}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Intersection}{50}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Miscellaneous }{52}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Formulae}{54}{subsection.4.8}%
-\contentsline {section}{\numberline {5}Skew Lines}{54}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Least Squares}{54}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Formulae}{56}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Singular Value Decomposition}{56}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Formulae}{58}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Circle}{59}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Equation}{59}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Formulae}{64}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Miscellaneous}{64}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Conics}{65}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Equation}{65}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Formulae}{70}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Miscellaneous}{72}{subsection.7.3}%
-\contentsline {section}{Appendix\nobreakspace A: Conic Section}{73}{section*.131}%
+\contentsline {section}{\numberline {1}Triangle}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Sides}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Formulae}{6}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Median}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Altitude}{8}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Perpendicular Bisector}{9}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Angle Bisector}{10}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Eigenvalues and Eigenvectors}{11}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Formulae}{11}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Matrices}{12}{subsection.1.9}%
+\contentsline {section}{\numberline {2}Vectors}{13}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Addition and Subtraction}{13}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Section Formula}{13}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Rank}{17}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Length}{18}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Direction}{18}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Scalar Product}{20}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Formulae}{24}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Orthogonality}{24}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Vector Product}{29}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Formulae}{33}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}Miscellaneous}{33}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}Formulae}{34}{subsection.2.12}%
+\contentsline {section}{\numberline {3}Constructions}{35}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Triangle}{35}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Quadrilateral}{37}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Formulae}{37}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Linear Forms}{38}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Equation }{38}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Parallel}{42}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Perpendicular}{43}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Formulae}{50}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Angle}{50}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Intersection}{51}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Miscellaneous }{53}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Formulae}{55}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Skew Lines}{55}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Least Squares}{55}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Formulae}{57}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Singular Value Decomposition}{57}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Formulae}{59}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Circle}{60}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Equation}{60}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Formulae}{65}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Miscellaneous}{65}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Conics}{66}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Equation}{66}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Formulae}{71}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Miscellaneous}{73}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Chords}{75}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Intersection}{75}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Formulae}{80}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Tangent And Normal}{81}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Examples}{81}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Formulae}{85}{subsection.9.2}%
+\contentsline {section}{Appendix\nobreakspace A: Conic Section}{85}{section*.150}%

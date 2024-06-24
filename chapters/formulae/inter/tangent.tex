@@ -1,0 +1,52 @@
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+\item
+  If $L$ in \eqref{eq:conic_tangent} touches \eqref{eq:conic_quad_form} at exactly one point $\vec{q}$, 
+  \begin{align}
+  \vec{m}^{\top}\brak{\vec{V}\vec{q}+\vec{u}} = 0
+  \label{eq:conic_tangent_mq}
+  \end{align}
+\begin{proof}
+  In this case, \eqref{eq:conic_intercept} has exactly one root.  Hence, 
+  in \eqref{eq:tangent_roots}
+  \begin{align}
+  \sbrak{
+  \vec{m}^{\top}\brak{\vec{V}\vec{q}+\vec{u}}
+  }^2 -\brak{\vec{m}^{\top}\vec{V}\vec{m}}
+	  \text{g}\brak
+  {
+  \vec{q}
+%  \vec{q}^{\top}\vec{V}\vec{q} + 2\vec{u}^{\top}\vec{q} +f
+  } = 0                                                                                             
+  \label{eq:conic_tangent_disc}
+  \end{align}                    
+  $\because \vec{q}$ is the point of contact,
+	%$\vec{q}$ satisfies \eqref{eq:conic_quad_form}
+%  and 
+  \begin{align}
+	  \text{g}\brak{  \vec{q}} = 0
+%  \vec{q}^{\top}\vec{V}\vec{q} + 2\vec{u}^{\top}\vec{q} +f = 0
+  \label{eq:conic_tangent_qquad}
+  \end{align}
+  Substituting \eqref{eq:conic_tangent_qquad} in \eqref{eq:conic_tangent_disc} and simplifying, we obtain \eqref{eq:conic_tangent_mq}.
+\end{proof}
+\item For a circle, the points of contact are
+	\begin{align}
+	\vec{q}_{ij} &= \brak{\pm r \frac{\vec{n}_j}{\norm{\vec{n}_j}}-\vec{u}}, \quad i,j = 1,2
+\label{eq:conic_tangent_qk-circ}
+\end{align}
+\begin{proof}
+	From 
+\eqref{eq:conic_tangent_qk},
+and 
+	\eqref{eq:circ-cr},
+\begin{align}
+\kappa_{ij} &= \pm 
+\frac{r
+}
+{
+	\norm{\vec{n}_j}
+}
+\end{align}
+\end{proof}
+
+\end{enumerate}
