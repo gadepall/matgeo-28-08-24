@@ -1053,7 +1053,6 @@ in \eqref{eq:conic_quad_form_F},
   Given the point of contact $\vec{q}$, the equation of a tangent to \eqref{eq:conic_quad_form} is 
   \begin{align}
   \brak{\vec{V}\vec{q}+\vec{u}}^{\top}\vec{x}+\vec{u}^{\top}\vec{q}+f = 0
-  \label{eq:conic_tangent_final}
   \end{align}
 
 \begin{proof}
@@ -1061,7 +1060,6 @@ in \eqref{eq:conic_quad_form_F},
   as
   %
   \begin{align}
-  \label{eq:conic_normal_vec}
 	  \kappa \vec{n} = \vec{V}\vec{q}+\vec{u}, \kappa \in \mathbb{R}
   \end{align}  
   From \eqref{eq:conic_normal_vec}, the equation of the tangent is
@@ -1078,7 +1076,6 @@ in \eqref{eq:conic_quad_form_F},
   Given the point of contact $\vec{q}$, the equation of the normal to \eqref{eq:conic_quad_form} is 
   \begin{align}
     \brak{\vec{V}\vec{q}+\vec{u}}^{\top}\vec{R}\brak{\vec{x}-\vec{q}} =0
-  \label{eq:conic_normal_final}
   \end{align}
 
 \begin{proof}
@@ -1087,7 +1084,6 @@ in \eqref{eq:conic_quad_form_F},
   as
   %
   \begin{align}
-  \label{eq:conic_tangent_vec}
 	  \vec{m} = \vec{R}\brak{\vec{V}\vec{q}+\vec{u}}, 
   \end{align}  
   where $\vec{R}$ is the rotation matrix.
@@ -1112,7 +1108,6 @@ the point of  contact to the conic in \eqref{eq:conic_quad_form} is given by
 	\vec{m}^{\top}(\vec{V}\vec{q}+\vec{u})&=0
 	\\
 	\implies        \vec{m}^{\top}\vec{V}\vec{q} &= -\vec{m}^{\top}\vec{u}
-  \label{eq:conic_tangent_contact_eq}
 \end{align}
 Combining 
   \eqref{eq:conic_tangent_eq}
@@ -1123,7 +1118,6 @@ Combining
 		\end{proof}
 
 \item
-	\label{prop:conic-p-contact-nonparab}
   If $\vec{V}^{-1}$ exists, given the normal vector $\vec{n}$, the tangent points of contact to \eqref{eq:conic_quad_form} are given by
 \begin{align}
   \begin{split}
@@ -1139,13 +1133,11 @@ f_0
 }
 }
   \end{split}
-\label{eq:conic_tangent_qk}
 \end{align}
 
 \begin{proof}
   From \eqref{eq:conic_normal_vec},
 \begin{align}
-\label{eq:conic_normal_vec_q}
  \vec{q} = \vec{V}^{-1}\brak{\kappa \vec{n}-\vec{u}}, \quad \kappa \in \mathbb{R}
 \end{align}
 Substituting \eqref{eq:conic_normal_vec_q}
@@ -1162,7 +1154,6 @@ in \eqref{eq:conic_tangent_qquad},
 	 %\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f
 	f_0 
  }{\vec{n}^{\top}\vec{V}^{-1}\vec{n}}} &
-	\label{eq:conic_normal_k}
 \end{align}
 %
 %yileding 
@@ -1171,7 +1162,6 @@ yields \eqref{eq:conic_tangent_qk}.
 %
 \end{proof}
 \item For a conic/hyperbola, a line with normal vector $\vec{n}$ cannot be a tangent if 
-	\label{prop:conic-p-contact-nonparab-cond}
 \begin{align}
 \frac{
 \vec{u}^{\top}\vec{V}^{-1}\vec{u}-f
@@ -1179,7 +1169,6 @@ yields \eqref{eq:conic_tangent_qk}.
 {
 \vec{n}^{\top}\vec{V}^{-1}\vec{n}
 } < 0
-	\label{eq:conic-p-contact-nonparab-cond}
 \end{align}
 
 \item
@@ -1374,5 +1363,316 @@ It is easy to verify that
 %
 Thus, the angle between the asymptotes is obtained from \eqref{eq:quad_form_pair_ang_exp} as \eqref{eq:quad_form_pair_ang}.
   \end{proof}
+\item
+  If $L$ in \eqref{eq:conic_tangent} touches \eqref{eq:conic_quad_form} at exactly one point $\vec{q}$, 
+  \begin{align}
+  \vec{m}^{\top}\brak{\vec{V}\vec{q}+\vec{u}} = 0
+  \end{align}
+\begin{proof}
+  In this case, \eqref{eq:conic_intercept} has exactly one root.  Hence, 
+  in \eqref{eq:tangent_roots}
+  \begin{align}
+  \sbrak{
+  \vec{m}^{\top}\brak{\vec{V}\vec{q}+\vec{u}}
+  }^2 -\brak{\vec{m}^{\top}\vec{V}\vec{m}}
+	  \text{g}\brak
+  {
+  \vec{q}
+%  \vec{q}^{\top}\vec{V}\vec{q} + 2\vec{u}^{\top}\vec{q} +f
+  } = 0                                                                                             
+  \label{eq:conic_tangent_disc}
+  \end{align}                    
+  $\because \vec{q}$ is the point of contact,
+	%$\vec{q}$ satisfies \eqref{eq:conic_quad_form}
+%  and 
+  \begin{align}
+	  \text{g}\brak{  \vec{q}} = 0
+%  \vec{q}^{\top}\vec{V}\vec{q} + 2\vec{u}^{\top}\vec{q} +f = 0
+  \label{eq:conic_tangent_qquad}
+  \end{align}
+  Substituting \eqref{eq:conic_tangent_qquad} in \eqref{eq:conic_tangent_disc} and simplifying, we obtain \eqref{eq:conic_tangent_mq}.
+\end{proof}
+\item
+  Given the point of contact $\vec{q}$, the equation of a tangent to \eqref{eq:conic_quad_form} is 
+  \begin{align}
+  \brak{\vec{V}\vec{q}+\vec{u}}^{\top}\vec{x}+\vec{u}^{\top}\vec{q}+f = 0
+  \end{align}
+\begin{proof}
+  The normal vector is obtained from \eqref{eq:conic_tangent_mq} 
+  as
+  %
+  \begin{align}
+  \label{eq:conic_normal_vec}
+	  \kappa \vec{n} = \vec{V}\vec{q}+\vec{u}, \kappa \in \mathbb{R}
+  \end{align}  
+  From \eqref{eq:conic_normal_vec}, the equation of the tangent is\begin{align}
+    \brak{\vec{V}\vec{q}+\vec{u}}^{\top}\brak{\vec{x}-\vec{q}} &=0
+    \\
+    \implies \brak{\vec{V}\vec{q}+\vec{u}}^{\top}\vec{x}-\vec{q}^{\top}\vec{V}\vec{q}-\vec{u}^{\top}\vec{q} &= 0
+    \end{align}
+    which, upon substituting from \eqref{eq:conic_tangent_qquad} and simplifying yields 
+  \eqref{eq:conic_tangent_final}
+%	\eqref{eq:conic_tangent}.
+\end{proof}
+\item
+  Given the point of contact $\vec{q}$, the equation of the normal to \eqref{eq:conic_quad_form} is 
+  \begin{align}
+    \brak{\vec{V}\vec{q}+\vec{u}}^{\top}\vec{R}\brak{\vec{x}-\vec{q}} =0
+  \end{align}
+\begin{proof}
+  The direction vector of the tangent is obtained from 
+  \eqref{eq:conic_normal_vec} as
+  as
+  %
+  \begin{align}
+  \label{eq:conic_tangent_vec}
+	  \vec{m} = \vec{R}\brak{\vec{V}\vec{q}+\vec{u}}, 
+  \end{align}  
+  where $\vec{R}$ is the rotation matrix.
+  From \eqref{eq:conic_tangent_vec}, the equation of the normal is
+  given by 
+  \eqref{eq:conic_normal_final}
+\end{proof}
+\item Given the tangent 
+\begin{align}
+\vec{n}^{\top}\vec{x} = c,
+\end{align}
+the point of  contact to the conic in \eqref{eq:conic_quad_form} is given by 
+\begin{align}
+        \myvec{\vec{n}^{\top} \\ \vec{m}^{\top}\vec{V}} \vec{q} = \myvec{c\\ -\vec{m}^{\top}\vec{u}}
+\end{align}
+		\begin{proof}
+			From
+  \eqref{eq:conic_tangent_mq},
+\begin{align}
+	\vec{m}^{\top}(\vec{V}\vec{q}+\vec{u})&=0
+	\\
+	\implies        \vec{m}^{\top}\vec{V}\vec{q} &= -\vec{m}^{\top}\vec{u}
+  \label{eq:conic_tangent_contact_eq}
+\end{align}
+Combining 
+  \eqref{eq:conic_tangent_eq}
+  and 
+  \eqref{eq:conic_tangent_contact_eq}, 
+  \eqref{eq:conic_tangent_contact} is obtained.
+
+		\end{proof}
+
+\item
+  If $\vec{V}^{-1}$ exists, given the normal vector $\vec{n}$, the tangent points of contact to \eqref{eq:conic_quad_form} are given by
+\begin{align}
+  \begin{split}
+\vec{q}_i &= \vec{V}^{-1}\brak{\kappa_i \vec{n}-\vec{u}}, i = 1,2
+\\
+\text{where }\kappa_i &= \pm \sqrt{
+\frac{
+f_0
+%\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f
+}
+{
+\vec{n}^{\top}\vec{V}^{-1}\vec{n}
+}
+}
+  \end{split}
+\end{align}
+\begin{proof}
+  From \eqref{eq:conic_normal_vec},
+\begin{align}
+\label{eq:conic_normal_vec_q}
+ \vec{q} = \vec{V}^{-1}\brak{\kappa \vec{n}-\vec{u}}, \quad \kappa \in \mathbb{R}
+\end{align}
+Substituting \eqref{eq:conic_normal_vec_q}
+in \eqref{eq:conic_tangent_qquad},
+\begin{align}
+\brak{\kappa \vec{n}-\vec{u}}^{\top}\vec{V}^{-1}\brak{\kappa \vec{n}-\vec{u}} 
+%\\
++ 2\vec{u}^{\top}\vec{V}^{-1}\brak{\kappa \vec{n}-\vec{u}} +f &= 0
+\\
+\implies 
+\kappa^2 \vec{n}^{\top}\vec{V}^{-1}\vec{n} - \vec{u}^{\top}\vec{V}^{-1}\vec{u} + f &=0
+ \\
+ \text{or, } \kappa = \pm \sqrt{\frac{
+	 %\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f
+	f_0 
+ }{\vec{n}^{\top}\vec{V}^{-1}\vec{n}}} &
+	\label{eq:conic_normal_k}
+\end{align}
+%
+%yileding 
+Substituting \eqref{eq:conic_normal_k} in \eqref{eq:conic_normal_vec_q}
+yields \eqref{eq:conic_tangent_qk}.
+%
+\end{proof}
+\item For a conic/hyperbola, a line with normal vector $\vec{n}$ cannot be a tangent if 
+\begin{align}
+\frac{
+\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f
+}
+{
+\vec{n}^{\top}\vec{V}^{-1}\vec{n}
+} < 0
+\end{align}
+\item For a circle, the points of contact are
+	\begin{align}
+	\vec{q}_{ij} &= \brak{\pm r \frac{\vec{n}_j}{\norm{\vec{n}_j}}-\vec{u}}, \quad i,j = 1,2
+\end{align}
+\begin{proof}
+	From 
+\eqref{eq:conic_tangent_qk},
+and 
+	\eqref{eq:circ-cr},
+\begin{align}
+\kappa_{ij} &= \pm 
+\frac{r
+}
+{
+	\norm{\vec{n}_j}
+}
+\end{align}
+\end{proof}
+\item A point $\vec{h}$ lies on a normal to the conic in \eqref{eq:conic_quad_form} 
+	if
+\begin{multline}
+	\brak{ {\vec{m}^\top(\vec{Vh}+\vec{u})}}^2\brak{\vec{n}^{\top}\vec{V}\vec{n}} 
+	\\
+	- 2\brak{\vec{m}^\top\vec{V}\vec{n}} \brak{ {\vec{m}^\top(\vec{Vh}+\vec{u})}\vec{n}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}} 
+	\\
++  \text{g}\brak{
+  \vec{h}
+	  }\brak{\vec{m}^\top\vec{V}\vec{n}}^2
+%	\vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} +f 
+	= 0
+\end{multline}
+\begin{proof}
+The point of contact for the normal passing through a point $\vec{h}$ is given by 
+\begin{align}
+	\label{eq:point_of_tangency}
+	\vec{q} = \vec{h} + \mu\vec{n}
+	%\vec{q} = \vec{h} + \mu\vec{R}\vec{m}
+\end{align}
+From 
+  \eqref{eq:conic_tangent_mq},
+	the tangent at $\vec{q}$ satisfies 
+\begin{align}
+	\label{eq:tangency_condition}
+	\vec{m}^\top(\vec{Vq}+\vec{u}) = 0
+\end{align}
+Substituting \eqref{eq:point_of_tangency} in \eqref{eq:tangency_condition},
+\begin{align}
+	\label{eq:normal_simp_1}
+	\vec{m}^\top(\vec{V}(\vec{h}+\mu\vec{n})+\vec{u}) = 0\\
+	%\vec{m}^\top(\vec{V}(\vec{h}+\mu\vec{R}\vec{m})+\vec{u}) = 0\\
+	\label{eq:normal_simp_2}
+	\implies \mu\vec{m}^\top\vec{V}\vec{n} = -\vec{m}^\top(\vec{Vh}+\vec{u})
+	%\implies \mu\vec{m}^\top\vec{V}\vec{R}\vec{m} = -\vec{m}^\top(\vec{Vh}+\vec{u})
+\end{align}
+yielding 
+\begin{align}
+	\label{eq:point_of_tangency-mu}
+	\mu &=- \frac  {\vec{m}^\top(\vec{Vh}+\vec{u})}{\vec{m}^\top\vec{V}\vec{n}},
+\end{align}
+%	\eqref{eq:point_of_tangency-mu}.
+	From 
+\eqref{eq:conic_intercept},
+\begin{align}
+	\label{eq:normal_simp_2-quad}
+\mu^2\vec{n}^{\top}\vec{V}\vec{n} + 2 \mu\vec{n}^{\top}\brak{\vec{V}\vec{h}+\vec{u}} 
++  \text{g}\brak{
+  \vec{h}
+	  }
+%	\vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} +f 
+	&= 0
+\end{align}
+From 
+	\eqref{eq:point_of_tangency-mu},
+	\eqref{eq:normal_simp_2-quad} can be expressed
+	as
+\begin{multline}
+%	\label{eq:normal_simp_2-quad}
+\brak{- \frac{\vec{m}^\top(\vec{Vh}+\vec{u})}{\vec{m}^\top\vec{V}\vec{n}}}^2\vec{n}^{\top}\vec{V}\vec{n} 
+	\\
+	+ 2 \brak{- \frac{\vec{m}^\top(\vec{Vh}+\vec{u})}{\vec{m}^\top\vec{V}\vec{n}}}\vec{n}^{\top}\brak{\vec{V}\vec{h}+\vec{u}} 
++  \text{g}\brak{
+  \vec{h}
+	  }
+	= 0
+\end{multline}
+	yielding
+	\eqref{eq:point_of_tangency-m}.
+\end{proof}
+\item  A point $\vec{h}$ lies on a tangent to the conic in \eqref{eq:conic_quad_form} if 
+\begin{align}
+  \vec{m}^{\top}  \sbrak{\brak{\vec{V}\vec{h}+\vec{u}}
+	  \brak{\vec{V}\vec{h}+\vec{u}}^{\top}
+   -\vec{V}
+	  \text{g}\brak{
+  \vec{h}
+	  }
+	  }\vec{m} 
+	  &= 0                                                                                             
+\end{align}
+\begin{proof}
+ From \eqref{eq:tangent_roots}
+ and
+  \eqref{eq:conic_tangent_disc}
+  \begin{align}
+  \sbrak{
+  \vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}
+  }^2 -\brak{\vec{m}^{\top}\vec{V}\vec{m}}
+	  \text{g}\brak{
+  \vec{h}
+	  }
+	  &= 0                                                                                             
+	  \iffalse
+  \\
+	  \implies 
+  \brak
+  {
+  \vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} +f
+  }
+\fi
+  \label{eq:conic_tangent_disc-h}
+  \end{align}                    
+  yielding
+	  \eqref{eq:h-tangents-cond}.
+\end{proof}
+\item
+	The normal vectors of the tangents 
+to the conic in \eqref{eq:conic_quad_form} 
+	from 
+	a point $\vec{h}$ 
+	are given by 
+  \begin{align} 
+  \label{eq:quad_form_pair_normvecs-sigma}
+  \begin{split}
+  \vec{n}_1 &= \vec{P}\myvec{\sqrt{\abs{\lambda_1}} \\[2mm]  \sqrt{\abs{\lambda_2}}}
+  \\
+  \vec{n}_2 &= \vec{P}\myvec{\sqrt{\abs{\lambda_1}} \\[2mm] - \sqrt{\abs{\lambda_2}}}
+  \end{split}
+  \end{align} 
+  where $\lambda_i, \vec{P}$ are the eigenparameters of 
+  \begin{align} 
+		\bm{\Sigma} &= 
+	   \brak{\vec{V}\vec{h}+\vec{u}}
+	  \brak{\vec{V}\vec{h}+\vec{u}}^{\top}
+   -
+  \brak
+  {
+	  \text{g}\brak{
+  \vec{h}
+	  }
+%  \vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} +f
+  }\vec{V}.
+	  \label{eq:h-tangents-sigma}
+  \end{align}                    
+  \begin{proof}
+	  From 
+	  \eqref{eq:h-tangents-cond} we obtain
+	  \eqref{eq:h-tangents-sigma}.  Consequently, from 
+  \eqref{eq:quad_form_pair_normvecs}, 
+  \eqref{eq:quad_form_pair_normvecs-sigma}
+  can be obtained.
+  \end{proof}
+
 	
 \end{enumerate}

@@ -53,4 +53,4 @@
 \contentsline {section}{\numberline {9}Tangent And Normal}{81}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Examples}{81}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Formulae}{86}{subsection.9.2}%
-\contentsline {section}{Appendix\nobreakspace A: Conic Section}{86}{section*.152}%
+\contentsline {section}{Appendix\nobreakspace A: Conic Section}{87}{section*.154}%

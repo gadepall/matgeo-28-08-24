@@ -5,48 +5,77 @@
   \vec{m}^{\top}\brak{\vec{V}\vec{q}+\vec{u}} = 0
   \label{eq:conic_tangent_mq}
   \end{align}
-\begin{proof}
-  In this case, \eqref{eq:conic_intercept} has exactly one root.  Hence, 
-  in \eqref{eq:tangent_roots}
+\item
+  Given the point of contact $\vec{q}$, the equation of a tangent to \eqref{eq:conic_quad_form} is 
   \begin{align}
-  \sbrak{
-  \vec{m}^{\top}\brak{\vec{V}\vec{q}+\vec{u}}
-  }^2 -\brak{\vec{m}^{\top}\vec{V}\vec{m}}
-	  \text{g}\brak
-  {
-  \vec{q}
-%  \vec{q}^{\top}\vec{V}\vec{q} + 2\vec{u}^{\top}\vec{q} +f
-  } = 0                                                                                             
-  \label{eq:conic_tangent_disc}
-  \end{align}                    
-  $\because \vec{q}$ is the point of contact,
-	%$\vec{q}$ satisfies \eqref{eq:conic_quad_form}
-%  and 
-  \begin{align}
-	  \text{g}\brak{  \vec{q}} = 0
-%  \vec{q}^{\top}\vec{V}\vec{q} + 2\vec{u}^{\top}\vec{q} +f = 0
-  \label{eq:conic_tangent_qquad}
+  \brak{\vec{V}\vec{q}+\vec{u}}^{\top}\vec{x}+\vec{u}^{\top}\vec{q}+f = 0
+  \label{eq:conic_tangent_final}
   \end{align}
-  Substituting \eqref{eq:conic_tangent_qquad} in \eqref{eq:conic_tangent_disc} and simplifying, we obtain \eqref{eq:conic_tangent_mq}.
-\end{proof}
+\item
+  Given the point of contact $\vec{q}$, the equation of the normal to \eqref{eq:conic_quad_form} is 
+  \begin{align}
+    \brak{\vec{V}\vec{q}+\vec{u}}^{\top}\vec{R}\brak{\vec{x}-\vec{q}} =0
+  \label{eq:conic_normal_final}
+  \end{align}
+\item
+	\label{prop:conic-p-contact-nonparab}
+  If $\vec{V}^{-1}$ exists, given the normal vector $\vec{n}$, the tangent points of contact to \eqref{eq:conic_quad_form} are given by
+\begin{align}
+  \begin{split}
+\vec{q}_i &= \vec{V}^{-1}\brak{\kappa_i \vec{n}-\vec{u}}, i = 1,2
+\\
+\text{where }\kappa_i &= \pm \sqrt{
+\frac{
+f_0
+%\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f
+}
+{
+\vec{n}^{\top}\vec{V}^{-1}\vec{n}
+}
+}
+  \end{split}
+\label{eq:conic_tangent_qk}
+\end{align}
+\item For a conic/hyperbola, a line with normal vector $\vec{n}$ cannot be a tangent if 
+	\label{prop:conic-p-contact-nonparab-cond}
+\begin{align}
+\frac{
+\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f
+}
+{
+\vec{n}^{\top}\vec{V}^{-1}\vec{n}
+} < 0
+	\label{eq:conic-p-contact-nonparab-cond}
+\end{align}
 \item For a circle, the points of contact are
 	\begin{align}
 	\vec{q}_{ij} &= \brak{\pm r \frac{\vec{n}_j}{\norm{\vec{n}_j}}-\vec{u}}, \quad i,j = 1,2
 \label{eq:conic_tangent_qk-circ}
 \end{align}
-\begin{proof}
-	From 
-\eqref{eq:conic_tangent_qk},
-and 
-	\eqref{eq:circ-cr},
+\item A point $\vec{h}$ lies on a normal to the conic in \eqref{eq:conic_quad_form} 
+	if
+\begin{multline}
+	\label{eq:point_of_tangency-m}
+	\brak{ {\vec{m}^\top(\vec{Vh}+\vec{u})}}^2\brak{\vec{n}^{\top}\vec{V}\vec{n}} 
+	\\
+	- 2\brak{\vec{m}^\top\vec{V}\vec{n}} \brak{ {\vec{m}^\top(\vec{Vh}+\vec{u})}\vec{n}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}} 
+	\\
++  \text{g}\brak{
+  \vec{h}
+	  }\brak{\vec{m}^\top\vec{V}\vec{n}}^2
+%	\vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} +f 
+	= 0
+\end{multline}
+\item  A point $\vec{h}$ lies on a tangent to the conic in \eqref{eq:conic_quad_form} if 
 \begin{align}
-\kappa_{ij} &= \pm 
-\frac{r
-}
-{
-	\norm{\vec{n}_j}
-}
+  \vec{m}^{\top}  \sbrak{\brak{\vec{V}\vec{h}+\vec{u}}
+	  \brak{\vec{V}\vec{h}+\vec{u}}^{\top}
+   -\vec{V}
+	  \text{g}\brak{
+  \vec{h}
+	  }
+	  }\vec{m} 
+	  &= 0                                                                                             
+	  \label{eq:h-tangents-cond}
 \end{align}
-\end{proof}
-
 \end{enumerate}
