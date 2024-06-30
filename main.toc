@@ -51,6 +51,8 @@
 \contentsline {subsection}{\numberline {8.1}Intersection}{75}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Formulae}{80}{subsection.8.2}%
 \contentsline {section}{\numberline {9}Tangent And Normal}{81}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Examples}{81}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Formulae}{86}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.1}Circle}{81}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Conic}{81}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Formulae}{87}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Construction}{87}{subsection.9.4}%
 \contentsline {section}{Appendix\nobreakspace A: Conic Section}{87}{section*.154}%
