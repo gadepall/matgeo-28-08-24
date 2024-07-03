@@ -43,38 +43,12 @@ https://www.gnu.org/licenses/fdl-1.3.en.html
 \twocolumn
 
 
+%\renewcommand{\theequation}{\theenumi}
+\numberwithin{equation}{enumi}
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 
 
-\section{Triangle}
-%\numberwithin{equation}{section}
-Consider a triangle with vertices
-		\begin{align}
-			\label{eq:tri-pts}
-			\vec{A} = \myvec{1 \\ -1},\,
-			\vec{B} = \myvec{-4 \\ 6},\,
-			\vec{C} = \myvec{-3 \\ -5}
-		\end{align}
-\subsection{Sides}
-\input{chapters/triangle/vector}
-\subsection{Formulae}
-\input{chapters/formulae/line}
-\subsection{Median}
-\input{chapters/triangle/median}
-\subsection{Altitude}
-\input{chapters/triangle/altitude}
-\subsection{Perpendicular Bisector}
-\input{chapters/triangle/perp-bisect}
-\subsection{Angle Bisector}
-\input{chapters/triangle/angle-bisect}
-\subsection{Eigenvalues and Eigenvectors}
-\input{chapters/triangle/eigen}
-\subsection{Formulae}
-\input{chapters/formulae/circle/tangent}
-\subsection{Matrices}
-\input{chapters/triangle/matrix}
-\newpage
 \section{Vectors}
 \subsection{Addition and Subtraction}
 \input{chapters/vectors/examples/adsub.tex}
@@ -174,6 +148,34 @@ Consider a triangle with vertices
 \input{chapters/tangent/examples/const.tex}
 %
 \appendices
+\section{Triangle}
+%\numberwithin{equation}{section}
+Consider a triangle with vertices
+		\begin{align}
+			\label{eq:tri-pts}
+			\vec{A} = \myvec{1 \\ -1},\,
+			\vec{B} = \myvec{-4 \\ 6},\,
+			\vec{C} = \myvec{-3 \\ -5}
+		\end{align}
+\subsection{Sides}
+\input{chapters/triangle/vector}
+\subsection{Formulae}
+\input{chapters/formulae/line}
+\subsection{Median}
+\input{chapters/triangle/median}
+\subsection{Altitude}
+\input{chapters/triangle/altitude}
+\subsection{Perpendicular Bisector}
+\input{chapters/triangle/perp-bisect}
+\subsection{Angle Bisector}
+\input{chapters/triangle/angle-bisect}
+\subsection{Eigenvalues and Eigenvectors}
+\input{chapters/triangle/eigen}
+\subsection{Formulae}
+\input{chapters/formulae/circle/tangent}
+\subsection{Matrices}
+\input{chapters/triangle/matrix}
+\newpage
 \section{Conic Section}
 \input{chapters/formulae/conics/app}
 
