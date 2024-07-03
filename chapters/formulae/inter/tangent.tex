@@ -36,6 +36,24 @@ f_0
   \end{split}
 \label{eq:conic_tangent_qk}
 \end{align}
+\item
+  If $\vec{V}$ is not invertible,  given the normal vector $\vec{n}$, the point of contact to \eqref{eq:conic_quad_form} is given by the matrix equation
+\begin{align}
+\label{eq:conic_tangent_q_eigen}
+\myvec{
+\vec{\brak{u+\kappa \vec{n}}}^{\top} \\ \vec{V}
+}
+\vec{q} &= 
+\myvec{
+-f
+\\
+\kappa\vec{n}-\vec{u}
+}
+\\
+\text{where }  \kappa = \frac{\vec{p}_1^{\top}\vec{u}}{\vec{p}_1^{\top}\vec{n}}, \quad \vec{V}\vec{p}_1 &= 0
+\label{eq:conic_tangent_qk_eigen}
+\end{align}
+
 \item For a conic/hyperbola, a line with normal vector $\vec{n}$ cannot be a tangent if 
 	\label{prop:conic-p-contact-nonparab-cond}
 \begin{align}

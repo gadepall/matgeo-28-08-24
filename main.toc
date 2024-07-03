@@ -46,13 +46,18 @@
 \contentsline {section}{\numberline {7}Conics}{66}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Equation}{66}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Formulae}{71}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Miscellaneous}{73}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Chords}{75}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Intersection}{75}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Formulae}{80}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Tangent And Normal}{81}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Circle}{81}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Conic}{81}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Formulae}{87}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Construction}{87}{subsection.9.4}%
-\contentsline {section}{Appendix\nobreakspace A: Conic Section}{87}{section*.154}%
+\contentsline {subsection}{\numberline {7.3}Miscellaneous}{72}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Intersection of Conics}{74}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Chords}{74}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Curves}{79}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Formulae}{82}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Tangent And Normal}{83}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Circle}{83}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Conic}{83}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Formulae}{89}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Construction}{89}{subsection.9.4}%
+\contentsline {section}{Appendix\nobreakspace A: Conic Section}{90}{section*.158}%
+\contentsline {subsection}{\numberline {A.1}Equation}{90}{subsection.Appendix.A.1}%
+\contentsline {subsection}{\numberline {A.2}Standard Conic}{91}{subsection.Appendix.A.2}%
+\contentsline {subsection}{\numberline {A.3}Conic Lines}{92}{subsection.Appendix.A.3}%
+\contentsline {subsection}{\numberline {A.4}Tangent and Normal}{94}{subsection.Appendix.A.4}%

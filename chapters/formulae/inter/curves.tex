@@ -40,5 +40,29 @@ See
 	 \ref{prop:chord}
 	 for proof.
 
-
+  \item
+	  \label{them:pair-mat-sing}
+\eqref{eq:conic_quad_form} represents a pair of straight lines if 
+the matrix 
+  \begin{align} 
+	  \myvec{\vec{V} & \vec{u}\\ \vec{u}^{\top} & f}  
+	  \label{eq:pair-mat-sing}
+  \end{align} 
+  is singular.
+\item The intersection of two conics 
+with parameters $\vec{V}_i, \vec{u}_i, f_i, i  1,2$
+	is defined
+as
+\begin{align}
+	\vec{x}^{\top}\brak{\vec{V}_1 + \mu\vec{V}_2}\vec{x}+2 \brak{\vec{u}_1+\mu \vec{u}_2}^{\top} \vec{x} 
+	+ \brak{f_1+\mu f_2}= 0
+	  \label{eq:pair-mat-sing-conic}
+    \end{align}
+	  
+	  
+\item From \eqref{eq:pair-mat-sing}, \eqref{eq:pair-mat-sing-conic} represents a pair of straight lines if
+\begin{align}
+	  \label{eq:pair-mat-sing-conic-det}
+\mydet{\vec{V}_1 + \mu\vec{V}_2 & \vec{u}_1+\mu \vec{u}_2\\ \brak{\vec{u}_1+\mu \vec{u}_2}^{\top} & f_1 + \mu f_2} &= 0
+\end{align}
 \end{enumerate}
