@@ -1,0 +1,170 @@
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+	\item The angle $\theta$ between $\vec{a}, \vec{b}$,
+		is given by 
+\begin{align}
+	\label{eq:angle-inner}
+		\cos\theta=\frac{{\vec{a}^{\top}}{\vec{b}}}{\norm{\vec{a}}\norm{\vec{b}}}
+\end{align}
+\item The equation of a line is given by 
+\begin{align}
+	\label{eq:param-form}
+	\vec{x} = \vec{h} + \kappa \vec{m}
+\end{align}
+\item 
+	For
+\begin{align}
+	\vec{m}^{\top}\vec{n} = 0,
+\end{align}
+	\eqref{eq:param-form} can be expressed as
+\begin{align}
+	\vec{n}^{\top}\vec{x} &= \vec{n}^{\top}\vec{h} + \kappa \vec{n}^{\top}\vec{m}
+	\\
+	\label{eq:normal-form}
+\implies	\vec{n}^{\top}\vec{x} = c
+\end{align}
+for 
+\begin{align}
+c = 	\vec{n}^{\top}\vec{h}. 
+\end{align}
+$\vec{n}$ is defined to be the
+{\em normal vector}
+		of the line.  
+	\item Mathematically, 
+the projection of $\vec{A}$ on $\vec{B}$ is defined as
+		\begin{align}
+	\vec{C} = k \vec{B},\, \text{such that}
+	\brak{\vec{A}-\vec{C}}^{\top}\vec{C} = 0
+\end{align}
+yielding
+\begin{align}
+	\brak{\vec{A}-k\vec{B}}^{\top}\vec{B} = 0
+	\\
+	\text{or, } k = 
+	\frac{\vec{A}^{\top}\vec{B}}{\norm{\vec{B}}^2}
+	\implies 
+	\vec{C} = 
+	\frac{\vec{A}^{\top}\vec{B}}{\norm{\vec{B}}^2}
+ \vec{B}
+	\label{eq:12/10/3/4/proj}
+\end{align}
+\item If $\vec{A}, \vec{B}$ are unit vectors, 
+\begin{multline}
+	\brak{\vec{A}-\vec{B}}^{\top} 
+	\brak{\vec{A}+\vec{B}} 
+	\\
+\norm{\vec{A}}^2 - \norm{\vec{B}}^2
+	= 0
+	\label{eq:12/10/3/11/unit}
+\end{multline}
+  \item If 
+\begin{align}
+	\vec{A}^{\top}\vec{A} =\vec{I},
+\label{eq:12/10/3/5/inner}
+\end{align}
+		then $	\vec{A}$ is an {\em orthogonal} matrix.
+\item Let 
+\begin{align}
+  \vec{A} &= \myvec{a_1\\a_2 \\ a_3} \equiv a_1\overrightarrow{i}+a_2\overrightarrow{j}+a_3\overrightarrow{j}, 
+  \\
+  \vec{B} &= \myvec{b_1\\b_2 \\ b_3}, 
+\end{align}
+and 
+\begin{align}
+  \label{eq:cross3d-submat}
+\begin{split}
+  \vec{A}_{ij} &= \myvec{a_i\\a_j}, 
+  \\
+  \vec{B}_{ij} &= \myvec{b_i\\b_j}. 
+\end{split}
+\end{align}
+
+\item The {\em cross product} or {\em vector product} of $\vec{A}, \vec{B}$ is defined as
+\begin{align}
+  \label{eq:cross3d}
+	\vec{A} \times \vec{B} 
+	 = \myvec{ \mydet{\vec{A}_{23} & \vec{B}_{23}} \\[1ex] \mydet{\vec{A}_{31} & \vec{B}_{31}} \\[1ex] \mydet{\vec{A}_{12}  & \vec{B}_{12}}}
+\end{align}
+\item Verify that
+\begin{align}
+  \label{eq:cross3d-commute}
+  \vec{A} \times \vec{B} = -  \vec{B} \times \vec{A} 
+  \\
+  \label{eq:cross3d-same}
+  \vec{A} \times \vec{A} = \vec{0}
+\end{align}
+\item If 
+		\label{prop:lin-dep-cross}
+\begin{align}
+  \vec{A} \times \vec{B} = \vec{0},
+\end{align}
+  $\vec{A}$ and $ \vec{B} $ are linearly independent.
+  \item 
+\begin{align}
+	\label{eq:cross-sin}
+	\norm{ \vec{A} \times \vec{B} }
+	=
+	\norm{\vec{A}} \times 	\norm{\vec{B}} \sin \theta
+\end{align}
+where $\theta$ is the angle between the vectors.
+\item 
+\begin{align}
+	ar\brak{ABCD} = 
+         \frac{1}{2}\brak{\brak{\vec{C}-\vec{A}}\times\brak{\vec{D}-\vec{B}}} \\
+        \label{eq:11/10/1/1area-diag} 
+\end{align}
+	\item 
+The affine transformation is given by 
+\begin{align}
+	\label{eq:conic_affine}
+	\vec{x} = \vec{P}\vec{y}+\vec{c}
+\end{align}
+where $\vec{c}$ is the translation vector.
+\item The matrix
+\begin{align}
+\vec{P} =
+\myvec{
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta 
+}
+\end{align}
+is defined to be the rotation matrix. 
+\item 
+\begin{align}
+	\vec{P}^{\top} \vec{P} = \vec{I}
+\end{align}
+		$\vec{P}$ is known as as {\em orthogonal} matrix.
+\item Given vertices $\vec{A}, \vec{C}$ of a square, the other two vertices are given by
+\begin{align}
+\begin{split}
+	\vec{B} = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{P}\vec{e}_1+\vec{A}
+	\\
+	\vec{D} = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{P}\vec{e}_2+\vec{A}
+\end{split}
+	\label{eq:affine-square-bd}
+\end{align}
+%-c}}{\norm{\vec{n}}}\vec{n}
+	\\
+		\solution Shifting $\vec{A}$ to the origin and rotating the square clockwise by an angle $\phi$ made by $CA$ with the $x$-axis,
+	from \eqref{eq:conic_affine},
+\begin{align}
+\vec{A} = \vec{P}\vec{0}+\vec{c}
+\\
+\implies 
+\vec{c} = \vec{A}
+\\
+	\theta =  \phi -\frac{\pi}{4} 
+\end{align}
+and we obtain a square with the other vertices as
+\begin{align}
+\begin{split}
+	\vec{B}_1 = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{e}_1
+	\\
+	\vec{D}_1 = \norm{\vec{C}-\vec{A}}\cos \frac{\pi}{4}\vec{e}_2
+\end{split}
+	\label{eq:affine-bd}
+\end{align}
+	From \eqref{eq:conic_affine}
+	and 
+	\eqref{eq:affine-bd},
+	we obtain \eqref{eq:affine-square-bd}.
+\end{enumerate}
