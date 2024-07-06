@@ -1,6 +1,22 @@
 %\begin{enumerate}[label=\arabic*.,ref=\theenumi]
 \begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
+	\item The {\em direction vector} of $AB$ is defined as
+		\begin{align}
+		\label{eq:dir-vec}
+			\vec{m}=\vec{B}-
+			\vec{A} = \kappa
+			\myvec{1 \\ m}
+		\end{align}
+		where $m$ is the slope of $AB$.  We also say that 
+\begin{align}
+\vec{m}\equiv   \myvec{1 \\ m}
+\end{align}
+	\item The lines with direction vectors $\vec{m}_1$ and $\vec{m}_2$
+		respectively, are parallel if 
+\begin{align}
+\vec{m}_1\equiv   \vec{m}_2
+\end{align}
   \item If $ABCD$ be a parallelogram with $AB \parallel CD$,
 	  \label{prop:two-pgm}
   \begin{align}
@@ -11,24 +27,6 @@
 		\begin{align}
 			\vec{D}= \frac{k\vec{C}+\vec{B}}{k+1}
 	  \label{eq:section_formula}
-		\end{align}
-	\item In 2D space,  the basis vectors are defined as 
-\begin{align}
-	\vec{e}_1 = \myvec{1 \\ 0},\
-	\vec{e}_2 = \myvec{0 \\ 1}.
-\end{align}
-\item   For a 2D space, 
-	points $\vec{A}, \vec{B}, \vec{C}$ are defined to be collinear if 
-		\begin{align}
-			\label{eq:line-rank}
-			\rank{\myvec{1 & 1 & 1 \\ \vec{A}& \vec{B}&\vec{C}}} = 2
-		\end{align}
-	\item 
-			\eqref{eq:line-rank}
-			can be simplified to obtain
-		\begin{align}
-			\label{eq:line-rank-2}
-			\rank{\myvec{\vec{B}-\vec{A}& \vec{C}-\vec{A}}} = 1
 		\end{align}
   \item 
 If $PQRS$ is formed by joining the mid points of $ABCD$, 
@@ -47,31 +45,53 @@ If $PQRS$ is formed by joining the mid points of $ABCD$,
 \end{align}
 Hence, $PQRS$ is a parallelogram
 	  from \eqref{eq:two-pgm}.
+	\item In 2D space,  the basis vectors are defined as 
+\begin{align}
+	\vec{e}_1 = \myvec{1 \\ 0},\
+	\vec{e}_2 = \myvec{0 \\ 1}.
+\end{align}
 	\item The length of a vector  is  defined as
 		\begin{align}
 		\label{eq:side-length}
 			 \norm{\vec{x}} \triangleq \sqrt{\vec{x}^{\top}\vec{x}}
 		\end{align}
+		For example, if 
+\begin{align}
+\vec{x}
+	&=\myvec{3 \\ 4},
+	\\
+	\vec{x}^{\top}\vec{x} &= \myvec{3 & 4}\myvec{3 \\ 4}
+	\label{eq:scalar-product}
+	\\
+	&=3 \times 3 + 4 \times 4 = 25
+\end{align}
+yielding
+		\begin{align}
+			 \norm{\vec{x}} = 5.
+		\end{align}
+	\eqref{eq:scalar-product}
+	is known as the scalar product.
 	\item The unit vector in the direction of $\vec{x}$ is 
 		\begin{align}
 		\label{eq:unit-vec}
 			 \frac{\vec{x}}{\norm{\vec{x}}} 
 		\end{align}
-	\item The {\em direction vector} of $AB$ is defined as
+		\iffalse
+\item   For a 2D space, 
+	points $\vec{A}, \vec{B}, \vec{C}$ are defined to be collinear if 
+		\fi
+	\item 
+	Points $\vec{A}, \vec{B}, \vec{C}$ are defined to be collinear if 
 		\begin{align}
-		\label{eq:dir-vec}
-			\vec{m}=\vec{B}-
-			\vec{A} = \kappa
-			\myvec{1 \\ m}
+			\label{eq:line-rank-2}
+			\rank{\myvec{\vec{B}-\vec{A}& \vec{C}-\vec{A}}} = 1
 		\end{align}
-		where $m$ is the slope of $AB$.  We also say that 
+	\item 
 \begin{align}
-\vec{m}\equiv   \myvec{1 \\ m}
-\end{align}
-	\item The lines with direction vectors $\vec{m}_1$ and $\vec{m}_2$
-		respectively, are parallel if 
-\begin{align}
-\vec{m}_1\equiv   \vec{m}_2
+			\label{eq:mat-rank-t}
+	\rank{\vec{A}}
+	=
+	\rank{\vec{A}^\top}
 \end{align}
 \item In the 2D space, the unit direction vector is defined as
 \begin{align}

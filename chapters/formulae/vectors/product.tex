@@ -15,12 +15,13 @@
 \begin{align}
 	\vec{m}^{\top}\vec{n} = 0,
 \end{align}
+which means that $\vec{m}\perp \vec{n}$,
 	\eqref{eq:param-form} can be expressed as
 \begin{align}
 	\vec{n}^{\top}\vec{x} &= \vec{n}^{\top}\vec{h} + \kappa \vec{n}^{\top}\vec{m}
 	\\
 	\label{eq:normal-form}
-\implies	\vec{n}^{\top}\vec{x} = c
+	\implies	\vec{n}^{\top}\vec{x} &= c
 \end{align}
 for 
 \begin{align}
@@ -29,6 +30,7 @@ c = 	\vec{n}^{\top}\vec{h}.
 $\vec{n}$ is defined to be the
 {\em normal vector}
 		of the line.  
+	In 3D, \eqref{eq:normal-form} represents a plane.
 	\item Mathematically, 
 the projection of $\vec{A}$ on $\vec{B}$ is defined as
 		\begin{align}
@@ -48,20 +50,25 @@ yielding
 	\label{eq:12/10/3/4/proj}
 \end{align}
 \item If $\vec{A}, \vec{B}$ are unit vectors, 
-\begin{multline}
+\begin{align}
 	\brak{\vec{A}-\vec{B}}^{\top} 
 	\brak{\vec{A}+\vec{B}} 
-	\\
+	=
 \norm{\vec{A}}^2 - \norm{\vec{B}}^2
 	= 0
 	\label{eq:12/10/3/11/unit}
-\end{multline}
+\end{align}
   \item If 
 \begin{align}
 	\vec{A}^{\top}\vec{A} =\vec{I},
 \label{eq:12/10/3/5/inner}
 \end{align}
-		then $	\vec{A}$ is an {\em orthogonal} matrix.
+		then $	\vec{A}$ is an {\em orthogonal} matrix.  This also means that its rows and columns are unit vectors and mutually perpendicular.
+	\item The determinant
+\begin{align}
+  \label{eq:det-2d}
+	\mydet{a_1 & b_1 \\ a_2 & b_2} = a_1 b_2 - a_2 b_1.
+\end{align}
 \item Let 
 \begin{align}
   \vec{A} &= \myvec{a_1\\a_2 \\ a_3} \equiv a_1\overrightarrow{i}+a_2\overrightarrow{j}+a_3\overrightarrow{j}, 
@@ -97,7 +104,7 @@ and
 \begin{align}
   \vec{A} \times \vec{B} = \vec{0},
 \end{align}
-  $\vec{A}$ and $ \vec{B} $ are linearly independent.
+  $\vec{A}$ and $ \vec{B} $ are linearly independent, i.e., they are points on the same line.
   \item 
 \begin{align}
 	\label{eq:cross-sin}
@@ -143,6 +150,7 @@ is defined to be the rotation matrix.
 	\label{eq:affine-square-bd}
 \end{align}
 %-c}}{\norm{\vec{n}}}\vec{n}
+\iffalse
 	\\
 		\solution Shifting $\vec{A}$ to the origin and rotating the square clockwise by an angle $\phi$ made by $CA$ with the $x$-axis,
 	from \eqref{eq:conic_affine},
@@ -167,4 +175,5 @@ and we obtain a square with the other vertices as
 	and 
 	\eqref{eq:affine-bd},
 	we obtain \eqref{eq:affine-square-bd}.
+	\fi
 \end{enumerate}
