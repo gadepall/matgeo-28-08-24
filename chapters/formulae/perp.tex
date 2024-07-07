@@ -12,6 +12,44 @@
 \label{eq:geo-param}
 	\vec{x} = \vec{h} + \kappa \vec{m}.
 \end{align}
+where $\vec{h}$ is any point on the line and 
+\begin{align}
+			\label{eq:line-school-dir}
+\vec{m} = \myvec{1 \\ m}
+\end{align}
+is the direction vector. 
+\item 
+	For
+\begin{align}
+	\vec{m}^{\top}\vec{n} = 0,
+\end{align}
+\eqref{eq:geo-param}
+	can be expressed as
+\begin{align}
+	\vec{n}^{\top}\vec{x} &= \vec{n}^{\top}\vec{h} + \kappa \vec{n}^{\top}\vec{m}
+	\\
+	\begin{split}
+	\implies	\vec{n}^{\top}\brak{\vec{x}-\vec{h}} &=0 
+	\\
+		\text{or, }
+	\vec{n}^{\top}\vec{x} &= c
+	\end{split}
+	\label{eq:geo-normal}
+\end{align}
+for 
+\begin{align}
+c = 	\vec{n}^{\top}\vec{h}. 
+\end{align}
+where
+\begin{align}
+\vec{n}=\myvec{-m \\ 1}
+			\label{eq:line-school-normal}
+\end{align}
+is defined to be the
+{\em normal vector}
+		of the line.  
+	In 3D, \eqref{eq:geo-normal} represents a plane.
+	\iffalse
 \item 			\eqref{eq:line-school} can also be expressed as
 \begin{align}
 	y - mx &= c 
@@ -23,17 +61,9 @@
 	\label{eq:geo-normal}
 \vec{n}^{\top}\vec{x} &= c
 \end{align}
-		\item The direction vector is 
-\begin{align}
-			\label{eq:line-school-dir}
-\vec{m} = \myvec{1 \\ m}
-\end{align}
+		\item 
 and the normal vector is
-\begin{align}
-\vec{n}=\myvec{-m \\ 1}
-			\label{eq:line-school-normal}
-\end{align}
-\iffalse
+\item The equation of a line passing through 
   \item From \eqref{eq:geo-param}, 
 	  if $\vec{A},\vec{D}$ and $\vec{C}$ are on the same line,
 		\label{prop:lin-dep}
