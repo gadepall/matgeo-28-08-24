@@ -11,9 +11,9 @@
 \contentsline {subsection}{\numberline {2.4}Vector Product}{19}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Miscellaneous}{22}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Constructions}{25}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Triangle}{25}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Quadrilateral}{27}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Formulae}{27}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.1}Formulae}{25}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Triangle}{25}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Quadrilateral}{27}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Linear Forms}{28}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Equation }{28}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Parallel}{32}{subsection.4.2}%
