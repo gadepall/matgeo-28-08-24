@@ -2,14 +2,14 @@
 \numberwithin{equation}{enumi}
 \item The equation of a line is given by 
 \begin{align}
-			\label{eq:line-school}
+			\label{eq:app-line-school}
 	y &= mx + c
 	\\
 	\implies \myvec{x \\ y} &= \myvec{x \\ 
 	 mx + c} =\myvec{0 \\ c} + x\myvec{1 \\ m}
 \end{align}
 			yielding \eqref{eq:geo-param}.
-\item 			\eqref{eq:line-school} can also be expressed as
+\item 			\eqref{eq:app-line-school} can also be expressed as
 \begin{align}
 	y - mx &= c 
 	\\
@@ -18,22 +18,22 @@
 			yielding \eqref{eq:geo-normal}.
 		\item The direction vector is 
 \begin{align}
-			\label{eq:line-school-dir}
+			\label{eq:app-line-school-dir}
 \vec{m} = \myvec{1 \\ m}
 \end{align}
 and the normal vector is
 \begin{align}
 \vec{n}=\myvec{-m \\ 1}
-			\label{eq:line-school-normal}
+			\label{eq:app-line-school-normal}
 \end{align}
   \item From \eqref{eq:geo-param}, 
 	  if $\vec{A},\vec{D}$ and $\vec{C}$ are on the same line,
-		\label{prop:lin-dep}
+		\label{prop:app-lin-dep}
 \begin{align}
 			\vec{D}=\vec{A}+q\vec{m} 
 			\\ 
 			\vec{C}=\vec{D}+p\vec{m} \\
-			\label{eq:collinear} 
+			\label{eq:app-collinear} 
 			\implies 	p\brak{\vec{D}-\vec{A}} 
 			+ q\brak{\vec{D}-\vec{C}} = 0, \quad p, q \ne 0 \\ 
 			\implies \vec{D} = \frac{p\vec{A}+q\vec{C}}{p+q} 
@@ -50,19 +50,19 @@ and the normal vector is
 \end{align}
 which can be expressed as 
 \begin{align}
-		\label{prop:lin-eq}
+		\label{prop:app-lin-eq}
 	\myvec{ \vec{A} & \vec{B} & \vec{C}}^{\top}\vec{n} = c\myvec{1 \\ 1 \\ 1}
 	\\
 	\equiv \myvec{ \vec{A} & \vec{B} & \vec{C}}^{\top}\vec{n} = \myvec{1 \\ 1 \\ 1}
-		\label{prop:lin-eq-unit-mat},
+		\label{prop:app-lin-eq-unit-mat},
 	\\
 	\implies 
 	\myvec{ 1 & 1 &1 \\ \vec{A} & \vec{B} & \vec{C}}^{\top}\myvec{\vec{n} \\ -1} &= \vec{0}
-		\label{prop:lin-dep-rank}
+		\label{prop:app-lin-dep-rank}
 \end{align}
 yielding
 		\begin{align}
-			\label{eq:line-rank}
+			\label{eq:app-line-rank-2}
 			\rank{\myvec{1 & 1 & 1 \\ \vec{A}& \vec{B}&\vec{C}}} = 2
 		\end{align}
 			  Rank is defined to be the number of linearly indpendent rows or columns of a matrix.
@@ -70,6 +70,6 @@ yielding
 The equation of a line can also be expressed as
 \begin{align}
 	 \vec{n}^{\top}\vec{x} &=   1
-		\label{prop:lin-eq-unit}
+		\label{prop:app-lin-eq-unit}
 \end{align}
 	  \end{enumerate}
