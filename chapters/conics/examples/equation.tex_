@@ -1,0 +1,155 @@
+In the each of the following exercises, find the coordinates of the focus, vertex, eccentricity, axis of the conic section, the equation of the directrix and the length of the latus rectum.
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+\item $y^2=12x$ 
+\label{chapters/11/11/2/1}
+\\
+\solution
+\input{chapters/11/11/2/1/parab.tex}
+\item 
+$y^2 = –8x$
+\\
+\solution
+\input{chapters/11/11/2/3/parab.tex}
+  \item $\frac{x^2}{36}+\frac{y^2}{16}=1$
+\\
+\solution
+\input{chapters/11/11/3/1/ellipse.tex}
+  \item $\frac{x^2}{16}+\frac{y^2}{9}=1$
+\\
+\solution
+\input{chapters/11/11/3/3/ellipse.tex}
+	\item $\frac{x^2}{16}-\frac{y^2}{9} = 1$. \\ 
+		\solution
+		\input{chapters/11/11/4/1/hyper.tex}
+\begin{table}[H]
+\centering
+\caption{}
+\label{tab:std-conic-params-sol}
+\resizebox{\columnwidth}{!}{%
+		\input{chapters/conics/tables/std.tex}
+		}
+\end{table}
+  \item $\frac{x^2}{4}+\frac{y^2}{25}=1$
+\\
+\solution
+\input{chapters/11/11/3/2/ellipse.tex}
+	\item $5{y^2}-9{x^2}=36$.
+		\\
+		\solution
+		\\
+		\input{chapters/11/11/4/5/hyper.tex}
+	\item $\frac{y^2}{9}-\frac{x^2}{27}=1$.
+		\\
+		\solution
+		\\
+		\input{chapters/11/11/4/2/hyper.tex}
+\item $x^2=-16y$
+\\
+\solution
+\input{chapters/11/11/2/4/parab.tex}
+\item $x^2$=6y 
+\\
+\solution
+\input{chapters/11/11/2/2/parab.tex}
+\begin{table}[H]
+\centering
+\caption{}
+\label{tab:rot-conic-params-sol}
+\resizebox{\columnwidth}{!}{%
+		\input{chapters/conics/tables/rot.tex}
+		}
+\end{table}
+\item $x^2$=-9y  
+  \item $\frac{x^2}{25}+\frac{y^2}{100}=1$
+  \item $\frac{x^2}{49}+\frac{y^2}{36}=1$
+  \item $\frac{x^2}{100}+\frac{y^2}{400}=1$
+  \item $36x^2+4y^2=144$
+  \item $16x^2+y^2=16$
+  \item $4x^2+9y^2=36$
+\item $y^2=10x$  
+\end{enumerate}
+
+In each of the following exercises, find the equation of the conic, that satisfies the given conditions.
+
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi,resume*]
+\item  foci \brak{\pm 4, 0}, latus rectum of length 12.
+\\
+\solution
+		\input{chapters/11/11/4/13/hyper.tex}
+    \item eccentricity $e = \frac{4}{3}$,
+    vertices 
+    \begin{align}
+        \vec{P_1} = \myvec{7\\0},\ \vec{P_2} = \myvec{-7\\0}
+        \label{eq:chapters/11/11/4/14/vert}
+    \end{align}
+\\
+\solution
+		\input{chapters/11/11/4/14/hyper.tex}
+\item centre at $\vec{c}(0,0)$, major axis on the y-axis and passes through the points $\vec{P}(3,2)$ and $\vec{Q}(1,6)$.
+\\
+\solution
+\input{chapters/11/11/3/19/ellipse.tex}
+\item major axis on the x-axis and passes through the points (4,3) and (6,2).
+\\
+\solution
+\input{chapters/11/11/3/20/ellipse.tex}
+\item vertices $\myvec{0\\\pm 3}$ and foci $\myvec{0\\\pm5}$.
+	\\
+\solution
+		\input{chapters/11/11/4/9/hyper.tex}
+\item vertices $\brak{0,\pm 5}, \text{foci} \brak{0,\pm 8}$.  
+\item focus (6,0); directrix x=-6 
+\item focus (0,-3); directrix y=3
+\item vertex (0,0); focus (3,0)
+\item vertex (0,0); focus (-2,0) 
+\item vertex (0,0) passing through (2,3) and axis is along x-axis
+\item vertex (0,0) passing through (5,2) symmetric with respect to y-axis
+\item vertices $(\pm5,0),\text{foci} (\pm4,0)$.
+\item vertices $(\pm0,13),\text{foci} (0,\pm5)$.
+\item vertices $(\pm6,0),\text{foci} (\pm4,0)$.
+\item ends of major axis $(\pm3,0)$, ends of minor axis $(0,\pm2)$.
+\item ends of major axis $(0,\pm \sqrt{5})$, ends of minor axis $(\pm1,0)$.
+\item length of major axis 26, foci $(\pm5,0)$.
+\item length of minor axis 16, foci $(0,\pm6)$.
+\item foci $(\pm3,0), a=4$.
+\item vertex (0,4),  focus (0,2). 
+\item vertex (-3,0),  directrix $x+5=0$.
+\item focus (0,-3) and directrix $y=3$.
+\item  directrix x=0, focus at (6,0).
+\item  vertex  at (0,4), focus at (0,2).
+\item  focus at (-1,2), directrix $x-2y+3=0$.
+	 \item  vertices $(\pm5,0)$, foci $(\pm 7,0)$.
+	 \item vertices $(0\pm7)$ ,e =$\frac{4}{3}$. 
+	 \item  foci (0,$\pm\sqrt{10})$, passing through (2,3).
+\item vertices at $(0,\pm6)$,  eccentricity $\frac{5}{3}$.
+\item focus (-1,-2),  directrix $x-2y+3=0$.
+\item eccentricity $\frac{3}{2}$, foci $(\pm2,0)$.
+ \item eccentricity $\frac{2}{3}$, latus rectum 5, centre  (0,0).
+\item If the parabola $y^2=4ax$ passes through the point (3,2), then the length of its latus rectum is
+\item Find the eccentricity of the hyperbola $9y^2-4x^2=36$.
+	\item Equation of the hyperbola with eccentricty $\frac{3}{2}$ and foci at ($\pm2,0)$ is
+\begin{enumerate} 
+	\item $\frac{x^2}{4}-\frac{y^2}{5}=\frac{4}{9}$
+
+	\item  $\frac{x^2}{9}-\frac{y^2}{9}=\frac{4}{9}$
+	\item  $\frac{x^2}{4}-\frac{y^2}{9}=1$
+\item  none of these.
+\end{enumerate}
+ \item Given the ellipse with equation $9x^2+25y^2=225,$ find the eccentricity and foci.
+ \item Find the equation of the set of all points whose distance from (0,4) is $\frac{2}{3}$ of their distance from the line $y=9$.
+\item The equation of the ellipse whose focus is (1,-1), directrix $x-y-3
+	=0$ and eccentricity $\frac{1}{2}$ is
+\begin{enumerate}
+\item $7x^2+2xy+7y^2-10x+10y+7=0$
+\item $7x^2+2xy+7y^2+7=0$
+\item $7x^2+2xy+7y^2+10x-10y-7=0$ 
+\item none
+\end{enumerate}
+\item The length of the latus rectum of the ellipse $3x^2+y^2=12$ is
+\begin{enumerate}
+\item 4
+\item 3
+\item 8
+\item $4\sqrt{3}$
+\end{enumerate}
+\end{enumerate}
