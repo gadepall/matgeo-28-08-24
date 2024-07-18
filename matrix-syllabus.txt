@@ -1,0 +1,6 @@
+Course Title: Matrices in Geometry
+Credits: 1
+Duration: 15 hours
+Syllabus: Installation - Termux on Android, Python - Numpy, Scipy, Matplotlib; Vector Arithmetic - Direction, Section Formula, Rank, Matrix Row Reduction,  Norm; Vector Multiplication - Scalar Product, Orthogonality, Vector Product; Constructions using Python - Point Vectors, Triangle, Quadrilateral; Linear Forms - Lines and Planes, Matrix Equations, Inverse;  Quadratic Foms - Circle and Conic Equations, Symmetric Matrices, Affine Transformation, Eigenvalues and Eigenvectors, Cayley Hamilton Theorem; Skew Lines - Least Squares, Singular Value Decomposition. 
+Textbook: Matrices in Geometry by GVV Sharma, July 2024.
+
