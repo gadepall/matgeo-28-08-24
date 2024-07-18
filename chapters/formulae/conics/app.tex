@@ -39,15 +39,14 @@ f &= \norm{\vec{n}}^2\norm{\vec{F}}^2-c^2e^2
   Using Definition \ref{conics/30/def} and 
 			\eqref{eq:PQ-final},
 for any point $\vec{x}$ on the conic,
-\begin{multline}
-\norm{\vec{x}-\vec{F}}^2=e^2 \frac{\brak{{\vec{n}^{\top}\vec{x} - c}}^2}{\norm{\vec{n}}^2}\label{conics/30/eq:1} \\
-\implies \norm{\vec{n}}^2\brak{\vec{x}-\vec{F}}^{\top}\brak{\vec{x}-\vec{F}}=e^2\brak{\vec{n}^{\top}\vec{x} - c}^2
+\begin{align}
+	\norm{\vec{x}-\vec{F}}^2&=e^2 \frac{\brak{{\vec{n}^{\top}\vec{x} - c}}^2}{\norm{\vec{n}}^2}\label{conics/30/eq:1} \\
+	\implies \norm{\vec{n}}^2\brak{\vec{x}-\vec{F}}^{\top}\brak{\vec{x}-\vec{F}}&=e^2\brak{\vec{n}^{\top}\vec{x} - c}^2
 \\
 \implies \norm{\vec{n}}^2\brak{\vec{x}^{\top}\vec{x}-2\vec{F}^{\top}\vec{x}+\norm{\vec{F}}^2}
-	\\
-	=e^2\brak{c^2+\brak{\vec{n}^{\top}\vec{x} }^2-2c\vec{n}^{\top}\vec{x}} \\
-=e^2\brak{c^2+\brak{\vec{x}^{\top}\vec{n}\vec{n}^{\top}\vec{x} }-2c\vec{n}^{\top}\vec{x}}
-\end{multline}
+	&=e^2\brak{c^2+\brak{\vec{n}^{\top}\vec{x} }^2-2c\vec{n}^{\top}\vec{x}} \\
+	&=e^2\brak{c^2+\brak{\vec{x}^{\top}\vec{n}\vec{n}^{\top}\vec{x} }-2c\vec{n}^{\top}\vec{x}}
+\end{align}
 %
 which can be expressed as \eqref{eq:app-conic_quad_form} after simplification.
 \item
@@ -173,7 +172,7 @@ Also,
 	\mydet{\vec{V}} =   \lambda_1\lambda_2 
 \end{align}
 	yielding \tabref{table:det}.
-\begin{table}[!h]
+\begin{table}[H]
 \centering
 \resizebox{\columnwidth}{!}{%
 \input{tables/det.tex}
@@ -250,26 +249,26 @@ When $\abs{\vec{V}} = 0, \lambda_1 = 0$ and
 \end{align}
 Substituting \eqref{eq:eig_matrix}
 in \eqref{eq:conic_simp},
-\begin{multline}
+\begin{align*}
 	\vec{y}^{\top}\vec{D}\vec{y}+2\brak{\vec{c}^{\top}\vec{V}+\vec{u}^{\top}}\myvec{\vec{p}_1 & \vec{p}_2}\vec{y}
-	\\
+%	\\
 	+  \vec{c}^{\top}\brak{\vec{V}\vec{c} + \vec{u}}+ \vec{u}^{\top}\vec{c} + f= 0
 \\
 \implies \vec{y}^{\top}\vec{D}\vec{y}
 +2\myvec{\brak{\vec{c}^{\top}\vec{V}+\vec{u}^{\top}}\vec{p}_1  \brak{\vec{c}^{\top}\vec{V}+\vec{u}^{\top}}\vec{p}_2}\vec{y}
-\\
+%\\
 	+  \vec{c}^{\top}\brak{\vec{V}\vec{c} + \vec{u}}+ \vec{u}^{\top}\vec{c} + f= 0
 \\
 \implies \vec{y}^{\top}\vec{D}\vec{y}
 +2\myvec{\vec{u}^{\top}\vec{p}_1 & \brak{\lambda_2\vec{c}^{\top}+\vec{u}^{\top}}\vec{p}_2}\vec{y}
-\\
+%\\
 	+  \vec{c}^{\top}\brak{\vec{V}\vec{c} + \vec{u}}+ \vec{u}^{\top}\vec{c} + f= 0
-\end{multline}
+\end{align*}
 upon substituting from 
  \eqref{eq:conic_parab_eig_prop}, yielding
 \begin{multline}
 \lambda_2y_2^2+2\brak{\vec{u}^{\top}\vec{p}_1}y_1+  2y_2\brak{\lambda_2\vec{c}+\vec{u}}^{\top}\vec{p}_2
-\\
+%\\
 	+  \vec{c}^{\top}\brak{\vec{V}\vec{c} + \vec{u}}+ \vec{u}^{\top}\vec{c} + f= 0
 \label{eq:conic_parab_foc_len_temp} 
 \end{multline}
@@ -552,9 +551,9 @@ where
 \vec{m}^{\top}\vec{V}\vec{m}
 }
 \lbrak{-\vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}}
-\\
+%\\
 \pm
-{\small
+%{\small
 \rbrak{\sqrt{
 \sbrak{
 \vec{m}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}
@@ -567,7 +566,7 @@ where
 \brak{\vec{m}^{\top}\vec{V}\vec{m}}
 }
 }
-}
+%}
 \label{eq:app-tangent_roots}
 \end{multline}
 \solution
@@ -779,8 +778,8 @@ from
 Substituting the above in
 \eqref{eq:chord-len}, 
 we obtain
-\eqref{eq:chord-len-sub-ell}.
-\begin{figure*}[!t]
+%\eqref{eq:chord-len-sub-ell}.
+%\begin{figure*}[!t]
 \begin{align}
  \frac{2\sqrt{
 \sbrak{
@@ -799,25 +798,7 @@ we obtain
 }\norm{\vec{e}_2}
 \label{eq:chord-len-sub-ell}
   \end{align}
-\begin{align}
- \frac{2\sqrt{
-\sbrak{
-\vec{e}_2^{\top}\brak{\vec{D}\brak{-\frac{\eta}{4\lambda_2}\vec{e}_1}+\frac{\eta}{2}\vec{e}_1}
-}^2
--
-\brak
-{
-\brak{-\frac{\eta}{4\lambda_2}\vec{e}_1}^{\top}\vec{D}\brak{-\frac{\eta}{4\lambda_2}\vec{e}_1} + 2\frac{\eta}{2}\vec{e}_1^{\top}\brak{-\frac{\eta}{4\lambda_2}\vec{e}_1} 
-}
-\brak{\vec{e}_2^{\top}\vec{D}\vec{e}_2}
-}
-}
-{
-\vec{e}_2^{\top}\vec{D}\vec{e}_2
-}\norm{\vec{e}_2}
-\label{eq:chord-len-sub}
-  \end{align}
-\end{figure*}
+%\end{figure*}
   Since 
   \begin{align}
 \vec{e}_2^{\top}\vec{D}\vec{e}_1 = 0, 
@@ -851,7 +832,25 @@ Substituting the above in
 %					from \eqref{eq:app-F-ell-hyp-parab}
 %and 						 \\
 the length of the latus rectum  can be expressed as
-\eqref{eq:chord-len-sub}.
+\begin{align}
+ \frac{2\sqrt{
+\sbrak{
+\vec{e}_2^{\top}\brak{\vec{D}\brak{-\frac{\eta}{4\lambda_2}\vec{e}_1}+\frac{\eta}{2}\vec{e}_1}
+}^2
+-
+\brak
+{
+\brak{-\frac{\eta}{4\lambda_2}\vec{e}_1}^{\top}\vec{D}\brak{-\frac{\eta}{4\lambda_2}\vec{e}_1} + 2\frac{\eta}{2}\vec{e}_1^{\top}\brak{-\frac{\eta}{4\lambda_2}\vec{e}_1} 
+}
+\brak{\vec{e}_2^{\top}\vec{D}\vec{e}_2}
+}
+}
+{
+\vec{e}_2^{\top}\vec{D}\vec{e}_2
+}\norm{\vec{e}_2}
+\label{eq:chord-len-sub}
+  \end{align}
+%\eqref{eq:chord-len-sub}.
   Since 
   \begin{align}
 \vec{e}_2^{\top}\vec{D}\vec{e}_1 = 0, 
@@ -1240,18 +1239,20 @@ and
 \end{proof}
 \item A point $\vec{h}$ lies on a normal to the conic in \eqref{eq:app-conic_quad_form} 
 	if
-\begin{multline}
-	\label{eq:app-point_of_tangency-m}.
+%\begin{multline}
+\begin{equation}
+	\label{eq:app-point_of_tangency-m}
 	\brak{ {\vec{m}^\top(\vec{Vh}+\vec{u})}}^2\brak{\vec{n}^{\top}\vec{V}\vec{n}} 
-	\\
+%	\\
 	- 2\brak{\vec{m}^\top\vec{V}\vec{n}} \brak{ {\vec{m}^\top(\vec{Vh}+\vec{u})}\vec{n}^{\top}\brak{\vec{V}\vec{h}+\vec{u}}} 
-	\\
+%	\\
 +  \text{g}\brak{
   \vec{h}
 	  }\brak{\vec{m}^\top\vec{V}\vec{n}}^2
 %	\vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} +f 
 	= 0
-\end{multline}
+\end{equation}
+%\end{multline}
 \begin{proof}
 The point of contact for the normal passing through a point $\vec{h}$ is given by 
 \begin{align}
@@ -1299,7 +1300,7 @@ From
 \begin{multline}
 %	\label{eq:normal_simp_2-quad}
 \brak{- \frac{\vec{m}^\top(\vec{Vh}+\vec{u})}{\vec{m}^\top\vec{V}\vec{n}}}^2\vec{n}^{\top}\vec{V}\vec{n} 
-	\\
+	%\\
 	+ 2 \brak{- \frac{\vec{m}^\top(\vec{Vh}+\vec{u})}{\vec{m}^\top\vec{V}\vec{n}}}\vec{n}^{\top}\brak{\vec{V}\vec{h}+\vec{u}} 
 +  \text{g}\brak{
   \vec{h}
@@ -1311,7 +1312,7 @@ From
 \end{proof}
 \item  A point $\vec{h}$ lies on a tangent to the conic in \eqref{eq:app-conic_quad_form} if 
 \begin{align}
-	  \label{eq:app-h-tangents-cond}.
+	  \label{eq:app-h-tangents-cond}
   \vec{m}^{\top}  \sbrak{\brak{\vec{V}\vec{h}+\vec{u}}
 	  \brak{\vec{V}\vec{h}+\vec{u}}^{\top}
    -\vec{V}

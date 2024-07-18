@@ -34,9 +34,9 @@
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
 \newcommand{\figuremacro}[5]{
-    \begin{figure}[#1]
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=#5\columnwidth]{#2}
+        \includegraphics[width=0.75\columnwidth]{#2}
         \caption[#3]{\textbf{#3}#4}
         \label{fig:#2}
     \end{figure}
@@ -58,9 +58,9 @@ columns=fullflexible
    \fi
    In Fig. 
 		\ref{fig:9/9/4/5},
-	\begin{figure}[!h]
+	\begin{figure}[H]
 		\centering
- \includegraphics[width=\columnwidth]{chapters/9/9/4/5/figs/matrix.png}
+ \includegraphics[width=0.75\columnwidth]{chapters/9/9/4/5/figs/matrix.png}
 		\caption{}
 		\label{fig:9/9/4/5}
   	\end{figure}
@@ -186,7 +186,7 @@ in the above,
 
 [Hint : Join EC and AD. Show that BE  AC abd DE AB, etc.]
 
-   %  \includegraphics[scale=1.0]{diag_1.png}
+   %  \includegraphics[width=0.75\columnwidth]{diag_1.png}
    \section{Solution}
    \textbf{Theory:}\\
    \textbf{To Prove:} ar(BDE)=1/4 ar(ABC) \\
@@ -289,7 +289,7 @@ https://github.com/Vamsi9849/iithfwc/blob/main/Matrix_line/codes/matrix.py
 \end{lstlisting}
  \section{Construction}
   \begin{center}
-  \includegraphics[scale=0.39]{par.pdf}  
+  \includegraphics[width=0.75\columnwidth]{par.pdf}  
   Figure of construction
    \end{center}   
 \bibliographystyle{ieeetr}

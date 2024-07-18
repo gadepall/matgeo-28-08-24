@@ -44,9 +44,9 @@
 \providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
 \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
 \newcommand{\figuremacro}[5]{
-    \begin{figure}[#1]
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=#5\columnwidth]{#2}
+        \includegraphics[width=0.75\columnwidth]{#2}
         \caption[#3]{\textbf{#3}#4}
         \label{fig:#2}
     \end{figure}
@@ -58,7 +58,7 @@ frame=single,
 breaklines=true,
 columns=fullflexible
 }
-\thiswatermark{\centering \put(181,-119.0){\includegraphics[scale=0.13]{iith_logo3}} }
+\thiswatermark{\centering \put(181,-119.0){\includegraphics[width=0.75\columnwidth]{iith_logo3}} }
 \title{\mytitle}
 \author{\myauthor\hspace{1em}\\\contact\\FWC22034\hspace{6.5em}IITH\hspace{0.5em}\mymodule\hspace{6em}Assignment}
 \begin{document}
@@ -76,9 +76,9 @@ that
 	ar (AEDF) &= ar (ABCDE)
 		\label{eq:9/9/3/11/pent}
 \end{align}
-	\begin{figure}[!h]
+	\begin{figure}[H]
 		\centering
- \includegraphics[width=\columnwidth]{chapters/9/9/3/11/figs/matrix.pdf}
+ \includegraphics[width=0.75\columnwidth]{chapters/9/9/3/11/figs/matrix.pdf}
 		\caption{}
 		\label{fig:9/9/3/11}
   	\end{figure}
@@ -123,7 +123,7 @@ upon substituting from		from  Appendix
 
 \iffalse
 
-	    \includegraphics[scale=1.0]{diag_1.png}
+	    \includegraphics[width=0.75\columnwidth]{diag_1.png}
    \section{Solution}
 The input parameters for this construction are 
 \begin{center}
@@ -200,7 +200,7 @@ $\therefore$ Ar($\vec{A}\vec{B}\vec{C}\vec{D}\vec{E}$)=Ar($\vec{A}\vec{E}\vec{D}
 \end{center}
  \section{Construction}
  	\begin{center}
-  \includegraphics[scale=0.39]{matrix.pdf}\\
+  \includegraphics[width=0.75\columnwidth]{matrix.pdf}\\
        Figure of construction 
   	\end{center}
 \end{document}
