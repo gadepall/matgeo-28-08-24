@@ -1,0 +1,31 @@
+Let the desired division for both cases be
+\begin{align}
+\begin{split}
+  x_1+x_2 &= 30000\\
+  0.05x_1+0.07x_2 &= 1800
+\end{split}
+\implies 
+  \myvec{1&1\\0.05&0.07}\myvec{x_1\\x_2} = \myvec{30000\\1800}
+\label{eq:solutions/matrix/292}
+\\
+\begin{split}
+  y_1+y_2 &= 30000\\
+  0.05y_1+0.07y_2 &= 2000
+\end{split}
+\implies  \myvec{1&1\\0.05&0.07}\myvec{y_1\\y_2} = \myvec{30000\\2000}
+\label{eq:solutions/matrix/294}
+\end{align}
+yielding
+\begin{align}
+  \myvec{1&1\\0.05&0.07}\myvec{x_1&y_1\\x_2&y_2} = \myvec{30000&30000\\1800&2000} 
+\end{align}
+with the augmented matrix followed by row reduction 
+\begin{align}
+	\xleftrightarrow{R_2 = R_2 - 0.05 R_1}\myvec{1&1 &\vrule &  30000&30000\\ 0&0.02 & \vrule& 300&500}   
+	\xleftrightarrow{R_2 = 50R_2}\myvec{1&1&\vrule& 30000&30000 \\ 0&1 & \vrule &15000&25000} \nonumber \\
+	\xleftrightarrow{R_1 = R_1-R_2}\myvec{1&0 & \vrule &115000&5000\\ 0&1& \vrule &15000&25000}\nonumber
+\end{align}
+Thus, 
+\begin{align}
+\myvec{x_1\\ x_2} = \myvec{15000 \\ 15000},  \myvec{y_1\\ y_2} = \myvec{5000 \\ 25000} 
+\end{align}
