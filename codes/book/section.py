@@ -51,6 +51,12 @@ for i, txt in enumerate(vert_labels):
                  textcoords="offset points", # how to position the text
                  xytext=(20,-10), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
+# use set_position
+ax = plt.gca()
+ax.spines['top'].set_color('none')
+ax.spines['left'].set_position('zero')
+ax.spines['right'].set_color('none')
+ax.spines['bottom'].set_position('zero')
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')
