@@ -1,8 +1,8 @@
 #Code by GVV Sharma
 #September 12, 2023
+#Revised July 21, 2024
 #released under GNU GPL
 #Secion Formula
-#Centroid
 
 
 import sys                                          #for path to external scripts
