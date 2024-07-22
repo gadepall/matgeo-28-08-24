@@ -24,35 +24,38 @@ import shlex
 #end if
 
 #Given points
-A=np.array(([-4,5])).reshape(-1,1) 
-B=np.array(([0,7])).reshape(-1,1) 
-C=np.array(([5,-5])).reshape(-1,1) 
-D=np.array(([-4,-2])).reshape(-1,1) 
+A = np.array(([0,-1])).reshape(-1,1)
+B = np.array(([2,1])).reshape(-1,1)
+C = np.array(([0,3])).reshape(-1,1)
 
-ar1=0.5*(LA.norm(np.cross((A-B).T,(A-D).T)))
-ar2=0.5*(LA.norm(np.cross((C-D).T,(C-B).T)))
-print(ar1+ar2)
+P=0.5*(A+B)
+Q=0.5*(B+C)
+R=0.5*(A+C)
+ar1=0.5*(LA.norm(np.cross((P-Q).T,(Q-R).T)))
+ar2=0.5*(LA.norm(np.cross((A-B).T,(A-C).T)))
+print(ar1/ar2)
 
-#Generating all lines
+#Generating Lines
 x_AB = line_gen(A,B)
-x_BC= line_gen(B,C)
-x_DC = line_gen(D,C)
-x_DA= line_gen(D,A)
+x_BC = line_gen(B,C)
+x_CA = line_gen(C,A)
+x_PQ = line_gen(P,Q)
+x_QR = line_gen(Q,R)
+x_RP = line_gen(R,P)
 
-#
-#
 #Plotting all lines
-plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
-plt.plot(x_BC[0,:],x_BC[1,:],label='$BC$')
-plt.plot(x_DC[0,:],x_DC[1,:],label='$DC$')
-plt.plot(x_DA[0,:],x_DA[1,:],label='$DA$')
-#
+plt.plot(x_AB[0,:],x_AB[1,:],label='$distance(AB)$')
+plt.plot(x_BC[0,:],x_BC[1,:],label='$distance(BC)$')
+plt.plot(x_CA[0,:],x_CA[1,:],label='$distance(CA)$')
+plt.plot(x_PQ[0,:],x_PQ[1,:],label='$distance(CA)$')
+plt.plot(x_QR[0,:],x_QR[1,:],label='$distance(CA)$')
+plt.plot(x_RP[0,:],x_RP[1,:],label='$distance(CA)$')
 
-colors = np.arange(1,5)
+colors = np.arange(1,7)
 #Labeling the coordinates
-tri_coords = np.block([[A,B,C,D]])
+tri_coords = np.block([[A,B,C,P,Q,R]])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['A','B','C','D']
+vert_labels = ['A','B','C','P','Q','R']
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt, # this is the text
 #    plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
@@ -80,7 +83,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/1/1/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/1/1/figs/fig.pdf"))
+plt.savefig('chapters/10/7/3/3/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/10/7/3/3/figs/fig.pdf"))
 #else
 #plt.show()
