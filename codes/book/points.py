@@ -23,30 +23,33 @@ import subprocess
 import shlex
 #end if
 
+theta = 60
 #Given points
-A = np.array(([6, 0])).reshape(-1,1) 
-B = np.array(([0, 3])).reshape(-1,1)  
-C = np.array(([3, 0])).reshape(-1,1) 
-D = np.array(([0, 6])).reshape(-1,1)  
-P = np.array(([2, 2])).reshape(-1,1) 
+A = np.array(([0, 0])).reshape(-1,1) 
+B = np.array(([-4, 0])).reshape(-1,1)  
+D = 3*np.array(([np.cos(np.deg2rad(theta)),np.sin(np.deg2rad(theta))])).reshape(-1,1)  
 
+# Net displacement
+C= B+D 
 
 #Generating all lines
 x_AB = line_gen(A,B)
-x_CD = line_gen(C,D)
+x_BC = line_gen(B,C)
+x_CA = line_gen(C,A)
 
 #Plotting all lines
 plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
-plt.plot(x_CD[0,:],x_CD[1,:],label='$CD$')
+plt.plot(x_BC[0,:],x_BC[1,:],label='$BC$')
+plt.plot(x_CA[0,:],x_CA[1,:],label='$CA$')
 
 #Labeling the coordinates
-colors = np.arange(1,6)
-tri_coords = np.block([[A,B,C,D,P]])
+colors = np.arange(1,4)
+tri_coords = np.block([[A,B,C]])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['A','B','C','D','P']
+vert_labels = ['A','B','C']
 for i, txt in enumerate(vert_labels):
     #plt.annotate(txt, # this is the text
-    plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
+    plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
                  xytext=(25,5), # distance from text to points (x,y)
@@ -71,7 +74,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/2/13/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/2/13/figs/fig.pdf"))
+plt.savefig('chapters/12/10/5/3/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/12/10/5/3/figs/fig.pdf"))
 #else
 #plt.show()
