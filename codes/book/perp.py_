@@ -28,33 +28,26 @@ e1 = I[:,[0]]
 e2 = I[:,[1]]
 
 #Direction vector
-n = np.array(([4, 3])).reshape(-1,1) 
-m = np.array(([-3, 4])).reshape(-1,1) 
-c,d =12,4
+n = np.array(([3, -4])).reshape(-1,1) 
+m = np.array(([4, 3])).reshape(-1,1) 
 
-#Points
-x1 = (d*LA.norm(n)+c)/(n.T@e1)
-x2 = (-d*LA.norm(n)+c)/(n.T@e1)
-
-P = x1*e1
-Q = x2*e1
+#Given point
+P = np.array(([-1, 3])).reshape(-1,1) 
+c = 16
 
 #Foot of the perpendicular
-R1 = perp_foot(n,c,P)
-R2 = perp_foot(n,c,Q)
+Q = perp_foot(n,c,P)
 
 
 #Generating Lines
-k1 = -2
-k2 = 2
-x_Q = line_dir_pt(m,R1,k1,k2)
-x_PR1 = line_gen(P,R1)
-x_QR2 = line_gen(Q,R2)
+k1 = -3
+k2 = 3
+x_Q = line_dir_pt(m,Q,k1,k2)
+x_PQ = line_gen(P,Q)
 
 #Plotting all lines
 plt.plot(x_Q[0,:],x_Q[1,:],label='$line$')
-plt.plot(x_PR1[0,:],x_PR1[1,:],label='$PR1$')
-plt.plot(x_QR2[0,:],x_QR2[1,:],label='$QR2$')
+plt.plot(x_PQ[0,:],x_PQ[1,:],label='$PQ$')
 
 colors = np.arange(1,3)
 #Labeling the coordinates
@@ -62,11 +55,11 @@ tri_coords = np.block([P,Q])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
 vert_labels = ['P','Q']
 for i, txt in enumerate(vert_labels):
-    #plt.annotate(txt, # this is the text
-    plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
+    plt.annotate(txt, # this is the text
+    #plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(0,10), # distance from text to points (x,y)
+                 xytext=(5,10), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -88,7 +81,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/3/5/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/3/5/figs/fig.pdf"))
+plt.savefig('chapters/11/10/3/14/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/10/3/14/figs/fig.pdf"))
 #else
 #plt.show()
