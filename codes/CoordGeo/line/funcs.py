@@ -53,14 +53,14 @@ def line_intersect(n1,A1,n2,A2):
 
 
 #Foot of the perpendicular
-def perp_foot(n,cn,P):
+def perp_foot(n,c,P):
   m = omat@n
-  N=np.block([[n],[m]])
-  p = np.zeros(2)
-  p[0] = cn
-  p[1] = m@P
+  N=np.block([m,n])
+  p = np.zeros((2,1))
+  p[0][0] = m.T@P
+  p[1][0] = c
   #Intersection
-  x_0=np.linalg.solve(N,p)
+  x_0=np.linalg.solve(N.T,p)
   return x_0
 
 #Rotation matrix

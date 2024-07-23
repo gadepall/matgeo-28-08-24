@@ -28,35 +28,40 @@ e1 = I[:,[0]]
 e2 = I[:,[1]]
 
 #Direction vector
-m = np.array(([1, np.tan(2*np.pi/3)])).reshape(-1,1) 
+m = np.array(([1, -2])).reshape(-1,1) 
+n = np.array(([2, 1])).reshape(-1,1) 
+c = 4
 
 #Given points
-A = np.array(([0, 2])).reshape(-1,1) 
-B = np.array(([0, -2])).reshape(-1,1) 
+A = np.array(([2, -2])).reshape(-1,1) 
+B = np.array(([3, 7])).reshape(-1,1) 
 
 #Section
+k = (c-n.T@A)/(n.T@B-c)
+print(k)
+C = (k*B+A)/(k+1)
 
 k1 = -3
 k2 = 3
 #Generating Lines
-x_A = line_dir_pt(m,A,k1,k2)
-x_B = line_dir_pt(m,B,k1,k2)
+x_C = line_dir_pt(m,C,k1,k2)
+x_AB = line_gen(A,B)
 
 #Plotting all lines
-plt.plot(x_A[0,:],x_A[1,:],label='$distance(A)$')
-plt.plot(x_B[0,:],x_B[1,:],label='$distance(B)$')
+plt.plot(x_AB[0,:],x_AB[1,:],label='$distance(AB)$')
+plt.plot(x_C[0,:],x_C[1,:],label='$distance(C)$')
 
-colors = np.arange(1,3)
+colors = np.arange(1,4)
 #Labeling the coordinates
-tri_coords = np.block([A,B])
+tri_coords = np.block([A,B,C])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['A','B']
+vert_labels = ['A','B','C']
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt, # this is the text
     #plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(10,-5), # distance from text to points (x,y)
+                 xytext=(-10,-5), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -78,7 +83,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/2/14/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/2/14/figs/fig.pdf"))
+plt.savefig('chapters/10/7/4/1/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/10/7/4/1/figs/fig.pdf"))
 #else
 #plt.show()
