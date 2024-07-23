@@ -19,52 +19,52 @@
 \contentsline {subsection}{\numberline {4.1}Formulae}{67}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Parameters}{69}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Equation }{69}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Parallel}{84}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Perpendicular}{87}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Angle}{105}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Intersection}{107}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Miscellaneous }{113}{subsection.4.8}%
-\contentsline {section}{\numberline {5}Matrices}{123}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Formulae}{123}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Equation}{123}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Inverse}{127}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Cayley-Hamilton Theoerm}{129}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Application}{131}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Chemistry}{134}{subsection.5.6}%
-\contentsline {section}{\numberline {6}Skew Lines}{138}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Formulae}{138}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Least Squares}{139}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Singular Value Decomposition}{145}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Circle}{150}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Formulae}{150}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Equation}{150}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Miscellaneous}{166}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Conics}{167}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Formulae}{167}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Equation}{169}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Miscellaneous}{185}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Quadratic Equations}{190}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Intersection of Conics}{193}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Formulae}{193}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Chords}{193}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Curves}{209}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Tangent And Normal}{212}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Formulae}{212}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Circle}{213}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Conic}{214}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Construction}{229}{subsection.10.4}%
-\contentsline {section}{Appendix\nobreakspace A: Triangle}{230}{section*.144}%
-\contentsline {subsection}{\numberline {A.1}Sides}{230}{subsection.Appendix.A.1}%
-\contentsline {subsection}{\numberline {A.2}Formulae}{235}{subsection.Appendix.A.2}%
-\contentsline {subsection}{\numberline {A.3}Median}{237}{subsection.Appendix.A.3}%
-\contentsline {subsection}{\numberline {A.4}Altitude}{240}{subsection.Appendix.A.4}%
-\contentsline {subsection}{\numberline {A.5}Perpendicular Bisector}{243}{subsection.Appendix.A.5}%
-\contentsline {subsection}{\numberline {A.6}Angle Bisector}{246}{subsection.Appendix.A.6}%
-\contentsline {subsection}{\numberline {A.7}Eigenvalues and Eigenvectors}{248}{subsection.Appendix.A.7}%
-\contentsline {subsection}{\numberline {A.8}Formulae}{250}{subsection.Appendix.A.8}%
-\contentsline {subsection}{\numberline {A.9}Matrices}{250}{subsection.Appendix.A.9}%
-\contentsline {section}{Appendix\nobreakspace B: Conic Section}{253}{section*.151}%
-\contentsline {subsection}{\numberline {B.1}Equation}{253}{subsection.Appendix.B.1}%
-\contentsline {subsection}{\numberline {B.2}Standard Conic}{257}{subsection.Appendix.B.2}%
-\contentsline {subsection}{\numberline {B.3}Conic Lines}{259}{subsection.Appendix.B.3}%
-\contentsline {subsection}{\numberline {B.4}Tangent and Normal}{262}{subsection.Appendix.B.4}%
+\contentsline {subsection}{\numberline {4.4}Parallel}{82}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Perpendicular}{85}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Angle}{103}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Intersection}{105}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Miscellaneous }{111}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Matrices}{121}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Formulae}{121}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Equation}{121}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Inverse}{125}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Cayley-Hamilton Theoerm}{127}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Application}{129}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Chemistry}{132}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Skew Lines}{136}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Formulae}{136}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Least Squares}{137}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Singular Value Decomposition}{143}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Circle}{148}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Formulae}{148}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Equation}{148}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Miscellaneous}{164}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Conics}{165}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Formulae}{165}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Equation}{167}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Miscellaneous}{183}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Quadratic Equations}{188}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Intersection of Conics}{191}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Formulae}{191}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Chords}{191}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Curves}{207}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Tangent And Normal}{210}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Formulae}{210}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Circle}{211}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Conic}{212}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Construction}{227}{subsection.10.4}%
+\contentsline {section}{Appendix\nobreakspace A: Triangle}{228}{section*.141}%
+\contentsline {subsection}{\numberline {A.1}Sides}{228}{subsection.Appendix.A.1}%
+\contentsline {subsection}{\numberline {A.2}Formulae}{233}{subsection.Appendix.A.2}%
+\contentsline {subsection}{\numberline {A.3}Median}{235}{subsection.Appendix.A.3}%
+\contentsline {subsection}{\numberline {A.4}Altitude}{238}{subsection.Appendix.A.4}%
+\contentsline {subsection}{\numberline {A.5}Perpendicular Bisector}{241}{subsection.Appendix.A.5}%
+\contentsline {subsection}{\numberline {A.6}Angle Bisector}{244}{subsection.Appendix.A.6}%
+\contentsline {subsection}{\numberline {A.7}Eigenvalues and Eigenvectors}{246}{subsection.Appendix.A.7}%
+\contentsline {subsection}{\numberline {A.8}Formulae}{248}{subsection.Appendix.A.8}%
+\contentsline {subsection}{\numberline {A.9}Matrices}{248}{subsection.Appendix.A.9}%
+\contentsline {section}{Appendix\nobreakspace B: Conic Section}{251}{section*.148}%
+\contentsline {subsection}{\numberline {B.1}Equation}{251}{subsection.Appendix.B.1}%
+\contentsline {subsection}{\numberline {B.2}Standard Conic}{255}{subsection.Appendix.B.2}%
+\contentsline {subsection}{\numberline {B.3}Conic Lines}{257}{subsection.Appendix.B.3}%
+\contentsline {subsection}{\numberline {B.4}Tangent and Normal}{260}{subsection.Appendix.B.4}%

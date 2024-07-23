@@ -1,7 +1,7 @@
 #Code by GVV Sharma
 #July 22, 2024
 #released under GNU GPL
-#Affine Transformation
+#Line 
 
 
 import sys                                          #for path to external scripts
@@ -26,38 +26,32 @@ import shlex
 I = np.eye(2)
 e1 = I[:,[0]]
 e2 = I[:,[1]]
-a = 2
-#Given vertices of the square 
-A = np.sqrt(a)*e1
-B = a*e2
-C = -a*e2
-D = -np.sqrt(a)*e1
 
+#Direction vector
+m = np.array(([1, -2])).reshape(-1,1) 
+
+#Give point
+P = np.array(([-3, 0])).reshape(-1,1) 
+
+k1 = -5
+k2 = 5
 #Generating Lines
-x_AB = line_gen(A,B)
-x_BC = line_gen(B,C)
-x_CA = line_gen(C,A)
-x_CD = line_gen(C,D)
-x_DB = line_gen(D,B)
+x_AB = line_dir_pt(m,P,k1,k2)
 
 #Plotting all lines
 plt.plot(x_AB[0,:],x_AB[1,:],label='$distance(AB)$')
-plt.plot(x_BC[0,:],x_BC[1,:],label='$distance(BC)$')
-plt.plot(x_CA[0,:],x_CA[1,:],label='$distance(CA)$')
-plt.plot(x_DB[0,:],x_DB[1,:],label='$distance(DB)$')
-plt.plot(x_CD[0,:],x_CD[1,:],label='$distance(CD)$')
 
-colors = np.arange(1,5)
+colors = np.arange(1,2)
 #Labeling the coordinates
-tri_coords = np.block([[A,B,C,D]])
+tri_coords = np.block([[P]])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['A','B','C','$A^\prime$']
+vert_labels = ['A']
 for i, txt in enumerate(vert_labels):
 #    plt.annotate(txt, # this is the text
-    plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
+    plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(30,10), # distance from text to points (x,y)
+                 xytext=(20,0), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -79,7 +73,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/1/2/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/1/2/figs/fig.pdf"))
+plt.savefig('chapters/11/10/2/5/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/10/2/5/figs/fig.pdf"))
 #else
 #plt.show()
