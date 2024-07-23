@@ -65,7 +65,9 @@ def perp_foot(n,cn,P):
 
 #Rotation matrix
 def rotmat(theta):
-    c = float(mp.cos(theta))
-    s = float(mp.sin(theta))
+    #c = float(mp.cos(theta))
+    #s = float(mp.sin(theta))
+    c = np.cos(theta)
+    s = np.sin(theta)
     P = np.array([[c,-s],[s,c]]) 
     return P

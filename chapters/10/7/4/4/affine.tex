@@ -1,22 +1,3 @@
-Let
-\begin{align}
-\vec{A} = \myvec
-{
--1 \\
- 2\\
-},
-\vec{C} = 
-\myvec
-{
-3\\
-2\\
-}
-\end{align}
-The given square is available in \figref{fig:7/4/4/4Fig1}.
-\figref{fig:7/4/4/4Fig2} shows the translation of $\vec{A}$ to the origin. 
-\figref{fig:7/4/4/4Fig3} shows the subsequent anticlockwise rotation of the square by $45\degree$.
-From
-	\eqref{eq:conic_affine}.
 \begin{align}
 \vec{C} - \vec{A} = \myvec{
 4\\
@@ -26,52 +7,63 @@ From
 1\\
 0
 },\,
-\phi= 0\degree
+\implies \phi= 0\degree
 \end{align}
 		where
 $\phi$ is the angle made by $AC$ with the x-axis.
-Substituting numerical values in 
-	\eqref{eq:affine-square-bd},
+Also, the diagonal
 \begin{align}
-	\vec{B}
-	=2\myvec{1 & 1 \\ -1 & 1}\myvec{1\\0}+
-\myvec
-{
--1 \\
- 2\\
-}
-=
-\myvec{
-1\\
-0
-}.
-		\end{align}
-		Similarly,
-\begin{align}
-\vec{D} = 
-\myvec{
-1\\
-4
-}.
+	d = \norm{\vec{C}-\vec{A}} = 4
 \end{align}
+\begin{enumerate}
+	\item We start with  the square in \figref{fig:7/4/4/4Fig3},
+ with vertices as columns of the matrix
+\begin{align}
+\vec{y} = d\myvec{0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 1}
+\end{align}
+	in \eqref{eq:conic_affine}.
+\item The next square, obtained as 
+\begin{align}
+\vec{P}\vec{y},
+\end{align}
+which is a rotated version of 
+\figref{fig:7/4/4/4Fig3},
+is available in 
+\figref{fig:7/4/4/4Fig2}.  The angle of rotation
+\begin{align}
+	\theta = \phi - \frac{\pi}{4}
+\end{align}
+\item The desired square  is obtained using
+\eqref{eq:conic_affine} as
+\begin{align}
+	\vec{x}=\vec{P}\vec{y} + \myvec{\vec{A} & \vec{A} &\vec{A} &\vec{A}} = 
+		\myvec{
+-1  &1 & 3 & 1 \\
+2 & 0 & 2 & 4
+	}
+\end{align}
+and available in 
+\figref{fig:7/4/4/4Fig1}. The 2nd and 4th columns in the above matrix are 
+$\vec{B}$ and $\vec{C}$ respectively.
+\end{enumerate}
 \begin{figure}[H]
 	\begin{center} 
-	    \includegraphics[width=0.75\columnwidth]{chapters/10/7/4/4/figs/square}
+	    \includegraphics[width=0.75\columnwidth]{chapters/10/7/4/4/figs/fig.pdf}
 	\end{center}
 \caption{}
-\label{fig:7/4/4/4Fig1}
+\label{fig:7/4/4/4Fig3}
 \end{figure}
 \begin{figure}[H]
 	\begin{center} 
-	    \includegraphics[width=0.75\columnwidth]{chapters/10/7/4/4/figs/square1}
+	    \includegraphics[width=0.75\columnwidth]{chapters/10/7/4/4/figs/fig1.pdf}
 	\end{center}
 \caption{}
 \label{fig:7/4/4/4Fig2}
 \end{figure}
 \begin{figure}[H]
 	\begin{center} 
-	    \includegraphics[width=0.75\columnwidth]{chapters/10/7/4/4/figs/square2}
+	    \includegraphics[width=0.75\columnwidth]{chapters/10/7/4/4/figs/fig2.pdf}
 	\end{center}
 \caption{}
-\label{fig:7/4/4/4Fig3}
+\label{fig:7/4/4/4Fig1}
 \end{figure}
