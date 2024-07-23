@@ -50,7 +50,7 @@ vert_labels = ['A', 'B', 'C']
 
 for i, txt in enumerate(vert_labels):
     # Annotate each point with its label and coordinates
-    ax.text(tri_coords[0, i], tri_coords[1, i], tri_coords[2, i], f'{txt}\n({tri_coords[0, i]:.2f}, {tri_coords[1, i]:.2f}, {tri_coords[2, i]:.2f})',
+    ax.text(tri_coords[0, i], tri_coords[1, i], tri_coords[2, i], f'{txt}\n({tri_coords[0, i]:.0f}, {tri_coords[1, i]:.0f}, {tri_coords[2, i]:.0f})',
              fontsize=12, ha='center', va='bottom')
 
 ax.spines['top'].set_color('none')

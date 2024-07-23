@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {4}Linear Forms}{67}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Formulae}{67}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Parameters}{69}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Equation }{69}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Equation }{70}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Parallel}{82}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Perpendicular}{85}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Angle}{103}{subsection.4.6}%
@@ -53,7 +53,7 @@
 \contentsline {subsection}{\numberline {10.2}Circle}{211}{subsection.10.2}%
 \contentsline {subsection}{\numberline {10.3}Conic}{212}{subsection.10.3}%
 \contentsline {subsection}{\numberline {10.4}Construction}{227}{subsection.10.4}%
-\contentsline {section}{Appendix\nobreakspace A: Triangle}{228}{section*.141}%
+\contentsline {section}{Appendix\nobreakspace A: Triangle}{228}{section*.142}%
 \contentsline {subsection}{\numberline {A.1}Sides}{228}{subsection.Appendix.A.1}%
 \contentsline {subsection}{\numberline {A.2}Formulae}{233}{subsection.Appendix.A.2}%
 \contentsline {subsection}{\numberline {A.3}Median}{235}{subsection.Appendix.A.3}%
@@ -63,7 +63,7 @@
 \contentsline {subsection}{\numberline {A.7}Eigenvalues and Eigenvectors}{246}{subsection.Appendix.A.7}%
 \contentsline {subsection}{\numberline {A.8}Formulae}{248}{subsection.Appendix.A.8}%
 \contentsline {subsection}{\numberline {A.9}Matrices}{248}{subsection.Appendix.A.9}%
-\contentsline {section}{Appendix\nobreakspace B: Conic Section}{251}{section*.148}%
+\contentsline {section}{Appendix\nobreakspace B: Conic Section}{251}{section*.149}%
 \contentsline {subsection}{\numberline {B.1}Equation}{251}{subsection.Appendix.B.1}%
 \contentsline {subsection}{\numberline {B.2}Standard Conic}{255}{subsection.Appendix.B.2}%
 \contentsline {subsection}{\numberline {B.3}Conic Lines}{257}{subsection.Appendix.B.3}%
