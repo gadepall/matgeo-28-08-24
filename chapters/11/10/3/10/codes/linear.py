@@ -27,41 +27,40 @@ I = np.eye(2)
 e1 = I[:,[0]]
 e2 = I[:,[1]]
 
-#Direction vector
-m = np.array(([1, -2])).reshape(-1,1) 
-n = np.array(([2, 1])).reshape(-1,1) 
-c = 4
-
+h = 22/9
 #Given points
-A = np.array(([2, -2])).reshape(-1,1) 
-B = np.array(([3, 7])).reshape(-1,1) 
+A = np.array(([h,3])).reshape(-1,1) 
+B = np.array(([4, 1])).reshape(-1,1) 
+C = np.array(([0, 19/9])).reshape(-1,1) 
 
-#Section
-k = (c-n.T@A)/(n.T@B-c)
-print(k)
-C = (k*B+A)/(k+1)
+#Direction vector
+m = np.array(([9, 7])).reshape(-1,1) 
+m1 = B-A
 
-k1 = -3
-k2 = 3
 #Generating Lines
+k1 = 0
+k2 = 0.5
 x_C = line_dir_pt(m,C,k1,k2)
-x_AB = line_gen(A,B)
+k1 = -1
+k2 =2 
+x_AB = line_dir_pt(m1,A,k1,k2)
+#x_AB = line_gen(A,B)
 
 #Plotting all lines
-plt.plot(x_AB[0,:],x_AB[1,:],label='$distance(AB)$')
-plt.plot(x_C[0,:],x_C[1,:],label='$distance(C)$')
+plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
+plt.plot(x_C[0,:],x_C[1,:],label='$7x-9y-19=0$')
 
-colors = np.arange(1,4)
+colors = np.arange(1,3)
 #Labeling the coordinates
-tri_coords = np.block([A,B,C])
+tri_coords = np.block([A,B])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['A','B','C']
+vert_labels = ['A','B']
 for i, txt in enumerate(vert_labels):
-    plt.annotate(txt, # this is the text
-    #plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
+#    plt.annotate(txt, # this is the text
+    plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(-10,-5), # distance from text to points (x,y)
+                 xytext=(20,0), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -77,13 +76,13 @@ ax.spines['top'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.legend(loc='best')
 '''
+plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/10/7/4/1/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/10/7/4/1/figs/fig.pdf"))
+plt.savefig('chapters/11/10/3/10/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/10/3/10/figs/fig.pdf"))
 #else
 #plt.show()
