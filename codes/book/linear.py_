@@ -27,20 +27,23 @@ I = np.eye(2)
 e1 = I[:,[0]]
 e2 = I[:,[1]]
 
-#Given points
-A = np.array(([2, 5])).reshape(-1,1) 
-B = np.array(([-3, 6])).reshape(-1,1) 
-C = np.array(([-3, 5])).reshape(-1,1) 
-
 #Direction vector
-n = B-A
-m = omat@n
+m = np.array(([1, -2])).reshape(-1,1) 
+n = np.array(([2, 1])).reshape(-1,1) 
+c = 4
 
+#Given points
+A = np.array(([2, -2])).reshape(-1,1) 
+B = np.array(([3, 7])).reshape(-1,1) 
 
+#Section
+k = (c-n.T@A)/(n.T@B-c)
+print(k)
+C = (k*B+A)/(k+1)
 
+k1 = -3
+k2 = 3
 #Generating Lines
-k1 = -0.5
-k2 = 0.5
 x_C = line_dir_pt(m,C,k1,k2)
 x_AB = line_gen(A,B)
 
@@ -54,11 +57,11 @@ tri_coords = np.block([A,B,C])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
 vert_labels = ['A','B','C']
 for i, txt in enumerate(vert_labels):
-#    plt.annotate(txt, # this is the text
-    plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
+    plt.annotate(txt, # this is the text
+    #plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(-20,0), # distance from text to points (x,y)
+                 xytext=(-10,-5), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -80,7 +83,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/2/10/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/2/10/figs/fig.pdf"))
+plt.savefig('chapters/10/7/4/1/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/10/7/4/1/figs/fig.pdf"))
 #else
 #plt.show()
