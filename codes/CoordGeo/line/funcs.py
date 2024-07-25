@@ -30,6 +30,22 @@ def line_gen(A,B):
     x_AB[:,i]= temp1.T
   return x_AB
 
+#Generating line in 2D using normal form
+def line_norm(n,c,k1,k2):
+    if c==0:
+        A = np.zeros((2,1))
+    elif np.array_equal(n, e1):
+        A = np.array(([c, 0])).reshape(-1,1) 
+    elif np.array_equal(n, e2):
+        A = np.array(([0, c])).reshape(-1,1) 
+    else:
+        A = np.array(([c/n[0][0], 0])).reshape(-1,1) 
+        print(A)
+    m = omat@n
+    return line_dir_pt(m,A,k1,k2)
+
+
+#Generating line using parametric form
 def line_dir_pt(m,A,k1,k2):
   len = 10
   dim = A.shape[0]

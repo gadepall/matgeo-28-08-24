@@ -23,43 +23,42 @@ import subprocess
 import shlex
 #end if
 
-I = np.eye(2)
-e1 = I[:,[0]]
-e2 = I[:,[1]]
 
-#Direction vector
-n = np.array(([3, -4])).reshape(-1,1) 
-m = np.array(([4, 3])).reshape(-1,1) 
+#Given Points
+A = np.array(([3, 2])).reshape(-1,1) 
+#Line parameters
+n1 = np.array(([1, -2])).reshape(-1,1) 
+c1 = 3
+n2 = np.array(([1, 3])).reshape(-1,1) 
+c2 = 9 
+n3 = np.array(([3, -1])).reshape(-1,1) 
+c3 =  7
 
-#Given point
-P = np.array(([-1, 3])).reshape(-1,1) 
-c = 16
-
-#Foot of the perpendicular
-Q = perp_foot(n,c,P)
-
-
+k1 = -5
+k2 = 3
 #Generating Lines
+x_A = line_norm(n1,c1,k1,k2)
 k1 = -3
 k2 = 3
-x_Q = line_dir_pt(m,Q,k1,k2)
-x_PQ = line_gen(P,Q)
+x_B = line_norm(n2,c2,k1,k2)
+x_C = line_norm(n3,c3,k1,k2)
 
 #Plotting all lines
-plt.plot(x_Q[0,:],x_Q[1,:],label='$line$')
-plt.plot(x_PQ[0,:],x_PQ[1,:],label='$PQ$')
+plt.plot(x_A[0,:],x_A[1,:],label='$(1 ~-2)\mathbf{x}=3$')
+plt.plot(x_B[0,:],x_B[1,:],label='$(1 ~~~~~3)\mathbf{x}=9$')
+plt.plot(x_C[0,:],x_C[1,:],label='$(3 ~ -1)\mathbf{x}=7$')
 
-colors = np.arange(1,3)
+colors = np.arange(1,2)
 #Labeling the coordinates
-tri_coords = np.block([P,Q])
+tri_coords = np.block([A])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['P','Q']
+vert_labels = ['A']
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt, # this is the text
     #plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(5,10), # distance from text to points (x,y)
+                 xytext=(-10,-5), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -75,13 +74,13 @@ ax.spines['top'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.legend(loc='best')
 '''
+plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/3/14/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/3/14/figs/fig.pdf"))
+plt.savefig('chapters/11/10/4/11/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/10/4/11/figs/fig.pdf"))
 #else
 #plt.show()
