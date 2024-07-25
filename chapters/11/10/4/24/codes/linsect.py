@@ -1,7 +1,7 @@
 #Code by GVV Sharma
-#July 22, 2024
+#July 25, 2024
 #released under GNU GPL
-#Line 
+#Line intersection
 
 
 import sys                                          #for path to external scripts
@@ -24,33 +24,52 @@ import shlex
 #end if
 
 
-#Given points
-A = np.array(([1, 2])).reshape(-1,1) 
-B = 13/5*e1
-C = np.array(([5, 3])).reshape(-1,1) 
-D = np.array(([5, -3])).reshape(-1,1) 
+#Given Points
+#A = np.array(([3, 2])).reshape(-1,1) 
+#Line parameters
+n1 = np.array(([2, -3])).reshape(-1,1) 
+c1 = -4
+n2 = np.array(([3, 4])).reshape(-1,1) 
+c2 = 5 
+n3 = np.array(([6, -7])).reshape(-1,1) 
+c3 =  -8
+n4 = np.array(([7, 6])).reshape(-1,1) 
+c4 =  125/17
 
+k1 = -0.6
+k2 = -0.7
 #Generating Lines
-x_AD = line_gen(A,D)
-x_CB = line_gen(C,B)
-x_CD = line_gen(C,D)
+x_A = line_norm(n1,c1,k1,k2)
+k1 = -0.4
+k2 = -0.5
+x_B = line_norm(n2,c2,k1,k2)
+k1 = -0.15
+k2 = -0.25
+x_C = line_norm(n3,c3,k1,k2)
+k1 = -0.15
+k2 = -0.2
+x_D = line_norm(n4,c4,k1,k2)
+
+A = line_isect(n1,c1,n2,c2)
+#print(A, 5/22*np.array(([-1, 3])).reshape(-1,1) )
 
 #Plotting all lines
-plt.plot(x_AD[0,:],x_AD[1,:],label='$distance(AD)$')
-plt.plot(x_CB[0,:],x_CB[1,:],label='$distance(CB)$')
-plt.plot(x_CD[0,:],x_CD[1,:],label='$distance(CD)$')
+plt.plot(x_A[0,:],x_A[1,:],label='$(2 \quad -3)\mathbf{x}=-4$')
+plt.plot(x_B[0,:],x_B[1,:],label='$(3 \quad 4)\mathbf{x}=5$')
+plt.plot(x_C[0,:],x_C[1,:],label='$(6 \quad -7)\mathbf{x}=-8$')
+plt.plot(x_D[0,:],x_D[1,:],label='$(7 \quad 6)\mathbf{x}=\\frac{125}{17}$')
 
-colors = np.arange(1,5)
+colors = np.arange(1,2)
 #Labeling the coordinates
-tri_coords = np.block([A,B,C,D])
+tri_coords = np.block([A])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['P','A','Q','R']
+vert_labels = ['A']
 for i, txt in enumerate(vert_labels):
-    #plt.annotate(txt, # this is the text
-    plt.annotate(f'{txt}\n({tri_coords[0,i]:.1f}, {tri_coords[1,i]:.1f})',
+    plt.annotate(txt, # this is the text
+    #plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(30,0), # distance from text to points (x,y)
+                 xytext=(-10,5), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -66,13 +85,13 @@ ax.spines['top'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.legend(loc='best')
 '''
+plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/4/22/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/4/22/figs/fig.pdf"))
+plt.savefig('chapters/11/10/4/24/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/10/4/24/figs/fig.pdf"))
 #else
 #plt.show()

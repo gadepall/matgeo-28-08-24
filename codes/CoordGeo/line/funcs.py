@@ -40,7 +40,6 @@ def line_norm(n,c,k1,k2):
         A = np.array(([0, c])).reshape(-1,1) 
     else:
         A = np.array(([c/n[0][0], 0])).reshape(-1,1) 
-        print(A)
     m = omat@n
     return line_dir_pt(m,A,k1,k2)
 
@@ -56,6 +55,15 @@ def line_dir_pt(m,A,k1,k2):
     x_AB[:,i]= temp1.T
   return x_AB
 
+#Intersection of two lines
+def line_isect(n1,c1,n2,c2):
+  N=np.block([n1,n2]).T
+  p = np.zeros((2,1))
+  p[0] = c1
+  p[1] = c2
+  #Intersection
+  P=np.linalg.solve(N,p)
+  return P
 
 #Intersection of two lines
 def line_intersect(n1,A1,n2,A2):
