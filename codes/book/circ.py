@@ -20,32 +20,43 @@ from line.funcs import *
 import subprocess
 import shlex
 
-C= np.array([2,-3]).reshape(-1,1) 
-B= np.array([1,4]).reshape(-1,1) 
+x1 = np.array([4,1]).reshape(-1,1) 
+x2 = np.array([6,5]).reshape(-1,1) 
 
 #line parameters
-A = 2*C-B
+n = np.array([4,1]).reshape(-1,1) 
+c = 16
+
+#Entering equations inmatrix form
+A = np.block([[2*x1,2*x2,n],[1,1,0]]).T
+b = -np.array([LA.norm(x1)**2,LA.norm(x2)**2,c]).reshape(-1,1) 
+x = LA.solve(A,b)
 
 #Centre and radius
-r = LA.norm(B-C)
-print(C,r)
+u = x[:2]
+O = -u
+f = x[2][0]
+r = np.sqrt(LA.norm(u)**2-f)
+print(O,r)
 
 #generating circle
-x_circ= circ_gen(C,r)
+x_circ= circ_gen(O,r)
 
 
 #Generating Lines
-x_AB = line_gen(A,B)
+k1 = -2
+k2 = 0
+x_A = line_norm(n,c,k1,k2)
 
 #Plotting all lines and circles
-plt.plot(x_AB[0,:],x_AB[1,:],label='$(4 \quad 1)\mathbf{x}=16$')
+plt.plot(x_A[0,:],x_A[1,:],label='$(4 \quad 1)\mathbf{x}=16$')
 plt.plot(x_circ[0,:],x_circ[1,:],label='$Circle$')
 
 colors = np.arange(1,4)
 #Labeling the coordinates
-tri_coords = np.block([A,B,C])
+tri_coords = np.block([x1,x2,O])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['A','B','C']
+vert_labels = ['$\mathbf{x}_1$','$\mathbf{x}_2$','$\mathbf{O}$']
 for i, txt in enumerate(vert_labels):
     #plt.annotate(txt, # this is the text
     plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
@@ -67,13 +78,13 @@ ax.spines['top'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.legend(loc='best')
 '''
+plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/10/7/2/7/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/10/7/2/7/figs/fig.pdf"))
+plt.savefig('chapters/11/11/1/10/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/11/1/10/figs/fig.pdf"))
 #else
 #plt.show()
