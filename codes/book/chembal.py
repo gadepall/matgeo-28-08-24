@@ -1,5 +1,6 @@
 #Code by GVV Sharma
-#July 26, 2024
+#Jan 23, 2021
+#Revised July 26, 2024
 #released under GNU GPL
 #Balance chemical equations
 
