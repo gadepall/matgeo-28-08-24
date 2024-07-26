@@ -23,34 +23,45 @@ import subprocess
 import shlex
 #end if
 
+I = np.eye(2)
+e1 = I[:,[0]]
+e2 = I[:,[1]]
+
+#Direction vector
+m = np.array(([1, -2])).reshape(-1,1) 
+n = np.array(([2, 1])).reshape(-1,1) 
+c = 4
 
 #Given points
-A = np.array(([1, 2])).reshape(-1,1) 
-B = 13/5*e1
-C = np.array(([5, 3])).reshape(-1,1) 
-D = np.array(([5, -3])).reshape(-1,1) 
+A = np.array(([2, -2])).reshape(-1,1) 
+B = np.array(([3, 7])).reshape(-1,1) 
 
+#Section
+k = (c-n.T@A)/(n.T@B-c)
+print(k)
+C = (k*B+A)/(k+1)
+
+k1 = -3
+k2 = 3
 #Generating Lines
-x_AD = line_gen(A,D)
-x_CB = line_gen(C,B)
-x_CD = line_gen(C,D)
+x_C = line_dir_pt(m,C,k1,k2)
+x_AB = line_gen(A,B)
 
 #Plotting all lines
-plt.plot(x_AD[0,:],x_AD[1,:],label='$distance(AD)$')
-plt.plot(x_CB[0,:],x_CB[1,:],label='$distance(CB)$')
-plt.plot(x_CD[0,:],x_CD[1,:],label='$distance(CD)$')
+plt.plot(x_AB[0,:],x_AB[1,:],label='$distance(AB)$')
+plt.plot(x_C[0,:],x_C[1,:],label='$distance(C)$')
 
-colors = np.arange(1,5)
+colors = np.arange(1,4)
 #Labeling the coordinates
-tri_coords = np.block([A,B,C,D])
+tri_coords = np.block([A,B,C])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['P','A','Q','R']
+vert_labels = ['A','B','C']
 for i, txt in enumerate(vert_labels):
-    #plt.annotate(txt, # this is the text
-    plt.annotate(f'{txt}\n({tri_coords[0,i]:.1f}, {tri_coords[1,i]:.1f})',
+    plt.annotate(txt, # this is the text
+    #plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(30,0), # distance from text to points (x,y)
+                 xytext=(-10,-5), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -72,7 +83,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/10/4/22/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/10/4/22/figs/fig.pdf"))
+plt.savefig('chapters/10/7/4/1/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/10/7/4/1/figs/fig.pdf"))
 #else
 #plt.show()

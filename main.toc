@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {5.3}Inverse}{119}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Cayley-Hamilton Theoerm}{121}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}Application}{123}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Chemistry}{126}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.6}Chemistry}{127}{subsection.5.6}%
 \contentsline {section}{\numberline {6}Skew Lines}{130}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Formulae}{130}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Least Squares}{131}{subsection.6.2}%
