@@ -57,9 +57,15 @@ c = (LA.norm(u)**2-D_vec[1]*f)/(2*u.T@n)
 c = c[0][0]
 k1 = -8
 k2 = 8
+
+#Latus rectum
+cl = n.T@F
+cl = cl[0][0]
+
 #Generating lines
-x_A = line_norm(n,c,k1,k2)
-print(n,c)
+x_A = line_norm(n,c,k1,k2)#directrix
+x_B = line_norm(n,cl,k1,k2)#latus rectum
+#print(n,c)
 
 #Affine parabola generation
 xStandardparab =np.block([[x],[y]])
@@ -69,6 +75,7 @@ xActualparab = P@xStandardparab + Of[:,np.newaxis]
 #plotting
 plt.plot(xActualparab[0,:],xActualparab[1,:],label='Parabola',color='r')
 plt.plot(x_A[0,:],x_A[1,:],label='Directrix')
+plt.plot(x_B[0,:],x_B[1,:],label='Latus Rectum')
 #
 colors = np.arange(1,3)
 #Labeling the coordinates
