@@ -53,7 +53,7 @@
 \contentsline {subsection}{\numberline {10.2}Circle}{198}{subsection.10.2}%
 \contentsline {subsection}{\numberline {10.3}Conic}{199}{subsection.10.3}%
 \contentsline {subsection}{\numberline {10.4}Construction}{214}{subsection.10.4}%
-\contentsline {section}{Appendix\nobreakspace A: Triangle}{215}{section*.120}%
+\contentsline {section}{Appendix\nobreakspace A: Triangle}{215}{section*.119}%
 \contentsline {subsection}{\numberline {A.1}Sides}{215}{subsection.Appendix.A.1}%
 \contentsline {subsection}{\numberline {A.2}Formulae}{220}{subsection.Appendix.A.2}%
 \contentsline {subsection}{\numberline {A.3}Median}{222}{subsection.Appendix.A.3}%
@@ -63,7 +63,7 @@
 \contentsline {subsection}{\numberline {A.7}Eigenvalues and Eigenvectors}{233}{subsection.Appendix.A.7}%
 \contentsline {subsection}{\numberline {A.8}Formulae}{235}{subsection.Appendix.A.8}%
 \contentsline {subsection}{\numberline {A.9}Matrices}{235}{subsection.Appendix.A.9}%
-\contentsline {section}{Appendix\nobreakspace B: Conic Section}{238}{section*.127}%
+\contentsline {section}{Appendix\nobreakspace B: Conic Section}{238}{section*.126}%
 \contentsline {subsection}{\numberline {B.1}Equation}{238}{subsection.Appendix.B.1}%
 \contentsline {subsection}{\numberline {B.2}Standard Conic}{242}{subsection.Appendix.B.2}%
 \contentsline {subsection}{\numberline {B.3}Conic Lines}{244}{subsection.Appendix.B.3}%
