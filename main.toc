@@ -1,70 +1,82 @@
-\contentsline {section}{\numberline {1}Vector Arithmetic}{5}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Formulae}{5}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Point Vectors}{6}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Section Formula}{11}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Rank}{16}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Length}{17}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Unit Vector}{21}{subsection.1.6}%
-\contentsline {section}{\numberline {2}Vector Multiplication}{27}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Formulae}{27}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Scalar Product}{29}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Orthogonality}{34}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Vector Product}{44}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Miscellaneous}{54}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Constructions}{62}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Formulae}{62}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Triangle}{62}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Quadrilateral}{66}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Linear Forms}{67}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Formulae}{67}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Parameters}{69}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Equation }{70}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Parallel}{83}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Perpendicular}{86}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Angle}{98}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Intersection}{100}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Miscellaneous }{106}{subsection.4.8}%
-\contentsline {section}{\numberline {5}Matrices}{115}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Formulae}{115}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Equation}{115}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Inverse}{119}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Cayley-Hamilton Theoerm}{121}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Application}{123}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Chemistry}{127}{subsection.5.6}%
-\contentsline {section}{\numberline {6}Skew Lines}{130}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Formulae}{130}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Least Squares}{131}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Singular Value Decomposition}{137}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Circle}{142}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Formulae}{142}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Equation}{142}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Miscellaneous}{151}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Conics}{152}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Formulae}{152}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Equation}{154}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Miscellaneous}{170}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Quadratic Equations}{175}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Intersection of Conics}{178}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Formulae}{178}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Chords}{178}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Curves}{194}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Tangent And Normal}{197}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Formulae}{197}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Circle}{198}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Conic}{199}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Construction}{214}{subsection.10.4}%
-\contentsline {section}{Appendix\nobreakspace A: Triangle}{215}{section*.119}%
-\contentsline {subsection}{\numberline {A.1}Sides}{215}{subsection.Appendix.A.1}%
-\contentsline {subsection}{\numberline {A.2}Formulae}{220}{subsection.Appendix.A.2}%
-\contentsline {subsection}{\numberline {A.3}Median}{222}{subsection.Appendix.A.3}%
-\contentsline {subsection}{\numberline {A.4}Altitude}{225}{subsection.Appendix.A.4}%
-\contentsline {subsection}{\numberline {A.5}Perpendicular Bisector}{228}{subsection.Appendix.A.5}%
-\contentsline {subsection}{\numberline {A.6}Angle Bisector}{231}{subsection.Appendix.A.6}%
-\contentsline {subsection}{\numberline {A.7}Eigenvalues and Eigenvectors}{233}{subsection.Appendix.A.7}%
-\contentsline {subsection}{\numberline {A.8}Formulae}{235}{subsection.Appendix.A.8}%
-\contentsline {subsection}{\numberline {A.9}Matrices}{235}{subsection.Appendix.A.9}%
-\contentsline {section}{Appendix\nobreakspace B: Conic Section}{238}{section*.126}%
-\contentsline {subsection}{\numberline {B.1}Equation}{238}{subsection.Appendix.B.1}%
-\contentsline {subsection}{\numberline {B.2}Standard Conic}{242}{subsection.Appendix.B.2}%
-\contentsline {subsection}{\numberline {B.3}Conic Lines}{244}{subsection.Appendix.B.3}%
-\contentsline {subsection}{\numberline {B.4}Tangent and Normal}{247}{subsection.Appendix.B.4}%
+\contentsline {section}{\numberline {1}Vector Arithmetic}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Formulae}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Point Vectors}{7}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Section Formula}{12}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}CBSE}{16}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Rank}{17}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}CBSE}{19}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Length}{20}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}CBSE}{23}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Unit Vector}{25}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}CBSE}{29}{subsection.1.10}%
+\contentsline {section}{\numberline {2}Vector Multiplication}{31}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Formulae}{31}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Scalar Product}{33}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}CBSE}{38}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Orthogonality}{38}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}CBSE}{48}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Vector Product}{50}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}CBSE}{60}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Miscellaneous}{61}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}CBSE}{68}{subsection.2.9}%
+\contentsline {section}{\numberline {3}Constructions}{72}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Formulae}{72}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Triangle}{72}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Quadrilateral}{76}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Linear Forms}{77}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Formulae}{77}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Parameters}{79}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}CBSE}{80}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Equation }{80}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}CBSE}{93}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Parallel}{93}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Perpendicular}{97}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}CBSE}{109}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Angle}{110}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Intersection}{112}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}CBSE}{117}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.12}Miscellaneous }{118}{subsection.4.12}%
+\contentsline {section}{\numberline {5}Matrices}{127}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Formulae}{127}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Equation}{127}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Inverse}{131}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Cayley-Hamilton Theoerm}{133}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Application}{135}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Chemistry}{139}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Skew Lines}{142}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Formulae}{142}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Least Squares}{143}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Singular Value Decomposition}{149}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Circle}{154}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Formulae}{154}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Equation}{154}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Miscellaneous}{163}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Conics}{164}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Formulae}{164}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Equation}{166}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Miscellaneous}{182}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Quadratic Equations}{187}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Intersection of Conics}{190}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Formulae}{190}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Chords}{190}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Curves}{206}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Tangent And Normal}{209}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Formulae}{209}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Circle}{210}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Conic}{211}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Construction}{226}{subsection.10.4}%
+\contentsline {section}{Appendix\nobreakspace A: Triangle}{227}{section*.119}%
+\contentsline {subsection}{\numberline {A.1}Sides}{227}{subsection.Appendix.A.1}%
+\contentsline {subsection}{\numberline {A.2}Formulae}{232}{subsection.Appendix.A.2}%
+\contentsline {subsection}{\numberline {A.3}Median}{234}{subsection.Appendix.A.3}%
+\contentsline {subsection}{\numberline {A.4}Altitude}{237}{subsection.Appendix.A.4}%
+\contentsline {subsection}{\numberline {A.5}Perpendicular Bisector}{240}{subsection.Appendix.A.5}%
+\contentsline {subsection}{\numberline {A.6}Angle Bisector}{243}{subsection.Appendix.A.6}%
+\contentsline {subsection}{\numberline {A.7}Eigenvalues and Eigenvectors}{245}{subsection.Appendix.A.7}%
+\contentsline {subsection}{\numberline {A.8}Formulae}{247}{subsection.Appendix.A.8}%
+\contentsline {subsection}{\numberline {A.9}Matrices}{247}{subsection.Appendix.A.9}%
+\contentsline {section}{Appendix\nobreakspace B: Conic Section}{250}{section*.126}%
+\contentsline {subsection}{\numberline {B.1}Equation}{250}{subsection.Appendix.B.1}%
+\contentsline {subsection}{\numberline {B.2}Standard Conic}{254}{subsection.Appendix.B.2}%
+\contentsline {subsection}{\numberline {B.3}Conic Lines}{256}{subsection.Appendix.B.3}%
+\contentsline {subsection}{\numberline {B.4}Tangent and Normal}{259}{subsection.Appendix.B.4}%

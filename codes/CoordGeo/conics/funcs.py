@@ -15,8 +15,9 @@ def conic_param(V,u,f):
     e = np.sqrt(1-lam[0]/lam[1])
     p = P[:,0].reshape(-1,1)
     n = np.sqrt(lam[1])*p
-    if e == 0:
+    if e == 1:
         c = (LA.norm(u)**2-lam[1]*f)/(2*u.T@n)
+        c = c[0][0]
         F = (c*e**2*n-u)/lam[1]
     else:
         c = np.zeros((2,1)).flatten()
@@ -25,26 +26,7 @@ def conic_param(V,u,f):
             disc = (e**2)*(u.T@n)**2-lam[1]*(e**2-1)*(LA.norm(u)**2-lam[1]*f)
             c[i] = (e*(u.T@n)+((-1)**i)*np.sqrt(disc))/(lam[1]*e*(e**2-1))
             F[:,i] = ((c[i]*(e**2)*n-u)/lam[1]).flatten()
-    return n,c,F
-    #return e,p
-'''
-#Conic parameters
-def conic_param(V,u,f):
-    lam,P = LA.eig(V)
-    e = np.sqrt(1-lam[0]/lam[1])
-    p = P[:,0].reshape(-1,1)
-    n = np.sqrt(lam[1])*p
-    if e == 0:
-        c = (LA.norm(u)**2-lam[1]*f)/(2*u.T@n)
-        F = (c*e**2*n-u)/lam[1]
-    else:
-        c = np.zeros((2,1)).flatten()
-        F = np.zeros(2)
-        for i in range(2):
-            c[i] = (e*u.T@n+(-1)**i*np.sqrt(e*2*(u.T@n)**2-lam[1]**(e**2-1)*(LA.norm(u)**2-lam[1]*f)))/(lam[1]*e*(e*2-1))
-            F[:,i] = (c[i]*e**2*n-u)/lam[1]
-	return(n,c,F)
-'''
+    return n,c,F,p
 
 #Generating points on a circle
 def circ_gen(O,r):
