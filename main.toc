@@ -1,14 +1,15 @@
 \contentsline {section}{\numberline {1}Vector Arithmetic}{6}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Formulae}{6}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Point Vectors}{7}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Section Formula}{12}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}CBSE}{16}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Rank}{18}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}CBSE}{19}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Length}{20}{subsection.1.7}%
-\contentsline {subsection}{\numberline {1.8}CBSE}{24}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Unit Vector}{25}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}CBSE}{30}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.3}CBSE}{12}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Section Formula}{12}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}CBSE}{16}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Rank}{18}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}CBSE}{20}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Length}{20}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}CBSE}{24}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Unit Vector}{25}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}CBSE}{30}{subsection.1.11}%
 \contentsline {section}{\numberline {2}Vector Multiplication}{32}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Formulae}{32}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Scalar Product}{34}{subsection.2.2}%
