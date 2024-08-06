@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {4.3}CBSE}{84}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Equation }{84}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}CBSE}{97}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Parallel}{98}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.6}Parallel}{99}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}CBSE}{102}{subsection.4.7}%
 \contentsline {subsection}{\numberline {4.8}Perpendicular}{102}{subsection.4.8}%
 \contentsline {subsection}{\numberline {4.9}CBSE}{115}{subsection.4.9}%
