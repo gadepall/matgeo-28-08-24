@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {4.7}CBSE}{102}{subsection.4.7}%
 \contentsline {subsection}{\numberline {4.8}Perpendicular}{102}{subsection.4.8}%
 \contentsline {subsection}{\numberline {4.9}CBSE}{115}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}Angle}{117}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.10}Angle}{118}{subsection.4.10}%
 \contentsline {subsection}{\numberline {4.11}Intersection}{119}{subsection.4.11}%
 \contentsline {subsection}{\numberline {4.12}CBSE}{125}{subsection.4.12}%
 \contentsline {subsection}{\numberline {4.13}Miscellaneous }{128}{subsection.4.13}%
