@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {1.7}CBSE}{20}{subsection.1.7}%
 \contentsline {subsection}{\numberline {1.8}Length}{21}{subsection.1.8}%
 \contentsline {subsection}{\numberline {1.9}CBSE}{25}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}Unit Vector}{27}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.10}Unit Vector}{26}{subsection.1.10}%
 \contentsline {subsection}{\numberline {1.11}CBSE}{31}{subsection.1.11}%
 \contentsline {section}{\numberline {2}Vector Multiplication}{33}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Formulae}{33}{subsection.2.1}%
