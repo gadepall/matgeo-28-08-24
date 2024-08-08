@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  8 AUG 2024 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2024.4.5)  8 AUG 2024 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1960,7 +1960,7 @@ Package pdftex.def Info: chapters/10/7/2/1/figs/fig.pdf  used on input line 21.
 
 (pdftex.def)             Requested size: 273.14647pt x 204.86801pt.
 
-Underfull \vbox (badness 1565) has occurred while \output is active []
+Underfull \vbox (badness 1681) has occurred while \output is active []
 
  [12])
 (./chapters/10/7/2/4/section.tex) (./chapters/12/10/2/16/section.tex
@@ -3948,7 +3948,7 @@ m.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.p
 fb></data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></data/data/com.termux/files/usr/share/texlive/2024/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (291 pages, 3734924 bytes).
+Output written on main.pdf (291 pages, 3734840 bytes).
 PDF statistics:
  9496 PDF objects out of 10688 (max. 8388607)
  7530 compressed objects within 76 object streams
