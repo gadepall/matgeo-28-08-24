@@ -78,7 +78,7 @@
 \contentsline {subsection}{\numberline {10.5}Construction}{248}{subsection.10.5}%
 \contentsline {subsection}{\numberline {10.6}CBSE}{249}{subsection.10.6}%
 \contentsline {section}{Appendix\nobreakspace A: Triangle}{249}{section*.120}%
-\contentsline {subsection}{\numberline {A.1}Sides}{250}{subsection.Appendix.A.1}%
+\contentsline {subsection}{\numberline {A.1}Sides}{249}{subsection.Appendix.A.1}%
 \contentsline {subsection}{\numberline {A.2}Formulae}{254}{subsection.Appendix.A.2}%
 \contentsline {subsection}{\numberline {A.3}Median}{256}{subsection.Appendix.A.3}%
 \contentsline {subsection}{\numberline {A.4}Altitude}{260}{subsection.Appendix.A.4}%
