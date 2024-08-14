@@ -39,57 +39,65 @@ a,b = ellipse_param(V,u,f)
 
 #Eigenvalues and eigenvectors
 lam,P = LA.eig(V)
-'''
-#Eigenvalues and eigenvectors
-D_vec,P = LA.eig(V)
-D = np.diag(D_vec)
-a = np.sqrt(-f/D_vec[0])
-b = np.sqrt(-f/D_vec[1])
-'''
-xStandardEllipse = ellipse_gen(a,b)
+xStandard= ellipse_gen(a,b)
 
-#Major and Minor Axes
-#MajorStandard = np.array(([a,0]))
-#MinorStandard = np.array(([0,b]))
+#Directrix
+k1 = -1
+k2 = 1
 
-#Affine ellipse parameters
-#F = P@Fstd+O#focus
-#Affine transform 
-xActualEllipse = P@xStandardEllipse
-#MajorActual = P@MajorStandard
-#MinorActual = P@MinorStandard
-print(a,b)
+#Latus rectum
+cl = (n.T@F).flatten()
 
+print(c)
+#Generating lines
+x_A = line_norm(n,c[0],k1,k2)#directrix
+x_B = line_norm(n,cl[0],k1,k2)#latus rectum
+x_C = line_norm(n,c[1],k1,k2)#directrix
+x_D = line_norm(n,cl[1],k1,k2)#latus rectum
+#Affine conic generation
+Of = O.flatten()
+xActual = P@xStandard + Of[:,np.newaxis]
+
+#plotting
+plt.plot(xActual[0,:],xActual[1,:],label='Ellipse')
+plt.plot(x_A[0,:],x_A[1,:],label='Directrix')
+plt.plot(x_B[0,:],x_B[1,:],label='Latus Rectum')
+plt.plot(x_C[0,:],x_C[1,:])
+plt.plot(x_D[0,:],x_D[1,:])
 #
-
-#Plotting the standard ellipse
-plt.plot(xStandardEllipse[0,:],xStandardEllipse[1,:],label='Standard ellipse')
-
-#Plotting the actual ellipse
-plt.plot(xActualEllipse[0,:],xActualEllipse[1,:],label='Actual ellipse')
-
-'''
+colors = np.arange(1,4)
 #Labeling the coordinates
-tri_coords = np.vstack((MajorStandard,MinorStandard,MajorActual,MinorActual,c)).T
-#tri_coords = np.vstack((MajorStandard,MinorStandard,MajorActual,MinorActual,c)).T
-plt.scatter(tri_coords[0,:], tri_coords[1,:])
-vert_labels = ['$a$','$b$','$a^{\prime}$','$b^{\prime}$','$\mathbf{c}$']
+tri_coords = np.block([O,F])
+plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
+vert_labels = ['$\mathbf{O}$','$\mathbf{F}_1$','$\mathbf{F}_2$']
 for i, txt in enumerate(vert_labels):
-    plt.annotate(txt, # this is the text
+#    plt.annotate(txt, # this is the text
+    plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(0,10), # distance from text to points (x,y)
+                 xytext=(-20,5), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
-                 '''
 
+# use set_position
+ax = plt.gca()
+ax.spines['top'].set_color('none')
+ax.spines['left'].set_position('zero')
+ax.spines['right'].set_color('none')
+ax.spines['bottom'].set_position('zero')
+'''
+ax.spines['left'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
+'''
 plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/11/3/1/figs/fig-temp.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/11/3/1/figs/fig-temp.pdf"))
+plt.savefig('chapters/11/11/3/1/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/11/3/1/figs/fig.pdf"))
 #else
 #plt.show()

@@ -1,7 +1,6 @@
-#Program to plot  the tangent of a parabola
+#Program to plot an ellipse 
 #Code by GVV Sharma
-#Released under GNU GPL
-#August 10, 2020
+#August 8, 2020
 #Revised July 31, 2024
 
 import numpy as np
@@ -26,53 +25,51 @@ import shlex
 fig = plt.figure()
 ax = fig.add_subplot(111, aspect='equal')
 len = 100
-y = np.linspace(-8,8,len)
+y = np.linspace(-5,5,len)
 
-#conic parameters
-V = np.array(([0,0],[0,1]))
-u = -6*e1
-f = 0
-
+#Ellipse parameters
+V = np.array(([16,0],[0,36]))
+u = np.array(([0,0])).reshape(-1,1)
+f = -16*36
 n,c,F,O = conic_param(V,u,f)
-print(n,c,F)
+#print(n,c,F)
+#print(O)
+#print(LA.inv(V)@u)
+a,b = ellipse_param(V,u,f)
 
 #Eigenvalues and eigenvectors
 lam,P = LA.eig(V)
-
-flen = parab_param(V,u)
-
-#Standard parabola generation
-x = parab_gen(y,flen)
-
+xStandard= ellipse_gen(a,b)
 
 #Directrix
-k1 = -8
-k2 = 8
+k1 = -1
+k2 = 1
 
 #Latus rectum
-cl = n.T@F
-cl = cl[0][0]
+cl = (n.T@F).flatten()
 
+print(c)
 #Generating lines
-x_A = line_norm(n,c,k1,k2)#directrix
-x_B = line_norm(n,cl,k1,k2)#latus rectum
-#print(n,c)
-
-#Affine parabola generation
-xStandardparab =np.block([[x],[y]])
+x_A = line_norm(n,c[0],k1,k2)#directrix
+x_B = line_norm(n,cl[0],k1,k2)#latus rectum
+x_C = line_norm(n,c[1],k1,k2)#directrix
+x_D = line_norm(n,cl[1],k1,k2)#latus rectum
+#Affine conic generation
 Of = O.flatten()
-xActualparab = P@xStandardparab + Of[:,np.newaxis]
+xActual = P@xStandard + Of[:,np.newaxis]
 
 #plotting
-plt.plot(xActualparab[0,:],xActualparab[1,:],label='Parabola',color='r')
+plt.plot(xActual[0,:],xActual[1,:],label='Ellipse')
 plt.plot(x_A[0,:],x_A[1,:],label='Directrix')
 plt.plot(x_B[0,:],x_B[1,:],label='Latus Rectum')
+plt.plot(x_C[0,:],x_C[1,:])
+plt.plot(x_D[0,:],x_D[1,:])
 #
-colors = np.arange(1,3)
+colors = np.arange(1,4)
 #Labeling the coordinates
 tri_coords = np.block([O,F])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['$\mathbf{O}$','$\mathbf{F}$']
+vert_labels = ['$\mathbf{O}$','$\mathbf{F}_1$','$\mathbf{F}_2$']
 for i, txt in enumerate(vert_labels):
 #    plt.annotate(txt, # this is the text
     plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
@@ -100,7 +97,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/11/2/1/figs/fig-temp.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/11/2/1/figs/fig-temp.pdf"))
+plt.savefig('chapters/11/11/3/1/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/11/3/1/figs/fig.pdf"))
 #else
 #plt.show()
