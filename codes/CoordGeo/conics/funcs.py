@@ -3,6 +3,7 @@
 #Revised November 12, 2023
 #Revised July 15, 2020
 #Revised August 1, 2024
+#Revised August 14, 2024
 #released under GNU GPL
 #Functions related to conics
 
@@ -28,8 +29,8 @@ def conic_param(V,u,f):
         O = LA.lstsq(cA,cb,rcond=None)[0]#vertex
 
     else:
-        c = np.zeros((2,1)).flatten()
-        F = np.zeros((2,2))
+        c = np.zeros((2,1)).flatten()#two directrices
+        F = np.zeros((2,2))#two foci
         for i in range(2):
             disc = (e**2)*(u.T@n)**2-lam[1]*(e**2-1)*(LA.norm(u)**2-lam[1]*f)
             c[i] = (e*(u.T@n)+((-1)**i)*np.sqrt(disc))/(lam[1]*e*(e**2-1))
@@ -45,6 +46,13 @@ def parab_param(V,u):
     flen = -eta/lam[1]
     return flen
 
+#Standard ellipse parameters
+def ellipse_param(V,u,f):
+    lam,P = LA.eig(V)
+    f0=u.T@LA.inv(V)@u-f
+    a = np.sqrt(np.abs(f0/lam[0]))
+    b = np.sqrt(np.abs(f0/lam[1]))
+    return a,b
 #Generating points on a circle
 def circ_gen(O,r):
 	len = 50

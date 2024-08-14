@@ -1,7 +1,7 @@
 #Program to plot an ellipse 
 #Code by GVV Sharma
 #August 8, 2020
-#Revsed July 31, 2024
+#Revised July 31, 2024
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -31,16 +31,21 @@ y = np.linspace(-5,5,len)
 V = np.array(([16,0],[0,36]))
 u = np.array(([0,0])).reshape(-1,1)
 f = -16*36
-O = -LA.inv(V)@u
-#F = np.zeros((2,2))
-n,c,F = conic_param(V,u,f)
-print(n,c,F)
+n,c,F,O = conic_param(V,u,f)
+#print(n,c,F)
+#print(O)
+#print(LA.inv(V)@u)
+a,b = ellipse_param(V,u,f)
+
+#Eigenvalues and eigenvectors
+lam,P = LA.eig(V)
 '''
 #Eigenvalues and eigenvectors
 D_vec,P = LA.eig(V)
 D = np.diag(D_vec)
 a = np.sqrt(-f/D_vec[0])
 b = np.sqrt(-f/D_vec[1])
+'''
 xStandardEllipse = ellipse_gen(a,b)
 
 #Major and Minor Axes
@@ -48,7 +53,7 @@ xStandardEllipse = ellipse_gen(a,b)
 #MinorStandard = np.array(([0,b]))
 
 #Affine ellipse parameters
-F = P@Fstd+O#focus
+#F = P@Fstd+O#focus
 #Affine transform 
 xActualEllipse = P@xStandardEllipse
 #MajorActual = P@MajorStandard
@@ -63,8 +68,10 @@ plt.plot(xStandardEllipse[0,:],xStandardEllipse[1,:],label='Standard ellipse')
 #Plotting the actual ellipse
 plt.plot(xActualEllipse[0,:],xActualEllipse[1,:],label='Actual ellipse')
 
+'''
 #Labeling the coordinates
 tri_coords = np.vstack((MajorStandard,MinorStandard,MajorActual,MinorActual,c)).T
+#tri_coords = np.vstack((MajorStandard,MinorStandard,MajorActual,MinorActual,c)).T
 plt.scatter(tri_coords[0,:], tri_coords[1,:])
 vert_labels = ['$a$','$b$','$a^{\prime}$','$b^{\prime}$','$\mathbf{c}$']
 for i, txt in enumerate(vert_labels):
@@ -73,6 +80,7 @@ for i, txt in enumerate(vert_labels):
                  textcoords="offset points", # how to position the text
                  xytext=(0,10), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
+                 '''
 
 plt.xlabel('$x$')
 plt.ylabel('$y$')
@@ -81,9 +89,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('./figs/ellipse/ellipse_tangent.pdf')
-plt.savefig('./figs/ellipse/ellipse_tangent.png')
-subprocess.run(shlex.split("termux-open ./figs/ellipse/ellipse_tangent.pdf"))
+plt.savefig('chapters/11/11/3/1/figs/fig-temp.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/11/3/1/figs/fig-temp.pdf"))
 #else
 #plt.show()
-'''
