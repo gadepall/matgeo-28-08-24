@@ -33,17 +33,24 @@ V = np.array(([0,0],[0,1]))
 u = -6*e1
 f = 0
 
-n,c,F,O = conic_param(V,u,f)
-print(n,c,F)
+n,c,F,p = conic_param(V,u,f)
+print(n,c,F,p)
 
 #Eigenvalues and eigenvectors
-lam,P = LA.eig(V)
+D_vec,P = LA.eig(V)
+D = np.diag(D_vec)
 
-flen = parab_param(V,u)
+#Standard parabola parameters
+eta = 2*u.T@p
+flen = -eta/D_vec[1]
 
 #Standard parabola generation
 x = parab_gen(y,flen)
 
+#Affine Parabola parameters
+cA = np.block([u+eta*p*0.5,V]).T
+cb = np.block([[-f],[0.5*eta*p-u]])
+O = LA.lstsq(cA,cb,rcond=None)[0]#vertex
 
 #Directrix
 k1 = -8

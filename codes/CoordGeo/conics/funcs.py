@@ -19,6 +19,14 @@ def conic_param(V,u,f):
         c = (LA.norm(u)**2-lam[1]*f)/(2*u.T@n)
         c = c[0][0]
         F = (c*e**2*n-u)/lam[1]
+        #Standard parabola parameters
+        eta = 2*u.T@p
+        flen = -eta/lam[1]
+        #Affine Parabola parameters
+        cA = np.block([u+eta*p*0.5,V]).T
+        cb = np.block([[-f],[0.5*eta*p-u]])
+        O = LA.lstsq(cA,cb,rcond=None)[0]#vertex
+
     else:
         c = np.zeros((2,1)).flatten()
         F = np.zeros((2,2))
@@ -26,7 +34,16 @@ def conic_param(V,u,f):
             disc = (e**2)*(u.T@n)**2-lam[1]*(e**2-1)*(LA.norm(u)**2-lam[1]*f)
             c[i] = (e*(u.T@n)+((-1)**i)*np.sqrt(disc))/(lam[1]*e*(e**2-1))
             F[:,i] = ((c[i]*(e**2)*n-u)/lam[1]).flatten()
-    return n,c,F,p
+        O = LA.inv(V)@u
+    return n,c,F,O
+
+#Standard parabola parameters
+def parab_param(V,u):
+    lam,P = LA.eig(V)
+    p = P[:,0].reshape(-1,1)
+    eta = 2*u.T@p
+    flen = -eta/lam[1]
+    return flen
 
 #Generating points on a circle
 def circ_gen(O,r):
