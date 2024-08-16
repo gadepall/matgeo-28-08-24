@@ -27,21 +27,24 @@ ax = fig.add_subplot(111, aspect='equal')
 len = 100
 y = np.linspace(-2,2,len)
 
-#Ellipse parameters
-V = np.array(([9,0],[0,-5]))
+#hyperbola parameters, first eigenvalue should be negative
+V = np.array(([-5,0],[0,9]))
 u = np.array(([0,0])).reshape(-1,1)
 f = 36
-#n,c,F,O = conic_param(V,u,f)
 n,c,F,O,lam,P = conic_param(V,u,f)
+#print(lam,P)
 ab = ellipse_param(V,u,f)
 #Generating the Standard Hyperbola
 x = hyper_gen(y)
 ParamMatrix = np.diag(ab)
-print(ParamMatrix, F, np.sqrt(ab[0]**2+ab[1]**2))
-
-#Eigenvalues and eigenvectors
-#lam,P = LA.eig(V)
-#xStandard= ellipse_gen(a,b)
+P = rotmat(np.pi/2)
+'''
+#print(P@n,c,c - n.T@O,P@F+O)
+n = P@n
+#print(n)
+c = (c - n.T@O).flatten()
+F = P@F+O
+'''
 
 #Directrix
 k1 = -5
@@ -51,14 +54,14 @@ k2 = 5
 cl = (n.T@F).flatten()
 
 #print(c)
-#Generating lines
-x_A = line_norm(n,c[0],k1,k2)#directrix
-x_B = line_norm(n,cl[0],k1,k2)#latus rectum
-x_C = line_norm(n,c[1],k1,k2)#directrix
-x_D = line_norm(n,cl[1],k1,k2)#latus rectum
 
 #Affine conic generation
 Of = O.flatten()
+#Generating lines
+x_A = P@line_norm(n,c[0],k1,k2)+Of[:,np.newaxis]#directrix
+x_B = P@line_norm(n,cl[0],k1,k2)+Of[:,np.newaxis]#latus rectum
+x_C = P@line_norm(n,c[1],k1,k2)+Of[:,np.newaxis]#directrix
+x_D = P@line_norm(n,cl[1],k1,k2)+Of[:,np.newaxis]#latus rectum
 
 xStandardHyperLeft = np.block([[-x],[y]])
 xStandardHyperRight= np.block([[x],[y]])

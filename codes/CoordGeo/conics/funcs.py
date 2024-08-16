@@ -13,16 +13,7 @@ from params import *
 
 def conic_param(V,u,f):
         # Compute eigenvalues and eigenvectors
-    eigenvalues, eigenvectors = LA.eig(V)
-    
-    # Sort eigenvalues and eigenvectors
-    sorted_indices = np.argsort(eigenvalues)  # For ascending order
-    
-    sorted_eigenvalues = eigenvalues[sorted_indices]
-    sorted_eigenvectors = eigenvectors[:, sorted_indices]
-    lam = sorted_eigenvalues 
-    P = sorted_eigenvectors 
-    #lam,P = LA.eig(V)
+    lam,P = LA.eig(V)
     e = np.sqrt(1-lam[0]/lam[1])
     p = P[:,0].reshape(-1,1)
     n = np.sqrt(np.abs(lam[1]))*p
@@ -55,8 +46,6 @@ def parab_param(V,u):
     eta = 2*u.T@p
     flen = -eta/lam[1]
     return flen
-import numpy as np
-from numpy.linalg import eig, inv
 
 
 #Standard ellipse/hyperbola parameters
