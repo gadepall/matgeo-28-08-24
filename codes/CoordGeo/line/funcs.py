@@ -4,6 +4,7 @@
 #released under GNU GPL
 #Functions related to line
 import numpy as np
+import numpy.linalg as LA
 import mpmath as mp
 #from line.params import *
 from params import *
@@ -32,6 +33,8 @@ def line_gen(A,B):
 
 #Generating line in 2D using normal form
 def line_norm(n,c,k1,k2):
+    c = c/LA.norm(n)
+    n = n/LA.norm(n)
     if c==0:
         A = np.zeros((2,1))
     elif np.array_equal(n, e1):

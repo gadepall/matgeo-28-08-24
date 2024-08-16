@@ -12,7 +12,17 @@ import numpy.linalg as LA
 from params import *
 
 def conic_param(V,u,f):
-    lam,P = LA.eig(V)
+        # Compute eigenvalues and eigenvectors
+    eigenvalues, eigenvectors = LA.eig(V)
+    
+    # Sort eigenvalues and eigenvectors
+    sorted_indices = np.argsort(eigenvalues)  # For ascending order
+    
+    sorted_eigenvalues = eigenvalues[sorted_indices]
+    sorted_eigenvectors = eigenvectors[:, sorted_indices]
+    lam = sorted_eigenvalues 
+    P = sorted_eigenvectors 
+    #lam,P = LA.eig(V)
     e = np.sqrt(1-lam[0]/lam[1])
     p = P[:,0].reshape(-1,1)
     n = np.sqrt(np.abs(lam[1]))*p
@@ -36,7 +46,7 @@ def conic_param(V,u,f):
             c[i] = (e*(u.T@n)+((-1)**i)*np.sqrt(disc))/(lam[1]*e*(e**2-1))
             F[:,i] = ((c[i]*(e**2)*n-u)/lam[1]).flatten()
         O = LA.inv(V)@u
-    return n,c,F,O
+    return n,c,F,O,lam,P
 
 #Standard parabola parameters
 def parab_param(V,u):

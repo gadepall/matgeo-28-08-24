@@ -2,7 +2,6 @@
 #Code by GVV Sharma
 #August 8, 2020
 #Revised July 31, 2024
-#Revised August 16, 2024
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,14 +28,17 @@ len = 100
 y = np.linspace(-5,5,len)
 
 #Ellipse parameters
-V = np.array(([25,0],[0,4]))
+V = np.array(([16,0],[0,36]))
 u = np.array(([0,0])).reshape(-1,1)
-f = -4*25
-n,c,F,O,lam,P = conic_param(V,u,f)
+f = -16*36
+n,c,F,O = conic_param(V,u,f)
+#print(n,c,F)
+#print(O)
+#print(LA.inv(V)@u)
 ab = ellipse_param(V,u,f)
 
 #Eigenvalues and eigenvectors
-print(lam, P)
+_,P = LA.eig(V)
 xStandard= ellipse_gen(ab[0],ab[1])
 
 #Directrix
@@ -46,6 +48,7 @@ k2 = 1
 #Latus rectum
 cl = (n.T@F).flatten()
 
+print(c)
 #Generating lines
 x_A = line_norm(n,c[0],k1,k2)#directrix
 x_B = line_norm(n,cl[0],k1,k2)#latus rectum
@@ -53,8 +56,7 @@ x_C = line_norm(n,c[1],k1,k2)#directrix
 x_D = line_norm(n,cl[1],k1,k2)#latus rectum
 #Affine conic generation
 Of = O.flatten()
-#xActual = P@xStandard + Of[:,np.newaxis]
-xActual = xStandard 
+xActual = P@xStandard + Of[:,np.newaxis]
 
 #plotting
 plt.plot(xActual[0,:],xActual[1,:],label='Ellipse')
@@ -95,7 +97,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/11/3/2/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/11/3/2/figs/fig.pdf"))
+plt.savefig('chapters/11/11/3/1/figs/fig-temp.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/11/3/1/figs/fig-temp.pdf"))
 #else
 #plt.show()
