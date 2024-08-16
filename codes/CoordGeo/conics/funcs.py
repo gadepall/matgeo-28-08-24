@@ -15,7 +15,7 @@ def conic_param(V,u,f):
     lam,P = LA.eig(V)
     e = np.sqrt(1-lam[0]/lam[1])
     p = P[:,0].reshape(-1,1)
-    n = np.sqrt(lam[1])*p
+    n = np.sqrt(np.abs(lam[1]))*p
     if e == 1:
         c = (LA.norm(u)**2-lam[1]*f)/(2*u.T@n)
         c = c[0][0]
@@ -45,14 +45,17 @@ def parab_param(V,u):
     eta = 2*u.T@p
     flen = -eta/lam[1]
     return flen
+import numpy as np
+from numpy.linalg import eig, inv
 
-#Standard ellipse parameters
+
+#Standard ellipse/hyperbola parameters
 def ellipse_param(V,u,f):
     lam,P = LA.eig(V)
     f0=u.T@LA.inv(V)@u-f
-    a = np.sqrt(np.abs(f0/lam[0]))
-    b = np.sqrt(np.abs(f0/lam[1]))
-    return a,b
+    ab =np.sqrt(np.abs(f0/lam))
+    return ab.flatten()
+
 #Generating points on a circle
 def circ_gen(O,r):
 	len = 50
