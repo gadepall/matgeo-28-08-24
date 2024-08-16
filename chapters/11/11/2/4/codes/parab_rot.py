@@ -30,11 +30,12 @@ y = np.linspace(-8,8,len)
 
 #conic parameters
 V = np.array(([0,0],[0,1]))
-u = -6*e1
+u = 8*e1
 f = 0
 
 n,c,F,O,lam,P = conic_param(V,u,f)
 #print(n,c,F)
+#print(lam,P)
 
 #Eigenvalues and eigenvectors
 
@@ -51,14 +52,16 @@ k2 = 8
 #Latus rectum
 cl = (n.T@F).flatten()
 
+P = rotmat(np.pi/2)
+Of = O.flatten()
+F = P@F
 #Generating lines
-x_A = line_norm(n,c,k1,k2)#directrix
-x_B = line_norm(n,cl[0],k1,k2)#latus rectum
+x_A = P@line_norm(n,c,k1,k2)+ Of[:,np.newaxis]#directrix
+x_B = P@line_norm(n,cl[0],k1,k2)+ Of[:,np.newaxis]#latus rectum
 #print(n,c)
 xStandard =np.block([[x],[y]])
 
 #Affine conic generation
-Of = O.flatten()
 xActual = P@xStandard + Of[:,np.newaxis]
 
 #plotting
@@ -98,7 +101,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/11/2/1/figs/fig-temp.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/11/2/1/figs/fig-temp.pdf"))
+plt.savefig('chapters/11/11/2/4/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/11/2/4/figs/fig.pdf"))
 #else
 #plt.show()

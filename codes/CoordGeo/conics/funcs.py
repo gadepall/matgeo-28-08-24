@@ -40,8 +40,7 @@ def conic_param(V,u,f):
     return n,c,F,O,lam,P
 
 #Standard parabola parameters
-def parab_param(V,u):
-    lam,P = LA.eig(V)
+def parab_param(lam,P,u):
     p = P[:,0].reshape(-1,1)
     eta = 2*u.T@p
     flen = -eta/lam[1]
