@@ -105,7 +105,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/11/11/3/20/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/11/11/3/20/figs/fig.pdf"))
+plt.savefig('chapters/11/11/3/20/figs/fig-temp.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/11/3/20/figs/fig-temp.pdf"))
 #else
 #plt.show()
