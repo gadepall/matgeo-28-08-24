@@ -4,6 +4,7 @@
 #Revised July 15, 2020
 #Revised August 1, 2024
 #Revised August 14, 2024
+#Revised August 17, 2024
 #released under GNU GPL
 #Functions related to conics
 
@@ -37,7 +38,7 @@ def conic_param(V,u,f):
             c[i] = (e*(u.T@n)+((-1)**i)*np.sqrt(disc))/(lam[1]*e*(e**2-1))
             F[:,i] = ((c[i]*(e**2)*n-u)/lam[1]).flatten()
         O = LA.inv(V)@u
-    return n,c,F,O,lam,P
+    return n,c,F,O,lam,P,e
 
 #Standard parabola parameters
 def parab_param(lam,P,u):

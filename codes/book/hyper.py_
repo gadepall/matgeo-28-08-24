@@ -29,21 +29,24 @@ len = 100
 y = np.linspace(-2,2,len)
 
 #Ellipse parameters
-V = np.array(([-1/3,0],[0,1]))
+V = np.array(([-9,0],[0,16]))
 u = np.array(([0,0])).reshape(-1,1)
-f = 4
-n,c,F,O,lam,P,e = conic_param(V,u,f)
+f = 9*16
+n,c,F,O = conic_param(V,u,f)
 ab = ellipse_param(V,u,f)
-
+lam,P = LA.eig(V)
 #Generating the Standard Hyperbola
 x = hyper_gen(y)
 ParamMatrix = np.diag(ab)
-print(e)
+print(ParamMatrix)
 
+#Eigenvalues and eigenvectors
+lam,P = LA.eig(V)
+#xStandard= ellipse_gen(a,b)
 
 #Directrix
-k1 = -2
-k2 = 2
+k1 = -1
+k2 = 1
 
 #Latus rectum
 cl = (n.T@F).flatten()
@@ -54,13 +57,16 @@ x_A = line_norm(n,c[0],k1,k2)#directrix
 x_B = line_norm(n,cl[0],k1,k2)#latus rectum
 x_C = line_norm(n,c[1],k1,k2)#directrix
 x_D = line_norm(n,cl[1],k1,k2)#latus rectum
-
 #Affine conic generation
 Of = O.flatten()
+#xActual = P@xStandard + Of[:,np.newaxis]
 
 xStandardHyperLeft = np.block([[-x],[y]])
+#xStandardHyperLeft = np.vstack((-x,y))
 xStandardHyperRight= np.block([[x],[y]])
+#xStandardHyperRight = np.vstack((x,y))
 
+#R =  np.array(([0,1],[1,0]))
 
 #Generating the eigen hyperbola
 xeigenHyperLeft = ParamMatrix@xStandardHyperLeft
@@ -87,11 +93,11 @@ tri_coords = np.block([O,F])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
 vert_labels = ['$\mathbf{O}$','$\mathbf{F}_1$','$\mathbf{F}_2$']
 for i, txt in enumerate(vert_labels):
-    plt.annotate(txt, # this is the text
-#    plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
+#    plt.annotate(txt, # this is the text
+    plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(-10,5), # distance from text to points (x,y)
+                 xytext=(-20,5), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -113,7 +119,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters//11/11/4/13/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters//11/11/4/13/figs/fig.pdf"))
+plt.savefig('chapters/11/11/3/1/figs/fig-temp.pdf')
+subprocess.run(shlex.split("termux-open chapters/11/11/3/1/figs/fig-temp.pdf"))
 #else
 #plt.show()
