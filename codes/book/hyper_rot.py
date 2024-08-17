@@ -31,7 +31,7 @@ y = np.linspace(-2,2,len)
 V = np.array(([-5,0],[0,9]))
 u = np.array(([0,0])).reshape(-1,1)
 f = 36
-n,c,F,O,lam,P = conic_param(V,u,f)
+n,c,F,O,lam,P,e = conic_param(V,u,f)
 #print(lam,P)
 ab = ellipse_param(V,u,f)
 #Generating the Standard Hyperbola
@@ -106,7 +106,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters//11/11/4/5/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters//11/11/4/5/figs/fig.pdf"))
+plt.savefig('chapters//11/11/4/5/figs/fig-temp.pdf')
+subprocess.run(shlex.split("termux-open chapters//11/11/4/5/figs/fig-temp.pdf"))
 #else
 #plt.show()
