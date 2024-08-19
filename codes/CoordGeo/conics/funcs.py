@@ -116,3 +116,16 @@ def contact(V,u,f,h):
     x2 = h + mu2*m2
     return(x1,x2)
     
+#Points of intersection for chords of a conic
+def chord(V,u,f,m,h):
+    #intermediate
+    c = h.T@V@h+2*u.T@h+f 
+    b = 2*m.T@(V@h+u)
+    a = m.T@V@m
+    k = np.roots((np.block([a,b,c])).flatten())
+    x1 = h+k[0]*m
+    x2 = h+k[1]*m
+    return x1,x2
+    
+    #matrix of tangents
+    
