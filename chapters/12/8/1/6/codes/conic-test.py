@@ -27,14 +27,15 @@ ax = fig.add_subplot(111, aspect='equal')
 num= 100
 #y = np.linspace(-2.5,2.5,num)
 
-V = np.array(([4,0],[0,9]))
+#V = np.array(([0,0],[0,1]))
+V = np.eye(2)
 u = np.array(([0,0])).reshape(-1,1)
-f = -4*9 
-n = np.array(([2,3])).reshape(-1,1)
-c = 2*3 
+f = -4 
+n = np.array(([1,-np.sqrt(3)])).reshape(-1,1)
+c = 0 
 m,h = param_norm(n,c)
 A,B = chord(V,u,f,m,h)
-print(h,m)
+print(h,m,A[1])
 
 '''
 #conic parameters
@@ -57,9 +58,7 @@ flen = 1
 '''
 
 #Standard parabola generation
-ab = ellipse_param(V,u,f)
-xStandard= ellipse_gen_num(ab[0],ab[1],num)
-#x = circ_gen(u,2)
+x = circ_gen(u,2)
 #x = parab_gen(y,flen)
 
 #Cable
@@ -88,17 +87,16 @@ k2 = 8
 
 #plotting
 #plt.plot(xActual[0,:],xActual[1,:],label='Parabola',color='r')
-plt.plot(xStandard[0,:],xStandard[1,:],label='Ellipse',color='r')
-#plt.plot(xActual[0,:],xActual[1,:],label='Ellipse')
-#plt.plot(x[0,:],x[1,:],label='Circle',color='g')
+#plt.plot(xStandard[0,:],xStandard[1,:],label='Parabola',color='r')
+plt.plot(x[0,:],x[1,:],label='Circle',color='g')
 plt.plot(x_A[0,:],x_A[1,:],label='Chord')
 #plt.plot(x_B[0,:],x_B[1,:],label='Chord')
 #plt.plot(x,x,label='Chord')
 #y1 =1 
 #plt.fill_between(x,x,y,where= y < x, color = 'cyan', label = '$Area$')
 #plt.fill_between(x,x1,y,where= (0< x)&(x < 1), color = 'cyan', label = '$Area$')
-#plt.fill_between(xStandard[0,:],xStandard[1,:], where= (xStandard[0,:]>0 )&(xStandard[1,:]>x_A[1,:] ), color = 'cyan')
-#plt.fill_between(x[0,:],x[1,:],where= (x[0,:] >=  0)&(x[1,:] >=  0)&(x[1,:] <=  A[1]), color = 'cyan', label = '$Area$')
+plt.fill_between(x_A[0,:],x_A[1,:],where= (x_A[1,:] >=  -0.01), color = 'cyan')
+plt.fill_between(x[0,:],x[1,:],where= (x[0,:] >=  0)&(x[1,:] >=  0)&(x[1,:] <=  A[1]), color = 'cyan', label = '$Area$')
 #plt.plot(x_B[0,:],x_B[1,:],label='Latus Rectum')
 #ax.fill_betweenx(y_fill, x_fill_parabola, x_fill_chord, where=(x_fill_chord < x_fill_parabola), color='cyan', alpha=0.5)
 
@@ -107,7 +105,7 @@ colors = np.arange(1,3)
 #Labeling the coordinates
 tri_coords = np.block([A,B])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['$\mathbf{A}$','$\mathbf{B}$']
+vert_labels = ['$\mathbf{x}$','$\mathbf{x}_1$']
 #vert_labels = ['$\mathbf{D}$','$\mathbf{E}$']
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt, # this is the text
@@ -136,7 +134,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/12/8/3/8/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/12/8/3/8/figs/fig.pdf"))
+plt.savefig('chapters/12/8/1/6/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/12/8/1/6/figs/fig.pdf"))
 #else
 #plt.show()

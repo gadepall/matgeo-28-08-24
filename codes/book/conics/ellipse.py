@@ -40,7 +40,7 @@ ab = ellipse_param(V,u,f)
 
 #Eigenvalues and eigenvectors
 print(lam, P)
-xStandard= ellipse_gen(ab[0],ab[1])
+xStandard= ellipse_gen_num(ab[0],ab[1])
 
 #Directrix
 k1 = -1

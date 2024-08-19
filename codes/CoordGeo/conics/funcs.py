@@ -74,6 +74,12 @@ def ellipse_gen(a,b):
 	x_ellipse[1,:] = b*np.sin(theta)
 	return x_ellipse
 
+def ellipse_gen_num(a,b,num):
+	theta = np.linspace(0,2*np.pi,num)
+	x_ellipse = np.zeros((2,num))
+	x_ellipse[0,:] = a*np.cos(theta)
+	x_ellipse[1,:] = b*np.sin(theta)
+	return x_ellipse
 #Generating points on a parabola
 def parab_gen(y,a):
 	x = y**2/a

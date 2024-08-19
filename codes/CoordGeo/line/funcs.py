@@ -33,7 +33,6 @@ def line_gen(A,B):
 
 #Generate line points
 def line_gen_num(A,B,num):
-  num =10
   dim = A.shape[0]
   x_AB = np.zeros((dim,num))
   lam_1 = np.linspace(0,1,num)
