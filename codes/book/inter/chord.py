@@ -86,6 +86,14 @@ k2 = 8
 #Affine conic generation
 #xActual = P@xStandard + Of[:,np.newaxis]
 
+#x=np.arange(0,3.1,0.1) #range of values to shade the region
+x=np.linspace(A[0],B[0],num).flatten() #range of values to shade the region
+#shading the region
+a = ab[0]
+b = ab[1]
+y1=(b/a)*(np.sqrt(a**2-x**2))
+y2=(b/a)*(a-x)
+plt.fill_between(x,y1,y2,color='green', alpha=.2)
 #plotting
 #plt.plot(xActual[0,:],xActual[1,:],label='Parabola',color='r')
 plt.plot(xStandard[0,:],xStandard[1,:],label='Ellipse',color='r')

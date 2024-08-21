@@ -65,6 +65,13 @@ def circ_gen(O,r):
 	x_circ = (x_circ + O)
 	return x_circ
 
+def circ_gen_num(O,r,num):
+	theta = np.linspace(0,2*np.pi,num)
+	x_circ = np.zeros((2,num))
+	x_circ[0,:] = r*np.cos(theta)
+	x_circ[1,:] = r*np.sin(theta)
+	x_circ = (x_circ + O)
+	return x_circ
 #Generating points on an ellipse
 def ellipse_gen(a,b):
 	len = 50
@@ -133,5 +140,9 @@ def chord(V,u,f,m,h):
     x2 = h+k[1]*m
     return x1,x2
     
-    #matrix of tangents
     
+#Circle parameters
+def circ_param(u,f):
+    O = -u
+    r = LA.norm(u)**2-f
+    return O,r
