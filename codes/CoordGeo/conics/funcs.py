@@ -144,5 +144,12 @@ def chord(V,u,f,m,h):
 #Circle parameters
 def circ_param(u,f):
     O = -u
-    r = LA.norm(u)**2-f
+    r = np.sqrt(LA.norm(u)**2-f)
     return O,r
+
+#Circle tangent parameters
+def circ_tang(n,u,r):
+    Pmat = np.array(([1,-1],[-1,-1]))
+    nmat = np.block([r*n,u])
+    q = nmat@Pmat
+    return q

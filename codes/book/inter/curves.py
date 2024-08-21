@@ -35,6 +35,7 @@ x_A = circ_gen_num(O,r,num)
 u = np.array(([0,0])).reshape(-1,1)
 f = -1
 O,r = circ_param(u,f)
+print(r)
 x_B = circ_gen_num(O,r,num)
 
 #Chord parameters
