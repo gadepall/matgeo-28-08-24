@@ -37,7 +37,7 @@ def conic_param(V,u,f):
             disc = (e**2)*(u.T@n)**2-lam[1]*(e**2-1)*(LA.norm(u)**2-lam[1]*f)
             c[i] = (e*(u.T@n)+((-1)**i)*np.sqrt(disc))/(lam[1]*e*(e**2-1))
             F[:,i] = ((c[i]*(e**2)*n-u)/lam[1]).flatten()
-        O = LA.inv(V)@u
+        O = -LA.inv(V)@u
     return n,c,F,O,lam,P,e
 
 #Standard parabola parameters
