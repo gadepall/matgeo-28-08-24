@@ -45,8 +45,9 @@ ParamMatrix = np.diag(ab)
 q = np.zeros((2,1))
 q[0][0] = 10
 q[1][0] = (q[0][0]-1)/(q[0][0]-2)
-n = V@q+u
-c = n.T@q
+n,c = conic_tangent(V,u,f,q)
+#n = V@q+u
+#c = n.T@q
 print(n,c)
 #Directrix
 k1 = -65

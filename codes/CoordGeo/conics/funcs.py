@@ -15,6 +15,9 @@ from params import *
 def conic_param(V,u,f):
         # Compute eigenvalues and eigenvectors
     lam,P = LA.eig(V)
+    if lam[1]==0:
+        lam = ref@lam
+        P = ref@P
     e = np.sqrt(1-lam[0]/lam[1])
     p = P[:,0].reshape(-1,1)
     n = np.sqrt(np.abs(lam[1]))*p
@@ -153,3 +156,11 @@ def circ_tang(n,u,r):
     nmat = np.block([r*n,u])
     q = nmat@Pmat
     return q
+
+#Conic tangent parameters
+def conic_tangent(V,u,f,q):
+    n = V@q+u
+    c = -(u.T@q+f)
+    #n = V@q+u
+    #c = n.T@q
+    return n,c
