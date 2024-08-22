@@ -45,7 +45,7 @@ ParamMatrix = np.diag(ab)
 q = np.zeros((2,1))
 q[0][0] = 10
 q[1][0] = (q[0][0]-1)/(q[0][0]-2)
-n,c = ellipse_tang(V,u,q)
+n,c = conic_tangent(V,u,f,q)
 #n = V@q+u
 #c = n.T@q
 print(n,c)
@@ -123,7 +123,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/12/6/3/2/figs/fig-temp.pdf')
-subprocess.run(shlex.split("termux-open chapters/12/6/3/2/figs/fig-temp.pdf"))
+plt.savefig('chapters/12/6/3/2/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/12/6/3/2/figs/fig.pdf"))
 #else
 #plt.show()

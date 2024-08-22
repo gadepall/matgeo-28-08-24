@@ -1,9 +1,3 @@
-	\begin{figure}[H]
-		\centering
- \includegraphics[width=0.75\columnwidth]{chapters/12/6/3/10/figs/conic1.pdf}
-		\caption{}
-		\label{fig:12/6/3/10}
-  	\end{figure}
 From the given information, 
 \begin{align}
 	\vec{V}
@@ -22,33 +16,28 @@ From the above, the  normal vector is
 	} = \myvec{1 \\ 1}
 	\label{eq:matrix-10-13-param-n}
 \end{align}
-From 
-\eqref{eq:conic_tangent_qk},
-	the point(s) of contact are given by
-\begin{align}
-	\vec{q}&=\vec{V}^{-1}(k_i\vec{n}-\vec{u}) 
-	\text{ where},\\
-	k_i&=\pm \sqrt{\frac{f_0}{\vec{n}^{\top}\vec{V}^{-1}\vec{n}}}\\
-	f_0&=f+\vec{u}^{\top}\vec{V}^{-1}\vec{u}
-\end{align}
 Substituting from 
 	\eqref{eq:matrix-10-13-param-n}
 	and
 	\eqref{eq:matrix-10-13-param}
-	in the above,
+	in 
+\eqref{eq:conic_tangent_qk},
+	the point(s) of contact are given by
 \begin{align}
 \vec{q}=\myvec{0 \\-1}, \myvec{2 \\ 1}.
 \end{align}
 From 
   \eqref{eq:conic_tangent_final},
-the equations of tangents are given by
-\begin{align}
-(\vec{V}\vec{q}+\vec{u})^{\top}\vec{x}+\vec{u}^{\top}\vec{q}+f=0
-\end{align}
-yielding
+the equations of tangents are 
 \begin{align}
 	\myvec{1 & 1}\vec{x}+1&=0\\
 \myvec{1 & 1}\vec{x}-3&=0\\
 \end{align}
 See 
 		\figref{fig:12/6/3/10}.
+	\begin{figure}[H]
+		\centering
+ \includegraphics[width=0.75\columnwidth]{chapters/12/6/3/10/figs/fig.pdf}
+		\caption{}
+		\label{fig:12/6/3/10}
+  	\end{figure}

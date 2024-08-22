@@ -15,7 +15,7 @@ from params import *
 def conic_param(V,u,f):
         # Compute eigenvalues and eigenvectors
     lam,P = LA.eig(V)
-    if lam[1]==0:
+    if lam[1]<=0:
         lam = ref@lam
         P = ref@P
     e = np.sqrt(1-lam[0]/lam[1])
@@ -37,7 +37,7 @@ def conic_param(V,u,f):
         c = np.zeros((2,1)).flatten()#two directrices
         F = np.zeros((2,2))#two foci
         for i in range(2):
-            disc = (e**2)*(u.T@n)**2-lam[1]*(e**2-1)*(LA.norm(u)**2-lam[1]*f)
+            disc = np.abs((e**2)*(u.T@n)**2-lam[1]*(e**2-1)*(LA.norm(u)**2-lam[1]*f))
             c[i] = (e*(u.T@n)+((-1)**i)*np.sqrt(disc))/(lam[1]*e*(e**2-1))
             F[:,i] = ((c[i]*(e**2)*n-u)/lam[1]).flatten()
         O = -LA.inv(V)@u
@@ -181,8 +181,8 @@ def conic_contact(V,u,f,n):
     else:
         #ellipse and hyperbola
         f0=u.T@LA.inv(V)@u-f
-        r = np.sqrt(f0/(n.T@LA.inv(V)@n))
+        r = np.sqrt(np.abs(f0/(n.T@LA.inv(V)@n)))
         Pmat = np.array(([1,-1],[-1,-1]))
         nmat = np.block([r*n,u])
-        q = nmat@Pmat
+        q = LA.inv(V)@nmat@Pmat
     return q
