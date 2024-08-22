@@ -25,17 +25,26 @@ import shlex
 #setting up plot
 fig = plt.figure()
 ax = fig.add_subplot(111, aspect='equal')
-len = 100
-y = np.linspace(-4,4,len)
+num= 100
+y = np.linspace(-2,2,num)
 
 #conic parameters
 V = np.array(([1,0],[0,0]))
 u = np.array(([-2,-0.5])).reshape(-1,1)
 f = 4
 
+#Given points
+
+A = np.array(([2,0])).reshape(-1,1)
+B = np.array(([4,4])).reshape(-1,1)
+m = A-B
+
 n,c,F,O,lam,P,e = conic_param(V,u,f)
-#print(O)
-print(lam,P)
+n = omat@m
+q = conic_contact(V,u,f,n)
+n,c = conic_tangent(V,u,f,q)
+print(q)
+#print(lam,P)
 
 #Eigenvalues and eigenvectors
 
@@ -43,11 +52,13 @@ flen = parab_param(lam,P,u)
 
 #Standard parabola generation
 x = parab_gen(y,flen)
+x_chord = line_gen(A,B)
 
+#Tangent generation
+k1 = -3
+k2 = 1
+x_A = line_norm(n,c[0][0],k1,k2)
 
-#Directrix
-k1 = -8
-k2 = 8
 
 #Latus rectum
 cl = (n.T@F).flatten()
@@ -56,8 +67,8 @@ cl = (n.T@F).flatten()
 Of = O.flatten()
 #F = P@F
 #Generating lines
-x_A = P@line_norm(n,c,k1,k2)+ Of[:,np.newaxis]#directrix
-x_B = P@line_norm(n,cl[0],k1,k2)+ Of[:,np.newaxis]#latus rectum
+#x_A = P@line_norm(n,c,k1,k2)+ Of[:,np.newaxis]#directrix
+#x_B = P@line_norm(n,cl[0],k1,k2)+ Of[:,np.newaxis]#latus rectum
 #print(n,c)
 xStandard =np.block([[x],[y]])
 
@@ -66,22 +77,22 @@ xActual = P@xStandard + Of[:,np.newaxis]
 
 #plotting
 plt.plot(xActual[0,:],xActual[1,:],label='Parabola',color='r')
-#plt.plot(x_A[0,:],x_A[1,:],label='Directrix')
+plt.plot(x_A[0,:],x_A[1,:],label='Tangent')
+plt.plot(x_chord[0,:],x_chord[1,:],label='Chord')
 #plt.plot(x_B[0,:],x_B[1,:],label='Latus Rectum')
 #
-colors = np.arange(1,2)
+colors = np.arange(1,4)
 #Labeling the coordinates
-#tri_coords = np.block([O,F])
-tri_coords = np.block([O])
+tri_coords = np.block([A,B,q])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
-vert_labels = ['$\mathbf{O}$']
-#vert_labels = ['$\mathbf{O}$','$\mathbf{F}$']
+#vert_labels = ['$\mathbf{O}$']
+vert_labels = ['$\mathbf{A}$','$\mathbf{B}$','$\mathbf{q}$']
 for i, txt in enumerate(vert_labels):
 #    plt.annotate(txt, # this is the text
-    plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})',
+    plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
                  textcoords="offset points", # how to position the text
-                 xytext=(-20,5), # distance from text to points (x,y)
+                 xytext=(-10,10), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
 
 # use set_position
@@ -103,7 +114,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/12/6/3/8/figs/fig-temp.pdf')
-subprocess.run(shlex.split("termux-open chapters/12/6/3/8/figs/fig-temp.pdf"))
+plt.savefig('chapters/12/6/3/8/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/12/6/3/8/figs/fig.pdf"))
 #else
 #plt.show()

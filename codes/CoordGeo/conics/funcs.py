@@ -164,3 +164,25 @@ def conic_tangent(V,u,f,q):
     #n = V@q+u
     #c = n.T@q
     return n,c
+
+#Conic tangent contact
+def conic_contact(V,u,f,n):
+    _,_,_,_,lam,P,e = conic_param(V,u,f)
+    p = P[:,0].reshape(-1,1)
+    if e==1:
+        #Parabola 
+        r = (p.T@u).flatten()/(p.T@n).flatten()
+        r = r[0]
+        print(r)
+        qA = np.block([u+r*n,V]).T
+        qb = np.block([[-f],[r*n-u]])
+        q = LA.lstsq(qA,qb,rcond=None)[0]#vertex
+        print(qA,qb)
+    else:
+        #ellipse and hyperbola
+        f0=u.T@LA.inv(V)@u-f
+        r = np.sqrt(f0/(n.T@LA.inv(V)@n))
+        Pmat = np.array(([1,-1],[-1,-1]))
+        nmat = np.block([r*n,u])
+        q = nmat@Pmat
+    return q
