@@ -33,8 +33,13 @@ f = -4*9
 n = np.array(([2,3])).reshape(-1,1)
 c = 2*3 
 m,h = param_norm(n,c)
-A,B = chord(V,u,f,m,h)
-print(h,m)
+#A,B = chord(V,u,f,m,h)
+q = chord(V,u,f,m,h)
+A = q[:,0]
+B = q[:,1]
+print(q)
+#print(h,m)
+#print(A,B)
 
 '''
 #conic parameters
@@ -113,7 +118,8 @@ plt.plot(x_A[0,:],x_A[1,:],label='Chord')
 #
 colors = np.arange(1,3)
 #Labeling the coordinates
-tri_coords = np.block([A,B])
+tri_coords = q
+#tri_coords = np.block([A,B])
 plt.scatter(tri_coords[0,:], tri_coords[1,:], c=colors)
 vert_labels = ['$\mathbf{A}$','$\mathbf{B}$']
 #vert_labels = ['$\mathbf{D}$','$\mathbf{E}$']
@@ -144,7 +150,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/12/8/3/8/figs/fig.pdf')
-subprocess.run(shlex.split("termux-open chapters/12/8/3/8/figs/fig.pdf"))
+plt.savefig('chapters/12/8/3/8/figs/fig-temp.pdf')
+subprocess.run(shlex.split("termux-open chapters/12/8/3/8/figs/fig-temp.pdf"))
 #else
 #plt.show()

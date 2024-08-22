@@ -15,7 +15,7 @@ from params import *
 def conic_param(V,u,f):
         # Compute eigenvalues and eigenvectors
     lam,P = LA.eig(V)
-    if lam[1]<=0:
+    if lam[1]<=0 or lam[1] < lam[0]:
         lam = ref@lam
         P = ref@P
     e = np.sqrt(1-lam[0]/lam[1])
@@ -138,10 +138,15 @@ def chord(V,u,f,m,h):
     c = h.T@V@h+2*u.T@h+f 
     b = 2*m.T@(V@h+u)
     a = m.T@V@m
-    k = np.roots((np.block([a,b,c])).flatten())
-    x1 = h+k[0]*m
-    x2 = h+k[1]*m
-    return x1,x2
+    k = np.roots((np.block([a,b,c])).flatten()).reshape(-1,1)
+    Pmat = np.block([k,np.ones((2,1))]).T
+    #print(Pmat,k)
+    nmat = np.block([m,h])
+    x = nmat@Pmat
+    #x1 = h+k[0]*m
+    #x2 = h+k[1]*m
+    #return x1,x2
+    return x
     
     
 #Circle parameters

@@ -3,6 +3,7 @@
 #August 8, 2020
 #Revised August 16, 2024
 #Revised August 21, 2024
+#Revised August 22, 2024
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,18 +30,17 @@ num= 100
 y = np.linspace(-2,2,num)
 
 #hyperbola parameters, first eigenvalue should be negative
-V = 0.5*np.array(([0,1],[1,0]))
-u = -0.5*e2
+V = np.array(([16,0],[0,9]))
+u = np.zeros((2,1))
 #u = -0.5*np.array(([0,1])).reshape(-1,1)
-f = -1
+f = -16*9
 n0,c,F,O,lam,P,e = conic_param(V,u,f)
-#print(lam,P,P@np.diag(lam)@P.T)
 #print(O)
 ab = ellipse_param(V,u,f)
-#Generating the Standard Hyperbola
-x = hyper_gen(y)
+#Generating the Standard ellipse
+xStandard= ellipse_gen(ab[0],ab[1])
 ParamMatrix = np.diag(ab)
-#P = rotmat(np.pi/2)
+P = rotmat(np.pi/2)
 
 #Tangent
 '''
@@ -48,10 +48,13 @@ q = np.zeros((2,1))
 q[0][0] = 10
 q[1][0] = (q[0][0]-1)/(q[0][0]-2)
 '''
-n = np.array(([1,1])).reshape(-1,1)
+#n = np.array(([1,1])).reshape(-1,1)
+n = e2
 q = conic_contact(V,u,f,n)
-print(q)
 c = (n.T@q).flatten()
+n1 = e1
+q1 = conic_contact(V,u,f,n1)
+c1 = (n1.T@q1).flatten()
 #n = V@q+u
 #c = n.T@q
 #print(n,c)
@@ -61,38 +64,38 @@ c = (n.T@q).flatten()
 Of = O.flatten()
 #Generating lines
 k1 = -3
-k2 = 1
-x_A = line_norm(n,c[0],k1,k2)
-
-k1 = -1
 k2 = 3
+x_A = line_norm(n,c[0],k1,k2)
 x_B = line_norm(n,c[1],k1,k2)
+x_C = line_norm(n1,c1[0],k1,k2)
+x_D = line_norm(n1,c1[1],k1,k2)
 '''
 x_A = P@line_norm(n,c[0],k1,k2)+Of[:,np.newaxis]#directrix
 x_B = P@line_norm(n,cl[0],k1,k2)+Of[:,np.newaxis]#latus rectum
 x_C = P@line_norm(n,c[1],k1,k2)+Of[:,np.newaxis]#directrix
 x_D = P@line_norm(n,cl[1],k1,k2)+Of[:,np.newaxis]#latus rectum
-'''
 
 xStandardHyperLeft = np.block([[-x],[y]])
 xStandardHyperRight= np.block([[x],[y]])
+'''
 
 
 
-#Generating the actual hyperbola
-xActualHyperLeft = P@ParamMatrix@xStandardHyperLeft+Of[:,np.newaxis]
-xActualHyperRight = P@ParamMatrix@xStandardHyperRight+Of[:,np.newaxis]
+#Generating the actual ellipse
+#xActual = P@xStandard + Of[:,np.newaxis]
+#xActualHyperLeft = P@ParamMatrix@xStandardHyperLeft+Of[:,np.newaxis]
+#xActualHyperRight = P@ParamMatrix@xStandardHyperRight+Of[:,np.newaxis]
 
 
 #plotting
-plt.plot(xActualHyperLeft[0,:],xActualHyperLeft[1,:],label='Hyperbola',color='r')
-plt.plot(xActualHyperRight[0,:],xActualHyperRight[1,:],color='r')
-plt.plot(x_A[0,:],x_A[1,:],label='Tangent')
-plt.plot(x_B[0,:],x_B[1,:],label='Tangent')
-'''
-plt.plot(x_C[0,:],x_C[1,:])
-plt.plot(x_D[0,:],x_D[1,:])
-'''
+#plt.plot(xActualHyperLeft[0,:],xActualHyperLeft[1,:],label='Hyperbola',color='r')
+#plt.plot(xActualHyperRight[0,:],xActualHyperRight[1,:],color='r')
+#plt.plot(xActual[0,:],xActual[1,:],label='Ellipse')
+plt.plot(xStandard[0,:],xStandard[1,:],label='Ellipse')
+plt.plot(x_A[0,:],x_A[1,:],label='X Tangent',color='r')
+plt.plot(x_B[0,:],x_B[1,:],color='r')
+plt.plot(x_C[0,:],x_C[1,:],color='g')
+plt.plot(x_D[0,:],x_D[1,:],label='Y Tangent',color='g')
 #
 colors = np.arange(1,4)
 #Labeling the coordinates
@@ -128,7 +131,7 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('chapters/12/6/3/10/figs/fig-temp.pdf')
-subprocess.run(shlex.split("termux-open chapters/12/6/3/10/figs/fig-temp.pdf"))
+plt.savefig('chapters/12/6/3/13/figs/fig.pdf')
+subprocess.run(shlex.split("termux-open chapters/12/6/3/13/figs/fig.pdf"))
 #else
 #plt.show()
