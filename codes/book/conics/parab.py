@@ -33,7 +33,7 @@ V = np.array(([0,0],[0,1]))
 u = -6*e1
 f = 0
 
-n,c,F,O,lam,P = conic_param(V,u,f)
+n,c,F,O,lam,P,e = conic_param(V,u,f)
 #print(n,c,F)
 
 #Eigenvalues and eigenvectors
